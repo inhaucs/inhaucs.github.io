@@ -1,3 +1,11 @@
+- title: Seminar
+  slug: seminar
+  teaser: UCSLab Seminars
+  items:
+    - title: Paper Review Seminar
+      url: /seminar/papers
+      icon: fa-compass
+      teaser: UCSLab Good Morning Paper Review Seminar.
 - title: Discover
   slug: discover
   teaser: Everybody has to start somewhere
