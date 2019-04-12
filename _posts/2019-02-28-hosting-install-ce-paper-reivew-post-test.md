@@ -31,12 +31,6 @@ List :
 - 1 GB
 - 1 CPU
 
-{% include articles/figure.html
-    url="/assets/img/help/2019/03/digital-ocean/002_choose_plan.png"
-    legend="Create droplet"
-%}
-
-
 
 ## Login in the machine and get the mysql credentials
 external url link using
@@ -45,17 +39,6 @@ code block:
 ```
 ssh root@this_droplet_ip
 ```
-
-
-{% include articles/figure.html
-    url="/assets/img/help/2019/03/digital-ocean/007_domain.png"
-    legend="Provide the DNS name for the SSL script"
-%}
-
-{% include articles/figure.html
-    url="/assets/img/help/2019/03/digital-ocean/008_select_auto.png"
-    legend="Choose auto for letsencrypt setup"
-%}
 
 
 {% include date/updated.html %}
