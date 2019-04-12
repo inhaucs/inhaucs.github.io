@@ -1,0 +1,70 @@
+---
+title: UCSLab Paper Review Test posting
+date: 2019-04-12 00:00:00 Z
+description: test about how to post into this site. 
+card_title: Paper Review(title)
+card_teaser: Paper Review 에 대한 내용(teaser)
+card_position: 7
+icon: fa-server
+categories: [hosting,install,ce]
+sidebar: hosting
+layout: default
+slug: ucslab-paper-review-test
+permalink: hosting/install/ce/ucslab-paper-review-test
+---
+
+{% assign product = 'ce' %}
+
+{% include layout/row_start.html %}
+{% include layout/col_start.html column="7" %}
+
+# English Test
+
+below, image!
+
+{% include articles/figure.html
+    url="/assets/img/help/2019/03/digital-ocean/001_create_droplet.png"
+    legend="Create droplet"
+%}
+
+List :
+- 1 GB
+- 1 CPU
+
+{% include articles/figure.html
+    url="/assets/img/help/2019/03/digital-ocean/002_choose_plan.png"
+    legend="Create droplet"
+%}
+
+
+
+## Login in the machine and get the mysql credentials
+external url link using
+[online tools](https://www.whatsmydns.net/).
+code block:
+```
+ssh root@this_droplet_ip
+```
+
+
+{% include articles/figure.html
+    url="/assets/img/help/2019/03/digital-ocean/007_domain.png"
+    legend="Provide the DNS name for the SSL script"
+%}
+
+{% include articles/figure.html
+    url="/assets/img/help/2019/03/digital-ocean/008_select_auto.png"
+    legend="Choose auto for letsencrypt setup"
+%}
+
+
+{% include date/updated.html %}
+
+{% include layout/col_end.html %}
+{% include layout/col_start.html column="4 last push1" %}
+
+{% include aside/ce-install-community-forum-cta.md %}
+
+{% include aside/contribute.html %}
+
+{% include layout/row_end.html %}
