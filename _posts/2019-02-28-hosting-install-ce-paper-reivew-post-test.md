@@ -46,8 +46,4 @@ ssh root@this_droplet_ip
 {% include layout/col_end.html %}
 {% include layout/col_start.html column="4 last push1" %}
 
-{% include aside/ce-install-community-forum-cta.md %}
-
-{% include aside/contribute.html %}
-
 {% include layout/row_end.html %}
