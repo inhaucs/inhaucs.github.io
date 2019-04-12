@@ -10,7 +10,7 @@ categories: [seminars,morning-seminar,apr-13-2019]
 sidebar: morning-seminar
 layout: default
 slug: ucslab-paper-review-test
-permalink: seminars/morning-seminar/ucslab-paper-review-test
+permalink: /:categories/:slug.html
 ---
 
 {% assign product = 'ce' %}
