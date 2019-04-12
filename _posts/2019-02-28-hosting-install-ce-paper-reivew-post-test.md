@@ -4,13 +4,13 @@ date: 2019-04-12 00:00:00 Z
 description: test about how to post into this site. 
 card_title: Paper Review(title)
 card_teaser: Paper Review 에 대한 내용(teaser)
-card_position: 7
+card_position: 1
 icon: fa-server
-categories: [hosting,install,ce]
-sidebar: hosting
+categories: [seminars,morning-seminar,apr-13-2019]
+sidebar: morning-seminar
 layout: default
 slug: ucslab-paper-review-test
-permalink: hosting/install/ce/ucslab-paper-review-test
+permalink: seminars/morning-seminar/ucslab-paper-review-test
 ---
 
 {% assign product = 'ce' %}
