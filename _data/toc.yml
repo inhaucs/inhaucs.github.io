@@ -109,34 +109,34 @@
       icon: fa-key
       teaser: Use Duo as multi factor authentication provider
       version: pro
-- title: Contribute
-  slug: contribute
-  teaser: Are you doing your part?
-  items:
-    - title: Contributor FAQ
-      url: /faq/contribute
-      icon: fa-group
-      teaser: How to get started as a contributor
-    - title: Feature requests
-      url: https://community.passbolt.com/c/backlog
-      icon: fa-plus-circle
-      teaser: Propose and vote for new ideas!
-    - title: Authentication
-      url: https://help.passbolt.com/tech/auth
-      icon: fa-lock
-      teaser: How does GPG Authentication work?
-    - title: Github
-      url: https://www.github.com/passbolt
-      icon: fa-github
-      teaser: Want to see the code? This way!
-    - title: Bug report
-      url: https://github.com/passbolt/passbolt_api/issues/new
-      icon: fa-bug
-      teaser: Who knows, maybe it is a feature?
-    - title: Get a job!
-      url: https://careers.passbolt.com
-      icon: fa-money
-      teaser: Careers oportunity at passbolt.
+# - title: Contribute
+#   slug: contribute
+#   teaser: Are you doing your part?
+#   items:
+#     - title: Contributor FAQ
+#       url: /faq/contribute
+#       icon: fa-group
+#       teaser: How to get started as a contributor
+#     - title: Feature requests
+#       url: https://community.passbolt.com/c/backlog
+#       icon: fa-plus-circle
+#       teaser: Propose and vote for new ideas!
+#     - title: Authentication
+#       url: https://help.passbolt.com/tech/auth
+#       icon: fa-lock
+#       teaser: How does GPG Authentication work?
+#     - title: Github
+#       url: https://www.github.com/passbolt
+#       icon: fa-github
+#       teaser: Want to see the code? This way!
+#     - title: Bug report
+#       url: https://github.com/passbolt/passbolt_api/issues/new
+#       icon: fa-bug
+#       teaser: Who knows, maybe it is a feature?
+#     - title: Get a job!
+#       url: https://careers.passbolt.com
+#       icon: fa-money
+#       teaser: Careers oportunity at passbolt.
 - title: Small print
   slug: legal
   teaser: The small print
