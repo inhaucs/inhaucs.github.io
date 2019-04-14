@@ -2,6 +2,14 @@
   slug: seminars
   teaser: UCSLab Seminars
   items:
+    - title: 2nd Morning Seminar
+      url: /seminars/2-morning-seminar
+      icon: fa-compass
+      teaser: 2nd UCSLab Good Morning Paper Review Seminar.
+    - title: 1st Morning Seminar
+      url: /seminars/1-morning-seminar
+      icon: fa-compass
+      teaser: 1st UCSLab Good Morning Paper Review Seminar.
     - title: Morning Seminar
       url: /seminars/morning-seminar
       icon: fa-compass
