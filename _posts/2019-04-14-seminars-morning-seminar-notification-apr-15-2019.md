@@ -1,9 +1,9 @@
 ---
 title: 1st UCSLab Morning Seminar
 date: 2019-04-14 00:00:00 Z
-description: 1st UCSLab Morning Seminar 일정에 관한 안내. (2019-04-15) 
+description: Notificaion of 1st UCSLab Morning Seminar (on 2019-04-15) 
 card_title: 1st Morning Seminar
-card_teaser: Date: 2019-04-15
+card_teaser: (2019-04-15)
 card_position: 2
 icon: fa-server
 categories: [seminars,morning-seminar,apr-15-2019]
