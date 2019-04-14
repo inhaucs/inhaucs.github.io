@@ -9,7 +9,7 @@ icon: fa-server
 categories: [seminars,morning-seminar,apr-15-2019]
 sidebar: morning-seminar
 layout: default
-slug: seminars-morning-seminar-apr-15-2019-notificaiton
+slug: notification-apr-15-2019
 permalink: /:categories/:slug.html
 ---
 
