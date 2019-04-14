@@ -1,0 +1,34 @@
+---
+title: 1st UCSLab Morning Seminar
+date: 2019-04-14 00:00:00 Z
+description: 1st UCSLab Morning Seminar 일정에 관한 안내. (2019-04-15) 
+card_title: 1st Morning Seminar
+card_teaser: Date: 2019-04-15
+card_position: 2
+icon: fa-server
+categories: [seminars,morning-seminar,apr-15-2019]
+sidebar: morning-seminar
+layout: default
+slug: seminars-morning-seminar-apr-15-2019-notificaiton
+permalink: /:categories/:slug.html
+---
+
+{% assign product = 'ce' %}
+
+{% include layout/row_start.html %}
+{% include layout/col_start.html column="7" %}
+
+# Title
+## Subtitle
+
+```
+int main()
+```
+
+
+{% include date/updated.html %}
+
+{% include layout/col_end.html %}
+{% include layout/col_start.html column="4 last push1" %}
+
+{% include layout/row_end.html %}
