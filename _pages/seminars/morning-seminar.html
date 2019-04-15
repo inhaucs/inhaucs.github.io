@@ -12,8 +12,10 @@ permalink: /seminars/morning-seminar
     <div class="panel middle">
         <div class="grid grid-responsive-12">
             {% include breadcrumbs/default.html slug=page.slug %}
-            {% assign mCategories = "seminars|morning-seminar" | split: "|" %}
-            {% include cards/jmy-section-cards.html section='seminars' sub='morning-seminar' title='Presentations' categories=mCategories %}
+            {% assign mCategories = "seminars|morning-seminar|04-18-2019" | split: "|" %}
+            {% include cards/jmy-section-cards.html section='seminars' sub='morning-seminar' title='1st Morning Seminar' categories=mCategories %}
+            {% assign mCategories = "seminars|morning-seminar|04-22-2019" | split: "|" %}
+            {% include cards/jmy-section-cards.html section='seminars' sub='morning-seminar' title='2nd Morning Seminar' categories=mCategories %}
         </div>
     </div>
 </div>
