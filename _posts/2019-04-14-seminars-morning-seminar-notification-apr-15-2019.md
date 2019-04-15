@@ -1,11 +1,11 @@
 ---
-title: 1st UCSLab Morning Seminar
+title: 2nd UCSLab Morning Seminar
 date: 2019-04-14 00:00:00 Z
 description: Notificaion of 1st UCSLab Morning Seminar (on 2019-04-15) 
-card_title: 1st Morning Seminar
+card_title: 2nd Morning Seminar
 card_teaser: On 2019-04-15 with 4 presenters.
-card_position: 2
-icon: fa-server
+card_position: 1
+icon: fa-bullhorn
 categories: [seminars,04-22-2019-morning-seminar,notification]
 sidebar: morning-seminar
 layout: default
