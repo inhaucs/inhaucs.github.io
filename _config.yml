@@ -36,19 +36,19 @@ plugins:
 
 # Additional folders and collections
 include: ['_pages']
-collections:
-  faq:
-    category: nil
-    output: true
-    default:
-      layout: default
-  releases:
-    category: nil
-    output: true
-    default:
-      layout: default
+# collections:
+#   faq:
+#     category: nil
+#     output: true
+#     default:
+#       layout: default
+#   releases:
+#     category: nil
+#     output: true
+#     default:
+#       layout: default
 
-destination: docs
+# destination: docs
 
 # Exclude from processing.
 exclude:
