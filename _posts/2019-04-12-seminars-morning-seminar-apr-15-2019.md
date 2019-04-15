@@ -6,7 +6,7 @@ card_title: Paper Review2(title)
 card_teaser: Paper Review 에 대한 내용2(teaser)
 card_position: 1
 icon: fa-server
-categories: [seminars,morning-seminar,04-18-2019]
+categories: [seminars,04-22-2019-morning-seminar,presentation]
 sidebar: morning-seminar
 layout: default
 slug: ucslab-paper-review-test

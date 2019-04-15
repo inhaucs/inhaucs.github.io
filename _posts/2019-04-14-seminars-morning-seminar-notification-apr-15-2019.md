@@ -6,7 +6,7 @@ card_title: 1st Morning Seminar
 card_teaser: On 2019-04-15 with 4 presenters.
 card_position: 2
 icon: fa-server
-categories: [seminars,morning-seminar,04-18-2019]
+categories: [seminars,04-22-2019-morning-seminar,notification]
 sidebar: morning-seminar
 layout: default
 slug: notification-apr-15-2019
