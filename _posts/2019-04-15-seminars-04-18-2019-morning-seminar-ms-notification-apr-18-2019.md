@@ -5,7 +5,7 @@ description: Notificaion of 1st UCSLab Morning Seminar (on 2019-04-18)
 card_title: 1st Morning Seminar
 card_teaser: with 5 presentations on 2019-04-18.
 card_position: 1
-icon: fa-address-book-o
+icon: fa-bullhorn
 categories: [seminars,04-18-2019-morning-seminar,04-18-2019]
 sidebar: morning-seminar
 layout: default
