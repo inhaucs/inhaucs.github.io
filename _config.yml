@@ -48,7 +48,7 @@ include: ['_pages']
 #     default:
 #       layout: default
 
-# destination: docs
+destination: docs
 
 # Exclude from processing.
 exclude:
