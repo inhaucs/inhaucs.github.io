@@ -1,8 +1,8 @@
 ---
 title: Privacy-Preserving Machine Learning: Threats and Solutions
 date: 2019-04-16 00:00:00 Z
-description: 
-card_title: Morning Seminar
+description: (blank)
+card_title: Session 2
 card_teaser: Privacy-Preserving Machine Learning: Threats and Solutions
 card_position: 2
 icon: fa-server
