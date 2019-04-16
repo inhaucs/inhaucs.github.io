@@ -6,7 +6,7 @@ card_title: Morning Seminar
 card_teaser: Privacy-Preserving Machine Learning: Threats and Solutions
 card_position: 2
 icon: fa-server
-categories: [seminars,morning-seminar,apr-18-2019]
+categories: [seminars,morning-seminar,apr-18-2019,presentation]
 sidebar: morning-seminar
 layout: default
 slug: ms-presentation-hy-apr-18-2019
