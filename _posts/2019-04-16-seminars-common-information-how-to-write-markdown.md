@@ -32,6 +32,7 @@ permalink: /:categories/:slug.html
 > ```legend``` 속성으로 캡션을 지정합니다.
 
 ----
+
 ## 포스팅에 파일(file) 추가하는 방법 : URL 생성하여 첨부하기
 
 ### step 1. ```assets/files/``` 디렉터리 아래에 파일을 업로드합니다.
@@ -44,6 +45,7 @@ permalink: /:categories/:slug.html
 ```[keepass_file_example.kdbx](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/keepass_file_example.kdbx?raw=true)```
 
 ----
+
 ## 포스팅에 태그(tags) 추가하는 방법
 
 ### step 1. 포스팅 작성시 상단에 tags 속성을 추가합니다.
