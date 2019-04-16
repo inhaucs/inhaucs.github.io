@@ -1,9 +1,9 @@
 ---
-title: The Rewards and Costs of Stronger Passwords in a University Linking Password Lifetime to Strength
+title: Session 1. The Rewards and Costs of Stronger Passwords in a University Linking Password Lifetime to Strength
 date: 2019-04-16 00:00:00 Z
 description: test about how to post into this site. 
-card_title: The Rewards and Costs of Stronger Passwords in a University Linking Password Lifetime to Strength
-card_teaser: The Rewards and Costs of Stronger Passwords in a University Linking Password Lifetime to Strength (USENIX Security 18)
+card_title: Session 1
+card_teaser: The Rewards and Costs of Stronger Passwords in a University Linking Password Lifetime to Strength
 card_position: 2
 icon: fa-server
 categories: [seminars,04-18-2019-morning-seminar,presentation]
