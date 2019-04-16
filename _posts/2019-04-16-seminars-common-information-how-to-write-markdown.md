@@ -44,7 +44,34 @@ permalink: /:categories/:slug.html
 
 ----
 ## 포스팅에 태그(tags) 추가하는 방법
-.. 작성중 ...
+
+### step 1. 포스팅 작성시 상단에 tags 속성을 추가합니다.
+
+예를 들면, 아래와 같습니다.
+```
+----
+title: UCSLab Paper Review Test posting
+date: 2019-04-12 00:00:00 Z
+description: test about how to post into this site. 
+...
+tags: [tag1, tag2, tag3,...]
+...
+----
+```
+
+### step 2. [약자와 태그에 관한 규칙](https://inhaucs.github.io/seminars/guides-for-seminars/common-information/guides-for-seminars-information-for-editors.html)에 맞춰서 tags 속성에 포스팅의 태그들을 나열합니다.
+
+예를 들면, 아래와 같습니다.
+```
+----
+title: UCSLab Paper Review Test posting
+date: 2019-04-12 00:00:00 Z
+description: test about how to post into this site. 
+...
+tags: [CCS, 2018, CCS2018, HE, FHE, Biometric, Biometric Authentication]
+...
+----
+```
 ----
 
 
