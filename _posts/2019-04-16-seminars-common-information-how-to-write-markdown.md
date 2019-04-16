@@ -19,6 +19,7 @@ permalink: /:categories/:slug.html
 {% include layout/col_start.html column="7" %}
 
 ----
+
 ## 포스팅에 그림(figure) 추가하는 방법
 
 ### step 1. ```assets/img/``` 디렉터리 아래에 그림 파일을 업로드합니다.
