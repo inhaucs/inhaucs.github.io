@@ -34,6 +34,9 @@ We analysed data of nearly 200,000 password changes and 115,000 resets of passwo
 We also found that passwords with more than 300 days of lifetime are 4 times as likely to be reset as passwords of 100 days of lifetime. Users who reset their password more than once per year (27% of users) choose passwords with over 10 days fewer lifetime, and while they also respond to the policy, maintain this deficit.
 We conclude that linking password lifetime to strength at the point of password creation is a viable strategy for encouraging users to choose stronger passwords (at least when measured by Shannon entropy).
 
+## Summary (Korean)
+(Short summary in Korean.)
+
 ## Details
 (Document for presentation)
 
