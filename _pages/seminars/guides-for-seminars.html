@@ -12,6 +12,8 @@ permalink: /seminars/guides-for-seminars
     <div class="panel middle">
         <div class="grid grid-responsive-12">
             {% include breadcrumbs/default.html slug=page.slug %}
+            {% assign mCategories = "seminars|guides-for-seminars|common-information" | split: "|" %}
+            {% include cards/jmy-section-cards.html section='seminars' sub='guides-for-seminars' title='Common information' categories=mCategories %}
             {% assign mCategories = "seminars|guides-for-seminars|morning-seminar-guide" | split: "|" %}
             {% include cards/jmy-section-cards.html section='seminars' sub='guides-for-seminars' title='Guide for morning seminar' categories=mCategories %}
             {% assign mCategories = "seminars|guides-for-seminars|external-seminar-guide" | split: "|" %}
