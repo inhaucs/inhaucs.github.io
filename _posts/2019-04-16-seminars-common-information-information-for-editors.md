@@ -4,7 +4,7 @@ date: 2019-04-16 00:00:00 Z
 description: This document contains abbreviations for journals and conferences and keywords related to research topics.
 card_title:  Information for editors
 card_teaser: Updated on apr-16-2019.
-card_position: 2
+card_position: 1 
 icon: fa-address-book-o
 categories: [seminars,guides-for-seminars,common-information]
 sidebar: guides-for-seminars
