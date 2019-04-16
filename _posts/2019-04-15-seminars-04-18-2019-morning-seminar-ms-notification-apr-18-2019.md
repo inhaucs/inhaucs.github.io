@@ -19,7 +19,7 @@ permalink: /:categories/:slug.html
 {% include layout/col_start.html column="7" %}
 
 ## Date
-2019/04/18
+2019-04-18
 
 ## Presenters
 + Jong-Hyuk Im (임종혁)
@@ -37,7 +37,7 @@ permalink: /:categories/:slug.html
 #### Information of the paper
 + Authors: Ingolf Becker, Simon Parkin, and M. Angela Sasse, University College London
 + Conference name: 27th USENIX Security Symposium (USENIX Security 18)
-+ Published date: 15/08/2018
++ Published date: 2018-08-15
 + [Paper Link](https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-becker.pdf)
 
 #### Abstract
