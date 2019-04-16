@@ -7,6 +7,7 @@ card_teaser: The Rewards and Costs of Stronger Passwords in a University Linking
 card_position: 1
 icon: fa-server
 categories: [seminars,04-18-2019-morning-seminar,presentation]
+tags: [USENIX, 2018, USENIX2018, Password, Analytics, IRB, LargeSacale]
 sidebar: morning-seminar
 layout: default
 slug: ms-presentation-jh-apr-18-2019
