@@ -20,6 +20,11 @@ permalink: /:categories/:slug.html
 
 ## How to participate in the morning seminar. 
 1. Notification 게시글이 올라오면, 각자의 논문 정보를 기입
+   
+   + 각 세미나별 논문 정보는 직전 세미나 이전에 미리 기입
+   
+      + 월요일 세미나: 직전 목요일 세미나 시작 전에 기입 완료
+      + 목요일 세미나: 직전 월요일 세미나 시작 전에 기입 완료   
 2. 각 발표일(월, 목) 이전에 발표 자료 정리 완료
 
    + 월요일 발표의 경우: 이전 주 금요일 정오까지 업로드 완료
