@@ -35,7 +35,7 @@ We also found that passwords with more than 300 days of lifetime are 4 times as 
 We conclude that linking password lifetime to strength at the point of password creation is a viable strategy for encouraging users to choose stronger passwords (at least when measured by Shannon entropy).
 
 ## Details
-
+(Document for presentation)
 
 ## Discussion
 Editor: 작성자 이름
