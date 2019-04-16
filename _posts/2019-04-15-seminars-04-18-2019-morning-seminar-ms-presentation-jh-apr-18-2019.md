@@ -37,6 +37,11 @@ We conclude that linking password lifetime to strength at the point of password 
 ## Details
 
 
+## Discussion
+Editor: 작성자 이름
+(내용 작성)
+
+
 {% include date/updated.html %}
 
 {% include layout/col_end.html %}
