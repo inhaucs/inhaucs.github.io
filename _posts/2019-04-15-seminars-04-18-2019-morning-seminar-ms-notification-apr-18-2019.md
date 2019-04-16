@@ -30,7 +30,7 @@ permalink: /:categories/:slug.html
 
 ## Presentations
 
-### [The Rewards and Costs of Stronger Passwords in a University: Linking Password Lifetime to Strength](https://www.usenix.org/conference/usenixsecurity18/presentation/becker)
+### Session 1: [The Rewards and Costs of Stronger Passwords in a University: Linking Password Lifetime to Strength](https://www.usenix.org/conference/usenixsecurity18/presentation/becker)
 
 + Jong-Hyuk Im (임종혁)
 
@@ -47,7 +47,7 @@ We also found that passwords with more than 300 days of lifetime are 4 times as 
 We conclude that linking password lifetime to strength at the point of password creation is a viable strategy for encouraging users to choose stronger passwords (at least when measured by Shannon entropy).
 
 
-### [Paper-2 title](link)
+### Session 2: [Paper-2 title](link)
 
 + Gil-Dong (길동)
 
