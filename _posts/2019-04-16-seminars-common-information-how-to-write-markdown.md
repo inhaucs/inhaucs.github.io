@@ -42,7 +42,9 @@ permalink: /:categories/:slug.html
 > 파일 다운로드 시, Github 페이지가 열리는 것이 아니라, 바로 다운로드 되도록 하려면 ```?raw=true``` 를 붙여 사용합니다. 
 
 예를 들면, 아래 마크다운 코드를 포스팅에서 원하는 위치에 추가합니다.
-```[keepass_file_example.kdbx](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/keepass_file_example.kdbx?raw=true)```
+```
+[keepass_file_example.kdbx](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/keepass_file_example.kdbx?raw=true)
+```
 
 ----
 
@@ -51,6 +53,7 @@ permalink: /:categories/:slug.html
 ### step 1. 포스팅 작성시 상단에 tags 속성을 추가합니다.
 
 예를 들면, 아래와 같습니다.
+
 ```
 ----
 title: UCSLab Paper Review Test posting
@@ -65,6 +68,7 @@ tags: [tag1, tag2, tag3,...]
 ### step 2. [약자와 태그에 관한 규칙](https://inhaucs.github.io/seminars/guides-for-seminars/common-information/guides-for-seminars-information-for-editors.html)에 맞춰서 tags 속성에 포스팅의 태그들을 나열합니다.
 
 예를 들면, 아래와 같습니다.
+
 ```
 ----
 title: UCSLab Paper Review Test posting
@@ -75,6 +79,7 @@ tags: [CCS, 2018, CCS2018, HE, FHE, Biometric, Biometric Authentication]
 ...
 ----
 ```
+
 ----
 
 
