@@ -32,7 +32,7 @@ permalink: /:categories/:slug.html
 
 ### [The Rewards and Costs of Stronger Passwords in a University: Linking Password Lifetime to Strength](https://www.usenix.org/conference/usenixsecurity18/presentation/becker)
 
-Assigned presenter: Jong-Hyuk Im (임종혁)
++ Jong-Hyuk Im (임종혁)
 
 #### Information of the paper
 + Authors: Ingolf Becker, Simon Parkin, and M. Angela Sasse, University College London
@@ -49,7 +49,7 @@ We conclude that linking password lifetime to strength at the point of password 
 
 ### [Paper-2 title](link)
 
-Assigned presenter: Gil-Dong (길동)
++ Gil-Dong (길동)
 
 #### Information of the paper
 + Authors: 저자들이 옵니다.
