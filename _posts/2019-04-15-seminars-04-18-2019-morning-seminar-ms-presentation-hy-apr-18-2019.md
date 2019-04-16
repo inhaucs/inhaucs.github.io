@@ -1,5 +1,5 @@
 ---
-title: Privacy-Preserving Machine Learning: Threats and Solutions
+title: Session 2. Privacy-Preserving Machine Learning: Threats and Solutions
 date: 2019-04-16 00:00:00 Z
 description: (blank)
 card_title: Session 2
