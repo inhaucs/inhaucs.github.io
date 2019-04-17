@@ -44,7 +44,6 @@ ID-based 암호체계가 certificate-based 암호체계에서의 공개키 관�
 
 ### II. PRELIMINARIES
 #### A. BILINEAR GROUPS (논문 참조)
-CDH에 대해 설명?
 
 #### B. BLS SHORT SIGNATURE SCHEME
 ##### BLS : Boneh, Lynn, and Shacham. 짧은 서명 스킴
