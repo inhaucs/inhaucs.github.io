@@ -32,7 +32,7 @@ permalink: /:categories/:slug.html
 For privacy concerns to be addressed adequately in today’s machine-learning (ML) systems, the knowledge gap between the ML and privacy communities must be bridged. This article aims to provide an introduction to the intersection of both fields with special emphasis on the techniques used to protect the data.
 
 ## Summary (Korean)
-(Short summary in Korean.)
+본 논문에서는 기계 학습을 수행하는 동안 데이터 제공자에게 발생할 수 있는 프라이버시 위협과 현재 연구된 해결 방법들 그리고 논문 말미에 앞으로 연구해야하는 방향에 대해 설명하며, 위협과 해결 방법 두 가지에 대한 개요를 
 
 ## Details
 (Document for presentation)
