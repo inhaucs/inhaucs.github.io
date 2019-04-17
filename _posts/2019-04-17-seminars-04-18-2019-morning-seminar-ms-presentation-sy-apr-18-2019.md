@@ -7,7 +7,7 @@ card_teaser: "Efficient Function-Hiding Functional Encryption: From Inner-Produc
 card_position: 3
 icon: fa-server
 categories: [seminars,04-18-2019-morning-seminar,presentation]
-tags: [RSA, 2019, RSA2019, functional encryption, FE, function-hiding, orthogonality]
+tags: [RSA, 2019, RSA2019, CT-RSA, CT-RSA2019, functional encryption, FE, function-hiding, orthogonality]
 sidebar: morning-seminar
 layout: default
 slug: ms-presentation-sy-apr-18-2019
