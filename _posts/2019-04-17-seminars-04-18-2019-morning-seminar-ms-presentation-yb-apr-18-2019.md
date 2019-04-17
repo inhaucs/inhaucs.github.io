@@ -55,9 +55,9 @@ ID-based 암호체계가 certificate-based 암호체계에서의 공개키 관�
 + 3) Verify : 메시지와 공개키, 서명을 가지고 개인키 없이도 메시지에 대한 서명이 옳음을 검증
  
 #### C. ID-BASED SIGNATURE SCHEME
-+ 1) Setup : (**INPUT**security parameter), 개인키(x), 공개키 생성
-+ 2) Extract : (**INPUT**개인키(x), ID) 를 받아서 private key D_ID 생성
-+ 3) Sign : (**INPUT**D_ID, 메시지)로 서명 생성
++ 1) Setup : {security parameter}, 개인키(x), 공개키 생성
++ 2) Extract : {개인키(x), ID} 를 받아서 private key D_ID 생성
++ 3) Sign : {D_ID, 메시지}로 서명 생성
 + 4) Verify : ID, 메시지, 서명으로 메시지에 대한 서명이 옳음을 검증
 
 + Existential Unforgeability : 아래의 쿼리를 만족할 수 있는 알고리즘이 존재하지 않다면, 이 스킴에서 ID는 위조될 수 없음.
@@ -65,9 +65,9 @@ ID-based 암호체계가 certificate-based 암호체계에서의 공개키 관�
   + 2) Signing queries
 
 #### D. ID-BASED LINEARLY SIGNATURE SCHEME
-+ 1) HSetup : (**INPUT**security parameter, 메시지 수 최대 범위 l, 사인 벡터 길이 최대 범위 N), 개인키, 공개키 생성
-+ 2) HExtract : (**INPUT**개인키(x), ID) 를 받아서 D_ID 생성
-+ 3) HSign : (**INPUT**D_ID, 메시지, file identifier) 로 서명 생성
++ 1) HSetup : {security parameter, 메시지 수 최대 범위 l, 사인 벡터 길이 최대 범위 N}, 개인키, 공개키 생성
++ 2) HExtract : {개인키(x), ID} 를 받아서 D_ID 생성
++ 3) HSign : {D_ID, 메시지, file identifier} 로 서명 생성
 + 4) HVerify : ID, v, file identifier, 서명으로 메시지에 대한 서명이 옳음을 검증
 + 5) HEVal : 메시지가 여러개 일 때에 검증 방법
 
@@ -78,9 +78,9 @@ ID-based 암호체계가 certificate-based 암호체계에서의 공개키 관�
   + 4) Reveal queries
 
 ### III. THE PROPOSED SCHEME
-+ 1) HSetup : (**INPUT**prime number q, generator g, security parameter, H1, H2), x_h = (x_s, 개인키(x)) 와 P_pub_h = (P_pub_s, 공개키(P_pub)) 생성
-+ 2) HExtract : (**INPUT**개인키(x)와 ID)를 받아서 D_ID = ( Extract(x_s, ID), H1(ID)^x) 생성
-+ 3) Hsign : (**INPUT**file identifier, D_ID, 메시지)로 서명 세트 Q(w, 서명1, 서명2, s) 생성
++ 1) HSetup : {prime number q, generator g, security parameter, H1, H2}, x_h = (x_s, 개인키(x)) 와 P_pub_h = (P_pub_s, 공개키(P_pub)) 생성
++ 2) HExtract : {개인키(x)와 ID}를 받아서 D_ID = ( Extract(x_s, ID), H1(ID)^x) 생성
++ 3) Hsign : {file identifier, D_ID, 메시지}로 서명 세트 Q(w, 서명1, 서명2, s) 생성
 + 4) HVerify : ID, file identifier, 메시지, 서명 세트 Q로 서명 검증
 + 5) HEval : 메시지가 여러개 일때의 검증 방법
 
