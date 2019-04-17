@@ -63,14 +63,22 @@ For privacy concerns to be addressed adequately in today’s machine-learning (M
 
   + **Perturbation Approaches**
     + DP는 membership inference attacks를 막기위해 사용되는데, 임의의 노이즈를 입력 데이터나 특정 알고리즘의 반복문이나 출력 데이터에 추가함으로써 수행됨.
-    + Dimensionality Reduction(DR)은 데이터를 낮은 차원으로 투영(projection)하여 원본이나 민감한 정보에 대한 추론을 불가능하게 만듦.
+    + Dimensionality Reduction은 데이터를 낮은 차원으로 투영(projection)하여 원본이나 민감한 정보에 대한 추론을 불가능하게 만듦.
     + Differential Privacy(DP) : 
+    + Local DP : 
+    + Dimensionality Reduction(DR) : 
+    
+    
++ **Discussion in the paper**
   
 
 [FENG2011] J. Feng and A. K. Jain, “Fingerprint reconstruction: From minutiae to phase,” IEEE Trans. Pattern Anal. Mach. Intell., vol. 33, no. 2, pp. 209–223, 2011.
 [Al2016] M. Al-Rubaie and J. M. Chang, “Reconstruction attacks against mobile-based continuous authentication systems in the cloud,” IEEE Trans. Inf. Forensics Security, vol. 11, no. 12, pp. 2648–2663, 2016.
 [FREDRIKSON2015] M. Fredrikson, T. Ristenpart, C. Tech, S. Jha, and R. Thomas, “Model inversion attacks that exploit confidence information and basic countermeasures,” in Proc. 22nd ACM SIGSAC Conf. Computer and Communications Security, 2015, pp. 1322–1333.
 [Ohrimenko2016] O. Ohrimenko et al., “Oblivious multi-party machine learning on trusted processors,” in Proc. 25th USENIX Security Symp., 2016, pp. 619–636.
+
+
+## Point to note
 
 
 ## Discussion
