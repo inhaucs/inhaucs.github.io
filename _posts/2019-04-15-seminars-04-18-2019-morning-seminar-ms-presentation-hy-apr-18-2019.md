@@ -62,15 +62,19 @@ For privacy concerns to be addressed adequately in today’s machine-learning (M
     + *보안 프로세서(Secure Processors)* : Intel SGX. [Ohrimenko2016]에서 다양한 ML 알고리즘을 Intel SGX에서 수행한 결과 발표.
 
   + **Perturbation Approaches**
+    + 얘기하기에 앞서, 연구하려는 내용은 Cryptographic approaches보다 Perturbation Approaches에 가까움.
     + DP는 membership inference attacks를 막기위해 사용되는데, 임의의 노이즈를 입력 데이터나 특정 알고리즘의 반복문이나 출력 데이터에 추가함으로써 수행됨.
     + Dimensionality Reduction은 데이터를 낮은 차원으로 투영(projection)하여 원본이나 민감한 정보에 대한 추론을 불가능하게 만듦.
-    + Differential Privacy(DP) : 
-    + Local DP : 
-    + Dimensionality Reduction(DR) : 
+    + Differential Privacy(DP) : 더 공부할 필요가 있음. 차등정보 보호라 하며, 개인의 정보가 전체 데이터베이스에 미치는 영향을 줄이는 것으로 예상됨. 즉 원 데이터 베이스 B1과 하나의 레코드 R가 다른 데이터 베이스 B2가 있을 때 B1을 분석할 때와 B2를 분석할 때 유의미한 차이가 없기 때문에, 레코드 R의 정보가 보장된다는 내용임.
+    + Local DP(LDP) : LDP에 대한 정의는 없고, Input parties가 학습에 필요한 정보를 충분히 가지고 있지 않는 경우 적용하는 것이라고 기술. 이외 Chrome에서 적용하는 방식(각각의 속성에 대해 DP를 적용하는 것으로 보임).
+    + Dimensionality Reduction(DR) : 더 낮은 차원으로 투영하여 원본 데이터 복구를 불가능하게 함. 그럼에도 위험이 남아있기 때문에 DR + DP 기법 또한 연구됨.
     
     
 + **Discussion in the paper**
-  
+  + 유연성의 문제 : 상기 기술된 PPML은 특정 ML 알고리즘에만 적용되므로, 포괄적인 PPML 필요(기존에 제안된 것들도 개선되어야 함) -> 여기에는 transformed data release(★)나 LDP가 좋은 접근이 될 수 있음.
+  + 확장성의 문제 : 연산량과 통신 코스트 측면에서, PPML을 위해 추가적인 연산과 통신이 부담.
+  + 가정의 문제 : PPML 연구들에서 공모하지 않는다는 가정은 증명하기 너무 쉽고, 또 어떤 컴포넌트가 공모하지 않는지를 정확히 해주어야 함(실적용의 문제).
+  + 정책에 대해서도 고려해야 함. 클라이언트에게 적용되어야 하는지 회사에게 적용되어야 하는지. 또 적용하고 있는 회사(Google and Apple, LDP)에서 적용하는 방법이 실제로 효과가 있는 것인지 설명되어야 함.  
 
 [FENG2011] J. Feng and A. K. Jain, “Fingerprint reconstruction: From minutiae to phase,” IEEE Trans. Pattern Anal. Mach. Intell., vol. 33, no. 2, pp. 209–223, 2011.
 [Al2016] M. Al-Rubaie and J. M. Chang, “Reconstruction attacks against mobile-based continuous authentication systems in the cloud,” IEEE Trans. Inf. Forensics Security, vol. 11, no. 12, pp. 2648–2663, 2016.
@@ -79,6 +83,10 @@ For privacy concerns to be addressed adequately in today’s machine-learning (M
 
 
 ## Point to note
++ Five privacy threats in ML: Private Data in the Clear, Reconstruction Attacks, Model Inversion Attacks, Membership Inference Attacks, and De-Anonymization
++ Privacy-preserving machine learning methodologies
+  + Cryptographic Approaches: Homomorphic Encryption, Garbled Circuits, and Secure Processors
+  + Perturbation Approaches: Differential Privacy, Local DP, and Dimensionality Reduction
 
 
 ## Discussion
