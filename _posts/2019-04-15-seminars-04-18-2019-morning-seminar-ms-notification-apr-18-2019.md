@@ -60,6 +60,21 @@ We conclude that linking password lifetime to strength at the point of password 
 #### Abstract
 For privacy concerns to be addressed adequately in today’s machine-learning (ML) systems, the knowledge gap between the ML and privacy communities must be bridged. This article aims to provide an introduction to the intersection of both fields with special emphasis on the techniques used to protect the data.
 
+### Session 3: [Efficient Function-Hiding Functional Encryption: From Inner-Products to Orthogonality](https://github.com/inhaucs/inhaucs.github.io/edit/master/_posts/2019-04-17-seminars-04-18-2019-morning-seminar-ms-presentation-sy-apr-18-2019.md)
+
++ Seong-Yun Jeon (전성윤)
+
+#### Information of the paper [(Link)](https://www.rsaconference.com/events/us19/speakers/cryptographers-track)
++ Authors: Manuel Barbosa(INESC TEC and FCUP, Portugal), Dario Catalano(Universit`a di Catania, Italy), Azam Soleimanian(Kharazmi University of Tehran, Iran and École Normale Supérieure, Paris, France), and Bogdan Warinschi(University of Bristol, Bristol, UK)
++ Conference name: The Cryptographers' Track at the RSA Conference 2019
++ Published date: 2019-03-04
++ [Paper Link](https://doi.org/10.1007/978-3-030-12612-4_7)
+
+#### Abstract
+We present an opportunistic study of the impact of a new password policy in a university with 100,000 staff and students. The goal of the IT staff who conceived the policy was to encourage stronger passwords by varying password lifetime according to password strength. Strength was measured through Shannon entropy (acknowledged to be a poor measure of password strength by the academic community, but still widely used in practice). When users change their password, a password meter informs them of the lifetime of their new password, which may vary from 100 days (50 bits of entropy) to 350 days (120 bits of entropy).
+We analysed data of nearly 200,000 password changes and 115,000 resets of passwords that were forgotten/expired over a period of 14 months. The new policy took over 100 days to gain traction, but after that, average entropy rose steadily. After another 12 months, the average password lifetime increased from 146 days (63 bits) to 170 days (70 bits).
+We also found that passwords with more than 300 days of lifetime are 4 times as likely to be reset as passwords of 100 days of lifetime. Users who reset their password more than once per year (27% of users) choose passwords with over 10 days fewer lifetime, and while they also respond to the policy, maintain this deficit.
+We conclude that linking password lifetime to strength at the point of password creation is a viable strategy for encouraging users to choose stronger passwords (at least when measured by Shannon entropy).
 
 
 
