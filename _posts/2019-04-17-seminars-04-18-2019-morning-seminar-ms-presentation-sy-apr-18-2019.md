@@ -44,24 +44,28 @@ We discuss potential applications of our constructions to secure databases and p
 + **(RQ2)** OFE를 설계하는 데에 Lin [Lin17] 와 Wee [Wee17] 의 방법들 조합하여 적용할 수 있는가?
 
 #### RQ1: 내적 값으로 인한 정보 누수(논문의 표현으로는 the excessive leakage)를 막기 위해 IPFE를 black-box로 활용하여 OFE를 설계할 수 있는가?
-이 질문에 대한 연구 시작점은 Kim __et al__.[KLM+16]
+이 질문에 대한 연구 시작점은 Kim __et al__ 이.[KLM+16] 에서 제안한 FH-IPFE이다. black-box 로 이용하여 간단하게 구성해보았다.
+correctness 와 security.
 
 #### RQ2: OFE를 설계하는 데에 Lin [Lin17] 와 Wee [Wee17] 의 방법들을 조합하여 적용할 수 있는가?
-Lin [Lin17] 와 Wee [Wee17]의 방법 각각 소개
-이 논문의 조합 방법 소개
+Lin [Lin17] 와 Wee [Wee17]의 방법 각각 소개.
+이 논문의 조합 방법 소개.
+correctness 와 security.
 
 #### Implementation and Performance Evaluation
+구현 환경과 관련 정보들 수집하여 쓰기.
+성능 평가와 성능 측정 방법. 다른 방법과 비교.
 
 #### Applications
-
-#### Conclusion
-+ 스킴 1
-+ 스킴 2
-+ 종합
-+ 성능
++ Privacy-preserving subset relation
++ Range Queries(Searchable Encryption)
++ Access Control
 
 ### Points to note
-+ Applications
++ Kim __et al__ 의.논문[KLM+16]에서 제안한 FH-IPFE을 활용해서 실용적인 FH-OFE를 구성했다. 물론, 이 첫번째 FH-OFE는 FH-IPFE와 같이, its security holds in the GGM 이다. 첫번째 FH-OFE의 장점은 간단히 구성가능하고 실용적인 성능을 가진다는 것이다.
++ 두번째 FH-OFE의 security는 GGM이 아니라 standard model에 hold 한다. security 의 hold 는 바꾸었지만, 성능은 매우 떨어졌다. 
++ 내적 값(inner product values)을 드러내는 것보다 직교 관계(orthogonality relation)에 있는지 여부만 0 또는 1 (sigle bit)만 드러냄으로써 발생가능한 정보 누수를 차단할수 있고, 이것이 GGM 뿐만 아니라 standard model 에 대해서도 overhead가 거의 없이 가능하다는 것을 보였다.
++ 
 
 [Lin17]: <https://doi.org/10.1007/978-3-319-63688-7_20> "Lin, H.: Indistinguishability obfuscation from SXDH on 5-linear maps and locality-5 prgs. Advances in Cryptology - CRYPTO 2017. Proceedings, Part I, pp. 599–629 (2017)"
 [Wee17]: <https://doi.org/10.1007/978-3-319-70500-2_8> "Wee, H.: Attribute-hiding predicate encryption in bilinear groups, revisited. Theory of Cryptography - TCC 2017. Proceedings, Part I, pp. 206–233 (2017)"
