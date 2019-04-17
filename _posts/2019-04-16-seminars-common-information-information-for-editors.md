@@ -25,6 +25,8 @@ permalink: /:categories/:slug.html
 + PKC: International Conference on Practice and Theory in Public Key Cryptography
 + SNPC: IEEE Symposium on Security and Privacy
 + USENIX: USENIX Security Symposium
++ RSA: RSA Conference
++ CT-RSA: Cryptographers' Track for RSA Conference 
 
 ## Abbreviations for journals.
 + ACCESS: IEEE Access
