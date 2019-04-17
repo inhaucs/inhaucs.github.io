@@ -40,20 +40,32 @@ We discuss potential applications of our constructions to secure databases and p
 ## Details
 ### Contents of the paper
 #### Research questions
-+ **(RQ1)** 내적 값으로 인한 정보 누수(논문의 표현으로는 the excessive leakage)를 막기 위해 IPFE를 black-box 로 활용하여 OFE를 설계할 수 있는가?
-+ **(RQ2)** OFE를 설계하는 데에 Lin [ref] 와 Wee [ref] 의 방법들 조합하여 적용할 수 있는가?
++ **(RQ1)** 내적 값으로 인한 정보 누수(논문의 표현으로는 the excessive leakage)를 막기 위해 IPFE를 black-box로 활용하여 OFE를 설계할 수 있는가?
++ **(RQ2)** OFE를 설계하는 데에 Lin [Lin17] 와 Wee [Wee17] 의 방법들 조합하여 적용할 수 있는가?
 
-#### RQ1: 내적 값으로 인한 정보 누수(논문의 표현으로는 the excessive leakage)를 막기 위해 IPFE를 black-box 로 활용하여 OFE를 설계할 수 있는가?
+#### RQ1: 내적 값으로 인한 정보 누수(논문의 표현으로는 the excessive leakage)를 막기 위해 IPFE를 black-box로 활용하여 OFE를 설계할 수 있는가?
+이 질문에 대한 연구 시작점은 Kim __et al__.[KLM+16]
 
-#### RQ2: OFE를 설계하는 데에 Lin [ref] 와 Wee [ref] 의 방법들 조합하여 적용할 수 있는가?
+#### RQ2: OFE를 설계하는 데에 Lin [Lin17] 와 Wee [Wee17] 의 방법들을 조합하여 적용할 수 있는가?
+Lin [Lin17] 와 Wee [Wee17]의 방법 각각 소개
+이 논문의 조합 방법 소개
+
+#### Implementation and Performance Evaluation
+
+#### Applications
 
 #### Conclusion
-작성중
++ 스킴 1
++ 스킴 2
++ 종합
++ 성능
 
 ### Points to note
-작성중
++ Applications
 
-[ref]: <url> "description"
+[Lin17]: <https://doi.org/10.1007/978-3-319-63688-7_20> "Lin, H.: Indistinguishability obfuscation from SXDH on 5-linear maps and locality-5 prgs. Advances in Cryptology - CRYPTO 2017. Proceedings, Part I, pp. 599–629 (2017)"
+[Wee17]: <https://doi.org/10.1007/978-3-319-70500-2_8> "Wee, H.: Attribute-hiding predicate encryption in bilinear groups, revisited. Theory of Cryptography - TCC 2017. Proceedings, Part I, pp. 206–233 (2017)"
+[KLM+16]: <https://eprint.iacr.org/2016/440.pdf> "Kim, S., Lewi, K., Mandal, A., Montgomery, H.W., Roy, A.,Wu, D.J.: Function-hiding inner product encryption is practical. IACR Cryptology ePrint Archive 2016, 440 (2016)"
 
 ## Discussion
 Editor: 작성자 이름
