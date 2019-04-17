@@ -47,21 +47,19 @@ We also found that passwords with more than 300 days of lifetime are 4 times as 
 We conclude that linking password lifetime to strength at the point of password creation is a viable strategy for encouraging users to choose stronger passwords (at least when measured by Shannon entropy).
 
 
-### Session 2: [Paper-2 title](url)
+### Session 2: [Privacy-Preserving Machine Learning: Threats and Solutions](https://inhaucs.github.io/seminars/04-18-2019-morning-seminar/presentation/ms-presentation-hy-apr-18-2019.html)
 
-+ Gil-Dong (길동)
++ Hee-Yong Kwon (권희용)
 
-#### Information of the paper [(Link)](url)
-+ Authors: 저자들이 옵니다.
-+ Conference name: 저널인 경우에는 Journal name
-+ Published date: 컨퍼런스의 경우에는 발표 일자 또는 프로시딩 공개 일자
-+ [Paper Link](https://ucs.inha.ac.kr)
+#### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/8677282/)
++ Authors: Mohammad Al-Rubaie, Iowa State University and J. Morris Chang, University of South Florida
++ Conference name: IEEE Security and Privacy Magazine
++ Published date: 2019-03-29 (Magazine version: 2019-04-11)
++ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8677282)
 
 #### Abstract
-초록이 여기에 옵니다.
+For privacy concerns to be addressed adequately in today’s machine-learning (ML) systems, the knowledge gap between the ML and privacy communities must be bridged. This article aims to provide an introduction to the intersection of both fields with special emphasis on the techniques used to protect the data.
 
-## Supplementary Data
-보조자료가 필요한 경우 또는 해당 회차 세미나완 관련된 무언가..?
 
 
 
