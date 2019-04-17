@@ -55,16 +55,22 @@ For privacy concerns to be addressed adequately in today’s machine-learning (M
   + 특히 DP는 membership inference attacks을 막는데 효과적
   + **Model inversion attacks**과 **Membership inference attacks**을 방지하기 위해서는 모델의 결과를 제한하는 것이 효과적임
   
-  + **암호학적 접근(Cryptographic Approaches)**
+  + **Cryptographic Approaches**
     + 암호화된 상태에서 학습 및 테스트를 수행하는 방법
-    + *동형 암호(Homomorphic Encryption)*
-    + *가블드 서킷(Garbled Circuits)*
-    + *보안 프로세서(Secure Processors)*
+    + *동형 암호(Homomorphic Encryption)* : 암호화된 상태에서 덧셈 및 곱셈 연산이 가능하며, 효율의 측면에서 덧셈은 암호문 상태에서, 곱셈은 평문 상태에서 수행함
+    + *가블드 서킷(Garbled Circuits)* : Alice와 Bob이 있을 때, 서로의 데이터를 사용해 어떤 함수 값을 얻고 싶음. 이 때 Alice가 Garbled circuit과 Alice's garbled input을 만들어 Bob에게 보내고, Bob은 Alice로부터 Bob's garbled input를 얻음(Alice에게 프라이버시 유출 없이). 그리고 Garbled circuit, Alice's garbled input, and Bob's garbled input을 이용하여 함수 값을 얻을 수 있음.
+    + *보안 프로세서(Secure Processors)* : Intel SGX. [Ohrimenko2016]에서 다양한 ML 알고리즘을 Intel SGX에서 수행한 결과 발표.
+
+  + **Perturbation Approaches**
+    + DP는 membership inference attacks를 막기위해 사용되는데, 임의의 노이즈를 입력 데이터나 특정 알고리즘의 반복문이나 출력 데이터에 추가함으로써 수행됨.
+    + Dimensionality Reduction(DR)은 데이터를 낮은 차원으로 투영(projection)하여 원본이나 민감한 정보에 대한 추론을 불가능하게 만듦.
+    + Differential Privacy(DP) : 
   
 
-[FENG2011]
-[Al2016]
-[FREDRIKSON2015]
+[FENG2011] J. Feng and A. K. Jain, “Fingerprint reconstruction: From minutiae to phase,” IEEE Trans. Pattern Anal. Mach. Intell., vol. 33, no. 2, pp. 209–223, 2011.
+[Al2016] M. Al-Rubaie and J. M. Chang, “Reconstruction attacks against mobile-based continuous authentication systems in the cloud,” IEEE Trans. Inf. Forensics Security, vol. 11, no. 12, pp. 2648–2663, 2016.
+[FREDRIKSON2015] M. Fredrikson, T. Ristenpart, C. Tech, S. Jha, and R. Thomas, “Model inversion attacks that exploit confidence information and basic countermeasures,” in Proc. 22nd ACM SIGSAC Conf. Computer and Communications Security, 2015, pp. 1322–1333.
+[Ohrimenko2016] O. Ohrimenko et al., “Oblivious multi-party machine learning on trusted processors,” in Proc. 25th USENIX Security Symp., 2016, pp. 619–636.
 
 
 ## Discussion
