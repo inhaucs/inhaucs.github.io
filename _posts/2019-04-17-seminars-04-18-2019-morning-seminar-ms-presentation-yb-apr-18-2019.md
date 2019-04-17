@@ -43,10 +43,13 @@ ID-based 암호체계가 certificate-based 암호체계에서의 공개키 관�
 
 ### II. PRELIMINARIES
 #### A. BILINEAR GROUPS
-<figure>
-    <img src="https://inhaucs.github.io/assets/img/byoul/2019/0418/2-a.png" alt="Create droplet" style="max-width:;"/>
-    <span class="legend">fig.Createdroplet</span>
-</figure>
+
+
+#### B. BLS SHORT SIGNATURE SCHEME
++ BLS : Boneh, Lynn, and Shacham. 짧은 서명 스킴
+ + 1) Key Gen
+ + 2) Sign
+ + 3) Verify
 
 ### III. THE PROPOSED SCHEME
 
