@@ -50,8 +50,14 @@ For privacy concerns to be addressed adequately in today’s machine-learning (M
   + **De-Anonymization(Re-Identification)** : 데이터 제공시, 개인 식별 정보를 모두 제거하고 전달하면 자연스럽게 보안 문제가 해결될 것이라 생각하고 실제로 많이 사용함. 그러나 알려진 유저들의 정보를 사용하여 누구인지 추론이 가능하므로 궁극적인 해결책이 될 수 없음.
   
   
-+ **Privacy-Preserving ML**
-  + 
++ **Privacy-Preserving Machine Learning (PPML)**
+  + 주로 암호학적 접근(Cryptographic approaches)과 차등 보호(differentially private data release: DP, Perturbation approaches)가 사용됨
+  + 특히 DP는 membership inference attacks을 막는데 효과적
+  + **Model inversion attacks**과 **Membership inference attacks**을 방지하기 위해서는 모델의 결과를 제한하는 것이 효과적임
+  
+  + **암호학적 접근(Cryptographic Approaches)**
+    + 암호화된 상태에서 학습 및 테스트를 수행하는 방법
+    + *동형 암호(Homomorphic Encryption)*
   
 
 [FENG2011]
