@@ -35,7 +35,13 @@ For privacy concerns to be addressed adequately in today’s machine-learning (M
 본 논문에서는 기계 학습을 수행하는 동안 데이터 제공자에게 발생할 수 있는 프라이버시 위협과 현재 연구된 해결 방법들 그리고 논문 말미에 앞으로 연구해야하는 방향에 대해 설명하며, 위협과 해결 방법 두 가지에 대한 개요를 소개함.
 
 ## Details
-(Document for presentation)
+Machine Learning(ML) Section Skip. (Supervised, Unsupervised, Semisupervised, etc.)
+ML은 세 가지 요소로 구성됨
+**Input party**: 데이터 제공자
+**Computation party**: ML 연산 수행자
+**Results party**: ML 모델을 사용자
+상기 세 요소가 같은 주체에서 구성되는 경우 프라이버시는 고려할 필요가 없으나, 일반적으로 **Computation party**와 **Results party**는 한 주체에 있고 **Input party**만 분리되어 구성됨.
+
 
 ## Discussion
 Editor: 작성자 이름
