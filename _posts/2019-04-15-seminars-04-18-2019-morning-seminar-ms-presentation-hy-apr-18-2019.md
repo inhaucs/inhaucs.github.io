@@ -58,6 +58,8 @@ For privacy concerns to be addressed adequately in today’s machine-learning (M
   + **암호학적 접근(Cryptographic Approaches)**
     + 암호화된 상태에서 학습 및 테스트를 수행하는 방법
     + *동형 암호(Homomorphic Encryption)*
+    + *가블드 서킷(Garbled Circuits)*
+    + *보안 프로세서(Secure Processors)*
   
 
 [FENG2011]
