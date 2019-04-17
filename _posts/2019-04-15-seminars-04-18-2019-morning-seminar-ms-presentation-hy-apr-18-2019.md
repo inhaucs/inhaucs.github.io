@@ -36,10 +36,15 @@ For privacy concerns to be addressed adequately in today’s machine-learning (M
 
 ## Details
 Machine Learning(ML) Section Skip. (Supervised, Unsupervised, Semisupervised, etc.)
+
 ML은 세 가지 요소로 구성됨
+
 **Input party**: 데이터 제공자
+
 **Computation party**: ML 연산 수행자
+
 **Results party**: ML 모델을 사용자
+
 상기 세 요소가 같은 주체에서 구성되는 경우 프라이버시는 고려할 필요가 없으나, 일반적으로 **Computation party**와 **Results party**는 한 주체에 있고 **Input party**만 분리되어 구성됨.
 
 
