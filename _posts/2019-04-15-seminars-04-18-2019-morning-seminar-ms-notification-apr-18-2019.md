@@ -60,7 +60,7 @@ We conclude that linking password lifetime to strength at the point of password 
 #### Abstract
 For privacy concerns to be addressed adequately in today’s machine-learning (ML) systems, the knowledge gap between the ML and privacy communities must be bridged. This article aims to provide an introduction to the intersection of both fields with special emphasis on the techniques used to protect the data.
 
-### Session 3: [Efficient Function-Hiding Functional Encryption: From Inner-Products to Orthogonality](https://github.com/inhaucs/inhaucs.github.io/edit/master/_posts/2019-04-17-seminars-04-18-2019-morning-seminar-ms-presentation-sy-apr-18-2019.md)
+### Session 3: [Efficient Function-Hiding Functional Encryption: From Inner-Products to Orthogonality](https://inhaucs.github.io/seminars/04-18-2019-morning-seminar/presentation/ms-presentation-sy-apr-18-2019.html)
 
 + Seong-Yun Jeon (전성윤)
 
