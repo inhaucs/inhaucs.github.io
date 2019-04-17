@@ -42,7 +42,11 @@ ID-based 암호체계가 certificate-based 암호체계에서의 공개키 관�
 + ID 기반의 homomorphic signature 개발은 거의 없고, 그마저도 비효율 적이어서 개발에 의미가 있음.
 
 ### II. PRELIMINARIES
-
+#### A. BILINEAR GROUPS
+<figure>
+    <img src="https://inhaucs.github.io/assets/img/byoul/2019/0418/2-a.png" alt="Create droplet" style="max-width:;"/>
+    <span class="legend">fig.Createdroplet</span>
+</figure>
 
 ### III. THE PROPOSED SCHEME
 
