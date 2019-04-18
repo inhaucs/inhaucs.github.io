@@ -76,10 +76,10 @@ For privacy concerns to be addressed adequately in today’s machine-learning (M
   + 가정의 문제 : PPML 연구들에서 공모하지 않는다는 가정은 증명하기 너무 쉽고, 또 어떤 컴포넌트가 공모하지 않는지를 정확히 해주어야 함(실적용의 문제).
   + 정책에 대해서도 고려해야 함. 클라이언트에게 적용되어야 하는지 회사에게 적용되어야 하는지. 또 적용하고 있는 회사(Google and Apple, LDP)에서 적용하는 방법이 실제로 효과가 있는 것인지 설명되어야 함.  
 
-[FJ2011]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5432222> J. Feng and A. K. Jain, “Fingerprint reconstruction: From minutiae to phase,” IEEE Trans. Pattern Anal. Mach. Intell., vol. 33, no. 2, pp. 209–223, 2011.
-[AC2016]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7523420> M. Al-Rubaie and J. M. Chang, “Reconstruction attacks against mobile-based continuous authentication systems in the cloud,” IEEE Trans. Inf. Forensics Security, vol. 11, no. 12, pp. 2648–2663, 2016.
-[FRTJT2015] <http://delivery.acm.org/10.1145/2820000/2813677/p1322-fredrikson.pdf?ip=165.246.44.143&id=2813677&acc=ARCHIVE%20SERVICE&key=36491E83F85BB6C1%2E36491E83F85BB6C1%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1555569871_6821eb35f713b3d6ba84b84c02ff3915> M. Fredrikson, T. Ristenpart, C. Tech, S. Jha, and R. Thomas, “Model inversion attacks that exploit confidence information and basic countermeasures,” in Proc. 22nd ACM SIGSAC Conf. Computer and Communications Security, 2015, pp. 1322–1333.
-[OSFM2016] <https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_ohrimenko.pdf> O. Ohrimenko et al., “Oblivious multi-party machine learning on trusted processors,” in Proc. 25th USENIX Security Symp., 2016, pp. 619–636.
+[FJ2011]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5432222> "J. Feng and A. K. Jain, “Fingerprint reconstruction: From minutiae to phase,” IEEE Trans. Pattern Anal. Mach. Intell., vol. 33, no. 2, pp. 209–223, 2011."
+[AC2016]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7523420> "M. Al-Rubaie and J. M. Chang, “Reconstruction attacks against mobile-based continuous authentication systems in the cloud,” IEEE Trans. Inf. Forensics Security, vol. 11, no. 12, pp. 2648–2663, 2016."
+[FRTJT2015] <http://delivery.acm.org/10.1145/2820000/2813677/p1322-fredrikson.pdf?ip=165.246.44.143&id=2813677&acc=ARCHIVE%20SERVICE&key=36491E83F85BB6C1%2E36491E83F85BB6C1%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1555569871_6821eb35f713b3d6ba84b84c02ff3915> "M. Fredrikson, T. Ristenpart, C. Tech, S. Jha, and R. Thomas, “Model inversion attacks that exploit confidence information and basic countermeasures,” in Proc. 22nd ACM SIGSAC Conf. Computer and Communications Security, 2015, pp. 1322–1333."
+[OSFM2016] <https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_ohrimenko.pdf> "O. Ohrimenko et al., “Oblivious multi-party machine learning on trusted processors,” in Proc. 25th USENIX Security Symp., 2016, pp. 619–636."
 
 
 ## Point to note
