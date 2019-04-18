@@ -27,7 +27,7 @@ permalink: /:categories/:slug.html
 + Tae-Hyun Kim (김태현) : Cont.
 + Jong-Hyuk Im (임종혁)
 + Hee-Yong Kwon (권희용)
-+ Sung-Yun Jeon (전성윤)
++ Seng-Yun Jeon (전성윤)
 
 ---
 ## Presentations
@@ -104,7 +104,18 @@ Private companies, government entities, and institutions such as hospitals routi
 
 ---
 
-### Session 5:
+### Session 5: [Calculation and optimization of thresholds for sets of software metrics](https://inhaucs.github.io/seminars/04-22-2019-morning-seminar/presentation/ms-presentation-sy-apr-22-2019.html)
+
++ Seng-Yun Jeon (전성윤)
+
+#### Information of the paper [(Link)](https://link.springer.com/article/10.1007/s10664-011-9162-z)
++ Authors: Steffen Herbold, Jens Grabowski, Stephan Waack (Institute of Computer Science, University of Göttingen, Göttingen, Germany)
++ Conference name: Empirical Software Engineering
++ Published date: 2011-05-25
++ [Paper file](https://link.springer.com/content/pdf/10.1007%2Fs10664-011-9162-z.pdf)
+
+#### Abstract
+In this article, we present a novel algorithmic method for the calculation of thresholds for a metric set. To this aim, machine learning and data mining techniques are utilized. We define a data-driven methodology that can be used for efficiency optimization of existing metric sets, for the simplification of complex classification models, and for the calculation of thresholds for a metric set in an environment where no metric set yet exists. The methodology is independent of the metric set and therefore also independent of any language, paradigm or abstraction level. In four case studies performed on large-scale open-source software metric sets for C functions, C+ +, C# methods and Java classes are optimized and the methodology is validated.
 
 {% include date/updated.html %}
 
