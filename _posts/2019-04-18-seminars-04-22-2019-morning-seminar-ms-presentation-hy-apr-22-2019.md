@@ -33,7 +33,7 @@ permalink: /:categories/:slug.html
 Private companies, government entities, and institutions such as hospitals routinely gather vast amounts of digitized personal information about the individuals who are their customers, clients, or patients. Much of this information is private or sensitive, and a key technological challenge for the future is how to design systems and processing techniques for drawing inferences from this large-scale data while maintaining the privacy and security of the data and individual identities. Individuals are often willing to share data, especially for purposes such as public health, but they expect that their identity or the fact of their participation will not be disclosed. In recent years, there have been a number of privacy models and privacy-preserving data analysis algorithms to answer these challenges. In this article, we will describe the progress made on differentially private machine learning and signal processing.
 
 ## Summary (Korean)
-OH YEAH.
+I feel like OH YEAH.
 
 ## Details
 + Machine Learning(ML) Section Skip. (Supervised, Unsupervised, Semisupervised, etc.)
