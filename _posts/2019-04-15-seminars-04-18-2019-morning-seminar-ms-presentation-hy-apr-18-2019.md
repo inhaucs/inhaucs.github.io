@@ -44,8 +44,8 @@ For privacy concerns to be addressed adequately in today’s machine-learning (M
   
 + **Threats**
   + **Private Data in the Clear** : 데이터 제공자가 데이터를 암호화되지 않은 상태로 전달하여 사용하는 경우
-  + **Reconstruction Attacks** : ML에 feature vector만 사용하더라도 모델에 feature vector가 남아있는 경우가 있음(e.g., SVM, k-NN). 이 경우 공격자는 feature vector로부터 Raw data 복원이 가능함. [FJ2011]에서는 minutiae template으로부터 지문을 재구성하는 공격을 성공하였고, [AC2016]에서는 개인의 인증 방식의 특징(gesture, speed, etc.)을 비슷하게 하여 공격한 연구를 진행.
-  + **Model Inversion Attacks** : 물론 feature vector가 모델에 포함되지 않는 것도 있음(e.g., ridge regression, NN). 이 때 공격자는 모델에 대한 테스트 결과를 사용하여 모델에 사용된 feature vector와 비슷한 결과를 얻는 것이 목표. 모델에 대한 테스트를 반복 수행하면 특정 클래스에 대한 평균을 얻을 수 있는데, 해당 클래스가 개인에 대한 정보를 포함하고 있는 경우 큰 문제가 됨. 예를 들어 [FRTJT2015]에서는 얼굴 인식에서 이를 보였음.
+  + **Reconstruction Attacks** : ML에 feature vector만 사용하더라도 모델에 feature vector가 남아있는 경우가 있음(e.g., SVM, k-NN). 이 경우 공격자는 feature vector로부터 Raw data 복원이 가능함. [[FJ2011]]에서는 minutiae template으로부터 지문을 재구성하는 공격을 성공하였고, [[AC2016]]에서는 개인의 인증 방식의 특징(gesture, speed, etc.)을 비슷하게 하여 공격한 연구를 진행.
+  + **Model Inversion Attacks** : 물론 feature vector가 모델에 포함되지 않는 것도 있음(e.g., ridge regression, NN). 이 때 공격자는 모델에 대한 테스트 결과를 사용하여 모델에 사용된 feature vector와 비슷한 결과를 얻는 것이 목표. 모델에 대한 테스트를 반복 수행하면 특정 클래스에 대한 평균을 얻을 수 있는데, 해당 클래스가 개인에 대한 정보를 포함하고 있는 경우 큰 문제가 됨. 예를 들어 [[FRTJT2015]]에서는 얼굴 인식에서 이를 보였음.
   + **Membership Inference Attacks** : 타겟 모델에 Input을 넣고(Label을 알고 있는 Input) 출력된 결과와 Label을 비교하여 해당 Input이 Training Phase에서 사용된 샘플인지 아닌지 확인하여 공격하는 방법.
   + **De-Anonymization(Re-Identification)** : 데이터 제공시, 개인 식별 정보를 모두 제거하고 전달하면 자연스럽게 보안 문제가 해결될 것이라 생각하고 실제로 많이 사용함. 그러나 알려진 유저들의 정보를 사용하여 누구인지 추론이 가능하므로 궁극적인 해결책이 될 수 없음.
   
@@ -59,7 +59,7 @@ For privacy concerns to be addressed adequately in today’s machine-learning (M
     + 암호화된 상태에서 학습 및 테스트를 수행하는 방법
     + *동형 암호(Homomorphic Encryption)* : 암호화된 상태에서 덧셈 및 곱셈 연산이 가능하며, 효율의 측면에서 덧셈은 암호문 상태에서, 곱셈은 평문 상태에서 수행함
     + *가블드 서킷(Garbled Circuits)* : Alice와 Bob이 있을 때, 서로의 데이터를 사용해 어떤 함수 값을 얻고 싶음. 이 때 Alice가 Garbled circuit과 Alice's garbled input을 만들어 Bob에게 보내고, Bob은 Alice로부터 Bob's garbled input를 얻음(Alice에게 프라이버시 유출 없이). 그리고 Garbled circuit, Alice's garbled input, and Bob's garbled input을 이용하여 함수 값을 얻을 수 있음.
-    + *보안 프로세서(Secure Processors)* : Intel SGX. [OSFM2016]에서 다양한 ML 알고리즘을 Intel SGX에서 수행한 결과 발표.
+    + *보안 프로세서(Secure Processors)* : Intel SGX. [[OSFM2016]]에서 다양한 ML 알고리즘을 Intel SGX에서 수행한 결과 발표.
 
   + **Perturbation Approaches**
     + 얘기하기에 앞서, 연구하려는 내용은 Cryptographic approaches보다 Perturbation Approaches에 가까움.
