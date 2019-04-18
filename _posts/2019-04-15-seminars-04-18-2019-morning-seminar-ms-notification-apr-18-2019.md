@@ -99,6 +99,21 @@ Identity-based cryptosystems mean that public keys can be directly derived from 
 
 ---
 
+### Session 5: [ProcHarvester: Fully Automated Analysis of Procfs Side-Channel Leaks on Android](https://inhaucs.github.io/seminars/04-18-2019-morning-seminar/presentation/ms-presentation-th-apr-18-2019.html)
+
++ Tae-Hyun Kim (김태현)
+
+#### Information of the paper [(Link)](https://pure.tugraz.at/ws/portalfiles/portal/17305447/AsiaCCS2018.pdf)
++ Authors: Raphael Spreitzer, Felix Kirchengast, Daniel Gruss, and Stefan Mangard(Graz University of Technology)
++ Conference name: Proceedings of the 2018 on Asia Conference on Computer and Communications
++ Published date: 2018-06-08
++ [Paper Link](https://pure.tugraz.at/ws/portalfiles/portal/17305447/AsiaCCS2018.pdf)
+
+#### Abstract
+The procfs has been identified as a viable source of side-channel information leaks on mobile devices. Starting with Android M (Android 6), access to the procfs has been continuously restricted in order to cope with these attacks. Yet, more recent papers demonstrated that even if access to process-specific information is restricted within the procfs, global statistics can still be exploited. However, with state-of-the-art techniques, the search for procfs information leaks requires a significant amount of manual work. This makes an exhaustive analysis of existing and newly introduced procfs resources in terms of information leaks impractical.
+We introduce ProcHarvester, a systematic and fully automated technique to assess procfs information leaks. ProcHarvester automatically triggers events of interest and later on applies machine learning techniques to identify procfs information leaks.We demonstrate the power of ProcHarvester by identifying information leaks to infer app starts from a set of 100 apps with an accuracy of 96% on Android N (Android 7). Thereby, we outperform the most accurate app inference attack by about 10 percentage points. We also demonstrate the ease of applicability of ProcHarvester by showing how to profile other events such as website launches as well as keyboard gestures, and we identify the first procfs side channels on Android O (Android 8). ProcHarvester advances investigations of procfs information leaks to the next level and will hopefully help to reduce the attack surface of side-channel attacks.
+
+
 {% include date/updated.html %}
 
 {% include layout/col_end.html %}
