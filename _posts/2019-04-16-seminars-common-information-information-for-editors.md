@@ -47,12 +47,14 @@ permalink: /:categories/:slug.html
 + Analytics: 주 기여가 실험을 분석한 논문
 + IRB: IRB 승인을 받은 연구
 + LargeSacale: 대규모 실험을 수행한 논문
++ Privacy-preserving: 정보 보호형 관련 논문
 + 
 + (Tips: 논문에 있는 그대로 추가(논문에 keywords가 없는 경우 제목을 참고하여 키워드 생성 또는 자기 분야에서 주로 쓰는 키워드로 적절히 추가))
 
 ## Tags for editors
 + USENIX2018
 + Human-Authenticate: session in USENIX 2018.
++ SNP, SNP2019
 + 
 + (Tag에는 발표 년도와 논문의 키워드, 등을 추가)
 + (Tips: 저널/컨퍼런스명, 세션명 추가: 2018년에 개최한 CCS의 경우, tags: [CCS, 2018, CCS2018])
