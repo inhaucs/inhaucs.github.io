@@ -23,16 +23,16 @@ permalink: /:categories/:slug.html
 + 2019-04-22
 
 ## Information of the paper
-+ Authors: Mohammad Al-Rubaie, Iowa State University and J. Morris Chang, University of South Florida
-+ Conference name: IEEE Security and Privacy Magazine
-+ Published date: 2019-03-29 (Magazine version: 2019-04-11)
-+ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8677282)
++ Authors: Anand D. Sarwate (Toyota Technological Institute); Kamalika Chaudhuri (University of California)
++ Conference name: IEEE Signal Processing Magazine
++ Published date: 2013-08-19
++ [Paper file](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6582713)
 
 ## Abstract
-For privacy concerns to be addressed adequately in today’s machine-learning (ML) systems, the knowledge gap between the ML and privacy communities must be bridged. This article aims to provide an introduction to the intersection of both fields with special emphasis on the techniques used to protect the data.
+Private companies, government entities, and institutions such as hospitals routinely gather vast amounts of digitized personal information about the individuals who are their customers, clients, or patients. Much of this information is private or sensitive, and a key technological challenge for the future is how to design systems and processing techniques for drawing inferences from this large-scale data while maintaining the privacy and security of the data and individual identities. Individuals are often willing to share data, especially for purposes such as public health, but they expect that their identity or the fact of their participation will not be disclosed. In recent years, there have been a number of privacy models and privacy-preserving data analysis algorithms to answer these challenges. In this article, we will describe the progress made on differentially private machine learning and signal processing.
 
 ## Summary (Korean)
-본 논문에서는 기계 학습을 수행하는 동안 데이터 제공자에게 발생할 수 있는 프라이버시 위협과 현재 연구된 해결 방법들 그리고 논문 말미에 앞으로 연구해야하는 방향에 대해 설명하며, 위협과 해결 방법 두 가지에 대한 개요를 소개함.
+OH YEAH.
 
 ## Details
 + Machine Learning(ML) Section Skip. (Supervised, Unsupervised, Semisupervised, etc.)
@@ -81,13 +81,11 @@ For privacy concerns to be addressed adequately in today’s machine-learning (M
 [FRT+15]: <http://delivery.acm.org/10.1145/2820000/2813677/p1322-fredrikson.pdf?ip=165.246.44.143&id=2813677&acc=ARCHIVE%20SERVICE&key=36491E83F85BB6C1%2E36491E83F85BB6C1%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1555569871_6821eb35f713b3d6ba84b84c02ff3915> "M. Fredrikson, T. Ristenpart, C. Tech, S. Jha, and R. Thomas, “Model inversion attacks that exploit confidence information and basic countermeasures,” in Proc. 22nd ACM SIGSAC Conf. Computer and Communications Security, 2015, pp. 1322–1333."
 [OSF+16]: <https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_ohrimenko.pdf> "O. Ohrimenko et al., “Oblivious multi-party machine learning on trusted processors,” in Proc. 25th USENIX Security Symp., 2016, pp. 619–636."
 
-
 ## Point to note
 + Five privacy threats in ML: Private Data in the Clear, Reconstruction Attacks, Model Inversion Attacks, Membership Inference Attacks, and De-Anonymization
 + Privacy-preserving machine learning methodologies
   + Cryptographic Approaches: Homomorphic Encryption, Garbled Circuits, and Secure Processors
   + Perturbation Approaches: Differential Privacy, Local DP, and Dimensionality Reduction
-
 
 ## Discussion
 Editor: 손예별
