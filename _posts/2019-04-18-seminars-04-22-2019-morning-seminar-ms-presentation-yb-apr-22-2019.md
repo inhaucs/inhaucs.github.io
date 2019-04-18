@@ -1,5 +1,5 @@
 ---
-title: "An ID-Based Linearly Homomorphic Signature Scheme and Its Application in Blockchain"
+title: "An ID-Based Linearly Homomorphic Signature Scheme and Its Application in Blockchain (Cont.)"
 date: "2019-04-18 20:36:00 Z"
 description: "a new ID-Based Linearly Homomorphic Signature Scheme 개발"
 card_title: Session 1
