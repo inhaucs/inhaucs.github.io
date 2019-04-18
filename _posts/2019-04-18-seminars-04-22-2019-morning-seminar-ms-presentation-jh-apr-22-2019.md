@@ -23,6 +23,8 @@ permalink: /:categories/:slug.html
 + Jong-Hyuk Im (임종혁)
 + 2019-04-22
 
+## [Rethinking Access Control and Authentication for the Home Internet of Things (IoT)](https://inhaucs.github.io/seminars/04-22-2019-morning-seminar/presentation/ms-presentation-jh-apr-22-2019.html)
+
 #### Information of the paper [(Link)](https://www.usenix.org/conference/usenixsecurity18/presentation/he)
 + Authors: Weijia He (University of Chicago); Maximilian Golla (Ruhr-University Bochum); Roshni Padhi and Jordan Ofek (University of Chicago); Markus Dürmuth (Ruhr-University Bochum); Earlence Fernandes (University of Washington); Blase Ur (University of Chicago)
 + Conference name: 27th USENIX Security Symposium (USENIX Security 18)
