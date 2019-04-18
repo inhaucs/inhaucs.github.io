@@ -38,6 +38,9 @@ We discuss potential applications of our constructions to secure databases and p
 이 논문은 기존의 내적 기반의 암호(Inner-Product Functional Encryption, IPFE) 스킴들을 근간으로 확장한 연구이다. 이 연구에서는 내적(Inner-Product)의 값이 아닌 직교성(Orthogonality) 여부를 결과로 얻는 스킴(functional encryption for orthogonality relation, OFE)들을 설계하였고 실험의 결과를 제시한다. 크게 두가지 스킴을 설계하였는데, 하나는 Kim __et al__. 이 SCN 2018에서 제안한 함수은닉을 지원하는 내적 암호(Function Hiding IPFE, FH-IPFE)를 black-box로써 직교성을 구하는 스킴으로 구성하는 방법이고, 다른 하나는, 직전 방법과 같이 제네릭 그룹 모델(Generic Group Model, GGM)을 활용하는 것이 아니라 standard model을 사용하는 방법이다. 연구의 결과에 따르면, 첫번째 스킴은 실용적인 수준의 성능을 가진다.
 
 ## Details
+### Notice for this seminar
++ RQ2와 Implementation and Performance Evaluation에 대한 내용을 마치지 못했습니다. 다음 세미나 앞시간을 활용하도록 양해를 구하고자 합니다.
+
 ### Contents of the paper
 #### Research questions
 + **(RQ1)** 내적 값으로 인한 정보 누수(논문의 표현으로는 the excessive leakage)를 막기 위해 IPFE를 black-box로 활용하여 OFE를 설계할 수 있는가?
@@ -49,13 +52,13 @@ We discuss potential applications of our constructions to secure databases and p
 기존에 알고 있던 FH-IPFE와 두드러지게 달라진 점은 sk, ct의 형태라고 할수 있다. FH-IPFE의 sk=(K1, K2)와 ct=(C1,C2)에서 첫번째 원소가 각각 없어졌기 때문에, 크기는 n+1이 아니라 n이다. 또, 복호화 단계에서 내적 값을 얻기 위해 이산 로그 문제를 해결하는 것이 아니라, 계산의 결과가 GT 상에서 1인 결과라면 직교라고 판단하고, 이외의 값인 경우 직교가 아니라고 판단한다. 이 스킴에 대한 Security 증명은 FH-IPE와 거의 비슷하다. 
 
 #### RQ2: OFE를 설계하는 데에 Lin [Lin17] 와 Wee [Wee17] 의 방법들을 조합하여 적용할 수 있는가?
-Lin [Lin17] 와 Wee [Wee17]의 방법 각각 소개.
-이 논문의 조합 방법 소개.
-correctness 와 security.
+(Lin [Lin17] 와 Wee [Wee17]의 방법 각각 소개.)
+(이 논문의 조합 방법 소개.)
+(Correctness 와 Security proof 설명.)
 
 #### Implementation and Performance Evaluation
-구현 환경과 관련 정보들 수집하여 쓰기.
-성능 평가와 성능 측정 방법. 다른 방법과 비교.
+(구현 환경과 관련 정보들 수집하여 쓰기.)
+(성능 평가와 성능 측정 방법. 다른 방법과 비교.)
 
 #### Applications
 + Privacy-preserving subset relation
