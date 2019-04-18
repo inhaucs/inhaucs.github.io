@@ -81,6 +81,10 @@ We conclude that linking password lifetime to strength at the point of password 
 + Ye-Byoul Son (손예별)
 
 #### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/8302552)
++ Authors: QUN LIN et al. Institute of Mathematics and Statistics, Hanshan Normal University, China
++ Journal name: IEEE ACCESS
++ Published date: 2018-02-27 (Present version : 2018-05-02)
++ [Paper Link](https://ieeexplore.ieee.org/document/8302552)
 
 #### Abstract
 Identity-based cryptosystems mean that public keys can be directly derived from user identifiers, such as telephone numbers, email addresses, and social insurance number, and so on. So they can simplify key management procedures of certificate-based public key infrastructures and can be used to realize authentication in blockchain. Linearly homomorphic signature schemes allow to perform linear computations on authenticated data. And the correctness of the computation can be publicly verified. Although a series of homomorphic signature schemes have been designed recently, there are few homomorphic signature schemes designed in identity-based cryptography. In this paper, we construct a new ID-based linear homomorphic signature scheme, which avoids the shortcomings of the use of public-key certificates. The scheme is proved secure against existential forgery on adaptively chosen message and ID attack under the random oracle model. The ID-based linearly homomorphic signature schemes can be applied in e-business and cloud computing. Finally, we show how to apply it to realize authentication in blockchain.
@@ -91,3 +95,5 @@ Identity-based cryptosystems mean that public keys can be directly derived from 
 {% include layout/col_start.html column="4 last push1" %}
 
 {% include layout/row_end.html %}
+
+
