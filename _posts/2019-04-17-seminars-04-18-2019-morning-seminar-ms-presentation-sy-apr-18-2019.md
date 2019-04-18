@@ -59,7 +59,9 @@ correctness 와 security.
 
 #### Applications
 + Privacy-preserving subset relation
-+ Range Queries(Searchable Encryption)
+  + Sorting algorithm
+  + Searchable Encryption
++ Range Queries
 + Access Control
 
 ### Points to note
