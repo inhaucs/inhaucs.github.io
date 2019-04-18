@@ -76,7 +76,14 @@ We analysed data of nearly 200,000 password changes and 115,000 resets of passwo
 We also found that passwords with more than 300 days of lifetime are 4 times as likely to be reset as passwords of 100 days of lifetime. Users who reset their password more than once per year (27% of users) choose passwords with over 10 days fewer lifetime, and while they also respond to the policy, maintain this deficit.
 We conclude that linking password lifetime to strength at the point of password creation is a viable strategy for encouraging users to choose stronger passwords (at least when measured by Shannon entropy).
 
+### Session 4: [An ID-Based Linearly Homomorphic Signature Scheme and Its Application in Blockchain](https://inhaucs.github.io/seminars/04-18-2019-morning-seminar/presentation/ms-presentation-yb-apr-18-2019.html)
 
++ Ye-Byoul Son (손예별)
+
+#### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/8302552)
+
+#### Abstract
+Identity-based cryptosystems mean that public keys can be directly derived from user identifiers, such as telephone numbers, email addresses, and social insurance number, and so on. So they can simplify key management procedures of certificate-based public key infrastructures and can be used to realize authentication in blockchain. Linearly homomorphic signature schemes allow to perform linear computations on authenticated data. And the correctness of the computation can be publicly verified. Although a series of homomorphic signature schemes have been designed recently, there are few homomorphic signature schemes designed in identity-based cryptography. In this paper, we construct a new ID-based linear homomorphic signature scheme, which avoids the shortcomings of the use of public-key certificates. The scheme is proved secure against existential forgery on adaptively chosen message and ID attack under the random oracle model. The ID-based linearly homomorphic signature schemes can be applied in e-business and cloud computing. Finally, we show how to apply it to realize authentication in blockchain.
 
 {% include date/updated.html %}
 
