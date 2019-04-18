@@ -30,7 +30,9 @@ permalink: /:categories/:slug.html
 + Sung-Yun Jeon (전성윤)
 
 ---
+## Presentations
 
+---
 ### Session 1: [An ID-Based Linearly Homomorphic Signature Scheme and Its Application in Blockchain](https://inhaucs.github.io/seminars/04-22-2019-morning-seminar/presentation/ms-presentation-yb-apr-22-2019.html)
 
 + Ye-Byoul Son (손예별)
@@ -51,7 +53,7 @@ Identity-based cryptosystems mean that public keys can be directly derived from 
 
 ---
 
-## Presentations
+
 
 ### Session 3: [Rethinking Access Control and Authentication for the Home Internet of Things (IoT)](https://inhaucs.github.io/seminars/04-22-2019-morning-seminar/presentation/ms-presentation-jh-apr-22-2019.html)
 
