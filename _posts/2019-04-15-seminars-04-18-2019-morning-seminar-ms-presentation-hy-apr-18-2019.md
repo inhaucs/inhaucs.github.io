@@ -90,8 +90,13 @@ For privacy concerns to be addressed adequately in today’s machine-learning (M
 
 
 ## Discussion
-Editor: 작성자 이름
-(내용 작성)
+Editor: 손예별
++ ML에서 party 구분 시에 꼭 Input party / Computation party / Result party 처럼 세 파트로 나눠야 하는가? 어떤 공식적인 개념이 있는가?
++ ridge regression : 이미지 처리에 많이 사용되는 기법
++ Differential Privacy 관련 논문들 유행중
++ MPC에 현재 가블드서킷, Homomorphic Encryption, Secret Sharing이 많이 사용됨
++ LDP가 실효성이 있는가? LDP의 실효성 관련 공격 논문이 제시되면 Google, Apple 등의 회사에 치명적일 수 있음.
++ Model Inversion Attack 의 얼굴 인식 관련 공격 논문 읽을 필요.
 
 
 {% include date/updated.html %}
