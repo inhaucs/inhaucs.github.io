@@ -7,7 +7,7 @@ card_teaser: "Privacy-Preserving Machine Learning: Threats and Solutions"
 card_position: 2
 icon: fa-server
 categories: [seminars,04-18-2019-morning-seminar,presentation]
-tags: [SNP, 2019, SNP2019, Privacy-preserving]
+tags: [SNP, 2019, SNP2019, Privacy-preserving, Machine Learning]
 sidebar: morning-seminar
 layout: default
 slug: ms-presentation-hy-apr-18-2019
