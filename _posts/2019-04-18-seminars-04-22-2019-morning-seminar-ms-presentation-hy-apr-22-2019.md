@@ -7,6 +7,7 @@ card_teaser: "Privacy-Preserving Machine Learning: Threats and Solutions"
 card_position: 4
 icon: fa-server
 categories: [seminars,04-22-2019-morning-seminar,presentation]
+tags: [SPM, 2013, SPM2013, Signal Processing, Machine Learning, Differential Privacy]
 sidebar: morning-seminar
 layout: default
 slug: ms-presentation-hy-apr-22-2019
