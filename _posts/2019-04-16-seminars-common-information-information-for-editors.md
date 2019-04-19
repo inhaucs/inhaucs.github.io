@@ -26,7 +26,7 @@ permalink: /:categories/:slug.html
 + SNPC: IEEE Symposium on Security and Privacy
 + USENIX: USENIX Security Symposium
 + RSA: RSA Conference
-+ CT-RSA: Cryptographers' Track for RSA Conference 
++ CT-RSA: Cryptographers' Track for RSA Conference
 
 ## Abbreviations for journals.
 + ACCESS: IEEE Access
@@ -40,6 +40,7 @@ permalink: /:categories/:slug.html
 + TII: IEEE Transactions on Industrial Informatics
 + TISS: ACM Transactions on Information and System Security
 + TSG: IEEE Transaction on SmartGrid
++ ESE: Empirical Software Engineering
 
 ## Keywords of research topics
 + Human: 사람을 대상으로 한 논문
