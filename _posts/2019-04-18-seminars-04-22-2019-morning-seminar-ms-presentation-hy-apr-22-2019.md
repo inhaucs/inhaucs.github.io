@@ -35,9 +35,45 @@ Private companies, government entities, and institutions such as hospitals routi
 ## Summary (Korean)
 제목에 신호 처리와 기계 학습 차등정보 보호가 있으나, 전체적인 내용은 continuous data에 대한 차등정보 보호 방법들을 연구한 논문들을 Survey한 성향이 강한 논문.
 
-*신호 처리*에 대해서는 continuous data에 대해서 설명할 때, 대표적으로 신호 처리가 있다라고 기술하는 
+*신호 처리*에 대해서는 continuous data에 대해서 설명할 때, 대표적으로 신호 처리가 있다라고 기술하는 정도임.
 
 ## Details
+
++ DP에서 완벽하게 안전한 알고리즘은 아무것도 주지 못함.
++ DP 사용 시에 privacy guarantee \(\epsilon\)
+
+
+
+[[FWC+2010]] : Survey paper of privacy-preserving machine learning (PPML)
+
+Need to modify
+
+[4] : Initial paper of differential privacy
+
+[5-7] : Variants of differential privacy
+
+[8] : Survey paper of differential privacy
+
+[11-13] : Differential privacy for signal processing
+
+[14-16] : Differential privacy for classification
+
+[17, 18] : Differential privacy for dimensionality reduction
+
+[19] : Differential privacy for auction design
+
+
+
+
+
+
+
+
+
+[FWC+2010]: <https://www.cs.sfu.ca/~wangk/pub/FWCY10csur.pdf> "B. C. M. Fung, K. Wang, R. Chen, P. S. Yu, “Privacy-preserving data publishing: A survey of recent developments”, ACM Comput. Surv., vol. 42, no. 4, pp. 14:1-14:53, June 2010."
+
+
+
 + Machine Learning(ML) Section Skip. (Supervised, Unsupervised, Semisupervised, etc.)
   + ML은 세 가지 요소로 구성됨
     + **Input party** : 데이터 제공자
