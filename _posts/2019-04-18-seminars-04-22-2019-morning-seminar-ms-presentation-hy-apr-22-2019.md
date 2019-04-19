@@ -93,10 +93,8 @@ Private companies, government entities, and institutions such as hospitals routi
 
 
 ## Point to note
-+ Five privacy threats in ML: Private Data in the Clear, Reconstruction Attacks, Model Inversion Attacks, Membership Inference Attacks, and De-Anonymization
-+ Privacy-preserving machine learning methodologies
-  + Cryptographic Approaches: Homomorphic Encryption, Garbled Circuits, and Secure Processors
-  + Perturbation Approaches: Differential Privacy, Local DP, and Dimensionality Reduction
++ Continuous data에 대한 privacy-preserving machine learning을 수행해야하는 경우 References 항목의 논문들 참조
++ 또한 Continous data에 대한 DP의 Overview를 위해 볼 수 있음
 
 ## Discussion
 + SUPER HAPPY
