@@ -20,29 +20,23 @@ permalink: /:categories/:slug.html
 {% include layout/col_start.html column="7" %}
 
 ## Presenter & Date
-+ Hee-Yong Kwon (전성윤)
++ Seong-Yun Jeon (전성윤)
 + 2019-04-22
 
 ## Information of the paper
-+ Authors: Anand D. Sarwate (Toyota Technological Institute); Kamalika Chaudhuri (University of California)
-+ Conference name: IEEE Signal Processing Magazine
-+ Published date: 2013-08-19
-+ [Paper file](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6582713)
++ Authors: Steffen Herbold, Jens Grabowski, Stephan Waack (Institute of Computer Science, University of Göttingen, Göttingen, Germany)
++ Journal name: Empirical Software Engineering
++ Published date: 2011-05-25
++ [Paper file](https://link.springer.com/content/pdf/10.1007%2Fs10664-011-9162-z.pdf)
 
 ## Abstract
-Private companies, government entities, and institutions such as hospitals routinely gather vast amounts of digitized personal information about the individuals who are their customers, clients, or patients. Much of this information is private or sensitive, and a key technological challenge for the future is how to design systems and processing techniques for drawing inferences from this large-scale data while maintaining the privacy and security of the data and individual identities. Individuals are often willing to share data, especially for purposes such as public health, but they expect that their identity or the fact of their participation will not be disclosed. In recent years, there have been a number of privacy models and privacy-preserving data analysis algorithms to answer these challenges. In this article, we will describe the progress made on differentially private machine learning and signal processing.
+In this article, we present a novel algorithmic method for the calculation of thresholds for a metric set. To this aim, machine learning and data mining techniques are utilized. We define a data-driven methodology that can be used for efficiency optimization of existing metric sets, for the simplification of complex classification models, and for the calculation of thresholds for a metric set in an environment where no metric set yet exists. The methodology is independent of the metric set and therefore also independent of any language, paradigm or abstraction level. In four case studies performed on large-scale open-source software metric sets for C functions, C+ +, C# methods and Java classes are optimized and the methodology is validated.
 
 ## Summary (Korean)
 + 
 
 ## Details
 + Machine Learning(ML) Section Skip. (Supervised, Unsupervised, Semisupervised, etc.)
-  + ML은 세 가지 요소로 구성됨
-    + **Input party** : 데이터 제공자
-    + **Computation party** : ML 연산 수행자
-    + **Results party** : ML 모델을 사용자
-  + 상기 세 요소가 같은 주체에서 구성되는 경우 프라이버시는 고려할 필요가 없으나, 일반적으로 **Computation party**와 **Results party**는 한 주체에 있고 **Input party**만 분리되어 구성됨.
- 하는지 회사에게 적용되어야 하는지. 또 적용하고 있는 회사(Google and Apple, LDP)에서 적용하는 방법이 실제로 효과가 있는 것인지 설명되어야 함.  
 
 [title]: <url> "describ"
 
