@@ -38,7 +38,7 @@ Private companies, government entities, and institutions such as hospitals routi
 
 ## Details
 + DP에서 완벽하게 안전한 알고리즘(Completely private algorithm)은 아무것도 주지 못함(release nothing).
-+ DP 사용 시에 privacy guarantee epsilon, utility(유용성), 그리고 sample size $n$ 사이에는 tradeoff 가 있음.
++ DP 사용 시에 privacy guarantee epsilon, utility(유용성), 그리고 sample size n 사이에는 tradeoff 가 있음.
   + 이러한 tradeoff는 데이터들의 특성에 따라 다름(e.g., dimension, range, sparsity).
 + Motivation : Discrete data에 대한 DP 연구는 많은데, Continuous data에 대한 연구는 많이 진행되지 않음.
 + DP가 왜 중요하냐 : 그것은 다른 ML들이 취약한 공격에 강하기 때문 [GKS08]
