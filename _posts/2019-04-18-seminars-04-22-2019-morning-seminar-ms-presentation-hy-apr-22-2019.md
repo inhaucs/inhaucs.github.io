@@ -3,7 +3,7 @@ title: "Session 4. Signal Processing and Machine Learning with Differential Priv
 date: 2019-04-18 00:00:00 Z
 description: (blank)
 card_title: Session 4
-card_teaser: "Privacy-Preserving Machine Learning: Threats and Solutions"
+card_teaser: "Signal Processing and Machine Learning with Differential Privacy"
 card_position: 4
 icon: fa-server
 categories: [seminars,04-22-2019-morning-seminar,presentation]
@@ -33,7 +33,9 @@ permalink: /:categories/:slug.html
 Private companies, government entities, and institutions such as hospitals routinely gather vast amounts of digitized personal information about the individuals who are their customers, clients, or patients. Much of this information is private or sensitive, and a key technological challenge for the future is how to design systems and processing techniques for drawing inferences from this large-scale data while maintaining the privacy and security of the data and individual identities. Individuals are often willing to share data, especially for purposes such as public health, but they expect that their identity or the fact of their participation will not be disclosed. In recent years, there have been a number of privacy models and privacy-preserving data analysis algorithms to answer these challenges. In this article, we will describe the progress made on differentially private machine learning and signal processing.
 
 ## Summary (Korean)
-I feel like OH YEAH.
+제목에 신호 처리와 기계 학습 차등정보 보호가 있으나, 전체적인 내용은 continuous data에 대한 차등정보 보호 방법들을 연구한 논문들을 Survey한 성향이 강한 논문.
+
+*신호 처리*에 대해서는 continuous data에 대해서 설명할 때, 대표적으로 신호 처리가 있다라고 기술하는 
 
 ## Details
 + Machine Learning(ML) Section Skip. (Supervised, Unsupervised, Semisupervised, etc.)
