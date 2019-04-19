@@ -37,8 +37,8 @@ Private companies, government entities, and institutions such as hospitals routi
 + *신호 처리*에 대해서는 continuous data에 대해서 설명할 때, 대표적으로 신호 처리가 있다라고 기술하는 정도임.
 
 ## Details
-+ DP에서 완벽하게 안전한 알고리즘은 아무것도 주지 못함.
-+ DP 사용 시에 privacy guarantee epsilon, utility(유용성), 그리고 sample size n 사이에는 tradeoff 가 있음.
++ DP에서 완벽하게 안전한 알고리즘(Completely private algorithm)은 아무것도 주지 못함(release nothing).
++ DP 사용 시에 privacy guarantee epsilon, utility(유용성), 그리고 sample size $n$ 사이에는 tradeoff 가 있음.
   + 이러한 tradeoff는 데이터들의 특성에 따라 다름(e.g., dimension, range, sparsity).
 + Motivation : Discrete data에 대한 DP 연구는 많은데, Continuous data에 대한 연구는 많이 진행되지 않음.
 + DP가 왜 중요하냐 : 그것은 다른 ML들이 취약한 공격에 강하기 때문 [GKS08]
@@ -91,6 +91,16 @@ Private companies, government entities, and institutions such as hospitals routi
 + [[CSS12]], [[HLM12]] : Differential privacy for dimensionality reduction
 + [[GR11]] : Differential privacy for auction design
 
+
+## Point to note
++ Five privacy threats in ML: Private Data in the Clear, Reconstruction Attacks, Model Inversion Attacks, Membership Inference Attacks, and De-Anonymization
++ Privacy-preserving machine learning methodologies
+  + Cryptographic Approaches: Homomorphic Encryption, Garbled Circuits, and Secure Processors
+  + Perturbation Approaches: Differential Privacy, Local DP, and Dimensionality Reduction
+
+## Discussion
++ SUPER HAPPY
+
 [FWC+10]: <https://www.cs.sfu.ca/~wangk/pub/FWCY10csur.pdf> "B. C. M. Fung, K. Wang, R. Chen, P. S. Yu, “Privacy-preserving data publishing: A survey of recent developments”, ACM Comput. Surv., vol. 42, no. 4, pp. 14:1-14:53, June 2010."
 [DMN+06]: <http://people.csail.mit.edu/asmith/PS/sensitivity-tcc-final.pdf> " C. Dwork, F. McSherry, K. Nissim, and A. Smith. (2006, Mar. 4–7). Theory of Cryptography (Lecture Notes in Computer Science Series, vol. 3876) [Online]. Available: http://dx.doi.org/10.1007/11681878_14"
 [GKS08]: <http://www.cse.psu.edu/~ads22/privacy598/papers/gks08.pdf> "S. R. Ganta, S. P. Kasiviswanathan, and A. Smith. Composition attacks and auxiliary information in data privacy. presented at the 14th ACM SIGKDD Int. Conf. Knowledge Discovery and Data Mining (KDD ’08) [Online]. Available: http://dx.doi.org/10.1145/1401890.1401926"
@@ -121,15 +131,6 @@ Private companies, government entities, and institutions such as hospitals routi
 [JKT12]: <http://www.jmlr.org/proceedings/papers/v23/jain12/jain12.pdf> "P. Jain, P. Kothari, and A. Thakurta. (2012, June). Proceedings of the 25th Annual Conference on Learning Theory (COLT ’12) (JMLR Workshop and Conference Proceedings Series, vol. 23) [Online]. Available: http://www.jmlr.org/proceedings/papers/v23/jain12/jain12.pdf"
 [RN10]: <https://www.microsoft.com/en-us/research/wp-content/uploads/2009/11/paper.pdf> "V. Rastogi and S. Nath. Differentially private aggregation of distributed time-series with transformation and encryption. presented at 2010 ACM SIGMOD Int. Conf. Management Data [Online]. Available: http://dx.doi.org/10.1145/1807167.1807247"
 [BKN10]: <https://www.cs.bgu.ac.il/~beimel/Papers/BKN.pdf> "A. Beimel, S. P. Kasiviswanathan, and K. Nissim. (2010, Feb. 9–11). Theory of Cryptography (Lecture Notes in Computer Science Series, vol. 5978) [Online]. Available: http://dx.doi.org/10.1007/978-3-642-11799-2_26"
-
-## Point to note
-+ Five privacy threats in ML: Private Data in the Clear, Reconstruction Attacks, Model Inversion Attacks, Membership Inference Attacks, and De-Anonymization
-+ Privacy-preserving machine learning methodologies
-  + Cryptographic Approaches: Homomorphic Encryption, Garbled Circuits, and Secure Processors
-  + Perturbation Approaches: Differential Privacy, Local DP, and Dimensionality Reduction
-
-## Discussion
-+ SUPER HAPPY
 
 
 {% include date/updated.html %}
