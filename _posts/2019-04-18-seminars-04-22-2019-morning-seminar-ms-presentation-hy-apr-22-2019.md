@@ -40,7 +40,19 @@ Private companies, government entities, and institutions such as hospitals routi
 ## Details
 
 + DP에서 완벽하게 안전한 알고리즘은 아무것도 주지 못함.
-+ DP 사용 시에 privacy guarantee \(\epsilon\)
++ DP 사용 시에 privacy guarantee epsilon, utility(유용성), 그리고 sample size n 사이에는 tradeoff 가 있음.
+  + 이러한 tradeoff는 데이터들의 특성에 따라 다름(e.g., dimension, range, sparsity).
++ Motivation : Discrete data에 대한 DP 연구는 많은데, Continuous data에 대한 연구는 많이 진행되지 않음.
++ DP가 왜 중요하냐 : 그것은 다른 ML들이 취약한 공격에 강하기 때문 [2]
++ DP 정의가 있긴한데 [4]를 보든가 해야지. 정확히 이해되지 않음. epsilon은 작을 수록 좋음.
++ epsilon-DP도 있고, (epsilon, delta)-DP도 있는데 epsilon과 delta 둘 다 작을 수록 프라이버시가 더 보장됨[4, 21]. 또한 (epsilon, delta)-DP는 delta=0일 때, epsilon-DP로 reduction되고, epsilon-DP보다 더 약한 프라이버시를 보장함(그럼 왜 사용함?-설명 無).
++ (epsilon, delta)-DP의 여러 변형으로 (1, epsilon, delta)-indistinguishability [7]이나 delta-probabilistic privacy[32] 등이 있음.
++ DP의 중요한 특징 두 가지
+  + epsilon-DP를 사용하여 출력된 결과를 사용하여 다른 작업을 수행하여도 epsilon-DP가 유지됨(Chain rule?)
+  + 만약 같은 데이터에 대하여 epsilon1과 epsilon2에 대하여 프라이버시를 보장하는 알고리즘의 출력을 동시에 사용하는 경우 안전성은 epsilon1 + epsilon2가 됨.
+
+
+## Generic Methods for Differential Privacy
 
 
 
