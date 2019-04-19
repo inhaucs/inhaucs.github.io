@@ -110,7 +110,7 @@ Private companies, government entities, and institutions such as hospitals routi
 
 #### Information of the paper [(Link)](https://link.springer.com/article/10.1007/s10664-011-9162-z)
 + Authors: Steffen Herbold, Jens Grabowski, Stephan Waack (Institute of Computer Science, University of Göttingen, Göttingen, Germany)
-+ Conference name: Empirical Software Engineering
++ Journal name: Empirical Software Engineering
 + Published date: 2011-05-25
 + [Paper file](https://link.springer.com/content/pdf/10.1007%2Fs10664-011-9162-z.pdf)
 
