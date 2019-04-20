@@ -33,7 +33,7 @@ permalink: /:categories/:slug.html
 Private companies, government entities, and institutions such as hospitals routinely gather vast amounts of digitized personal information about the individuals who are their customers, clients, or patients. Much of this information is private or sensitive, and a key technological challenge for the future is how to design systems and processing techniques for drawing inferences from this large-scale data while maintaining the privacy and security of the data and individual identities. Individuals are often willing to share data, especially for purposes such as public health, but they expect that their identity or the fact of their participation will not be disclosed. In recent years, there have been a number of privacy models and privacy-preserving data analysis algorithms to answer these challenges. In this article, we will describe the progress made on differentially private machine learning and signal processing.
 
 ## Summary (Korean)
-+ 제목에 신호 처리와 기계 학습 차등정보 보호가 있으나, 전체적인 내용은 continuous data에 대한 차등정보 보호 방법들을 연구한 논문들을 Survey한 성향이 강한 논문.
++ 제목에 신호 처리와 기계 학습 차등정보 보호가 있으나, 전체적인 내용은 continuous data에 대한 차등정보 보호 방법들을 연구한 논문들을 Survey함.
 + *신호 처리*에 대해서는 continuous data에 대해서 설명할 때, 대표적으로 신호 처리가 있다라고 기술하는 정도임.
 
 ## Details
@@ -42,9 +42,9 @@ Private companies, government entities, and institutions such as hospitals routi
   + 이러한 tradeoff는 데이터들의 특성에 따라 다름(e.g., dimension, range, sparsity).
 + Motivation : Discrete data에 대한 DP 연구는 많은데, Continuous data에 대한 연구는 많이 진행되지 않음.
 + DP가 왜 중요하냐 : 그것은 다른 ML들이 취약한 공격에 강하기 때문 [GKS08]
-+ DP 정의가 있긴한데 [[DMN+06]]를 보든가 해야지. 정확히 이해되지 않음. epsilon은 작을 수록 좋음.
++ DP 정의가 있긴한데 [[DMN+06]] 정확히 이해되지 않음. epsilon은 작을 수록 좋음.
 + epsilon-DP도 있고, (epsilon, delta)-DP도 있는데 epsilon과 delta 둘 다 작을 수록 프라이버시가 더 보장됨[[DMN+06]], [[WZ10]]. 또한 (epsilon, delta)-DP는 delta=0일 때, epsilon-DP로 reduction되고, epsilon-DP보다 더 약한 프라이버시를 보장함(그럼 왜 사용함?-설명 無).
-+ (epsilon, delta)-DP의 여러 변형으로 (1, epsilon, delta)-indistinguishability [[CM06]]이나 delta-probabilistic privacy[[MKA+08]] 등이 있음.
++ (epsilon, delta)-DP의 여러 변형으로 (1, epsilon, delta)-indistinguishability[[CM06]]이나 delta-probabilistic privacy[[MKA+08]] 등이 있음.
 + DP의 중요한 특징 두 가지
   + epsilon-DP를 사용하여 출력된 결과를 사용하여 다른 작업을 수행하여도 epsilon-DP가 유지됨(Chain rule?)
   + 만약 같은 데이터에 대하여 epsilon1과 epsilon2에 대하여 프라이버시를 보장하는 알고리즘의 출력을 동시에 사용하는 경우 안전성은 epsilon1 + epsilon2가 됨.
@@ -54,29 +54,29 @@ Private companies, government entities, and institutions such as hospitals routi
 + Output perturbation : Output에 임의의 노이즈를 추가하여 출력하는 방법
 + Exponential mechanism : 이 부분은 정확히 모르겠으나 Mean Squared Error와 같은 최적화 알고리즘에 노이즈를 추가하여 계산하는 방법
 + Objective perturbation : 학습 시에 사용되는 Objective function에 노이즈를 추가하여 계산하는 방법
-+ Exponential mechanism과 Objective perturbation의 차이?
++ Exponential mechanism과 Objective perturbation이 비슷한 것으로 보이는데 실제 사용시 확인해볼 필요 있음.
 + 각 방법에 더해지는 노이즈는 특정 밀도를 따름.
 
 
 ## Signal processing and machine learning with privacy
 + [[CMS11]], [[RBH+12]], [[KST12]], [[C11]] : Classification
 + [[ZZX+12]], [[L11]] : Regression
+  + Logistic regression with continous value (Example, 논문 식 참조 필요)
 + [[CSS12]], [[HR13]], [[BDM+05]], [[KT13]] : Principal components analysis (PCA)
 + [[DRV10]] : Boosting
 + [[JKT12]] : Online learning
-  + Logistic regression with continous value (논문 식 참조 필요, example임)
-  + [[BDM+05]], [[CSS12]], [[MT07]] : PCA + DP
-  + Time-series data + DP
-    + [[RN10]] : Fourier + HE
-    + [[FX12]] : Kalman filter + Laplace noise -> 이 논문은 discrete Fourier transform을 개량하는데 도움을 줌 [[RN10]].
-    + [[LP12a]], [[LP12b]] : Signal processing + DP, Input pert. vs. Output pert. -> Input pert.가 더 성능이 좋음.
++ [[BDM+05]], [[CSS12]], [[MT07]] : PCA + DP
++ Time-series data + DP
+  + [[RN10]] : Fourier + HE
+  + [[FX12]] : Kalman filter + Laplace noise -> 이 논문은 discrete Fourier transform을 개량하는데 도움을 줌 [[RN10]].
+  + [[LP12a]], [[LP12b]] : Signal processing + DP, Input pert. vs. Output pert. -> Input pert.가 더 성능이 좋음.
 
 ## Practical issues and limitations
 + 여기서도 가정이 너무 심함. e.g., Discrete data, finite hypothesis sets, bounded range[[CH11]], [[BKN10]].
 + epsilon과 delta의 초기 설정 문제 -> 이와 관련된 합의가 제안되긴 했음. [GKS08](초기 delta 설정 관련 논문)
 
 ## Future challenges
-+ DP와 관련된 다른 논문들도 많은데 본 논문에서 소개하는 것은 너무 적음.
++ DP와 관련된 다른 논문들도 많은데 본 논문에서 소개하는 것은 적음.
 + Challenge 1 : Signal을 수집하는 순간과 학습에 사용되기 전 어느 시점에서 Perturbation이 적용되어야 하는가에 대한 문제
 + Challenge 2 : 이미지와 같이 차원이 매우 높은 데이터에 대한 경우에 대한 연구 부족 (문제?)
 + Challenge 3 : 암호학적 접근과 관련된 연구들은 많으나, DP 관련 연구는 아직 초기임.(2013 논문이라 현재까지도 이게 Challenge가 될지는 모르겠음.)
