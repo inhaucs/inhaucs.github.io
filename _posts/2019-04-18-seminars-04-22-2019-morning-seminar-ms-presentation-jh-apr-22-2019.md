@@ -7,7 +7,7 @@ card_teaser: Rethinking Access Control and Authentication for the Home Internet 
 card_position: 3
 icon: fa-server
 categories: [seminars,04-22-2019-morning-seminar,presentation]
-tags: [USENIX, 2018, USENIX2018]
+tags: [USENIX, 2018, USENIX2018, Human, Policy, IoT, LargeSacle, IRB, Analytics, Human-Authenticate]
 sidebar: morning-seminar
 layout: default
 slug: ms-presentation-jh-apr-22-2019
@@ -59,20 +59,17 @@ Finally, we discuss the degree to which different authentication methods potenti
 
 + Map desired access-control policies for home IoT devices
   (IoT 기기들에 대한 적절한(?) 엑세스 제어 정책 매핑)
+  
   + How <u>policies</u> vary by **relationships** and **capabilities**
   + <u>Identify</u> **potential default polices**
 + What contextual factors affect the user's decision?
 
 #### User study
 
-<figure>
-    <img src="https://inhaucs.github.io/assets/img/jonghyuk/2019/2019-04-22-fig-usetstudy.PNG" alt="User Study" style="max-width:;"/>
-    <span class="legend">fig. User Study</span>
-</figure>
-
 {% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-22-fig-usetstudy.PNG" legend="User Study" %}
 
 + 6 Relationships (각각의 실험자들이 구분한 24개의 관계 중 큰 틀로 분류한 것들)
+
   + Your Spouse
   + Your Teenage Child
   + Your Child in Elementrary School
@@ -80,6 +77,7 @@ Finally, we discuss the degree to which different authentication methods potenti
   + The Babysitter
   + Your Neighbor
 + 22 Capabilities
+
   + Order Onlie
   + Live Video
   + Answer Door
@@ -88,17 +86,59 @@ Finally, we discuss the degree to which different authentication methods potenti
 
 #### Results
 
-+ 425 Participants
-  + Male / Female ( 54 : 46 )
-  + Age 25-34 : 47%
-  + Computer Science: 19%
-  + Home IoT Device (Ai Speaker, CCTV, Nest, Lights): 44%
+##### 425 Participants
+
++ Male / Female ( 54 : 46 )
++ Age 25-34 : 47%
++ Computer Science: 19%
++ Home IoT Device (Ai Speaker, CCTV, Nest, Lights): 44%
+
+##### Capability and access-controll policy for one
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-22-fig-result1.PNG" legend="User Study" %}
+
+##### Comparison between capabilities
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-22-fig-result2.PNG" legend="User Study" %}
+
+##### Capabilities within one device
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-22-fig-result3.PNG" legend="User Study" %}
+
+##### Relationships and capabilities
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-22-fig-result4.PNG" legend="User Study" %}
+
+#### Contextual factors
+
++ Time of Day
+  + "밤에 잔디깎는건 안됩니다..."
++ People around
+  + "어린이가 무엇을 작업할 때에는, 보호자와 함께"
++ Location of user
+  + "집에 없을 때, 음악을 재생할 필요가 있는가"
++ Location of device
+  + "침실에서 CCTV 사용 여부?"
++ Responsible usage
+  + "너무 조명을 자주 사용해서는 안됩니다."
++ Understanding
+  + "자신의 아이에게 사용법을 가르칠 필요가 있다."
++ Etc...
 
 #### Conclusion
-+
+
+가정용 IoT 환경에서 앞으로 고려할 것은, 기기에 대한 권한이나 Owner/Guest 정도의 구분이 아닌
+
++ Relationships
++ Capabilites
++ Contextual factors
+
+가 될 것이다. 이에 대해 다시 생각하고, IoT 시대의 새로운 응용을 적용해야 할 것이다.
 
 ### Points to note
-+
++ 어떤 대상(e.g. Home IoT devices)에 대한 권한 정책 수립에 있어 대규모 실험을 통해 실제 수요를 확인할 수 있다. 이 또한 논문으로 정리할 수 있다.
++ 이러한 분석/설계 논문을 구성할 때에는 실험을 통해 무엇을 확보할 것인지 구체적으로 고려하는 것이 꼭 선행되어야 할 것이다.
++ 본 논문에서는 Appedix에 Survey 항목을 모두 기재하였다. 저널/컨퍼런스에서 이와 같은 것을 요구할 수 있기 때문에 설문 항목은 잘 작성해야하며 한국어/영어 버전 모두 미리 작성해 두는 것을 잊지 않아야 할 것이다.
 
 
 ## Discussion
