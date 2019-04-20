@@ -95,19 +95,19 @@ Finally, we discuss the degree to which different authentication methods potenti
 
 ##### Capability and access-controll policy for one
 
-{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-22-fig-result1.PNG" legend="User Study" %}
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-22-fig-results1.PNG" legend=" Capability and access-controll policy" %}
 
 ##### Comparison between capabilities
 
-{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-22-fig-result2.PNG" legend="User Study" %}
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-22-fig-results2.PNG" legend="Comparison between capabilities" %}
 
 ##### Capabilities within one device
 
-{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-22-fig-result3.PNG" legend="User Study" %}
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-22-fig-results3.PNG" legend="apabilities within one device" %}
 
 ##### Relationships and capabilities
 
-{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-22-fig-result4.PNG" legend="User Study" %}
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-22-fig-results4.PNG" legend="Relationships and capabilities" %}
 
 #### Contextual factors
 
