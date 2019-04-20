@@ -43,21 +43,62 @@ These primitives range from the time of day to the current location of users.
 Finally, we discuss the degree to which different authentication methods potentially support desired policies.
 
 ## Summary (Korean)
-한국어 요약
 
-## TODO
-+ Tag 
+가정용 IoT 기기들에 대한 Access-control 정책에 대한 새로운 방향을 제시한 논문이다. 이 논문에서는 기존의 가정용 IoT 기기들의 권한 체계는 기기 중심적이며, 역할이 Onwer/Guest 로만 나뉘는 등의 제한적이므로 변화하는 IoT 시대의 패러다임에 맞추기 위해서 이를 적합하게 변경하는 것은 필요하다고 주장한다.
+
+따라서, 이 논문의 목표는 IoT 기기들에 대한 적절한 엑세서 제어 정책을 매핑하는 것이며, 이를 위해 가정용 IoT 기기들과 사용자의 관계를 6가지로 정의하고, 기기 중심적인 권한 체계에서 기능 중심적(IoT 기기 자체의 권한이 아니라, 기기가 수행할 수 있는 특정 동작을 말함)인 체계로 변경시키고, 나아가 새로운 기기들에 대한 잠재적인 권한 부여를 위한 기본 정책을 설립하는 것이다.
+
+이 논문은 425명의 온라인 참가자에 대해 실험을 수행하였으며, 같은 장치 내에서 다양한 기능에 대한 참가자들이 각각 원하는 엑세스 제어 정책은 물론 누가 해당 기능을 사용하려하는지에 따라 명확한 차이가 있음을 확인하였다. 즉, 이러한 실험을 통해 설립된 정책(앞으로 지속적으로 갱신 가능함)을 논문에 제시하였으며, 정책을 지정하는데 필요한 기본 요소(시간이나 사용자의 현재 위치까지도 포함)를 정의하고, 서로 다른 인증 방식이 잠재적인 정책 지원에 어떠한 영향을 미칠 수 있는지에 대한 논의 또한 진행하였다.
+
+
 
 ## Details
+
 ### Contents of the paper
-+
+#### Research goals
+
++ Map desired access-control policies for home IoT devices
+  (IoT 기기들에 대한 적절한(?) 엑세스 제어 정책 매핑)
+  + How <u>policies</u> vary by **relationships** and **capabilities**
+  + <u>Identify</u> **potential default polices**
++ What contextual factors affect the user's decision?
+
+#### User study
+
+<figure>
+    <img src="https://inhaucs.github.io/assets/img/jonghyuk/2019/2019-04-22-fig-usetstudy.PNG" alt="User Study" style="max-width:;"/>
+    <span class="legend">fig. User Study</span>
+</figure>
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-22-fig-usetstudy.PNG" legend="User Study" %}
+
++ 6 Relationships (각각의 실험자들이 구분한 24개의 관계 중 큰 틀로 분류한 것들)
+  + Your Spouse
+  + Your Teenage Child
+  + Your Child in Elementrary School
+  + A Visiting Family Member
+  + The Babysitter
+  + Your Neighbor
++ 22 Capabilities
+  + Order Onlie
+  + Live Video
+  + Answer Door
+  + Mower Rule
+  + Lights Rule ...
+
+#### Results
+
++ 425 Participants
+  + Male / Female ( 54 : 46 )
+  + Age 25-34 : 47%
+  + Computer Science: 19%
+  + Home IoT Device (Ai Speaker, CCTV, Nest, Lights): 44%
 
 #### Conclusion
 +
 
 ### Points to note
 +
-
 
 
 ## Discussion
