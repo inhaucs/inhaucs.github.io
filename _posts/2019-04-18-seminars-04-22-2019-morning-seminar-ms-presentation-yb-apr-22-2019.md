@@ -41,15 +41,18 @@ Identity-based cryptosystems mean that public keys can be directly derived from 
 
 ### I. Introduction
 + 인증서 기반 암호체계는 공개키 암호체계에 널리 이용되고 있다. 이 인증서 기반 암호체계는 아래와 같은 세가지의 특징이 있다.
-  + 1) **entity에게 정보를 암호화 해서 주기 위해서는 entity의 인증된 공개키 인증서가 필요하다. **
-  + 2) **그래서 이러한 인증서들은 대규모로 생성되어, 커뮤니티의 많은 사람들에게 배포되어야 한다. **
-  + 3) **또한 이 인증서들은 빈번하게 검증되어야 한다. **
+  +1) **entity에게 정보를 암호화 해서 주기 위해서는 entity의 인증된 공개키 인증서가 필요하다.**
+  +2) **그래서 이러한 인증서들은 대규모로 생성되어, 커뮤니티의 많은 사람들에게 배포되어야 한다.**
+  +3) **또한 이 인증서들은 빈번하게 검증되어야 한다.**
   + **그래서 이 공개키 인증서의 관리는 성가시다.** 이러한 공개키 인증서의 단점을 피하기 위해서, Shamir가 1984년에 identity-based cryptography 개념을 소개했다. user identifier로부터 공개키를 만드는 것. private key는 Private Key Generator(PKG)라고 불리는 중앙 권한 시스템 레벨의 secret key와 user공개키 조합으로 만들 수 있음.
+
+{% include articles/figure.html url="/assets/img/byoul/2019/20190422001.PNG" legend="User Study" %}
+
   + 이후로 많은 ID기반 암호에 많은 진전이 있었고, ID기반 서명 스킴들, ID기반 암호스킴 등이 우후죽순 생겨났다.
  
 + 한편, 2002년에 Johnson이 동형 서명 개념 소개. 
-  + **동형 서명의 개념은 중요한 기본 요소(primitive)이며, 인증된 데이터를 통해 계산을 검증할 수 있도록 한다 [39, 40, 41] (The notion of homomorphic signature is an important primitive and allows to validate computation over authenticated data.)**
-  + 동형 속성은 sk 없어도 서명을 검증할 수 있다. 그래서 이 동형서명스킴은 e사업이나 클라우드 컴퓨팅에서 많이 이용됨 [16, 18, 21, 27, 36]. 현재는 선형동형서명스킴[7,8,13,20], 다항식함수를 지원하는 동형 스킴[12,14,15], fully 동형서명스킴 [17,19] 등 많은 기술들이 나와있으나, 이 기술들은 인증서 기반 암호체계에 속함.
+  + **동형 서명의 개념은 중요한 기본 요소(primitive)이며, 인증된 데이터를 통해 계산을 검증할 수 있도록 한다.**(The notion of homomorphic signature is an important primitive and allows to validate computation over authenticated data.)
+  + 동형 속성은 sk 없어도 서명을 검증할 수 있다. 그래서 이 동형서명스킴은 e사업이나 클라우드 컴퓨팅에서 많이 이용됨. 현재는 선형동형서명스킴, 다항식함수를 지원하는 동형 스킴 등 많은 기술들이 나와있으나, 이 기술들은 인증서 기반 암호체계에 속함.
   + ID기반 동형서명스킴은 거의 없음[34, 35, 37]. 이 중 두 개[34, 35]는 오염된 공격을 생산하는 악성 노드를 예방하기 위한 네트워크 공격쪽에 많이 쓰이고, 나머지 하나는 [37] 양자 쪽이라 비효율적임. 
   + 인증서 기반의 암호체계에서 공개키 인증서 관리는 성가시기 때문에, id기반암호체계로 효율적인 동형서명스킴을 설계하는것은 의미가 있음.
 
