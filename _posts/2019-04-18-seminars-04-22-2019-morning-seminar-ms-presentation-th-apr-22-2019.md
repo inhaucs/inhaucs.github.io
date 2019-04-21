@@ -6,7 +6,7 @@ card_title: Session 2
 card_teaser: "Session 2. ProcHarvester: Fully Automated Analysis of Procfs Side-Channel Leaks on Android"
 card_position: 2
 icon: fa-server
-categories: [seminars,04-18-2019-morning-seminar,presentation]
+categories: [seminars,04-22-2019-morning-seminar,presentation]
 tags: [ASIACCS, 2018, ASIACCS2018, Android, automatic analysis, procfs, side-channel analysis]
 sidebar: morning-seminar
 layout: default
@@ -57,9 +57,7 @@ We introduce ProcHarvester, a systematic and fully automated technique to assess
   + Log: 안드로이드 앱은 procfs resource로부터 정보의 발생을 알 수 있다(exploration phase). 이벤트 실행의 실제 접근 방식과 관계없이, 안드로이드 앱은 지속적으로 procfs resource를 모리터링하고 기록한다(profiling phase).
   + Fetch Data: 특정 이벤트가 실행되면 분석을 위해 로그파일을 Desktop으로 가져온다.
   + Analysis: 실행된 이벤트를 추론하기 위해 기록된 정보간의 가능한 상관관계에 대해 분석한다(analysis phase). 즉, 실행된 이벤트를 추론하는 부채널 공격에 이용 될 수 있는 resource의 리스트를 뽑아낸다(attack phase). 
-  
 
-  
 
 ## Discussion
 Editor: 작성자 이름
