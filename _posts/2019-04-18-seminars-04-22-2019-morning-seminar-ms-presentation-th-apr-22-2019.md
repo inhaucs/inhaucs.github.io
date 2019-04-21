@@ -38,6 +38,14 @@ We introduce ProcHarvester, a systematic and fully automated technique to assess
 안드로이드에서 procfs information leaks를 자동으로 찾아서 앱의 실행, 웹사이트 방문, 키보드 제스처와 같은 이벤트의 발생을 알아낼 수 있다. 이를 이용해 OS 설계자와 OS 개발자가 이후 좀 더 안전하게 OS를 개발해 주길 기대한다.
 
 ## Details
+  + Android에서 앱 설치 중에 user ID(uid)가 할당되고 process ID(pid)는 실행 된 프로세스를 식별하는데 이러한 리소스는 각어플리케이션의대한 정보를 제공한다. 또한, procfs는 시스템에서 처리된 interrupt에 대한 통계 정보와 같이 무해하다고 간주되는 정보를 제공하기도 한다.
+
+#### procfs Rectiction
+  + Android 4.3부터 이전 정책보다 더 세분화해서 앱에 대한 액세스를 제한한다.
+  + Android 6부터 third-party 앱들은 untrusted_app으로 label되는데, 해당 앱들은 /proc/에만 액세스 할 수 있도록 제한된다.
+  + Android 7부터 process들은 자신의 pid가 아닌 경우의 /proc/<pid>/*에 접근 할 수 없다.
+  + Android 8부터 procfs에 대한 제한이 더 많아졌다.(/proc/interrupts에 더이상 접근이 불가능하다.)
+
 #### ProcHarvester는 네가지 단계로 구성됨
   + exploration phase 
   + profiling phase 
@@ -46,11 +54,10 @@ We introduce ProcHarvester, a systematic and fully automated technique to assess
   
 #### ProcHarvester의 작업흐름은 아래 네가지가 있다.
   + Trigger event: Desktop에서 ADB connection을 통해 이벤트를 실행. ADB를 통해 이벤트를 실행하는 것 외에도 MonkeyRunner와 같이 안드로이드 앱 자체에서 프로그래밍 방식으로 이벤트를 실행할 수 있다. 그리고 이벤트는 사람이 직접 실행시킬수 있다. 
-  + Log: 안드로이드 앱은 exploration phase에서 procfs resource로부터의 정보 유출을 식별할 수 있다. 이벤트 실행의 실제 접근 방식과 관계없이, 안드로이드 앱은 지속적으로 profiling phase에서 procfs resource를 모리터링하고 기록한다.
+  + Log: 안드로이드 앱은 procfs resource로부터 정보의 발생을 알 수 있다(exploration phase). 이벤트 실행의 실제 접근 방식과 관계없이, 안드로이드 앱은 지속적으로 procfs resource를 모리터링하고 기록한다(profiling phase).
   + Fetch Data: 특정 이벤트가 실행되면 분석을 위해 로그파일을 Desktop으로 가져온다.
-  + Analysis: Analysis phase에서 실행된 이벤트를 추론할 수 있는 정보 유출을 식별하기 위해 가능한 상관관계에 대해 분석한다. 즉, attack phase에서 실행된 이벤트를 추론할 수 있고, 부채널 공격에서 이용될 수 있는 리소스의 리스트다. 
+  + Analysis: 실행된 이벤트를 추론하기 위해 기록된 정보간의 가능한 상관관계에 대해 분석한다(analysis phase). 즉, 실행된 이벤트를 추론하는 부채널 공격에 이용 될 수 있는 resource의 리스트를 뽑아낸다(attack phase). 
   
-#### procfs를 프로파일링하는 방법
 
   
 
