@@ -20,25 +20,42 @@ permalink: /:categories/:slug.html
 {% include layout/col_start.html column="7" %}
 
 ## Presenter & Date
-+ Seong-Yun Jeon (전성윤)
-+ 2019-04-22
-
+- Seong-Yun Jeon (전성윤)
+- 2019-04-22
 ## Information of the paper
-+ Authors: Steffen Herbold, Jens Grabowski, Stephan Waack (Institute of Computer Science, University of Göttingen, Göttingen, Germany)
-+ Journal name: Empirical Software Engineering
-+ Published date: 2011-05-25
-+ [Paper file](https://link.springer.com/content/pdf/10.1007%2Fs10664-011-9162-z.pdf)
+- Authors: Steffen Herbold, Jens Grabowski, Stephan Waack (Institute of Computer Science, University of Göttingen, Göttingen, Germany)
+- Journal name: Empirical Software Engineering
+- Published date: 2011-05-25
+- [Paper file](https://link.springer.com/content/pdf/10.1007%2Fs10664-011-9162-z.pdf)
+- [Slide file](https://www.swe.informatik.uni-goettingen.de/sites/default/files/publications/Slides-CalculationOptimizationOfMetricSets.pdf)
 
 ## Abstract
 In this article, we present a novel algorithmic method for the calculation of thresholds for a metric set. To this aim, machine learning and data mining techniques are utilized. We define a data-driven methodology that can be used for efficiency optimization of existing metric sets, for the simplification of complex classification models, and for the calculation of thresholds for a metric set in an environment where no metric set yet exists. The methodology is independent of the metric set and therefore also independent of any language, paradigm or abstraction level. In four case studies performed on large-scale open-source software metric sets for C functions, C+ +, C# methods and Java classes are optimized and the methodology is validated.
 
 ## Summary (Korean)
-+ 
+- 이 논문에서는 여러 개의 software metric의 threshold들을 동시에 고려할 때에, 그 때 고려하는 계산과 최적화를 다룬다. software metric이란 소프트웨어의 질적 평가를 수행하는 metric 이다. 하나의 software metric 만으로 소프트웨어의 충분한 평가를 수행할 수 없기 때문에, 이 논문에서는 개별적인 software metric 들을 활용하여 다방면(N-metrics)으로 동시에 고려하는 종합적인 평가 방법을 고안하고, 그 방법들의 계산과 최적화를 다룬다.
+
+## Explanatory notes
+- 이 논문에서 다루는 metric들은 biometric이 아니라 software metric 이기 때문에 thresholding 최적화 기술을 위주로 review 하였다. 참고로, 여러 개의 biometric 을 조합하는 것은 information confusion, combination of [BIOMETRIC](https://doi.org/10.1016/j.inffus.2016.05.003) 등의 키워드로 찾는 것이 유리해보인다.
 
 ## Details
-+ Machine Learning(ML) Section Skip. (Supervised, Unsupervised, Semisupervised, etc.)
-
-[title]: <url> "describ"
+- 본 논문의 기여는 아래 4가지로 분류해서 설명할 수 있다. 이 논문은 software metric 에 관한 논문임에도 불구하고, 이 논문의 기여들은, 여러 개의 metric들을 동시에 고려하는 상황들에 범용적으로 참고할 수 있는 듯하다.
+1. metric sets의 threshold들을 계산하는 데에 machine learning 기반 방법을 사용
+    1. rectangle-learning
+2. 기존의 metric sets와 그것들의 threshold를 가지고 high-level 최적화 방법을 제안
+    1. N-metrics 에서 실제 사용되지 않은 metrics 들은 제거하고, threshold 를 조율하는 generic methodology 제안
+3. 기존의 분류 방법들을 효과적으로 대체하기 위해 같은 방법 사용함(?)
+    1. (작성중)
+4. 아직 threshold들이 결정되지 않은 metric sets들에 대해서, 좋은 threshold들을 결정하는 outline을 제안
+- 기여 외의 참고 사항
+    - 이 논문의 software assessment 의 데이터셋으로 large-scale open-source software projects 의 C 함수들, C++, C#, Java의 method와 클래스들을 사용함.
+- software metric 과 machine learning 에 관한 설명은 pass 하도록 하고 다음 세가지의 thresholding 최적화 관련 기술을 review 하겠다. 
+    - rectangle-learning
+    - 실제 사용되지 않은 metrics 들은 제거하고, threshold 를 조율하는 methodology
+    - 아직 threshold들이 결정되지 않은 metric sets들에 대해서, 좋은 threshold들을 결정하는 outline
+- rectangle-learning
+- 실제 사용되지 않은 metrics 들은 제거하고, threshold 를 조율하는 methodology
+- 아직 threshold들이 결정되지 않은 metric sets들에 대해서, 좋은 threshold들을 결정하는 outline
 
 ## Point to note
 + write something
