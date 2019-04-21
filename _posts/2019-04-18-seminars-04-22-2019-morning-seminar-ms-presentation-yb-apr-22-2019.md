@@ -41,9 +41,9 @@ Identity-based cryptosystems mean that public keys can be directly derived from 
 
 ### I. Introduction
 + 인증서 기반 암호체계는 공개키 암호체계에 널리 이용되고 있다. 이 인증서 기반 암호체계는 아래와 같은 세가지의 특징이 있다.
-  +1) **entity에게 정보를 암호화 해서 주기 위해서는 entity의 인증된 공개키 인증서가 필요하다.**
-  +2) **그래서 이러한 인증서들은 대규모로 생성되어, 커뮤니티의 많은 사람들에게 배포되어야 한다.**
-  +3) **또한 이 인증서들은 빈번하게 검증되어야 한다.**
+  + 1) **entity에게 정보를 암호화 해서 주기 위해서는 entity의 인증된 공개키 인증서가 필요하다.**
+  + 2) **그래서 이러한 인증서들은 대규모로 생성되어, 커뮤니티의 많은 사람들에게 배포되어야 한다.**
+  + 3) **또한 이 인증서들은 빈번하게 검증되어야 한다.**
   + **그래서 이 공개키 인증서의 관리는 성가시다.** 이러한 공개키 인증서의 단점을 피하기 위해서, Shamir가 1984년에 identity-based cryptography 개념을 소개했다. user identifier로부터 공개키를 만드는 것. private key는 Private Key Generator(PKG)라고 불리는 중앙 권한 시스템 레벨의 secret key와 user공개키 조합으로 만들 수 있음.
 
 {% include articles/figure.html url="/assets/img/byoul/2019/20190422001.PNG" legend="User Study" %}
