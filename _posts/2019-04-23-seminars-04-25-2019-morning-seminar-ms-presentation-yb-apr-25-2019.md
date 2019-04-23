@@ -1,5 +1,5 @@
 ---
-title: Session 2. SABRE: Protecting Bitcoin against Routing Attacks
+title: Session 3. SABRE: Protecting Bitcoin against Routing Attacks
 date: 2019-04-23 00:00:00 Z
 description: SABRE: Protecting Bitcoin against Routing Attacks
 card_title: Session 3
