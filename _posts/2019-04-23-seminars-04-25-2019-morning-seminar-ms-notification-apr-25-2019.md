@@ -57,10 +57,10 @@ We show that our usage of encryption adds tolerable overhead to the ordinary dee
 + Ye-Byoul Son (손예별)
 
 #### Information of the paper [Link](https://www.ndss-symposium.org/ndss-paper/sabre-protecting-bitcoin-against-routing-attacks/)
-Authors : Maria Apostolak, Gian Marti, Jan Miller, Laurent Vanbever (ETH Zurich)
-Journal : NDSS19 
-Published date: 2019-02-24
-[Paper Link](https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_02A-1_Apostolaki_paper.pdf)
++ Authors : Maria Apostolak, Gian Marti, Jan Miller, Laurent Vanbever (ETH Zurich)
++ Journal : NDSS19 
++ Published date: 2019-02-24 
++ [Paper Link](https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_02A-1_Apostolaki_paper.pdf)
 
 #### Abstract
 Nowadays Internet routing attacks remain practically effective as existing countermeasures either fail to provide protection guarantees or are not easily deployable. Blockchain systems are particularly vulnerable to such attacks as they rely on Internet-wide communications to reach consensus. In particular, Bitcoin—the most widely-used cryptocurrency—can be split in half by any AS-level adversary using BGP hijacking. 
