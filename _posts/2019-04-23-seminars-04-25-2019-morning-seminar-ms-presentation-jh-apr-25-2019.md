@@ -115,11 +115,11 @@ We show that our usage of encryption adds tolerable overhead to the ordinary dee
 
 
 
-[SS15]: (<https://dl.acm.org/citation.cfm?id=2813687>)
+[SS15]: https://dl.acm.org/citation.cfm?id=2813687
 
-[SVHN]: (<http://ufldl.stanford.edu/housenumbers/>)
+[SVHN]: http://ufldl.stanford.edu/housenumbers/
 
-[MNIST]: (<http://yann.lecun.com/exdb/mnist/>)
+[MNIST]: http://yann.lecun.com/exdb/mnist/
 
 
 
