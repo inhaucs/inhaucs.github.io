@@ -46,7 +46,7 @@ Identity-based cryptosystems mean that public keys can be directly derived from 
   + 3) **또한 이 인증서들은 빈번하게 검증되어야 한다.**
   + **그래서 이 공개키 인증서의 관리는 성가시다.** 이러한 공개키 인증서의 단점을 피하기 위해서, Shamir가 1984년에 identity-based cryptography 개념을 소개했다. user identifier로부터 공개키를 만드는 것. private key는 Private Key Generator(PKG)라고 불리는 중앙 권한 시스템 레벨의 secret key와 user공개키 조합으로 만들 수 있음.
 
-{% include articles/figure.html url="/assets/img/byoul/2019/20190422001.PNG" legend="User Study" %}
+{% include articles/figure.html url="/assets/img/byoul/2019/20190422001.PNG" legend="2019042201yb" %}
 
   + 이후로 많은 ID기반 암호에 많은 진전이 있었고, ID기반 서명 스킴들, ID기반 암호스킴 등이 우후죽순 생겨났다.
  
