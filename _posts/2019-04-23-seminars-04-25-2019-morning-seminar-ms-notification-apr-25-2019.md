@@ -93,7 +93,7 @@ of Service attacks.
  ---
  
  
- ### Session 4: [Surveylance: Automatically Detecting Online Survey Scams](https://inhaucs.github.io/seminars/04-25-2019-morning-seminar/presentation/ms-presentation-th-apr-25-2019.html)
+ ### Session 5: [Surveylance: Automatically Detecting Online Survey Scams](https://inhaucs.github.io/seminars/04-25-2019-morning-seminar/presentation/ms-presentation-th-apr-25-2019.html)
 
 + Tae-Hyun Kim (김태현)
 
