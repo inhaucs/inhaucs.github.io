@@ -76,7 +76,7 @@ We show that our usage of encryption adds tolerable overhead to the ordinary dee
 + **E**(W_global) = **E**(W_global) + **E**(-a*G_local)
 
   + 암호화된 상태로 그라디언트 디센트를 수행함.
-  + Honest-but-curious cloud server와 honest client에 대해 안전함. 즉, 공격자는 클라우드 서버만 고려됨.
+  + Honest-but-curious cloud server와 honest client에 대해 안전함. 즉, 공격자는 클라우드 서버만 고려됨. 대신, 나머지 참여자들은 Global weight 값만 알 수 있으므로, 자연스럽게 타 참여자들의 데이터를 알 수 없음. 다만, 공격자로 고려하지 않는 것은 모델을 통해 다른 공격들을 수행하는 것을 고려하지 않기 위함으로 보임.
   + SSL/TLS 또한 함께 있어야 안전성이 보장됨.
 
 + AHE로써 Paillier와 LWE-based AHE 두가지 기법을 고려하였음.
