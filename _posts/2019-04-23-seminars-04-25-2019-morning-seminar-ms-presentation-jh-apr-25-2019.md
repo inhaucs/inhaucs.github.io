@@ -93,7 +93,8 @@ We show that our usage of encryption adds tolerable overhead to the ordinary dee
     + MNIST db : 구분이 잘 되는 수준의 handwritten digits
   + [SVHN dataset](SVHN)에는 n_gd가 **402250**으로 사용됨
     + SVHN dataset : real-world image dataset으로 길에 있는 숫자들
-      {% include articles/figure.html url="http://ufldl.stanford.edu/housenumbers/examples_new.png" %}
+
+      {% include articles/figure.html url="http://ufldl.stanford.edu/housenumbers/examples_new.png" legend="SVHN examples" %}
 
 + Estimating the computation costs of multilayer perceptron (MLP)
 
@@ -101,7 +102,7 @@ We show that our usage of encryption adds tolerable overhead to the ordinary dee
 
   + 예제로 MNIST dataset에 관한 성능을 예측 하였는데, 그 결과가 다음과 같음.
 
-    {% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-25-fig-estimate-performance.png" %}
+    {% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-25-fig-estimate-performance.png" legend="Computation Cost Esitmation of MLP for MNIST" %}
 
 
 ### Points to note
