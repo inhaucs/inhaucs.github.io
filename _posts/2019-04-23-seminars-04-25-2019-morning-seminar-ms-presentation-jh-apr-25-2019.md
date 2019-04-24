@@ -1,6 +1,6 @@
 ---
 title: Session 2. Privacy-Preserving Deep Learning via Additively Homomorphic Encryption
-date: 2019-04-23 00:00:00 Z
+date: 2019-04-24 00:00:00 Z
 description: Privacy-Preserving Deep Learning via Additively Homomorphic Encryption
 card_title: Session 2
 card_teaser: Privacy-Preserving Deep Learning via Additively Homomorphic Encryption
