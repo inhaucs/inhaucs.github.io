@@ -88,6 +88,24 @@ of Service attacks.
  We present a complete implementation of SABRE together with an extensive evaluation. Our results demonstrate that SABRE is effective at securing Bitcoin against routing attacks, even with deployments of as few as 6 nodes.
  
  ---
+ 
+ 
+ ---
+ 
+ 
+ ### Session 4: [Surveylance: Automatically Detecting Online Survey Scams](https://inhaucs.github.io/seminars/04-25-2019-morning-seminar/presentation/ms-presentation-th-apr-25-2019.html)
+
++ Tae-Hyun Kim (김태현)
+
+#### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/8418597)
++ Authors: Amin Kharraz, William Robertson, Engin Kirda(Northeastern University, University of Illinois Urbana-Champaign)
++ Conference name: 2018 IEEE Symposium on Security and Privacy
++ Published date: 2018-05-20
++ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8418597)
+
+#### Abstract
+Online surveys are a popular mechanism for performing market research in exchange for monetary compensation. Unfortunately, fraudulent survey websites are similarly rising in popularity among cyber-criminals as a means for executing social engineering attacks. In addition to the sizable population of users that participate in online surveys as a secondary revenue stream, unsuspecting users who search the web for free content or access codes to commercial software can also be exposed to survey scams. This occurs through redirection to websites that ask the user to complete a survey in order to receive the promised content or a reward.
+In this paper, we present SURVEYLANCE, the first system that automatically identifies survey scams using machine learning techniques. Our evaluation demonstrates that SURVEYLANCE works well in practice by identifying 8,623 unique websites involved in online survey attacks. We show that SURVEYLANCE is suitable for assisting human analysts in survey scam detection at scale. Our work also provides the first systematic analysis of the survey scam ecosystem by investigating the capabilities of these services, mapping all the parties involved in the ecosystem, and quantifying the consequences to users that are exposed to these services. Our analysis reveals that a large number of survey scams are easily reachable through the Alexa top 30K websites, and expose users to a wide range of security issues including identity fraud, deceptive advertisements, potentially unwanted programs (PUPs), malicious extensions, and malware.
 
 {% include date/updated.html %}
 
