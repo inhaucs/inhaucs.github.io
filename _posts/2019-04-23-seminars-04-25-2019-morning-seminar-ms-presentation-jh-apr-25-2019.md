@@ -46,7 +46,7 @@ We show that our usage of encryption adds tolerable overhead to the ordinary dee
 
 이 때, 딥러닝이란 Neural network를 돌린 어떠한 결과를 직접적으로 얘기하는 것이 아니라, Asynchronous (aka. Donwpour) SGD를 계산하는 것을 의미하며, 본 논문에서 가정하는 세팅은 여러 데이터 제공자가, Cloud 등을 이용하여 Model을 학습하는데, 그 과정을 함께하는 것을 의미한다. 
 
-즉, 자신의 정보가 타 참여자(데이터 제공자)에게 공개되지 않는 상태에서 모델을 학습할 수 있는 것을 의미한다. 
+즉, 자신의 정보가 클라우드에게 공개되지 않는 상태에서 모델을 학습할 수 있는 것을 의미한다. 
 
 
 
@@ -76,7 +76,7 @@ We show that our usage of encryption adds tolerable overhead to the ordinary dee
 + **E**(W_global) = **E**(W_global) + **E**(-a*G_local)
 
   + 암호화된 상태로 그라디언트 디센트를 수행함.
-  + Honest-but-curious cloud server와 honest client (사실상 honest-but-curious라 볼 수 있음)에 대해 안전함.
+  + Honest-but-curious cloud server와 honest client에 대해 안전함. 즉, 공격자는 클라우드 서버만 고려됨.
   + SSL/TLS 또한 함께 있어야 안전성이 보장됨.
 
 + AHE로써 Paillier와 LWE-based AHE 두가지 기법을 고려하였음.
