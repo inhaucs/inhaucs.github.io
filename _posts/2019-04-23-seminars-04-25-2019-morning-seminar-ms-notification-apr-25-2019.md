@@ -23,7 +23,7 @@ permalink: /:categories/:slug.html
 2019-04-25
 
 ## Presenters
-+ Seng-Yun Jeon (전성윤)
++ Seong-Yun Jeon (전성윤)
 + Jong-Hyuk Im (임종혁)
 + Ye-Byoul Son (손예별)
 + Hee-Yong Kwon (권희용)
@@ -33,6 +33,24 @@ permalink: /:categories/:slug.html
 ## Presentations
 
 ---
+### Session 1: [Overview of the combination of biometric matchers](https://inhaucs.github.io/seminars/04-25-2019-morning-seminar/presentation/ms-presentation-sy-apr-25-2019.html)
+
++ Seong-Yun Jeon (전성윤)
+
+#### Information of the paper [(Link)](https://www.sciencedirect.com/science/article/pii/S1566253516300446?via%3Dihub)
++ Authors: Alessandra Lumini; Loris Nanni; (in the University of Bologna in Italy and the University of Padua in Italy)
++ Journal name: Information Fusion
++ Published date: 2016-05-18
++ [Paper Link](https://www.sciencedirect.com/science/article/pii/S1566253516300446?via%3Dihub)
+
+#### Abstract
+Biometric identity verification refers to technologies used to measure human physical or behavioral characteristics, which offer a radical alternative to passports, ID cards, driving licenses or PIN numbers in authentication. Since biometric systems present several limitations in terms of accuracy, universality, distinctiveness, acceptability, methods for combining biometric matchers have attracted increasing attention of researchers with the aim of improving the ability of systems to handle poor quality and incomplete data, achieving scalability to manage huge databases of users, ensuring interoperability, and protecting user privacy against attacks. The combination of biometric systems, also known as “biometric fusion”, can be classified into unimodal biometric if it is based on a single biometric trait and multimodal biometric if it uses several biometric traits for person authentication.
+The main goal of this study is to analyze different techniques of information fusion applied in the biometric field. This paper overviews several systems and architectures related to the combination of biometric systems, both unimodal and multimodal, classifying them according to a given taxonomy. Moreover, we deal with the problem of biometric system evaluation, discussing both performance indicators and existing benchmarks.
+As a case study about the combination of biometric matchers, we present an experimental comparison of many different approaches of fusion of matchers at score level, carried out on three very different benchmark databases of scores. Our experiments show that the most valuable performance is obtained by mixed approaches, based on the fusion of scores. The source code of all the method implemented for this research is freely available for future comparisons1.
+After a detailed analysis of pros and cons of several existing approaches for the combination of biometric matchers and after an experimental evaluation of some of them, we draw our conclusion and suggest some future directions of research, hoping that this work could be a useful start point for newer research.
+
+---
+
 ### Session 2: [Privacy-Preserving Deep Learning via Additively Homomorphic Encryption](https://inhaucs.github.io/seminars/04-25-2019-morning-seminar/presentation/ms-presentation-jh-apr-25-2019.html)
 
 + Jong-Hyuk Im (임종혁)
