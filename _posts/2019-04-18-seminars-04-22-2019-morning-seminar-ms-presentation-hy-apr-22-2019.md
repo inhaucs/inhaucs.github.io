@@ -97,7 +97,16 @@ Private companies, government entities, and institutions such as hospitals routi
 + 또한 Continous data에 대한 DP의 Overview를 위해 볼 수 있음
 
 ## Discussion
-+ SUPER HAPPY
++ Editor: Jong-Hyuk Im (임종혁)
++ Algorithm_priv (Differential private algorithm)의 정의에 관한 질문이 있었으나, 명확한 답변이 없어 *추후 확인이 필요함*.
++ DP가 중요한 이유에 대해서 많은 질문들이 있었음
+  1. DP로 출력된 결과를 이용해 "다른 작업"을 해도 안전성 유지
+    + "다른 작업"에 관한 구체적인 정의를 확인하지 못함
+  2. 다른 Machine Learning (ML)이 취약한 공격들에 강함. 
+    + DP와 ML의 경계가 불분명한 상태로 설명이 진행되어, 많은 논의가 있었지만 정확히 핵심을 찾지는 못하였음
++ ML 기준으로 DP를 설명해보려는 시도 또한 있었으나, DP 자체의 정의는 애매한 것으로 보임
++ 여러 Pertubation에 관한 설명이 있었음
+  + 여러가지 섞는 것 문제가 있는가? -> 없으나 이상할 듯?
 
 [FWC+10]: <https://www.cs.sfu.ca/~wangk/pub/FWCY10csur.pdf> "B. C. M. Fung, K. Wang, R. Chen, P. S. Yu, “Privacy-preserving data publishing: A survey of recent developments”, ACM Comput. Surv., vol. 42, no. 4, pp. 14:1-14:53, June 2010."
 [DMN+06]: <http://people.csail.mit.edu/asmith/PS/sensitivity-tcc-final.pdf> " C. Dwork, F. McSherry, K. Nissim, and A. Smith. (2006, Mar. 4–7). Theory of Cryptography (Lecture Notes in Computer Science Series, vol. 3876) [Online]. Available: http://dx.doi.org/10.1007/11681878_14"
