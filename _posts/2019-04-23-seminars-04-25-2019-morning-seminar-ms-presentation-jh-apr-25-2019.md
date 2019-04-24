@@ -58,10 +58,13 @@ We show that our usage of encryption adds tolerable overhead to the ordinary dee
 
 + Gradients-selective ASGD라고 불리는 프라이버시 보장형 딥러닝 시스템
 + W_global = W_global - a*G^{selective}_{local}
+
   + G^{selective}_{local}는 G_local의 1~10%정도의 선택적인 gradients만이 포함되어 있다함
   + 어려운 개념은 아니고, 상기 식을 통해 각 참자가 선택적인 그라디언트만을 클라우드로 보내, 전체 집합을 노출 시키는 것을 막는 방식이라고 함.
   + 자연스럽게, leakage가 발생하는데, Laplace noise를 이용한 Differential Privacy (DP) 기법을 이용하여 이러한 leakage를 방지한다 함.
+  
 + 이 논문에서는 이러한 DP 기법을 이용한 프라이버시 보호가 취약함을 보임.
+
   + 굉장히 적은 정보만으로도 (1~10% 정도의 gradients) 학습에 사용된 원본 이미지를 획득할 수 있다는 것을 복원(recover) 공격을 통해 보임.
 
 #### The system of the paper
