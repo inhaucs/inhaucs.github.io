@@ -23,9 +23,9 @@ permalink: /:categories/:slug.html
 + Tae-Hyun Kim (김태현)
 + 2019-04-25
 
-## [Surveylance: Automatically Detecting Online Survey Scams](https://inhaucs.github.io/seminars/04-25-2019-morning-seminar/presentation/ms-presentation-sy-apr-25-2019.html)
+## [Surveylance: Automatically Detecting Online Survey Scams](https://inhaucs.github.io/seminars/04-25-2019-morning-seminar/presentation/ms-presentation-th-apr-25-2019.html)
 
-#### Information of the paper [(Link)](https://www.sciencedirect.com/science/article/pii/S1566253516300446?via%3Dihub)
+#### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/8418597)
 + Authors: Amin Kharraz, William Robertson, Engin Kirda(Northeastern University, University of Illinois Urbana-Champaign)
 + Conference name: 2018 IEEE Symposium on Security and Privacy
 + Published date: 2018-05-20
