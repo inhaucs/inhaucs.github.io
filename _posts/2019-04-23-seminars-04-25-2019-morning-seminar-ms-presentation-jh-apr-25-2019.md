@@ -82,10 +82,10 @@ We show that our usage of encryption adds tolerable overhead to the ordinary dee
   + LWE-based AHE는 실험을 수행함.
 
 + System
-  {% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-25-fig-system-overview.PNG" legend="System overview" %}
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-25-fig-system-overview.PNG" legend="System overview" %}
 
 + Results
-  {% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-25-fig-results.PNG" legend="Results using LWE-based AHE scheme" %}
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-25-fig-results.PNG" legend="Results using LWE-based AHE scheme" %}
 
   + (10): LWE 스타일로 인코딩한 데이터.
   + (11): AHE 덧셈 ( **E**(r) + **E**(-t) ).
@@ -94,7 +94,7 @@ We show that our usage of encryption adds tolerable overhead to the ordinary dee
   + [SVHN dataset](SVHN)에는 n_gd가 **402250**으로 사용됨
     + SVHN dataset : real-world image dataset으로 길에 있는 숫자들
 
-      {% include articles/figure.html url="http://ufldl.stanford.edu/housenumbers/examples_new.png" legend="SVHN examples" %}
+{% include articles/figure.html url="http://ufldl.stanford.edu/housenumbers/examples_new.png" legend="SVHN examples" %}
 
 + Estimating the computation costs of multilayer perceptron (MLP)
 
@@ -102,7 +102,7 @@ We show that our usage of encryption adds tolerable overhead to the ordinary dee
 
   + 예제로 MNIST dataset에 관한 성능을 예측 하였는데, 그 결과가 다음과 같음.
 
-    {% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-25-fig-estimate-performance.png" legend="Computation Cost Esitmation of MLP for MNIST" %}
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-25-fig-estimate-performance.png" legend="Computation Cost Esitmation of MLP for MNIST" %}
 
 
 ### Points to note
