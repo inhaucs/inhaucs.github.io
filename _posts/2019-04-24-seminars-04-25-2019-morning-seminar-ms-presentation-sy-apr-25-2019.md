@@ -38,18 +38,21 @@ As a case study about the combination of biometric matchers, we present an exper
 After a detailed analysis of pros and cons of several existing approaches for the combination of biometric matchers and after an experimental evaluation of some of them, we draw our conclusion and suggest some future directions of research, hoping that this work could be a useful start point for newer research.
 
 ## Summary (Korean)
-
+이 논문은 information fusion을 biometric 분야에 적용한 biometric fusion의 여러가지 방법들을 분석하였다. 이 논문에서는 여러가지 biometric system들의 조합에 관련된 시스템들과 설계들에 대해 overview한다. 또한 biometric system의 성능 평가의 문제를 언급하면서 성능 측정과 기존의 벤치마크에 대해 discuss한다.
+이 논문에서는 score level의 biometric matcher들의 조합에 대해 experimental comparison을 수행하는 사례연구를 하였고, mixed approach에서 매우 좋은 성능을 보였음을 확인하였다. 모든 소스코드는 공개되어있고, 마지막으로 향후 연구에 대한 방향 제시를 한다.
 
 ## Details
 
+### Biometric system들의 한계(limitations of biometric systems)
+* variable environmental conditions(i.e. noise, changes in illumination, pose) -> 시스템의 정확도에 큰 영향을 준다.
+* biometric data를 acquisition하는 조건에 따라 또는 aging effect에 따라 intra-class variation이 크다.
+* 질병이나 장애로 인한 non-universality.
+* spoof attacks 이 가능할 수 있다.  
 
-### Contents of the paper
+### Biometric fusion 이란
+* Biometric system들의 한계를 극복하기 위해 biometric matchers 를 조합하는 방법에 대한 연구에 관심이 높아졌다.
 
-
-#### Conclusion
-
-
-### Points to note
+## Points to note
 
 
 ## Discussion
