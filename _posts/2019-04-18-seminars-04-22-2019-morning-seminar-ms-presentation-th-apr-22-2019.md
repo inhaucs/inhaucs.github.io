@@ -60,8 +60,13 @@ We introduce ProcHarvester, a systematic and fully automated technique to assess
 
 
 ## Discussion
-Editor: 작성자 이름
-(내용 작성)
++ Editor: 손예별
++ 이벤트 자동으로 실행 -> scikit-learn, dynamic-time-wraping(DTW) 등의 툴을 이용해 이벤트 분석 -> 앱 이용시 비슷한 결과를 내는 것들을 모아 앱의 finger print를 만듦.
++ Finger Print를 가지고, 사용자의 앱 리소스를 분석하여 사용자가 무슨 앱을 쓰는지 확인 가능 (사용자의 이용 정보를 획득)
++ 자동으로 분석하는 툴 들 중에서는 정확도가 높음.
+  + 수동으로 하는 분석 보다는 낮을 수 있음.
+  + Android 8에서 최초로 분석 진행
++ 폰을 루팅을 해도 /proc/ 폴더 외에는 접근이 불가능하게 개발되었다는 점을 고려하면, 루팅 후 /proc/이외의 폴더에 접근하는 공격기법을 만들면 논문이 될 수 있을 것 같음. 
 
 
 {% include date/updated.html %}
