@@ -25,7 +25,6 @@ permalink: /:categories/:slug.html
 ## Presenters
 + Tae-Hyun Kim (김태현)
 + Jong-Hyuk Im (임종혁)
-+ Ye-Byoul Son (손예별): Cont.
 + Seong-Yun Jeon (전성윤)
 + Hee-Yong Kwon (권희용)
 
