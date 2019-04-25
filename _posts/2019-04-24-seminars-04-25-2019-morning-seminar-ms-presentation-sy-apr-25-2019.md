@@ -30,6 +30,7 @@ permalink: /:categories/:slug.html
 + Journal name: Information Fusion
 + Published date: 2016-05-18
 + [Paper Link](https://www.sciencedirect.com/science/article/pii/S1566253516300446?via%3Dihub)
++ [Source Code](https://www.dropbox.com/s/5tf1q0o5do3a4tj/ToolBiometricFusion2015.rar?dl=0)
 
 #### Abstract
 Biometric identity verification refers to technologies used to measure human physical or behavioral characteristics, which offer a radical alternative to passports, ID cards, driving licenses or PIN numbers in authentication. Since biometric systems present several limitations in terms of accuracy, universality, distinctiveness, acceptability, methods for combining biometric matchers have attracted increasing attention of researchers with the aim of improving the ability of systems to handle poor quality and incomplete data, achieving scalability to manage huge databases of users, ensuring interoperability, and protecting user privacy against attacks. The combination of biometric systems, also known as “biometric fusion”, can be classified into unimodal biometric if it is based on a single biometric trait and multimodal biometric if it uses several biometric traits for person authentication.
@@ -39,7 +40,7 @@ After a detailed analysis of pros and cons of several existing approaches for th
 
 ## Summary (Korean)
 이 논문은 information fusion을 biometric 분야에 적용한 biometric fusion의 여러가지 방법들을 분석하였다. 이 논문에서는 여러가지 biometric system들의 조합에 관련된 시스템들과 설계들에 대해 overview한다. 또한 biometric system의 성능 평가의 문제를 언급하면서 성능 측정과 기존의 벤치마크에 대해 discuss한다.
-이 논문에서는 score level의 biometric matcher들의 조합에 대해 experimental comparison을 수행하는 사례연구를 하였고, mixed approach에서 매우 좋은 성능을 보였음을 확인하였다. 모든 소스코드는 공개되어있고, 마지막으로 향후 연구에 대한 방향 제시를 한다.
+이 논문에서는 score level의 biometric matcher들의 조합에 대해 experimental comparison을 수행하는 사례연구를 하였고, mixed approach에서 매우 좋은 성능을 보였음을 확인하였다. 모든 소스코드(matlab으로 작성됨)는 공개되어있고, 마지막으로 향후 연구(biometric fusion)에 대한 방향 제시를 한다. 본 논문의 인용은 현재 58회이다.
 
 ## Details
 
@@ -63,7 +64,14 @@ After a detailed analysis of pros and cons of several existing approaches for th
   * 단점
     * biometric template 보호가 더욱 강화되어야한다. 특히, biometric template 개수가 많아질수록, 종류가 다양해질 수록 개인에 대한 정보를 더 드러내는 셈이 된다.
     * 사용자가 인증에 몇가지 더 step이 생기기 때문에 불편함을 줄수 있다. 이 경우 fingerprints와 finger veins를 fusion하는 식으로 trait들 간의 취득 위치도 고려할 필요가 있다.
+    
 {% include articles/figure.html url="/assets/img/seongyun/2019/04-25-2019-ms-session1-fig1.PNG" legend="Possible sources of information in a biometric fusion system" %}
+
+### Different levels of biometric fusion
+* Sensor-level fusion ; 센서 수준에서 raw data를 combination. 예를 들면, swipe 식 지문 센서가 이미지들을 영상처리 기법을 이용하여 큰 이미지로 만들어 주는 것. 얼굴 인식 시에 3D로 인식하기 위해 여러개의 카메라로부터 받는 것.
+* Feature-level fusion ; 추출한 feature vector들을 combination.
+* Score-level fusion ; biometric matcher에 계산된 score를 combination. (i.e. LC, NLC)
+* Decision-level fusion ; biometric matcher에 의해 산출된 인증 여부를 combination. (i.e. AND, OR)
 
 {% include articles/figure.html url="/assets/img/seongyun/2019/04-25-2019-ms-session1-fig2.PNG" legend="Different levels of fusion in biometric systems" %}
 
