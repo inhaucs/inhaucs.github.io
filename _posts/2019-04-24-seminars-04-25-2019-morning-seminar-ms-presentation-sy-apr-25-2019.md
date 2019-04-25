@@ -1,6 +1,6 @@
 ---
 title: "Session 1. Overview of the combination of biometric matchers"
-date: 2019-04-23 00:00:00 Z
+date: 2019-04-25 00:00:00 Z
 description: "Overview of the combination of biometric matchers"
 card_title: Session 1
 card_teaser: "Overview of the combination of biometric matchers"
