@@ -80,8 +80,14 @@ After a detailed analysis of pros and cons of several existing approaches for th
 * Biometric system를 combination하는 연구가 많이 진행되었음. score level 뿐만 아니라 다양한 level 상에서 combination하는 연구들이 많다.
 
 ## Discussion
-Editor: 작성자 이름
-(내용 작성)
+Editor: 손예별 
++ "biometric : bio-information을 threshold를 가지고 metric를 만든다."
++ biometric combination
+  + biometric을 여러개 써서 성능을 높인다.
+    + 종류는 크게 unimodal(i.e. 얼굴 + 얼굴) / multimodal (i.e. 얼굴 + 홍채)
+  + 여러개 써서 함께 이용하기 위해 기존에 있는 기능들을 재구현, 성능 측정.
++ "FTER : biometric 두가지를 등록할 경우, 등록 성공의 확률이 더 높다?" 자세한 확인 필요.
++ "Different levels of biometric fustion : 개념 정리가 잘 되어 있어, 차후 논문에 이용할 때 기본 개념으로 넣기 좋을 것 같음."
 
 
 {% include date/updated.html %}
