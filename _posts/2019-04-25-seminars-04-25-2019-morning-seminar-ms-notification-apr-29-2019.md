@@ -58,6 +58,22 @@ Finally, we consider the efficacy of state-of-the-art privacy mechanisms through
 The affected companies have been notified of the discovered vulnerabilities and at the time of publication have incorporated our proposed countermeasures into their production systems.
  
 ---
+
+### Session 3: [NormFace: L<sub>2</sub> Hypersphere Embedding for Face Verification](https://inhaucs.github.io/seminars/04-29-2019-morning-seminar/presentation/ms-presentation-sy-apr-29-2019.html)
+
++ Seong-Yun Jeon (전성윤)
+
+#### Information of the paper [(Link)](https://dl.acm.org/citation.cfm?id=3123266.3123359)
++ Authors: Feng Wang, Xiang Xiang, Jian Cheng, and Alan Loddon Yuille (University of Electronic Science and Technology of China and Johns Hopkins University)
++ Conference name: 25th ACM international conference on Multimedia
++ Published date: 2017-08-23
++ [Paper Link](https://dl.acm.org/citation.cfm?id=3123266.3123359)
++ [Paper Link(arXiv)](https://arxiv.org/pdf/1704.06369.pdf)
+
+#### Abstract
+Thanks to the recent developments of Convolutional Neural Networks, the performance of face verification methods has increased rapidly. In a typical face verification method, feature normalization is a critical step for boosting performance. This motivates us to introduce and study the effect of normalization during training. But we find this is non-trivial, despite normalization being differentiable. We identify and study four issues related to normalization through mathematical analysis, which yields understanding and helps with parameter settings. Based on this analysis we propose two strategies for training using normalized features. The first is a modification of softmax loss, which optimizes cosine similarity instead of inner-product. The second is a reformulation of metric learning by introducing an agent vector for each class. We show that both strategies, and small variants, consistently improve performance by between 0.2% to 0.4% on the LFW dataset based on two models. This is significant because the performance of the two models on LFW dataset is close to saturation at over 98%.
+
+---
  
 {% include date/updated.html %}
 
