@@ -3,7 +3,7 @@ title: 4th UCSLab Morning Seminar
 date: 2019-04-25 00:00:00 Z
 description: Notificaion of 4th UCSLab Morning Seminar (on 2019-04-29) 
 card_title: 4th Morning Seminar
-card_teaser: with 4 presentations on 2019-04-25.
+card_teaser: with 4 presentations on 2019-04-29.
 card_position: 1
 icon: fa-bullhorn
 categories: [seminars,04-29-2019-morning-seminar,notification]
