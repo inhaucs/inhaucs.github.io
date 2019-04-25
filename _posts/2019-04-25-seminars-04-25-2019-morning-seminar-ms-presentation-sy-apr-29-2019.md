@@ -43,7 +43,34 @@ Thanks to the recent developments of Convolutional Neural Networks, the performa
 
 
 ### Contents of the paper
+Abstract
++ CNN의 발전과 함께 face verification의 성능도 급격히 좋아짐.
++ 일반적인 face verification에서는 **feature normalization**이 성능 향상을 위해 매우 중요함.
++ 수학적인 분석을 통해 feature normalization 관련된 4가지 이슈를 확인하고 공부하였음. => normalized features를 이용한 training을 위해 두가지 전략을 제안하겠다.
++ 첫번째 전략) softmax loss의 변형 버전. inner-product 대신에 cosine similarity를 최적화하는 방법(?).
++ 두번째 전략) 각 class들 간의 agent vector를 도입하여 metric learning을 재구성하는 것.
 
+Introduction
++ 얼굴 인증에 있어서 CNN은 인간의 능력을 넘어선 수준.
++ feature comparison 하는 과정에서는, Euclidean distance 나 cosine similarity 많이 사용.
++ training phase 에서는 inner product without normalization 을 사용, testing phase 에서는 inner product with normalization(i.e. cosine similarity)를 사용.
++ face verification community 에서는 왜 testing phase에 normalization 되어야하는지 설명 못했었음. 일종의 testing 성능을 끌어올리기 위한 trick 정도였음.
++ 이 논문은, 왜 그동안 training 단계에서 inner-product layer with nomalization이 불가능했는지와 이 논문이 이것을(training phase 에서 normalization을 적용하는 것) 어떻게 가능하게 했는지 방법을 제안한다.
++ 결론적으로 다음 RQ 4가지를 해결한다.
+    1. 특히, softmax loss로 train한 CNN feature들을 비교할때에, 왜 featrue normalization이 효과적일까?
+    2. softmax loss를 이용하여 cosine similarity를 직접적으로 최적화하려고 하면, 네트워크 학습시 왜 수렴에 실패할까?
+    3. softmax loss를 사용할 때 어떻게하면 cosine similarity를 최적화할 수 있을까
+    4. normalized features를 위한 적절한 다른 loss functions 도 있을까? softmax loss 말고.
+
+Related works
++ Face Verification은 두가지 다른 loss function을 사용함
+    1. metrlc learning loss functions
+    2. softmax loss를 활용하여 classification 문제로써 verification 하는 것
++ Normalization에 대한 최근 연구
+    1. Cosine Loss, vMFMM과 본 논문의 loss functions는 featrue 와 weight를 둘다 최적화하는 반면에, L2-softmax는 feature만을, SphereFace는 weight만을 normalize하였다.
+
+L<sub>2</sub> Normalization Layer
++ 
 
 ### Points to note
 
