@@ -7,7 +7,7 @@ card_teaser: Privacy-Preserving Deep Learning via Additively Homomorphic Encrypt
 card_position: 2
 icon: fa-server
 categories: [seminars,04-25-2019-morning-seminar,presentation]
-tags: [TIFS, 2017, Privacy, DeepLearning, Homomorphic encryption]
+tags: [TIFS, 2017, Privacy-Preserving, Deep-Learning, Homomorphic-Encryption, Application]
 sidebar: morning-seminar
 layout: default
 slug: ms-presentation-jh-apr-25-2019
