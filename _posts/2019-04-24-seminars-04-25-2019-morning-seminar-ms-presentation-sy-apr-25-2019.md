@@ -54,7 +54,7 @@ After a detailed analysis of pros and cons of several existing approaches for th
 * Biometric fusion = the combination of biometric systems. biometric fusion은 크게 두가지로 나눈다.
   * unimodal biometric systems ; 한개의 biometric 정보를 다각도에서 취득하여 combination
   * multimodal biometric systems ; 여러개의 biometric 정보들에 대해서 combination
-  * unimodal/multimodal에 대한 예시는 논문의 Fig. 2. Possible sources of information in a biometric fusion system. 을 참고
+  * unimodal/multimodal에 대한 예시는 Fig. 1. Possible sources of information in a biometric fusion system. 을 참고
 * unimodal fusion의 경우는 성형 수술을 한 얼굴의 인식이나 한가지 biometric에 대한 성능 향상에 효과적이다. 
 * multimodal fusion의 경우는 non-universality를 어느 정도 극복하기 때문에, unimodal fusion에 비해 여러 장점이 있다. 물론 단점도 있다.
   * 장점
@@ -63,6 +63,10 @@ After a detailed analysis of pros and cons of several existing approaches for th
   * 단점
     * biometric template 보호가 더욱 강화되어야한다. 특히, biometric template 개수가 많아질수록, 종류가 다양해질 수록 개인에 대한 정보를 더 드러내는 셈이 된다.
     * 사용자가 인증에 몇가지 더 step이 생기기 때문에 불편함을 줄수 있다. 이 경우 fingerprints와 finger veins를 fusion하는 식으로 trait들 간의 취득 위치도 고려할 필요가 있다.
+{% include articles/figure.html url="/assets/img/seongyun/2019/04-25-2019-ms-session1-fig1.PNG" legend="Possible sources of information in a biometric fusion system" %}
+
+{% include articles/figure.html url="/assets/img/seongyun/2019/04-25-2019-ms-session1-fig2.PNG" legend="Different levels of fusion in biometric systems" %}
+
 
 ## Points to note
 * Biometric system를 combination하는 연구가 많이 진행되었음. score level 뿐만 아니라 다양한 level 상에서 combination하는 연구들이 많다.
