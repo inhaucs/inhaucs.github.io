@@ -27,7 +27,7 @@ permalink: /:categories/:slug.html
 
 ### Information of the paper [(Link)](https://www.ndss-symposium.org/ndss-paper/sabre-protecting-bitcoin-against-routing-attacks/)
 + Authors: Maria Apostolak, Gian Marti, Jan Miller, Laurent Vanbever (ETH Zurich)
-+ Journal name: IEEE Transactions on Information Forensics and Security
++ Journal name: NDSS Symposium 2019 Programme
 + Published date: 2019-02-24
 + [Paper Link](https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_02A-1_Apostolaki_paper.pdf)
 + [Slide Link](https://www.ndss-symposium.org/wp-content/uploads/ndss2019_02A-1_Apostolaki_slides.pdf)
