@@ -47,13 +47,25 @@ After a detailed analysis of pros and cons of several existing approaches for th
 * variable environmental conditions(i.e. noise, changes in illumination, pose) -> 시스템의 정확도에 큰 영향을 준다.
 * biometric data를 acquisition하는 조건에 따라 또는 aging effect에 따라 intra-class variation이 크다.
 * 질병이나 장애로 인한 non-universality.
-* spoof attacks 이 가능할 수 있다.  
+* spoof attacks이 가능할 수 있다.  
 
 ### Biometric fusion 이란
-* Biometric system들의 한계를 극복하기 위해 biometric matchers 를 조합하는 방법에 대한 연구에 관심이 높아졌다.
+* Biometric system들의 한계를 극복하기 위해 biometric matchers를 조합하는 방법에 대한 연구에 관심이 높아졌다.
+* Biometric fusion = the combination of biometric systems. biometric fusion은 크게 두가지로 나눈다.
+  * unimodal biometric systems ; 한개의 biometric 정보를 다각도에서 취득하여 combination
+  * multimodal biometric systems ; 여러개의 biometric 정보들에 대해서 combination
+  * unimodal/multimodal에 대한 예시는 논문의 Fig. 2. Possible sources of information in a biometric fusion system. 을 참고
+* unimodal fusion의 경우는 성형 수술을 한 얼굴의 인식이나 한가지 biometric에 대한 성능 향상에 효과적이다. 
+* multimodal fusion의 경우는 non-universality를 어느 정도 극복하기 때문에, unimodal fusion에 비해 여러 장점이 있다. 물론 단점도 있다.
+  * 장점
+    * Failure-to-Enroll Rate (FTER)과 Failure-to-Capture Rate(FTCR)을 줄이고 충분한 population coverage를 확보할 수 있었다(=non-universality 완화. 조건부적으로..).
+    * 공격자가 spoof attacks를 할때 여러 biometric sources들을 동시에 spoof 해야하기 때문에 공격이 더 어려워 질 것이다.
+  * 단점
+    * biometric template 보호가 더욱 강화되어야한다. 특히, biometric template 개수가 많아질수록, 종류가 다양해질 수록 개인에 대한 정보를 더 드러내는 셈이 된다.
+    * 사용자가 인증에 몇가지 더 step이 생기기 때문에 불편함을 줄수 있다. 이 경우 fingerprints와 finger veins를 fusion하는 식으로 trait들 간의 취득 위치도 고려할 필요가 있다.
 
 ## Points to note
-
+* Biometric system를 combination하는 연구가 많이 진행되었음. score level 뿐만 아니라 다양한 level 상에서 combination하는 연구들이 많다.
 
 ## Discussion
 Editor: 작성자 이름
