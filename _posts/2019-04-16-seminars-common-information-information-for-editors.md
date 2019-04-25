@@ -49,9 +49,11 @@ permalink: /:categories/:slug.html
 + IRB: IRB 승인을 받은 연구
 + LargeSacale: 대규모 실험을 수행한 논문
 + Privacy-preserving: 정보 보호형 관련 논문
-+ Machine Learning: 
++ Machine Learning: ML 기법 또는, 이를 이용한 응용 논문
 + Policy: 정책 수립에 관한 논문
 + IoT: Internet of Things 와 관련된 논문
++ Homomorphic Encryption: HE를 이용한 논문 또는 HE 제안 논문
++ DeepLearning: DL 기법 또는, 이를 이용한 응용 논문
 + 
 + (Tips: 논문에 있는 그대로 추가(논문에 keywords가 없는 경우 제목을 참고하여 키워드 생성 또는 자기 분야에서 주로 쓰는 키워드로 적절히 추가))
 
