@@ -1,6 +1,6 @@
 ---
 title: Session 4. Iris Recognition After Death
-date: 2019-04-23 00:00:00 Z
+date: 2019-04-25 00:00:00 Z
 description: Iris Recognition After Death
 card_title: Session 4
 card_teaser: Iris Recognition After Death
@@ -138,8 +138,12 @@ This paper presents a comprehensive study of post-mortem human iris recognition 
 
 
 ## Discussion
-Editor: 작성자 이름
-(내용 작성)
+Editor: Jong-Hyuk Im (임종혁)
+
++ 윤리적 이슈로 인해 살아있는 사람의 홍채는 획득하지 않았으나 5시간이 지난사람의 홍채 정보는 꼭 획득하였음.
++ 상업용 홍채 인식 제품에도 성능의 차이가 크게 발생하였으며(IrisCore >> MIRLIN), 학계의 결과는 특정 상황에서 좋은 성능을 보이기도 하였음.
++ 여러 제품의 인식 성능을 직접 비교하기보다는, 시각화하여 제공한 논문임
++ 홍채에 국한된 내용인지는 모르겠으나, RGB 채널을 분리하여 얻은 각각의 이미지를 활용하는 것은 다른 이미지 기반 인증에도 적용하여 테스트 해볼수 있을 것으로 보임.
 
 
 {% include date/updated.html %}
