@@ -90,9 +90,13 @@ Automatic face recognition is now widely used in applications ranging from dedup
 + Database summary
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-04-30-fig-db-summary.png" legend="Summary of databases" %}
 
-
-
-### Contents of the paper
+## Experimental Results
++ 실험에 사용된 비교 Features
+  + LBP features [[MHP11]], DoG-LBP features [[KD12]], IDA features
++ 사용된 데이터 수
+  + Idiap : Training(22,497 Genuine / 69,686 Spoof), Test(29,791 Genuine / 93,686 Spoof)
+  + CASIA (H) : Training(4,579 Genuine / 11,858 Spoof), Test(5,603 Genuine / 16,958 Spoof)
+  + MSU : Training(11,567 Genuine / 33,050 Spoof), Test(11,178 Genuine / 33,102 Spoof)
 
 
 ### Points to note
@@ -108,7 +112,8 @@ Automatic face recognition is now widely used in applications ranging from dedup
 [SPW+07]: <https://arxiv.org/pdf/1801.01949.pdf> "L. Sun, G. Pan, Z. Wu, and S. Lao, “Blinking-based live face detection using conditional random fields,” in Proc. AIB, 2007, pp. 252–260."
 [BLL+09]: <https://arxiv.org/pdf/1804.06702.pdf> "W. Bao, H. Li, N. Li, and W. Jiang, “A liveness detection method for face recognition based on optical flow field,” in Proc. IASP, Apr. 2009, pp. 233–236."
 [BDV+13]: <http://iab-rubric.org/papers/PID2777141.pdf> "S. Bharadwaj, T. I. Dhamecha, M. Vatsa, and R. Singh, “Computationally efficient face spoofing detection with motion magnification,” in Proc. IEEE Conf. Comput. Vis. Pattern Recognit. Workshops (CVPRW), Jun. 2013, pp. 105–110."
-
+[MHP11]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6117510> "J. Määtta, A. Hadid, and M. Pietikäinen, “Face spoofing detection from single images using micro-texture analysis,” in Proc. IJCB, Oct. 2011, pp. 1–7."
+[KD12]: <http://www.eurecom.fr/en/publication/3646/download/mm-publi-3646.pdf> "N. Kose and J. Dugelay, “Classification of captured and recaptured images to detect photograph spoofing,” in Proc. ICIEV, May 2012, pp. 1027–1032."
 
 
 {% include date/updated.html %}
