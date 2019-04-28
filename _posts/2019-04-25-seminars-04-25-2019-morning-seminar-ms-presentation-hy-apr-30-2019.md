@@ -64,7 +64,7 @@ Automatic face recognition is now widely used in applications ranging from dedup
 
 
 + System Diagram
-{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-25-fig-system-overview.PNG" legend="System overview" %}
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-30-fig-system-diagram.png" legend="System diagram" %}
 
 
 
