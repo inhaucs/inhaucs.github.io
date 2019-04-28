@@ -55,7 +55,17 @@ Automatic face recognition is now widely used in applications ranging from dedup
 
 
 ## Details
-
++ Motivation
+  + 얼굴 인식은 지문과 다르게 따로 센서가 필요하지 않기 때문에 생체 인식의 이점이 있어 많이 사용된다(Abstract 참고 가능)
+  + 하지만 얼굴 데이터는 다른 생체 데이터와는 다르게 수집하기 용이함(SNS or Video 등)
+  + 논문 출판 당시 최신의 기술인 Commercial Off-The-Shelf (COTS)는 Fig. 2에서 보이듯 Face Spoofing에 취약함
+  + 그래서 본 논문은 3D mask(비용 문제)를 제외한 printed photo와 replayed video attacks에 대해서 Face spoofing에 안전한 방법 제안
+  + 기존 연구들([[CAM12]][[AM11]][[TLL+10]][[ZYL+12]][[SPW+07]][[BLL+09]][[BDV+13]])은 사용한 DB들의 한계가 있음
++ Contribution
+  + IDA 기반의 face spoof detection algorithm 제안
+  + 새로운 face spoof detection database 구성 : MSU Mobile Face Spoof Database (MSU MFSD) -> 허락 받고 
+  + 세 개의 DB에 대해 제안하는 방법 실험
+    + MSU MFSD, Idiap REPLAY-ATTACK, CASIA FASD
 
 
 ### Contents of the paper
@@ -66,6 +76,14 @@ Automatic face recognition is now widely used in applications ranging from dedup
 
 
 ## Discussion
+
+[CAM12]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6313548> "I. Chingovska, A. Anjos, and S. Marcel, “On the effectiveness of local binary patterns in face anti-spoofing,” in Proc. IEEE BIOSIG, Sep. 2012, pp. 1–7."
+[AM11]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6117503> "A. Anjos and S. Marcel, “Counter-measures to photo attacks in face recognition: A public database and a baseline,” in Proc. IJCB, Oct. 2011, pp. 1–7."
+[TLL+10]: <http://parnec.nuaa.edu.cn/xtan/paper/eccv10r1.pdf> "X. Tan, Y. Li, J. Liu, and L. Jiang, “Face liveness detection from a single image with sparse low rank bilinear discriminative model,” in Proc. ECCV, Sep. 2010, pp. 504–517."
+[ZYL+12]: <http://www.cbsr.ia.ac.cn/users/jjyan/ZHANG-ICB2012.pdf> "Z. Zhang, J. Yan, S. Liu, Z. Lei, D. Yi, and S. Z. Li, “A face antispoofing database with diverse attacks,” in Proc. ICB, Mar./Apr. 2012, pp. 26–31."
+[SPW+07]: <https://arxiv.org/pdf/1801.01949.pdf> "L. Sun, G. Pan, Z. Wu, and S. Lao, “Blinking-based live face detection using conditional random fields,” in Proc. AIB, 2007, pp. 252–260."
+[BLL+09]: <https://arxiv.org/pdf/1804.06702.pdf> "W. Bao, H. Li, N. Li, and W. Jiang, “A liveness detection method for face recognition based on optical flow field,” in Proc. IASP, Apr. 2009, pp. 233–236."
+[BDV+13]: <http://iab-rubric.org/papers/PID2777141.pdf> "S. Bharadwaj, T. I. Dhamecha, M. Vatsa, and R. Singh, “Computationally efficient face spoofing detection with motion magnification,” in Proc. IEEE Conf. Comput. Vis. Pattern Recognit. Workshops (CVPRW), Jun. 2013, pp. 105–110."
 
 
 
