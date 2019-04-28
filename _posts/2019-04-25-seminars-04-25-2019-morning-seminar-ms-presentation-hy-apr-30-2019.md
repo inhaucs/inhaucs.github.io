@@ -25,26 +25,15 @@ permalink: /:categories/:slug.html
 
 ## [Face Spoof Detection With Image Distortion Analysis](https://inhaucs.github.io/seminars/04-29-2019-morning-seminar/presentation/ms-presentation-hy-apr-30-2019.html)
 
-### Information of the paper [(Link)](https://www.usenix.org/conference/usenixsecurity18/presentation/hassan)
-+ Authors: Wajih Ul Hassan, Saad Hussain, and Adam Bates (University Of Illinois Urbana-Champaign)
-+ Conference name: 27th USENIX Security Symposium
-+ Published date: 2018-08-16
-+ [Paper Link](https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-hassan_0.pdf)
+### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/7031384)
++ Authors: Di Wen; Hu Han; and Anil K. Jain (Michigan State University)
++ Conference name: IEEE Transactions on Information Forensics and Security
++ Published date: 2015-02-04
++ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7031384)
 
 
 ### Abstract
-Mobile fitness tracking apps allow users to track their workouts and share them with friends through online social networks. 
-Although the sharing of personal data is an inherent risk in all social networks, the dangers presented by sharing personal workouts comprised of geospatial and health data may prove especially grave. 
-While fitness apps offer a variety of privacy features, at present it is unclear if these countermeasures are sufficient to thwart a determined attacker, nor is it clear how many of these services’ users are at risk.
-
-In this work, we perform a systematic analysis of privacy behaviors and threats in fitness tracking social networks. 
-Collecting a month-long snapshot of public posts of a popular fitness tracking service (21 million posts, 3 million users), 
-we observe that 16.5% of users make use of Endpoint Privacy Zones (EPZs), 
-which conceal fitness activity near user-designated sensitive locations (e.g., home, office). 
-We go on to develop an attack against EPZs that infers users’ protected locations from the remaining available information in public posts, 
-discovering that 95.1% of moderately active users are at risk of having their protected locations extracted by an attacker. 
-Finally, we consider the efficacy of state-of-the-art privacy mechanisms through adapting geo-indistinguishability techniques as well as developing a novel EPZ fuzzing technique. 
-The affected companies have been notified of the discovered vulnerabilities and at the time of publication have incorporated our proposed countermeasures into their production systems.
+Automatic face recognition is now widely used in applications ranging from deduplication of identity to authentication of mobile payment. This popularity of face recognition has raised concerns about face spoof attacks (also known as biometric sensor presentation attacks), where a photo or video of an authorized person’s face could be used to gain access to facilities or services. While a number of face spoof detection techniques have been proposed, their generalization ability has not been adequately addressed. We propose an efficient and rather robust face spoof detection algorithm based on image distortion analysis (IDA). Four different features (specular reflection, blurriness, chromatic moment, and color diversity) are extracted to form the IDA feature vector. An ensemble classifier, consisting of multiple SVM classifiers trained for different face spoof attacks (e.g., printed photo and replayed video), is used to distinguish between genuine (live) and spoof faces. The proposed approach is extended to multiframe face spoof detection in videos using a voting-based scheme. We also collect a face spoof database, MSU mobile face spoofing database (MSU MFSD), using two mobile devices (Google Nexus 5 and MacBook Air) with three types of spoof attacks (printed photo, replayed video with iPhone 5S, and replayed video with iPad Air). Experimental results on two public-domain face spoof databases (Idiap REPLAY-ATTACK and CASIA FASD), and the MSU MFSD database show that the proposed approach outperforms the state-of-the-art methods in spoof detection. Our results also highlight the difficulty in separating genuine and spoof faces, especially in cross-database and cross-device scenarios.
 
 
 ## Summary (Korean)
