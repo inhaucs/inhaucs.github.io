@@ -62,7 +62,18 @@ permalink: /:categories/:slug.html
 + USENIX2018
 + Human-Authenticate: **session in USENIX 2018**.
 + SNP, SNP2019
-+ 
++ TIFS2015
++ face recognition
++ spoof detection
++ image distortion analysis
++ ensemble classifier
++ cross-database
++ cross-device
++ TIFS2019
++ Iris recognition
++ post-mortem biometrics
++ forensics
++ Signal Processing
 + (Tag에는 발표 년도와 논문의 키워드, 등을 추가)
 + (Tips: 저널/컨퍼런스명, 세션명 추가: 2018년에 개최한 CCS의 경우, tags: [CCS, 2018, CCS2018])
 
