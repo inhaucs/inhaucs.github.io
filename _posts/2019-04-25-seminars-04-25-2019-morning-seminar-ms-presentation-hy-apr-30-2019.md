@@ -37,9 +37,25 @@ Automatic face recognition is now widely used in applications ranging from dedup
 
 
 ## Summary (Korean)
++ Image Distortion Analysis (IDA) 기반의 Face Spoof Attack Detection 방법 제안
++ IDA에는 4개의 특징들이 사용됨
+  + Specular reflection
+  + Blurriness
+  + Chromatic moment
+  + Color diversity
++ 분류를 위해 ensemble classifier 사용
++ 타겟 기기
+  + Google Nexus 5 and MacBook Air
++ Face spoofing types
+  + Printed photo, replayed video with iPhone 5S, replayed video with iPad Air
++ Face spoofing database
+  + MSU mobile face spoofing database (MSU MFSED) : 본인들이 수집한 DB
+  + Idiap REPLAY-ATTACK
+  + CASIA FASD
 
 
 ## Details
+
 
 
 ### Contents of the paper
