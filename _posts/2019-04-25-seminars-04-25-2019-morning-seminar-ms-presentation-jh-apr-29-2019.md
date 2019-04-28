@@ -61,9 +61,7 @@ The affected companies have been notified of the discovered vulnerabilities and 
 
 
 ## Discussion
-Editor: Hee-Yong Kwon
-+ Security model이 Honest-but-Curious Server & Honest Client인데, 이후 진행되는 연구들에서 이 모델을 어떻게 극복할지를 관심있게 볼 수 있을듯
-+ Participants 가 둘인 경우, 한 Participant가 모델을 완전 복구 가능한지 -> 이를 Honest Client로 해결한 것인지
+
 
 
 {% include date/updated.html %}
