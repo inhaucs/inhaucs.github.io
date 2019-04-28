@@ -63,6 +63,11 @@ Automatic face recognition is now widely used in applications ranging from dedup
     + MSU MFSD, Idiap REPLAY-ATTACK, CASIA FASD
 
 
++ System Diagram
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-04-25-fig-system-overview.PNG" legend="System overview" %}
+
+
+
 ### Contents of the paper
 
 
