@@ -39,19 +39,14 @@ Automatic face recognition is now widely used in applications ranging from dedup
 ## Summary (Korean)
 + Image Distortion Analysis (IDA) 기반의 Face Spoof Attack Detection 방법 제안
 + IDA에는 4개의 특징들이 사용됨
-  + Specular reflection
-  + Blurriness
-  + Chromatic moment
-  + Color diversity
+  + Specular reflection, Blurriness, Chromatic moment, Color diversity
 + 분류를 위해 ensemble classifier 사용
 + 타겟 기기
   + Google Nexus 5 and MacBook Air
 + Face spoofing types
   + Printed photo, replayed video with iPhone 5S, replayed video with iPad Air
 + Face spoofing database
-  + MSU mobile face spoofing database (MSU MFSED) : 본인들이 수집한 DB
-  + Idiap REPLAY-ATTACK
-  + CASIA FASD
+  + MSU mobile face spoofing database (MSU MFSED) : 본인들이 수집한 DB, Idiap REPLAY-ATTACK, CASIA FASD
 
 
 ## Details
@@ -60,7 +55,7 @@ Automatic face recognition is now widely used in applications ranging from dedup
   + 하지만 얼굴 데이터는 다른 생체 데이터와는 다르게 수집하기 용이함(SNS or Video 등)
   + 논문 출판 당시 최신의 기술인 Commercial Off-The-Shelf (COTS)는 Fig. 2에서 보이듯 Face Spoofing에 취약함
   + 그래서 본 논문은 3D mask(비용 문제)를 제외한 printed photo와 replayed video attacks에 대해서 Face spoofing에 안전한 방법 제안
-  + 기존 연구들([[CAM12]][[AM11]][[TLL+10]][[ZYL+12]][[SPW+07]][[BLL+09]][[BDV+13]])은 사용한 DB들의 한계가 있음
+  + 기존 연구들([[CAM12]], [[AM11]], [[TLL+10]], [[ZYL+12]], [[SPW+07]], [[BLL+09]], [[BDV+13]])은 사용한 DB들의 한계가 있음
 + Contribution
   + IDA 기반의 face spoof detection algorithm 제안
   + 새로운 face spoof detection database 구성 : MSU Mobile Face Spoof Database (MSU MFSD) -> 허락 받고 
