@@ -23,7 +23,7 @@ permalink: /:categories/:slug.html
 + Tae-Hyun Kim (김태현)
 + 2019-04-30
 
-## [How Do Tor Users InteractWith Onion Services?](https://inhaucs.github.io/seminars/04-29-2019-morning-seminar/presentation/ms-presentation-hy-apr-30-2019.html)
+## [How Do Tor Users InteractWith Onion Services?](https://inhaucs.github.io/seminars/04-29-2019-morning-seminar/presentation/ms-presentation-th-apr-30-2019.html)
 
 ### Information of the paper [(Link)](https://www.usenix.org/conference/usenixsecurity18/presentation/winter)
 + Authors: Philipp Winter; Anne Edmundson; Laura M. Roberts; Agnieszka Dutkowska-Zuk; Marshini Chetty; and Nick Feamster (Princeton University)
