@@ -97,9 +97,16 @@ Automatic face recognition is now widely used in applications ranging from dedup
   + Idiap : Training(22,497 Genuine / 69,686 Spoof), Test(29,791 Genuine / 93,686 Spoof)
   + CASIA (H) : Training(4,579 Genuine / 11,858 Spoof), Test(5,603 Genuine / 16,958 Spoof)
   + MSU : Training(11,567 Genuine / 33,050 Spoof), Test(11,178 Genuine / 33,102 Spoof)
++ Results
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-04-30-fig-intra_db_performance.png" legend="Intra-Database Performance" %}
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-04-30-fig-cross_db_performance.png" legend="Cross-Database Performance" %}
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-04-30-fig-both_db_performance.png" legend="Intra and Cross Databases Performance" %}
 
 
 ### Points to note
++ Face spoof attack detection을 위해 네 가지 특징을 사용함
++ Ensemble을 사용했지만 다양한 input에 대해 ensemble하였고, 이에 다른 Learning model을 Ensemble 했을 때는 어떤 결과가 나올지
++ Face spoof detection의 새로운 DB 공개
 
 
 
