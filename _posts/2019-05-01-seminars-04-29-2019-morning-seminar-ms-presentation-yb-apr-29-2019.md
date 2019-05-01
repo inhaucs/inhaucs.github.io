@@ -58,7 +58,7 @@ permalink: /:categories/:slug.html
 + Bitcoin 뿐 아니라 Ethereum, Litecoin, ZCash에서도 통용될 수 있으니 주의해야 함.
 
 ### BGP hijack
-+ 참고[https://en.wikipedia.org/wiki/BGP_hijacking]
++ [참고](https://en.wikipedia.org/wiki/BGP_hijacking])
   + filtering, MD5/TTL 보호로 대부분의 BGP hijack 공격 차단이 가능은 하지만, 완벽 차단은 안됨. (일반적이고 효율적인 방법은 없음.)
   
 ### Partitioning attack
