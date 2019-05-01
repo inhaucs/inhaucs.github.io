@@ -1,4 +1,3 @@
-
 ---
 title: Session 4. "Hijacking Bitcoin: Routing Attacks on Cryptocurrencies"
 date: 2019-04-28 00:00:00 Z
