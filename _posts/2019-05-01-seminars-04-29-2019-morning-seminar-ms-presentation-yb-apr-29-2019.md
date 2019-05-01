@@ -1,9 +1,9 @@
 ---
-title: Session 4. Hijacking Bitcoin: Routing Attacks on Cryptocurrencies
+title: Session 4. "Hijacking Bitcoin: Routing Attacks on Cryptocurrencies"
 date: 2019-05-01 00:00:00 Z
-description: Hijacking Bitcoin: Routing Attacks on Cryptocurrencies
+description: "Hijacking Bitcoin: Routing Attacks on Cryptocurrencies"
 card_title: Session 4
-card_teaser: Hijacking Bitcoin: Routing Attacks on Cryptocurrencies
+card_teaser: "Hijacking Bitcoin: Routing Attacks on Cryptocurrencies"
 card_position: 4
 icon: fa-server
 categories: [seminars,04-29-2019-morning-seminar,presentation]
