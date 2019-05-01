@@ -23,7 +23,8 @@ permalink: /:categories/:slug.html
 + Ye-Byoul Son (손예별)
 + 2019-05-01
 
-## [Hijacking Bitcoin: Routing Attacks on Cryptocurrencies](2019-05-01-seminars-04-29-2019-morning-seminar-ms-presentation-yb-apr-29-2019.md)
+## [Hijacking Bitcoin: Routing Attacks on Cryptocurrencies]
+(https://inhaucs.github.io/seminars/04-29-2019-morning-seminar/presentation/ms-presentation-yb-apr-29-2019.html)
 
 ### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/7958588)
 + Authors: Maria Apostolaki(ETH Zurich), Aviv Zohar(The Hebrew University), Laurent Vanbever(ETH Zurich)
