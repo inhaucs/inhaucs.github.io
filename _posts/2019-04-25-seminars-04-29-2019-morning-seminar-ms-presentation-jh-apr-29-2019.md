@@ -1,6 +1,6 @@
 ---
 title: Session 2. Analysis of Privacy Protections in Fitness Tracking Social Networks -or- You can run, but can you hide?
-date: 2019-04-25 00:00:00 Z
+date: 2019-05-01 00:00:00 Z
 description: Analysis of Privacy Protections in Fitness Tracking Social Networks -or- You can run, but can you hide?
 card_title: Session 2
 card_teaser: Analysis of Privacy Protections in Fitness Tracking Social Networks -or- You can run, but can you hide?
