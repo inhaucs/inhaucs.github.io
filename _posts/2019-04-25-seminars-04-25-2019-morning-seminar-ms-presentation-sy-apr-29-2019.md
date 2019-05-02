@@ -102,8 +102,12 @@ L<sub>2</sub> Normalization Layer
 + 학습 단계에서 Feature를 Normalize 해야하는 타당성을 수식에 의해 입증했음. Related work이나 Preliminaries에 참고 가능. 
 
 ## Discussion
-Editor: 
-+ 
+Editor: 손예별
++ normalized feature와 agent vector의 차이점은 무엇?
++ 기존에 training set에서 feature normalized가 안되는줄 알았는데, 어떻게 변형하여 되게 했는지
++ test set에서 feature normalized를 해야 하는 이유가 무엇인지
++ 그럼 training set에서 feature normalized를 하면 좋은 이유는 무엇? 
++ 한군데서만 feature normalized 하는것 보다 두군데 모두에서 feature normalized하는게 더 낫다는 것에 대한 이유는?
 
 {% include date/updated.html %}
 
