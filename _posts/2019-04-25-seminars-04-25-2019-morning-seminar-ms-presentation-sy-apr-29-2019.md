@@ -37,7 +37,7 @@ permalink: /:categories/:slug.html
 Thanks to the recent developments of Convolutional Neural Networks, the performance of face verification methods has increased rapidly. In a typical face verification method, feature normalization is a critical step for boosting performance. This motivates us to introduce and study the effect of normalization during training. But we find this is non-trivial, despite normalization being differentiable. We identify and study four issues related to normalization through mathematical analysis, which yields understanding and helps with parameter settings. Based on this analysis we propose two strategies for training using normalized features. The first is a modification of softmax loss, which optimizes cosine similarity instead of inner-product. The second is a reformulation of metric learning by introducing an agent vector for each class. We show that both strategies, and small variants, consistently improve performance by between 0.2% to 0.4% on the LFW dataset based on two models. This is significant because the performance of the two models on LFW dataset is close to saturation at over 98%.
 
 ## Summary (Korean)
-
+일반적인 face verification에서는 feature normalization이 성능 향상을 위해 매우 중요하다. 수학적인 분석을 통해 feature normalization 관련된 4가지 이슈를 확인한다. 그리고, normalized features를 이용한 training을 위해 두가지 전략으로 softmax loss의 변형 버전과 각 class들 간의 agent vector를 도입하여 metric learning을 재구성하는 방법을 제안하였다. 
 
 ## Details
 
