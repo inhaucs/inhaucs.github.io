@@ -91,7 +91,7 @@ Thanks to the recent developments of Convolutional Neural Networks, the performa
 ---
 
 
-### Session 4: ["Hijacking Bitcoin: Routing Attacks on Cryptocurrencies"]
+### Session 4: [Hijacking Bitcoin: Routing Attacks on Cryptocurrencies]
 (https://inhaucs.github.io/seminars/04-29-2019-morning-seminar/presentation/ms-presentation-yb-apr-29-2019.html)
 
 + Ye-Byoul Son (손예별)
