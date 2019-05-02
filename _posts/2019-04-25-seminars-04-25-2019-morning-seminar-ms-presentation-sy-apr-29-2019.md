@@ -41,8 +41,6 @@ Thanks to the recent developments of Convolutional Neural Networks, the performa
 
 ## Details
 
-
-### Contents of the paper
 Abstract
 + CNN의 발전과 함께 face verification의 성능도 급격히 좋아짐.
 + 일반적인 face verification에서는 **feature normalization**이 성능 향상을 위해 매우 중요함.
@@ -70,23 +68,37 @@ Related works
     1. Cosine Loss, vMFMM과 본 논문의 loss functions는 featrue 와 weight를 둘다 최적화하는 반면에, L2-softmax는 feature만을, SphereFace는 weight만을 normalize하였다.
 
 L<sub>2</sub> Normalization Layer
-+ 
++ L<sub>2</sub> normalization 은 쉽게 말하자면, feature vector를 모두 unit vector로 바꾸는 것. 
 {% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig1.PNG" legend="L<sub>2</sub> Normalization Layer definition" %}
+
++ feature vector가 normalized 됨에 따라 softmax loss를 아래와 같이 Original softmax를 Modified softmax로 최적화할 수 있게 되었다.
++ 아래는 원래의 softmax이다.
 
 {% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig2.PNG" legend="Original softmax" %}
 
++ 아래는 최적화된 softmax이다.
+
 {% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig3.PNG" legend="Modified softmax (optimized for nomalized vector" %}
 
-{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig2.PNG" legend="Original contrastive loss" %}
++ Face Verification 분야에서 가장 많이 사용하는 metric learning 방법은 contrastive loss와 triplet loss이다.
++ feature vector가 normalized 됨에 따라 위 두가지 방법을 아래와 같이 최적화할 수 있게 되었다.
++ 아래는 원래의 contrastive loss와 triplet loss이다
 
-{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig2.PNG" legend="Original triplet loss" %}
+{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig4.PNG" legend="Original contrastive loss" %}
 
-{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig3.PNG" legend="Modified contrastive loss (optimized for nomalized vector" %}
+{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig5.PNG" legend="Original triplet loss" %}
 
-{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig3.PNG" legend="Modified triplet loss (optimized for nomalized vector" %}
++ 아래는 최적화된 contrastive loss와 triplet loss이다.
+
+{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig6.PNG" legend="Modified contrastive loss (optimized for nomalized vector" %}
+
+{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig7.PNG" legend="Modified triplet loss (optimized for nomalized vector" %}
+
+실험 결과에 대한 평가에 대해서는 현재 [ArcFace]가 가장 좋기 때문에, 자세한 내용은 본 논문을 읽어보기로 하고, 향상된 실험 결과에 대한 정보는 [ArcFace]의 결과를 보기 바란다.
+
+[ArcFace](https://arxiv.org/abs/1801.07698)
 
 ### Points to note
-
 
 
 ## Discussion
