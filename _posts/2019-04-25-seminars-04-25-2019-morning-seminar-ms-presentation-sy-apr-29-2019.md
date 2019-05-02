@@ -71,16 +71,27 @@ Related works
 
 L<sub>2</sub> Normalization Layer
 + 
+{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig1.PNG" legend="L<sub>2</sub> Normalization Layer definition" %}
+
+{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig2.PNG" legend="Original softmax" %}
+
+{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig3.PNG" legend="Modified softmax (optimized for nomalized vector" %}
+
+{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig2.PNG" legend="Original contrastive loss" %}
+
+{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig2.PNG" legend="Original triplet loss" %}
+
+{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig3.PNG" legend="Modified contrastive loss (optimized for nomalized vector" %}
+
+{% include articles/figure.html url="/assets/img/seongyun/2019/05-02-2019-ms-session3-fig3.PNG" legend="Modified triplet loss (optimized for nomalized vector" %}
 
 ### Points to note
 
 
 
 ## Discussion
-Editor: Hee-Yong Kwon
-+ Security model이 Honest-but-Curious Server & Honest Client인데, 이후 진행되는 연구들에서 이 모델을 어떻게 극복할지를 관심있게 볼 수 있을듯
-+ Participants 가 둘인 경우, 한 Participant가 모델을 완전 복구 가능한지 -> 이를 Honest Client로 해결한 것인지
-
+Editor: 
++ 
 
 {% include date/updated.html %}
 
