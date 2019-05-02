@@ -91,22 +91,25 @@ Thanks to the recent developments of Convolutional Neural Networks, the performa
 ---
 
 
-### Session 4: [Hijacking Bitcoin: Routing Attacks on Cryptocurrencies]
-(https://inhaucs.github.io/seminars/04-29-2019-morning-seminar/presentation/ms-presentation-yb-apr-29-2019.html)
+### Session 5: [Face Spoof Detection With Image Distortion Analysis]
+(https://inhaucs.github.io/seminars/04-25-2019-morning-seminar/presentation/ms-presentation-hy-apr-30-2019.html)
 
-+ Ye-Byoul Son (손예별)
++ Hee-Yong Kwon (권희용)
 
-#### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/7958588)
-+ Authors: Maria Apostolaki(ETH Zurich), Aviv Zohar(The Hebrew University), Laurent Vanbever(ETH Zurich)
-+ Conference name: 2017 IEEE Symposium on Security and Privacy
-+ Published date: 2017-05-22
-+ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7958588)
+### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/7031384)
++ Authors: Di Wen; Hu Han; and Anil K. Jain (Michigan State University)
++ Conference name: IEEE Transactions on Information Forensics and Security
++ Published date: 2015-02-04
++ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7031384)
 
 
-#### Abstract
-+ As the most successful cryptocurrency to date, Bitcoin constitutes a target of choice for attackers. While many attack vectors have already been uncovered, one important vector has been left out though: attacking the currency via the Internet routing infrastructure itself. Indeed, by manipulating routing advertisements (BGP hijacks) or by naturally intercepting traffic, Autonomous Systems (ASes) can intercept and manipulate a large fraction of Bitcoin traffic. This paper presents the first taxonomy of routing attacks and their impact on Bitcoin, considering both small-scale attacks, targeting individual nodes, and large-scale attacks, targeting the network as a whole. While challenging, we show that two key properties make routing attacks practical: (i) the efficiency of routing manipulation; and (ii) the significant centralization of Bitcoin in terms of mining and routing. Specifically, we find that any network attacker can hijack few (<;100) BGP prefixes to isolate ~50% of the mining power-even when considering that mining pools are heavily multi-homed. We also show that on-path network attackers can considerably slow down block propagation by interfering with few key Bitcoin messages. We demonstrate the feasibility of each attack against the deployed Bitcoin software. We also quantify their effectiveness on the current Bitcoin topology using data collected from a Bitcoin supernode combined with BGP routing data. The potential damage to Bitcoin is worrying. By isolating parts of the network or delaying block propagation, attackers can cause a significant amount of mining power to be wasted, leading to revenue losses and enabling a wide range of exploits such as double spending. To prevent such effects in practice, we provide both short and long-term countermeasures, some of which can be deployed immediately.
+### Abstract
+Automatic face recognition is now widely used in applications ranging from deduplication of identity to authentication of mobile payment. This popularity of face recognition has raised concerns about face spoof attacks (also known as biometric sensor presentation attacks), where a photo or video of an authorized person’s face could be used to gain access to facilities or services. While a number of face spoof detection techniques have been proposed, their generalization ability has not been adequately addressed. We propose an efficient and rather robust face spoof detection algorithm based on image distortion analysis (IDA). Four different features (specular reflection, blurriness, chromatic moment, and color diversity) are extracted to form the IDA feature vector. An ensemble classifier, consisting of multiple SVM classifiers trained for different face spoof attacks (e.g., printed photo and replayed video), is used to distinguish between genuine (live) and spoof faces. The proposed approach is extended to multiframe face spoof detection in videos using a voting-based scheme. We also collect a face spoof database, MSU mobile face spoofing database (MSU MFSD), using two mobile devices (Google Nexus 5 and MacBook Air) with three types of spoof attacks (printed photo, replayed video with iPhone 5S, and replayed video with iPad Air). Experimental results on two public-domain face spoof databases (Idiap REPLAY-ATTACK and CASIA FASD), and the MSU MFSD database show that the proposed approach outperforms the state-of-the-art methods in spoof detection. Our results also highlight the difficulty in separating genuine and spoof faces, especially in cross-database and cross-device scenarios.
 
 ---
+
+
+
 
  
 {% include date/updated.html %}
