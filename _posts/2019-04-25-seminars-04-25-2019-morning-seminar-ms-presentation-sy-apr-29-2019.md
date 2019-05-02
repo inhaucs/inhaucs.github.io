@@ -96,7 +96,7 @@ L<sub>2</sub> Normalization Layer
 
 실험 결과에 대한 평가에 대해서는 현재 [ArcFace]가 가장 좋기 때문에, 자세한 내용은 본 논문을 읽어보기로 하고, 향상된 실험 결과에 대한 정보는 [ArcFace]의 결과를 보기 바란다.
 
-[ArcFace](https://arxiv.org/abs/1801.07698)
+[ArcFace] : https://arxiv.org/abs/1801.07698
 
 ### Points to note
 + 학습 단계에서 Feature를 Normalize 해야하는 타당성을 수식에 의해 입증했음. Related work이나 Preliminaries에 참고 가능. 
