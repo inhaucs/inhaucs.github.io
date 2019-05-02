@@ -38,7 +38,7 @@ permalink: /:categories/:slug.html
 + TDSC: IEEE Transactions on Dependable and Secure Computing
 + TIFS: IEEE Transactions on Information Forensics and Security 
 + TII: IEEE Transactions on Industrial Informatics
-+ TISS: ACM Transactions on Information and System Security
++ TISSEC: ACM Transactions on Information and System Security
 + TSG: IEEE Transaction on SmartGrid
 + ESE: Empirical Software Engineering
 
