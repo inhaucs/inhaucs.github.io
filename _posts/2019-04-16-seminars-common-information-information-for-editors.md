@@ -4,7 +4,7 @@ date: 2019-04-16 00:00:00 Z
 description: This document contains abbreviations for journals and conferences and keywords related to research topics.
 card_title:  Information for editors
 card_teaser: Updated on apr-16-2019.
-card_position: 1 
+card_position: 1
 icon: fa-address-book-o
 categories: [seminars,guides-for-seminars,common-information]
 sidebar: guides-for-seminars
@@ -31,12 +31,12 @@ permalink: /:categories/:slug.html
 ## Abbreviations for journals.
 + ACCESS: IEEE Access
 + CNS: Computers & Security
-+ COUMPUTER: Computer 
++ COUMPUTER: Computer
 + IJIS: International Journal of Information Security
 + IS: IET Information Security
 + SNPJ: IEEE Security & Privacy
 + TDSC: IEEE Transactions on Dependable and Secure Computing
-+ TIFS: IEEE Transactions on Information Forensics and Security 
++ TIFS: IEEE Transactions on Information Forensics and Security
 + TII: IEEE Transactions on Industrial Informatics
 + TISSEC: ACM Transactions on Information and System Security
 + TSG: IEEE Transaction on SmartGrid
@@ -55,7 +55,7 @@ permalink: /:categories/:slug.html
 + Homomorphic-Encryption: HE를 이용한 논문 또는 HE 제안 논문
 + Deep-Learning: DL 기법 또는 이를 이용한 응용 논문
 + Application: 기초내용이 아닌 응용 논문
-+ 
++
 + (Tips: 논문에 있는 그대로 추가(논문에 keywords가 없는 경우 제목을 참고하여 키워드 생성 또는 자기 분야에서 주로 쓰는 키워드로 적절히 추가))
 
 ## Tags for editors
@@ -74,6 +74,11 @@ permalink: /:categories/:slug.html
 + post-mortem biometrics
 + forensics
 + Signal Processing
++ TII2018
++ Access control
++ computer security
++ mobile applications
++ mobile computing
 + (Tag에는 발표 년도와 논문의 키워드, 등을 추가)
 + (Tips: 저널/컨퍼런스명, 세션명 추가: 2018년에 개최한 CCS의 경우, tags: [CCS, 2018, CCS2018])
 

@@ -1,16 +1,16 @@
 ---
-title: Session 5. Face Spoof Detection With Image Distortion Analysis
-date: 2019-04-28 00:00:00 Z
-description: Face Spoof Detection With Image Distortion Analysis
-card_title: Session 5
-card_teaser: Face Spoof Detection With Image Distortion Analysis
-card_position: 5
+title: Session 4. Significant Permission Identification for Machine-Learning-Based Android Malware Detection
+date: 2019-05-06 00:00:00 Z
+description: Significant Permission Identification for Machine-Learning-Based Android Malware Detection
+card_title: Session 4
+card_teaser: Significant Permission Identification for Machine-Learning-Based Android Malware Detection
+card_position: 4
 icon: fa-server
-categories: [seminars,04-29-2019-morning-seminar,presentation]
-tags: [TIFS, 2015, TIFS2015, face recognition, spoof detection, image distortion analysis, ensemble classifier, cross-database, cross-device]
+categories: [seminars,05-06-2019-morning-seminar,presentation]
+tags: [TII, 2018, TII2018, Access control, computer security, machine learning, mobile applications, mobile computing]
 sidebar: morning-seminar
 layout: default
-slug: ms-presentation-hy-apr-30-2019
+slug: ms-presentation-hy-may-06-2019
 permalink: /:categories/:slug.html
 ---
 
@@ -21,19 +21,20 @@ permalink: /:categories/:slug.html
 
 ## Presenter & Date
 + Hee-Yong Kwon (권희용)
-+ 2019-05-03
++ 2019-05-06
 
-## [Face Spoof Detection With Image Distortion Analysis](https://inhaucs.github.io/seminars/04-29-2019-morning-seminar/presentation/ms-presentation-hy-apr-30-2019.html)
+## [Significant Permission Identification for Machine-Learning-Based Android Malware Detection](https://inhaucs.github.io/seminars/05-03-2019-morning-seminar/presentation/ms-presentation-hy-may-03-2019.html)
 
-### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/7031384)
-+ Authors: Di Wen; Hu Han; and Anil K. Jain (Michigan State University)
-+ Conference name: IEEE Transactions on Information Forensics and Security
-+ Published date: 2015-02-04
-+ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7031384)
+### Information of the paper [(Link)](https://ieeexplore.ieee.org/abstract/document/8255798)
++ Authors: Jin Li (Guangzhou University); Lichao Sun (University of
+Illinois at Chicago); Qiben Yan; Zhiqiang Li; Witawas Srisa-an (University of Nebraska–Lincoln); Heng Ye (Beijing Jiaotong University)
++ Conference name: IEEE Transactions on Industrial Informatics
++ Published date: 2018-01-12
++ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8255798)
 
 
 ### Abstract
-Automatic face recognition is now widely used in applications ranging from deduplication of identity to authentication of mobile payment. This popularity of face recognition has raised concerns about face spoof attacks (also known as biometric sensor presentation attacks), where a photo or video of an authorized person’s face could be used to gain access to facilities or services. While a number of face spoof detection techniques have been proposed, their generalization ability has not been adequately addressed. We propose an efficient and rather robust face spoof detection algorithm based on image distortion analysis (IDA). Four different features (specular reflection, blurriness, chromatic moment, and color diversity) are extracted to form the IDA feature vector. An ensemble classifier, consisting of multiple SVM classifiers trained for different face spoof attacks (e.g., printed photo and replayed video), is used to distinguish between genuine (live) and spoof faces. The proposed approach is extended to multiframe face spoof detection in videos using a voting-based scheme. We also collect a face spoof database, MSU mobile face spoofing database (MSU MFSD), using two mobile devices (Google Nexus 5 and MacBook Air) with three types of spoof attacks (printed photo, replayed video with iPhone 5S, and replayed video with iPad Air). Experimental results on two public-domain face spoof databases (Idiap REPLAY-ATTACK and CASIA FASD), and the MSU MFSD database show that the proposed approach outperforms the state-of-the-art methods in spoof detection. Our results also highlight the difficulty in separating genuine and spoof faces, especially in cross-database and cross-device scenarios.
+The alarming growth rate of malicious apps has become a serious issue that sets back the prosperous mobile ecosystem. A recent report indicates that a new malicious app for Android is introduced every 10 s. To combat this serious malware campaign, we need a scalable malware detection approach that can effectively and efficiently identify malware apps. Numerous malware detection tools have been developed, including system-level and network-level approaches. However, scaling the detection for a large bundle of apps remains a challenging task. In this paper, we introduce Significant Permission IDentification (SigPID), a malware detection system based on permission usage analysis to cope with the rapid increase in the number of Android malware. Instead of extracting and analyzing all Android permissions, we develop three levels of pruning by mining the permission data to identify the most significant permissions that can be effective in distinguishing between benign and malicious apps. SigPID then utilizes machine-learning-based classification methods to classify different families of malware and benign apps. Our evaluation finds that only 22 permissions are significant. We then compare the performance of our approach, using only 22 permissions, against a baseline approach that analyzes all permissions. The results indicate that when a support vector machine is used as the classifier, we can achieve over 90% of precision, recall, accuracy, and F-measure, which are about the same as those produced by the baseline approach while incurring the analysis times that are 4–32 times less than those of using all permissions. Compared against other state-of-the-art approaches, SigPID is more effective by detecting 93.62% of malware in the dataset and 91.4% unknown/new malware samples.
 
 
 ## Summary (Korean)
