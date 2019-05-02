@@ -99,7 +99,7 @@ L<sub>2</sub> Normalization Layer
 [ArcFace](https://arxiv.org/abs/1801.07698)
 
 ### Points to note
-
++ 학습 단계에서 Feature를 Normalize 해야하는 타당성을 수식에 의해 입증했음. Related work이나 Preliminaries에 참고 가능. 
 
 ## Discussion
 Editor: 
