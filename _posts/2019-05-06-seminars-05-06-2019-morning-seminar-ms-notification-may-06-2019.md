@@ -1,15 +1,15 @@
 ---
 title: 5th UCSLab Morning Seminar
 date: 2019-05-06 00:00:00 Z
-description: Notificaion of 4th UCSLab Morning Seminar (on 2019-05-03)
+description: Notificaion of 4th UCSLab Morning Seminar (on 2019-05-06)
 card_title: 5th Morning Seminar
-card_teaser: with 5 presentations on 2019-05-03.
+card_teaser: with 5 presentations on 2019-05-06.
 card_position: 1
 icon: fa-bullhorn
-categories: [seminars,05-03-2019-morning-seminar,notification]
+categories: [seminars,05-06-2019-morning-seminar,notification]
 sidebar: morning-seminar
 layout: default
-slug: ms-notification-may-03-2019
+slug: ms-notification-may-06-2019
 permalink: /:categories/:slug.html
 
 ---
@@ -20,7 +20,7 @@ permalink: /:categories/:slug.html
 {% include layout/col_start.html column="7" %}
 
 ## Date
-2019-04-29
+2019-05-06
 
 ## Presenters
 + Tae-Hyun Kim (김태현)
