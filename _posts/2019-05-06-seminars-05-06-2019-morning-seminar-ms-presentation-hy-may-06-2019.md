@@ -38,16 +38,16 @@ The alarming growth rate of malicious apps has become a serious issue that sets 
 
 
 ## Summary (Korean)
-+ Image Distortion Analysis (IDA) 기반의 Face Spoof Attack Detection 방법 제안
-+ IDA에는 4개의 특징들이 사용됨
-  + Specular reflection, Blurriness, Chromatic moment, Color diversity
-+ 분류를 위해 ensemble classifier 사용
-+ 타겟 기기
-  + Google Nexus 5 and MacBook Air
-+ Face spoofing types
-  + Printed photo, replayed video with iPhone 5S, replayed video with iPad Air
-+ Face spoofing database
-  + MSU mobile face spoofing database (MSU MFSED) : 본인들이 수집한 DB, Idiap REPLAY-ATTACK, CASIA FASD
++ Android에서 새로운 Malware들이 10초에 하나 꼴로 추가되고 있음
++ 기존의 system-level, network-level 의 malware detection tool들이 있으나 여전히 문제
++ 이에, Significant Permission IDentification (SigPID) 제안
+  + 권한 분석에 기반한 Malware detection system
+  + Android의 모든 권한을 분석하는 것이 아닌 일반 앱과 Malware를 구분하는 가장 심대한 권한을 가지치기하는 세 가지 레벨을 개발
+  + 기계 학습 기반 분류 방법 사용
+  + 결과적으로 22 개의 권한이 중요 권한임을 찾음
+  + 실험 : baseline approach(모든 권한에 대해 분석) vs. 상기 22개의 권한에 대한 분석
+    + 결과적으로 SVM을 분류기로 사용했을 때, baseline approach 와 비교하여 비슷한 결과를 얻었으며, 90%가 넘는 precision, recall, accuracy, F-measure를 보였고, 4-32배 빠름
+    + State-of-art approach와 비교해도 SigPID는 93.62%의 malware를 탐지함으로써 더 나은 성능을 보였고, 알려지지 않거나/새로운 Malware에 대해서도 91.4% 탐지
 
 
 ## Details
