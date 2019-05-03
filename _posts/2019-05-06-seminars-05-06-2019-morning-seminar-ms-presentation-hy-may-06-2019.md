@@ -67,14 +67,18 @@ The alarming growth rate of malicious apps has become a serious issue that sets 
 
 ## Introducing SigPID
 + Goal : Malware 분석을 위해 필요한 최소한의 권한 찾기
-+ Multi-Level Data Pruning(MLDP)을 사용하여 Malware 탐지에 영향이 별로 없는 권한 제거, 이는 세 컴포넌트를 포함
++ a) Multi-Level Data Pruning(MLDP)을 사용하여 Malware 탐지에 영향이 별로 없는 권한 제거, 이는 세 컴포넌트를 포함
   + Permission Ranking with Negative Rate (PPNR)
   + Support-based Permission Ranking (SPR)
   + Permission Mining with Association Rules (PMAR)
-+ MLDP로 필터링된 권한들을 지도 학습 분류 방법에 입력으로 사용하여 Malware 탐지
++ b) MLDP로 필터링된 권한들을 지도 학습 분류 방법에 입력으로 사용하여 Malware 탐지
 
-# 하기 파트는 그냥 위에다 추가하고 삭제
-+ Multi-Level Data Pruning(MLDP)
+  ##### Multi-Level Data Pruning(MLDP)
+  + Permission Ranking with Negative Rate (PPNR)
+  + Support-based Permission Ranking (SPR)
+  + Permission Mining with Association Rules (PMAR)
+
+  ##### Machine-Learning-Based Malware Detection Using Significant Permissions
   + Permission Ranking with Negative Rate (PPNR)
   + Support-based Permission Ranking (SPR)
   + Permission Mining with Association Rules (PMAR)
