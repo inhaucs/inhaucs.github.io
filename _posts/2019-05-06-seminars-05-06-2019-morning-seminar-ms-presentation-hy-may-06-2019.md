@@ -48,48 +48,37 @@ The alarming growth rate of malicious apps has become a serious issue that sets 
   + 실험 : baseline approach(모든 권한에 대해 분석) vs. 상기 22개의 권한에 대한 분석
     + 결과적으로 SVM을 분류기로 사용했을 때, baseline approach 와 비교하여 비슷한 결과를 얻었으며, 90%가 넘는 precision, recall, accuracy, F-measure를 보였고, 4-32배 빠름
     + State-of-art approach와 비교해도 SigPID는 93.62%의 malware를 탐지함으로써 더 나은 성능을 보였고, 알려지지 않거나/새로운 Malware에 대해서도 91.4% 탐지
+  + Contribution
+    + Malware를 탐지하기 위한 권한의 서브셋을 찾는 SigPID 개발 -> 필요한 권한을 84% 줄임(16% 사용)
+    + 제안하는 방법 평가 -> 90% in precision, recall, accuracy, and F-measure
+    + 포괄성 증명 -> 주로 사용되는 67개의 지도 학습 알고리즘에 적용 (5494 malware & 310926 benign)
+      + 55개의 알고리즘에서 F-measure 85% 이상, 평균 수행 시간이 baseline approach에 비해 85.6% 감소
 
 
-## Details
-+ Motivation
-  + 얼굴 인식은 지문과 다르게 따로 센서가 필요하지 않기 때문에 생체 인식의 이점이 있어 많이 사용된다(Abstract 참고 가능)
-  + 하지만 얼굴 데이터는 다른 생체 데이터와는 다르게 수집하기 용이함(SNS or Video 등)
-  + 논문 출판 당시 최신의 기술인 Commercial Off-The-Shelf (COTS)는 Fig. 2에서 보이듯 Face Spoofing에 취약함
-  + 그래서 본 논문은 3D mask(비용 문제)를 제외한 printed photo와 replayed video attacks에 대해서 Face spoofing에 안전한 방법 제안
-  + 기존 연구들([[CAM12]], [[AM11]], [[TLL+10]], [[ZYL+12]], [[SPW+07]], [[BLL+09]], [[BDV+13]])은 사용한 DB들의 한계가 있음
-+ Contribution
-  + IDA 기반의 face spoof detection algorithm 제안
-  + 새로운 face spoof detection database 구성 : MSU Mobile Face Spoof Database (MSU MFSD) -> 허락 받고
-  + 세 개의 DB에 대해 제안하는 방법 실험
-    + MSU MFSD, Idiap REPLAY-ATTACK, CASIA FASD
+## Motivation
++ Android 시장은 매우 큰데, iOS와는 다르게 third-party나 file-sharing을 통한 어플리케이션 설치를 허용하고 있음 -> Malware가 다운로드될 수 있는 경로
++ Mobile malware의 97%가 Android를 타겟으로 함
++ 이러한 Malware의 타입은 50개 이상 있고, 이 때문에 모두 탐지하기가 힘듦
++ 이전 기술들이 있고 한계가 있음
+  + RISKRANKER : 정적 분석 기반 -> False positive 많음
+  + TAINTDROID : 동적 분석 기반 -> Malware 탐지 회피 기술
+  + DREBIN : 정적 분석 + 기계 학습 -> High Cost
 
 
-+ System Diagram
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-04-30-fig-system-diagram.png" legend="System diagram" %}
-  + input image를 144 x 120 pixels로 normalize -> PittPatt 5.2.2 SDK 사용
-    + Face spoof detection을 위해서는 이 crop 과정이 매우 중요, 얼굴의 다른 부분이나 배경 영향을 받지 않게 하기 위해
-  + 이후, 4개의 IDA 특징 추출, 121-d feature vector 생성
-  + Ensemble classifier로 투입
-  + 분류기는 binary decision 결과 출력
+## Introducing SigPID
++ Goal : Malware 분석을 위해 필요한 최소한의 권한 찾기
++ Multi-Level Data Pruning(MLDP)을 사용하여 Malware 탐지에 영향이 별로 없는 권한 제거, 이는 세 컴포넌트를 포함
+  + Permission Ranking with Negative Rate (PPNR)
+  + Support-based Permission Ranking (SPR)
+  + Permission Mining with Association Rules (PMAR)
++ MLDP로 필터링된 권한들을 지도 학습 분류 방법에 입력으로 사용하여 Malware 탐지
 
-+ Four different features to detect face spoof
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-04-30-fig-specular-reflection.png" legend="Specular reflection" %}
-  + Specular Reflection Features : 반사광 추출 Fig. 4에서 보면 실제 이미지에서와 replayed video에서 추출되는 반사광의 위치와 분포가 다름을 알 수 있음
-  + Blurriness Features : Spoofing에 사용되는 이미지는 크기가 제한되는 경우가 많기 때문에 카메라에 가까이 붙여 인식시키려고 시도한다. 그러므로 카메라의 초점이 맞지 않아 Blur가 생기는데, 이를 특징으로 사용
-  {% include articles/figure.html url="/assets/img/heeyong/2019/2019-04-30-fig-chromatic-difference.png" legend="Chromatic Difference" %}
-  + Chromatic Moment Features : Spoofing에 사용되는 이미지는 실제 이미지의 색을 완벽하게 재구성하지 못 함 -> In my opinion, it is nutshell (Analog -> Digital -> Print), 이에 따라 두 이미지의 Hue(색조), Saturation(포화도), Value(값)의 분포를 사용
-    + Fig. 5에서 보면 Saturation과 Value에서의 분포가 다름을 알 수 있음
-  + Color Diversity Features : 실제 이미지와 Spoofing 이미지에서의 색의 다양성에 대한 특징 (Chromatic Moment Features와 같은 이유로, 색의 다양성이 다름)
+# 하기 파트는 그냥 위에다 추가하고 삭제
++ Multi-Level Data Pruning(MLDP)
+  + Permission Ranking with Negative Rate (PPNR)
+  + Support-based Permission Ranking (SPR)
+  + Permission Mining with Association Rules (PMAR)
 
-+ Classification Method
-  + SVM with RBF kernel
-  + Ensemble Classifier를 구성할 때, 여러 알고리즘으로 Ensemble 하는 것이 아닌 SVM에 각각 다른 training sample group으로 학습된 Classifier 사용
-    + Attack type에 따라 spoof sample을 K group으로 나눔
-    + 그리고 모든 실제 이미지 + a group of spoof spoof sample을 training set으로 설정 -> K 개의 training set, classifier가 되는 이유
-  + Test 시 feature input은 모든 classifier로 들어가서 fusion -> fusion scheme으로는 sum and min rule 사용
-    + min rule이 더 나은 성능을 보임
-+ Database summary
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-04-30-fig-db-summary.png" legend="Summary of databases" %}
 
 ## Experimental Results
 + 실험에 사용된 비교 Features
