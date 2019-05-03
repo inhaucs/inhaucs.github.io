@@ -23,7 +23,7 @@ permalink: /:categories/:slug.html
 + Hee-Yong Kwon (권희용)
 + 2019-05-06
 
-## [Significant Permission Identification for Machine-Learning-Based Android Malware Detection](https://inhaucs.github.io/seminars/05-03-2019-morning-seminar/presentation/ms-presentation-hy-may-03-2019.html)
+## [Significant Permission Identification for Machine-Learning-Based Android Malware Detection](https://inhaucs.github.io/seminars/05-06-2019-morning-seminar/presentation/ms-presentation-hy-may-06-2019.html)
 
 ### Information of the paper [(Link)](https://ieeexplore.ieee.org/abstract/document/8255798)
 + Authors: Jin Li (Guangzhou University); Lichao Sun (University of
