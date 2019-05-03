@@ -38,7 +38,7 @@ permalink: /:categories/:slug.html
 
 ---
 
-### Session 2: [Simple Password-Hardened Encryption Services](https://inhaucs.github.io/seminars/04-29-2019-morning-seminar/presentation/ms-presentation-jh-may-03-2019.html)
+### Session 2: [Simple Password-Hardened Encryption Services](https://inhaucs.github.io/seminars/05-06-2019-morning-seminar/presentation/ms-presentation-jh-may-06-2019.html)
 
 + Jong-Hyum Im (임종혁)
 
