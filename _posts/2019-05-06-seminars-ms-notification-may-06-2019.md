@@ -67,7 +67,7 @@ Regarding security, our scheme also achieves a stronger soundness property, whic
 
 ---
 
-### Session 4: [Significant Permission Identification for Machine-Learning-Based Android Malware Detection](https://inhaucs.github.io/seminars/05-03-2019-morning-seminar/presentation/ms-presentation-hy-may-03-2019.html)
+### Session 4: [Significant Permission Identification for Machine-Learning-Based Android Malware Detection](https://inhaucs.github.io/seminars/05-06-2019-morning-seminar/presentation/ms-presentation-hy-may-06-2019.html)
 
 + Hee-Yong Kwon (권희용)
 
