@@ -68,25 +68,41 @@ The alarming growth rate of malicious apps has become a serious issue that sets 
 ## Introducing SigPID
 + Goal : Malware 분석을 위해 필요한 최소한의 권한 찾기
 + a) Multi-Level Data Pruning(MLDP)을 사용하여 Malware 탐지에 영향이 별로 없는 권한 제거, 이는 세 컴포넌트를 포함
-  + Permission Ranking with Negative Rate (PPNR)
+  + Permission Ranking with Negative Rate (PRNR)
   + Support-based Permission Ranking (SPR)
   + Permission Mining with Association Rules (PMAR)
 + b) MLDP로 필터링된 권한들을 지도 학습 분류 방법에 입력으로 사용하여 Malware 탐지
 
   ##### Multi-Level Data Pruning(MLDP)
-  + Permission Ranking with Negative Rate (PPNR)
+  + Permission Ranking with Negative Rate (PRNR)
+    + Benign과 Malware를 구별하는 권한들을 식별하고, 비슷하게 사용되는 권한 제거(pruning)
+    + 이를 위해 PPNR을 사용할건데, 먼저 Malware와 Benign 어플리케이션들에서 사용되는 권한들을 매트릭스 M & B로 표현
+      + Sample 수가 다르면 Skewed model이 될 수 있으므로(5494 malware vs. 310,926 benign), scaling 해주는 식 포함 (1)
+      + 식 (2)를 사용하여 권한들의 사용 빈도를 계산, [-1, 1]의 값이 나오며 -1은 benign에서만 사용하는 권한, 1은 malware에서만 사용하는 권한을 의미, 0인 경우 malware 탐지에 별 효과가 없음을 의미
+      + R(P) 값이 1, -1인 값이 중요하므로, 오름차순과 내림차순의 two ranked lists 생성
+      + Two lists의 top tier 권한을 시스템에 넣어 TPR, FPR, precision, recall, F-measure를 측정, 이 값이 안정될 때까지 반복
+        + 이를 통해, 전체 sample에서 135개의 권한을 사용하는데 이를 비슷한 정확도를 가지는 95개로 줄임
   + Support-based Permission Ranking (SPR)
+    + 상기 PRNR 방법은 benign과 malware 각각에서 사용되는 ranking이기 때문에, 실질적인 support를 고려(특정 권한은 benign에서만 사용된다든지)
+    + 사용되는 권한을 25개로 줄임
   + Permission Mining with Association Rules (PMAR)
+    + 특정 권한들의 경우 항상 같이 등장함(e.g., WRITE_SMS AND READ_SMS) -> 하나만 사용해도 됨
+    + 결과적으로 22개의 권한으로 줄임
 
   ##### Machine-Learning-Based Malware Detection Using Significant Permissions
-  + Permission Ranking with Negative Rate (PPNR)
-  + Support-based Permission Ranking (SPR)
-  + Permission Mining with Association Rules (PMAR)
+  + SVM을 먼저 사용하여 비교했고, 주로 알려진 67개의 기계 학습 알고리즘을 사용, 135개의 전체 권한(baseline)과 비교 결과는 차후 기술
 
 
-## Experimental Results
-+ 실험에 사용된 비교 Features
-  + LBP features [[MHP11]], DoG-LBP features [[KD12]], IDA features
+## Evaluation
++ Dataset
+  + Google play store benign apps 310,926개 [[ASH+14]], 여러 소스로부터 2650, 5494, 54694 Malware [[WWF+14]]
++ Evaluating Effectiveness of MLDP
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-05-06-fig-detection_results.png" legend="Detection Results" %}
+  + ㅇㅁㄴㅇㄹㄴㅇㄹ
+
+
+
+
 + 사용된 데이터 수
   + Idiap : Training(22,497 Genuine / 69,686 Spoof), Test(29,791 Genuine / 93,686 Spoof)
   + CASIA (H) : Training(4,579 Genuine / 11,858 Spoof), Test(5,603 Genuine / 16,958 Spoof)
@@ -106,15 +122,8 @@ The alarming growth rate of malicious apps has become a serious issue that sets 
 
 ## Discussion
 
-[CAM12]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6313548> "I. Chingovska, A. Anjos, and S. Marcel, “On the effectiveness of local binary patterns in face anti-spoofing,” in Proc. IEEE BIOSIG, Sep. 2012, pp. 1–7."
-[AM11]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6117503> "A. Anjos and S. Marcel, “Counter-measures to photo attacks in face recognition: A public database and a baseline,” in Proc. IJCB, Oct. 2011, pp. 1–7."
-[TLL+10]: <http://parnec.nuaa.edu.cn/xtan/paper/eccv10r1.pdf> "X. Tan, Y. Li, J. Liu, and L. Jiang, “Face liveness detection from a single image with sparse low rank bilinear discriminative model,” in Proc. ECCV, Sep. 2010, pp. 504–517."
-[ZYL+12]: <http://www.cbsr.ia.ac.cn/users/jjyan/ZHANG-ICB2012.pdf> "Z. Zhang, J. Yan, S. Liu, Z. Lei, D. Yi, and S. Z. Li, “A face antispoofing database with diverse attacks,” in Proc. ICB, Mar./Apr. 2012, pp. 26–31."
-[SPW+07]: <https://arxiv.org/pdf/1801.01949.pdf> "L. Sun, G. Pan, Z. Wu, and S. Lao, “Blinking-based live face detection using conditional random fields,” in Proc. AIB, 2007, pp. 252–260."
-[BLL+09]: <https://arxiv.org/pdf/1804.06702.pdf> "W. Bao, H. Li, N. Li, and W. Jiang, “A liveness detection method for face recognition based on optical flow field,” in Proc. IASP, Apr. 2009, pp. 233–236."
-[BDV+13]: <http://iab-rubric.org/papers/PID2777141.pdf> "S. Bharadwaj, T. I. Dhamecha, M. Vatsa, and R. Singh, “Computationally efficient face spoofing detection with motion magnification,” in Proc. IEEE Conf. Comput. Vis. Pattern Recognit. Workshops (CVPRW), Jun. 2013, pp. 105–110."
-[MHP11]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6117510> "J. Määtta, A. Hadid, and M. Pietikäinen, “Face spoofing detection from single images using micro-texture analysis,” in Proc. IJCB, Oct. 2011, pp. 1–7."
-[KD12]: <http://www.eurecom.fr/en/publication/3646/download/mm-publi-3646.pdf> "N. Kose and J. Dugelay, “Classification of captured and recaptured images to detect photograph spoofing,” in Proc. ICIEV, May 2012, pp. 1027–1032."
+[ASH+14]: <https://www.researchgate.net/profile/Hugo_Gascon/publication/264785935_DREBIN_Effective_and_Explainable_Detection_of_Android_Malware_in_Your_Pocket/links/53efd0020cf26b9b7dcdf395.pdf> "D. Arp, M. Spreitzenbarth, M. H¨ubner, H. Gascon, K. Rieck, and C. Siemens, “DREBIN: Effective and explainable detection of android malware in your pocket,” presented at Annu. Symp. Netw. Distrib. Syst. Security, 2014."
+[WWF+14]: <https://ieeexplore.ieee.org/abstract/document/6891250> "W. Wang, X. Wang, D. Feng, J. Liu, Z. Han, and X. Zhang, “Exploring permission-induced risk in android applications for malicious application detection,” IEEE Trans. Inf. Forensics Security, vol. 9, no. 11, pp. 1869–1882, Nov. 2014."
 
 
 {% include date/updated.html %}
