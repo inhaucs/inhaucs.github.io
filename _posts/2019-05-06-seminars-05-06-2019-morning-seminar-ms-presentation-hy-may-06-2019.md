@@ -110,8 +110,8 @@ The alarming growth rate of malicious apps has become a serious issue that sets 
   + Other Approaches
     + DREBIN [[ASH+14]] : 정적 분석 접근법 사용, SVM 사용, 재구현하지는 않고 논문에 있는 정보 사용
     + PERMISSION-INDUCED RISK MALWARE DETECTION [[WWF+14]] : Mutual information이라는 권한 랭킹 사용, 위험한 권한 상위 40개를 사용, 이건 재구현 함
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-05-06-fig-detection_rates.png" legend="Detection Rates" %}
     + Antivirus scanners가 detection rate이 작은 이유는 signature matching based이기 때문
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-05-06-fig-detection_rates.png" legend="Detection Rates" %}
 
 
 ### Points to note
