@@ -98,25 +98,25 @@ The alarming growth rate of malicious apps has become a serious issue that sets 
   + Google play store benign apps 310,926개 [[ASH+14]], 여러 소스로부터 2650, 5494, 54694 Malware [[WWF+14]]
 + Evaluating Effectiveness of MLDP
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-05-06-fig-detection_results.png" legend="Detection Results" %}
-  + ㅇㅁㄴㅇㄹㄴㅇㄹ
-
-
-
-
-+ 사용된 데이터 수
-  + Idiap : Training(22,497 Genuine / 69,686 Spoof), Test(29,791 Genuine / 93,686 Spoof)
-  + CASIA (H) : Training(4,579 Genuine / 11,858 Spoof), Test(5,603 Genuine / 16,958 Spoof)
-  + MSU : Training(11,567 Genuine / 33,050 Spoof), Test(11,178 Genuine / 33,102 Spoof)
-+ Results
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-04-30-fig-intra_db_performance.png" legend="Intra-Database Performance" %}
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-04-30-fig-cross_db_performance.png" legend="Cross-Database Performance" %}
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-04-30-fig-both_db_performance.png" legend="Intra and Cross Databases Performance" %}
+  + Malware는 잘 찾으나 FPR이 상대적으로 높음
+  + Mutual Information이라는 다른 권한 리스트와 비교한 내용이 Table 2에 있음
++ Evaluating Generality of MLDP
+  + Figure 5에서 top five 기계 학습 알고리즘에 대해서 테스트 결과를 보임
+  {% include articles/figure.html url="/assets/img/heeyong/2019/2019-05-06-fig-optimal_ml_algorithm.png" legend="Optimal Machine Learning Algorithm" %}
+  + SigPID(Proposed)와 Google에서 제안한 방법에 대해서 가장 좋은 기계 학습 방법에 대한 소개
+  + Table 4에서 Top five 기계 학습 알고리즘에 대한 수행 시간을 보임, 예상되다시피 권한의 수가 적을수록 빠름을 보임
+  + Table 5에서는 다른 소스에서 얻어진 Malware들에 대해서 Precision, Recall, FPR, FM, ACC 비교
++ Comparison With Other Approaches
+  + Other Approaches
+    + DREBIN [[ASH+14]] : 정적 분석 접근법 사용, SVM 사용, 재구현하지는 않고 논문에 있는 정보 사용
+    + PERMISSION-INDUCED RISK MALWARE DETECTION [[WWF+14]] : Mutual information이라는 권한 랭킹 사용, 위험한 권한 상위 40개를 사용, 이건 재구현 함
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-05-06-fig-detection_rates.png" legend="Detection Rates" %}
+    + Antivirus scanners가 detection rate이 작은 이유는 signature matching based이기 때문
 
 
 ### Points to note
-+ Face spoof attack detection을 위해 네 가지 특징을 사용함
-+ Ensemble을 사용했지만 다양한 input에 대해 ensemble하였고, 이에 다른 Learning model을 Ensemble 했을 때는 어떤 결과가 나올지
-+ Face spoof detection의 새로운 DB 공개
++ 권한 랭킹과 가지치기를 통해 적은 수의 권한들로 높은 수준의 malware 탐지율을 보임
++ 비록 최신 연구 내용과 비교하여 더 높은 탐지율은 아니지만, 이와 비슷한 수준이며 feature로 사용되는 권한의 수가 적기 때문에, malware가 빠르게 늘어나는 Android 플랫폼의 특성상 빠르게 탐지해야하는 요구 조건을 만족시킴
 
 
 
