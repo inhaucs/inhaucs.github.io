@@ -6,14 +6,18 @@
       url: /seminars/guides-for-seminars
       icon: fa-bullhorn
       teaser: Guide and notice for seminars of UCSLab.
+    - title: Morning Seminar (05-13-2019)
+      url: /seminars/05-13-2019-morning-seminar
+      icon: fa-compass
+      teaser: 6th UCSLab Good Morning Paper Review Seminar.
     - title: Morning Seminar (05-06-2019)
       url: /seminars/05-06-2019-morning-seminar
       icon: fa-compass
-      teaser: 5th UCSLab Good Morning Paper Review Seminar.      
+      teaser: 5th UCSLab Good Morning Paper Review Seminar.
     - title: Morning Seminar (04-29-2019)
       url: /seminars/04-29-2019-morning-seminar
       icon: fa-compass
-      teaser: 4th UCSLab Good Morning Paper Review Seminar.      
+      teaser: 4th UCSLab Good Morning Paper Review Seminar.
     - title: Morning Seminar (04-25-2019)
       url: /seminars/04-25-2019-morning-seminar
       icon: fa-compass
