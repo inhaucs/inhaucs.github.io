@@ -37,21 +37,15 @@ With the development of the Internet, malicious code attacks have increased expo
 
 
 ## Summary (Korean)
-+ Android에서 새로운 Malware들이 10초에 하나 꼴로 추가되고 있음
-+ 기존의 system-level, network-level 의 malware detection tool들이 있으나 여전히 문제
-+ 이에, Significant Permission IDentification (SigPID) 제안
-  + 권한 분석에 기반한 Malware detection system
-  + Android의 모든 권한을 분석하는 것이 아닌 일반 앱과 Malware를 구분하는 가장 심대한 권한을 가지치기하는 세 가지 레벨을 개발
-  + 기계 학습 기반 분류 방법 사용
-  + 결과적으로 22 개의 권한이 중요 권한임을 찾음
-  + 실험 : baseline approach(모든 권한에 대해 분석) vs. 상기 22개의 권한에 대한 분석
-    + 결과적으로 SVM을 분류기로 사용했을 때, baseline approach 와 비교하여 비슷한 결과를 얻었으며, 90%가 넘는 precision, recall, accuracy, F-measure를 보였고, 4-32배 빠름
-    + State-of-art approach와 비교해도 SigPID는 93.62%의 malware를 탐지함으로써 더 나은 성능을 보였고, 알려지지 않거나/새로운 Malware에 대해서도 91.4% 탐지
-  + Contribution
-    + Malware를 탐지하기 위한 권한의 서브셋을 찾는 SigPID 개발 -> 필요한 권한을 84% 줄임(16% 사용)
-    + 제안하는 방법 평가 -> 90% in precision, recall, accuracy, and F-measure
-    + 포괄성 증명 -> 주로 사용되는 67개의 지도 학습 알고리즘에 적용 (5494 malware & 310926 benign)
-      + 55개의 알고리즘에서 F-measure 85% 이상, 평균 수행 시간이 baseline approach에 비해 85.6% 감소
++ Internet 발달과 함께 각종 malware들의 변종들이 등장
++ 현재의 탐지 방법들은 탐지율이 매우 낮고 심지어 느림
++ Deep learning을 사용해서 malware의 변종들을 탐지하는 방법을 제안
+  + Malware 코드를 **grayscale** 이미지로 변환
+  + 변환된 image에 대해서 **Convolution Neural Network (CNN)** 적용
+  + 다른 malware familie 사이의 불균형을 다루기 위해 **bat algorithm** 사용
++ Vision Research Lab.의 malware 이미지 데이터에 대해 실험했고(Santa Barbara, [[NLJ+11]]), 좋은 정확도와 속도를 보임
+
+[NLJ+11]: <http://delivery.acm.org/10.1145/2020000/2016908/a4-nataraj.pdf?ip=165.246.44.143&id=2016908&acc=ACTIVE%20SERVICE&key=36491E83F85BB6C1%2E36491E83F85BB6C1%2E1702E7686A5145AB%2E4D4702B0C3E38B35&__acm__=1557306835_9d024be09ef7961180484ff3c8575c2a> "Nataraj, Lakshmanan, et al. "Malware images: visualization and automatic classification." Proceedings of the 8th international symposium on visualization for cyber security. ACM, 2011."
 
 
 ## Motivation
