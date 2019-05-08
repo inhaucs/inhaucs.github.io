@@ -46,7 +46,7 @@ permalink: /:categories/:slug.html
 
 ---
 
-### Session 4: [Detection of Malicious Code Variants Based on Deep Learning](https://inhaucs.github.io/seminars/05-06-2019-morning-seminar/presentation/ms-presentation-hy-may-13-2019.html)
+### Session 4: [Detection of Malicious Code Variants Based on Deep Learning](https://inhaucs.github.io/seminars/05-13-2019-morning-seminar/presentation/ms-presentation-hy-may-13-2019.html)
 
 + Hee-Yong Kwon (권희용)
 

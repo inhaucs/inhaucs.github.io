@@ -1,16 +1,16 @@
 ---
-title: Session 4. Significant Permission Identification for Machine-Learning-Based Android Malware Detection
-date: 2019-05-06 00:00:00 Z
-description: Significant Permission Identification for Machine-Learning-Based Android Malware Detection
+title: Session 4. Detection of Malicious Code Variants Based on Deep Learning
+date: 2019-05-13 00:00:00 Z
+description: Detection of Malicious Code Variants Based on Deep Learning
 card_title: Session 4
-card_teaser: Significant Permission Identification for Machine-Learning-Based Android Malware Detection
+card_teaser: Detection of Malicious Code Variants Based on Deep Learning
 card_position: 4
 icon: fa-server
-categories: [seminars,05-06-2019-morning-seminar,presentation]
-tags: [TII, 2018, TII2018, Access control, computer security, machine learning, mobile applications, mobile computing]
+categories: [seminars,05-13-2019-morning-seminar,presentation]
+tags: [TII, 2018, TII2018, Malware variants, grayscale image, deep learning, convolution neural network, bat algorithm]
 sidebar: morning-seminar
 layout: default
-slug: ms-presentation-hy-may-06-2019
+slug: ms-presentation-hy-may-13-2019
 permalink: /:categories/:slug.html
 ---
 
@@ -21,20 +21,19 @@ permalink: /:categories/:slug.html
 
 ## Presenter & Date
 + Hee-Yong Kwon (권희용)
-+ 2019-05-06
++ 2019-05-13
 
-## [Significant Permission Identification for Machine-Learning-Based Android Malware Detection](https://inhaucs.github.io/seminars/05-06-2019-morning-seminar/presentation/ms-presentation-hy-may-06-2019.html)
+## [Detection of Malicious Code Variants Based on Deep Learning](https://inhaucs.github.io/seminars/05-13-2019-morning-seminar/presentation/ms-presentation-hy-may-13-2019.html)
 
-### Information of the paper [(Link)](https://ieeexplore.ieee.org/abstract/document/8255798)
-+ Authors: Jin Li (Guangzhou University); Lichao Sun (University of
-Illinois at Chicago); Qiben Yan; Zhiqiang Li; Witawas Srisa-an (University of Nebraska–Lincoln); Heng Ye (Beijing Jiaotong University)
-+ Conference name: IEEE Transactions on Industrial Informatics
-+ Published date: 2018-01-12
-+ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8255798)
+### Information of the paper [(Link)](https://ieeexplore.ieee.org/abstract/document/8330042)
++ Authors: Zhihua Cui; Xingjuan Cai; Jinjun Chen (TaiYuan University of Science and Technology); Fei Xue (Beijing Wuzi University); Yang Cao (Beijing Unibersity of Technology); Gai-ge Wang (Ocean University)
++ **Journal** name: IEEE Transactions on Industrial Informatics
++ Published date: 2018-04-03
++ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8330042)
 
 
 ### Abstract
-The alarming growth rate of malicious apps has become a serious issue that sets back the prosperous mobile ecosystem. A recent report indicates that a new malicious app for Android is introduced every 10 s. To combat this serious malware campaign, we need a scalable malware detection approach that can effectively and efficiently identify malware apps. Numerous malware detection tools have been developed, including system-level and network-level approaches. However, scaling the detection for a large bundle of apps remains a challenging task. In this paper, we introduce Significant Permission IDentification (SigPID), a malware detection system based on permission usage analysis to cope with the rapid increase in the number of Android malware. Instead of extracting and analyzing all Android permissions, we develop three levels of pruning by mining the permission data to identify the most significant permissions that can be effective in distinguishing between benign and malicious apps. SigPID then utilizes machine-learning-based classification methods to classify different families of malware and benign apps. Our evaluation finds that only 22 permissions are significant. We then compare the performance of our approach, using only 22 permissions, against a baseline approach that analyzes all permissions. The results indicate that when a support vector machine is used as the classifier, we can achieve over 90% of precision, recall, accuracy, and F-measure, which are about the same as those produced by the baseline approach while incurring the analysis times that are 4–32 times less than those of using all permissions. Compared against other state-of-the-art approaches, SigPID is more effective by detecting 93.62% of malware in the dataset and 91.4% unknown/new malware samples.
+With the development of the Internet, malicious code attacks have increased exponentially, with malicious code variants ranking as a key threat to Internet security. The ability to detect variants of malicious code is critical for protection against security breaches, data theft, and other dangers. Current methods for recognizing malicious code have demonstrated poor detection accuracy and low detection speeds. This paper proposed a novel method that used deep learning to improve the detection of malware variants. In prior research, deep learning demonstrated excellent performance in image recognition. To implement our proposed detection method, we converted the malicious code into grayscale images. Then, the images were identified and classified using a convolutional neural network (CNN) that could extract the features of the malware images automatically. In addition, we utilized a bat algorithm to address the data imbalance among different malware families. To test our approach, we conducted a series of experiments on malware image data from Vision Research Lab. The experimental results demonstrated that our model achieved good accuracy and speed as compared with other malware detection models.
 
 
 ## Summary (Korean)
