@@ -21,7 +21,7 @@ permalink: /:categories/:slug.html
 
 ## Presenter & Date
 + Hee-Yong Kwon (권희용)
-+ 2019-05-16
++ 2019-05-13
 
 ## [Detection of Malicious Code Variants Based on Deep Learning](https://inhaucs.github.io/seminars/05-13-2019-morning-seminar/presentation/ms-presentation-hy-may-13-2019.html)
 
