@@ -1,15 +1,15 @@
 ---
 title: 6th UCSLab Morning Seminar
 date: 2019-05-07 00:00:00 Z
-description: Notificaion of 6th UCSLab Morning Seminar (on 2019-05-13)
+description: Notificaion of 6th UCSLab Morning Seminar (on 2019-05-16)
 card_title: 6th Morning Seminar
-card_teaser: with 5 presentations on 2019-05-13.
+card_teaser: with 5 presentations on 2019-05-16.
 card_position: 1
 icon: fa-bullhorn
-categories: [seminars,05-13-2019-morning-seminar,notification]
+categories: [seminars,05-16-2019-morning-seminar,notification]
 sidebar: morning-seminar
 layout: default
-slug: ms-notification-may-13-2019
+slug: ms-notification-may-16-2019
 permalink: /:categories/:slug.html
 
 ---
@@ -20,7 +20,7 @@ permalink: /:categories/:slug.html
 {% include layout/col_start.html column="7" %}
 
 ## Date
-2019-05-13
+2019-05-16
 
 ## Presenters
 + Tae-Hyun Kim (김태현)
@@ -46,7 +46,7 @@ permalink: /:categories/:slug.html
 
 ---
 
-### Session 4: [Detection of Malicious Code Variants Based on Deep Learning](https://inhaucs.github.io/seminars/05-13-2019-morning-seminar/presentation/ms-presentation-hy-may-13-2019.html)
+### Session 4: [Detection of Malicious Code Variants Based on Deep Learning](https://inhaucs.github.io/seminars/05-16-2019-morning-seminar/presentation/ms-presentation-hy-may-16-2019.html)
 
 + Hee-Yong Kwon (권희용)
 
