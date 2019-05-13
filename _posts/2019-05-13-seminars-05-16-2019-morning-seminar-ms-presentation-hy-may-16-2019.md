@@ -38,73 +38,34 @@ With the development of the Internet, malicious code attacks have increased expo
 
 ## Summary (Korean)
 + Internet 발달과 함께 각종 malware들의 변종들이 등장
+  + Symantec 401 million malicious codes 찾음 (2016), 이 중 357 millions는 variants
 + 현재의 탐지 방법들은 탐지율이 매우 낮고 심지어 느림
+  + Static or Dynamic approaches
+    + 보통 feature-based로 수행되는데, 둘 다 회피 가능
++ 이를 해결하기 위해 malicious code를 grayscale 이미지로 변환하는 방법이 이미 제안([NLJ+11])
+  + 상기 회피 방법(e.g., 난독화)을 다룰 수 있지만 이미지로부터 feature extraction이 오래 걸리고(high cost), 큰 데이터셋에 대해 효율적이지 않음
 + Deep learning을 사용해서 malware의 변종들을 탐지하는 방법을 제안
   + Malware 코드를 **grayscale** 이미지로 변환
   + 변환된 image에 대해서 **Convolution Neural Network (CNN)** 적용
   + 다른 malware familie 사이의 불균형을 다루기 위해 **bat algorithm** 사용
 + Vision Research Lab.의 malware 이미지 데이터에 대해 실험했고(Santa Barbara, [[NLJ+11]]), 좋은 정확도와 속도를 보임
++ Contributions
+  + Malware binary를 이미지로 변환하는 방법을 소개하고, 이를 통해 malware 탐지 문제를 이미지 분류 문제로 변환
+  + CNN 기반의 malware variants detection 방법 소개
+  + 다른 malware family 간의 데이터 불균형 문제를 해결하기 위해, bat algorithm에 기반한 data equilibrium approach 설계
+  + 많은 실험을 통해, 제안하는 방법이 malware detection에 효과적임을 보임
 
 [NLJ+11]: <http://delivery.acm.org/10.1145/2020000/2016908/a4-nataraj.pdf?ip=165.246.44.143&id=2016908&acc=ACTIVE%20SERVICE&key=36491E83F85BB6C1%2E36491E83F85BB6C1%2E1702E7686A5145AB%2E4D4702B0C3E38B35&__acm__=1557306835_9d024be09ef7961180484ff3c8575c2a> "Nataraj, Lakshmanan, et al. "Malware images: visualization and automatic classification." Proceedings of the 8th international symposium on visualization for cyber security. ACM, 2011."
 
 
 ## Motivation
-+ Android 시장은 매우 큰데, iOS와는 다르게 third-party나 file-sharing을 통한 어플리케이션 설치를 허용하고 있음 -> Malware가 다운로드될 수 있는 경로
+<!-- + Android 시장은 매우 큰데, iOS와는 다르게 third-party나 file-sharing을 통한 어플리케이션 설치를 허용하고 있음 -> Malware가 다운로드될 수 있는 경로
 + Mobile malware의 97%가 Android를 타겟으로 함
 + 이러한 Malware의 타입은 50개 이상 있고, 이 때문에 모두 탐지하기가 힘듦
 + 이전 기술들이 있고 한계가 있음
   + RISKRANKER : 정적 분석 기반 -> False positive 많음
   + TAINTDROID : 동적 분석 기반 -> Malware 탐지 회피 기술
-  + DREBIN : 정적 분석 + 기계 학습 -> High Cost
-
-
-## Introducing SigPID
-+ Goal : Malware 분석을 위해 필요한 최소한의 권한 찾기
-+ a) Multi-Level Data Pruning(MLDP)을 사용하여 Malware 탐지에 영향이 별로 없는 권한 제거, 이는 세 컴포넌트를 포함
-  + Permission Ranking with Negative Rate (PRNR)
-  + Support-based Permission Ranking (SPR)
-  + Permission Mining with Association Rules (PMAR)
-+ b) MLDP로 필터링된 권한들을 지도 학습 분류 방법에 입력으로 사용하여 Malware 탐지
-
-  ##### Multi-Level Data Pruning(MLDP)
-  + Permission Ranking with Negative Rate (PRNR)
-    + Benign과 Malware를 구별하는 권한들을 식별하고, 비슷하게 사용되는 권한 제거(pruning)
-    + 이를 위해 PPNR을 사용할건데, 먼저 Malware와 Benign 어플리케이션들에서 사용되는 권한들을 매트릭스 M & B로 표현
-      + Sample 수가 다르면 Skewed model이 될 수 있으므로(5494 malware vs. 310,926 benign), scaling 해주는 식 포함 (1)
-      + 식 (2)를 사용하여 권한들의 사용 빈도를 계산, [-1, 1]의 값이 나오며 -1은 benign에서만 사용하는 권한, 1은 malware에서만 사용하는 권한을 의미, 0인 경우 malware 탐지에 별 효과가 없음을 의미
-      + R(P) 값이 1, -1인 값이 중요하므로, 오름차순과 내림차순의 two ranked lists 생성
-      + Two lists의 top tier 권한을 시스템에 넣어 TPR, FPR, precision, recall, F-measure를 측정, 이 값이 안정될 때까지 반복
-        + 이를 통해, 전체 sample에서 135개의 권한을 사용하는데 이를 비슷한 정확도를 가지는 95개로 줄임
-  + Support-based Permission Ranking (SPR)
-    + 상기 PRNR 방법은 benign과 malware 각각에서 사용되는 ranking이기 때문에, 실질적인 support를 고려(특정 권한은 benign에서만 사용된다든지)
-    + 사용되는 권한을 25개로 줄임
-  + Permission Mining with Association Rules (PMAR)
-    + 특정 권한들의 경우 항상 같이 등장함(e.g., WRITE_SMS AND READ_SMS) -> 하나만 사용해도 됨
-    + 결과적으로 22개의 권한으로 줄임
-
-  ##### Machine-Learning-Based Malware Detection Using Significant Permissions
-  + SVM을 먼저 사용하여 비교했고, 주로 알려진 67개의 기계 학습 알고리즘을 사용, 135개의 전체 권한(baseline)과 비교 결과는 차후 기술
-
-
-## Evaluation
-+ Dataset
-  + Google play store benign apps 310,926개 [[ASH+14]], 여러 소스로부터 2650, 5494, 54694 Malware [[WWF+14]]
-+ Evaluating Effectiveness of MLDP
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-05-06-fig-detection_results.png" legend="Detection Results" %}
-  + Malware는 잘 찾으나 FPR이 상대적으로 높음
-  + Mutual Information이라는 다른 권한 리스트와 비교한 내용이 Table 2에 있음
-+ Evaluating Generality of MLDP
-  + Figure 5에서 top five 기계 학습 알고리즘에 대해서 테스트 결과를 보임
-  {% include articles/figure.html url="/assets/img/heeyong/2019/2019-05-06-fig-optimal_ml_algorithm.png" legend="Optimal Machine Learning Algorithm" %}
-  + SigPID(Proposed)와 Google에서 제안한 방법에 대해서 가장 좋은 기계 학습 방법에 대한 소개
-  + Table 4에서 Top five 기계 학습 알고리즘에 대한 수행 시간을 보임, 예상되다시피 권한의 수가 적을수록 빠름을 보임
-  + Table 5에서는 다른 소스에서 얻어진 Malware들에 대해서 Precision, Recall, FPR, FM, ACC 비교
-+ Comparison With Other Approaches
-  + Other Approaches
-    + DREBIN [[ASH+14]] : 정적 분석 접근법 사용, SVM 사용, 재구현하지는 않고 논문에 있는 정보 사용
-    + PERMISSION-INDUCED RISK MALWARE DETECTION [[WWF+14]] : Mutual information이라는 권한 랭킹 사용, 위험한 권한 상위 40개를 사용, 이건 재구현 함
-    + Antivirus scanners가 detection rate이 작은 이유는 signature matching based이기 때문
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-05-06-fig-detection_rates.png" legend="Detection Rates" %}
+  + DREBIN : 정적 분석 + 기계 학습 -> High Cost -->
 
 
 ### Points to note
