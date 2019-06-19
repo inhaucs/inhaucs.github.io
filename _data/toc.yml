@@ -6,6 +6,10 @@
       url: /seminars/guides-for-seminars
       icon: fa-bullhorn
       teaser: Guide and notice for seminars of UCSLab.
+    - title: Morning Seminar (06-20-2019)
+      url: /seminars/06-20-2019-morning-seminar
+      icon: fa-compass
+      teaser: Seong-yun & Ye-byul special seminar.
     - title: Morning Seminar (05-16-2019)
       url: /seminars/05-16-2019-morning-seminar
       icon: fa-compass
