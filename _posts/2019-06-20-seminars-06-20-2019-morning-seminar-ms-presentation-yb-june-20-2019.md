@@ -37,12 +37,29 @@ This paper presents new software speed records for the computation of cryptograp
 
 
 ### Weil pairing miller algorithm
-
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062001.PNG" legend="Weil pairing miller algorithm" %}
 ### Tate pairing miller algorithm
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062002.PNG" legend="Tate pairing miller algorithm" %}
 
 ### Optimal pairing miller algorithm
-
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062003.PNG" legend="Optimal pairing miller algorithm" %}
 ### bn256 Optimal ate pairing miller algorithm
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062004.PNG" legend="bn256 Optimal ate pairing miller algorithm" %}
+
+### bn256 pairing code
+[Basic bn256 crypto code](https://github.com/ethereum/go-ethereum/tree/master/crypto/bn256/cloudflare)
+[go-ethereum bn256 code](https://github.com/ethereum/go-ethereum/tree/master/crypto/bn256/cloudflare)
+
+#### bn256 pairing code
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062005.PNG" legend="bn256 optimalate pairing code" %}
+
+#### miller code
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062006.PNG" legend="miller code" %}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062007.PNG" legend="miller code(cont.)" %}
+
+#### finalexponentation code
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062008.PNG" legend="finalexponentation code" %}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062008.PNG" legend="finalexponentation code(cont.)" %}
 
 
 
