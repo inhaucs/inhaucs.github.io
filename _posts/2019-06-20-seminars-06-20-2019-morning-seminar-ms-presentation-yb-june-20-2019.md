@@ -1,4 +1,3 @@
-
 ---
 title: Session 1. Barreto-Naehrig(BN)256 curve Pairing
 date: 2019-06-19 00:00:00 Z
@@ -14,6 +13,7 @@ layout: default
 slug: ms-presentation-yb-june-20-2019
 permalink: /:categories/:slug.html
 ---
+
 
 {% assign product = 'ce' %}
 
