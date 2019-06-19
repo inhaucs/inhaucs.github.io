@@ -41,8 +41,12 @@ This paper presents new software speed records for the computation of cryptograp
 ### Tate pairing miller algorithm
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062002.PNG" legend="Tate pairing miller algorithm" %}
 
-### Optimal pairing miller algorithm
++ All the fast algorithms to compute the Weil and Tate pairing on elliptic curves are based on Miller's algorithm.
+### [Optimal pairing miller algorithm](https://ieeexplore.ieee.org/document/5361495)
+
+
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062003.PNG" legend="Optimal pairing miller algorithm" %}
+
 ### bn256 Optimal ate pairing miller algorithm
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062004.PNG" legend="bn256 Optimal ate pairing miller algorithm" %}
 
