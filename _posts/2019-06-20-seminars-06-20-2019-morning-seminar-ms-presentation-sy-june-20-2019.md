@@ -1,9 +1,9 @@
 ---
-title: Session 2. Barreto-Naehrig(BN)256 curve pairing using MCL
+title: Session 2. Pairing-Friendly Elliptic Curves of Prime Order
 date: 2019-06-20 00:00:00 Z
-description: Barreto-Naehrig(BN)256 curve pairing using MCL
-card_title: Session 1
-card_teaser: Barreto-Naehrig(BN)256 curve pairing using MCL
+description: Pairing-Friendly Elliptic Curves of Prime Order
+card_title: Session 2
+card_teaser: Pairing-Friendly Elliptic Curves of Prime Order
 card_position: 2
 icon: fa-server
 categories: [seminars,06-20-2019-morning-seminar,presentation]
@@ -24,17 +24,17 @@ permalink: /:categories/:slug.html
 + Seong-Yun Jeon (전성윤)
 + 2019-06-20
 
-## [Detection of Malicious Code Variants Based on Deep Learning](https://inhaucs.github.io/seminars/06-20-2019-morning-seminar/presentation/ms-presentation-yb-june-20-2019.html)
+## [Pairing-Friendly Elliptic Curves of Prime Order](https://inhaucs.github.io/seminars/06-20-2019-morning-seminar/presentation/ms-presentation-sy-june-20-2019.html)
 
-### Information of the paper [(Link)](http://cryptojedi.org/papers/dclxvi-20100714.pdf)
-+ Authors: Michael Naehrig (Microsoft Research), Ruben Niederhagen (National Taiwan University), Peter Schwabe(Technische Universiteit Eindhoven)
-+ Published date: 2010-07-14
-+ [Paper Link](http://cryptojedi.org/papers/dclxvi-20100714.pdf)
+### Information of the paper [(Link)](https://dl.acm.org/citation.cfm?id=2180571)
++ Authors: Paulo S. L. M. Barreto1 (Escola Polit´ecnica, Universidade de S˜ao Paulo),  Michael Naehrig (Lehrstuhl f¨ur Theoretische Informationstechnik, Rheinisch-Westf¨alische Technische Hochschule Aachen.)
++ Published date: 2005-08-11
++ [Paper Link](https://eprint.iacr.org/2005/133.pdf)
 
 
 ### Abstract
-This paper presents new software speed records for the computation of cryptographic pairings. More specifically, we present details of an implementation which computes the optimal ate pairing on a 256- bit Barreto-Naehrig curve in only 4,379,912 cycles on one core of an Intel Core 2 Quad Q9550 processor. This speed is achieved by combining 1.) state-of-the-art high-level optimization techniques, 2.) a new representation of elements in the underlying finite fields which makes use of the special modulus arising from the Barreto-Naehrig curve construction, and 3.) implementing arithmetic in this representation using the double-precision floating-point SIMD instructions of the AMD64 architecture.
-
+Previously known techniques to construct pairing-friendly curves of prime or near-prime order are restricted to embedding degree k <= 6. More general methods produce curves over Fp where the bit length of p is often twice as large as that of the order r of the subgroup with embedding degree k; the best published results achieve ρ ≡ log(p)/ log(r) ∼ 5/4. In this paper we make the first step towards
+surpassing these limitations by describing a method to construct elliptic curves of prime order and embedding degree k = 12. The new curves lead to very efficient implementation: non-pairing cryptosystem operations only need Fp and Fp2 arithmetic, and pairing values can be compressed to one sixth of their length in a way compatible with point reduction techniques. We also discuss the role of large CM discriminants D to minimize ρ; in particular, for embedding degree k = 2q where q is prime we show that the ability to handle log(D)/ log(r) ∼ (q − 3)/(q − 1) enables building curves with ρ ∼ q/(q − 1).
 
 ### Weil pairing miller algorithm
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062001.PNG" legend="Weil pairing miller algorithm" %}
@@ -43,8 +43,6 @@ This paper presents new software speed records for the computation of cryptograp
 
 + All the fast algorithms to compute the Weil and Tate pairing on elliptic curves are based on Miller's algorithm.
 ### [Optimal pairing miller algorithm](https://ieeexplore.ieee.org/document/5361495)
-
-
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062003.PNG" legend="Optimal pairing miller algorithm" %}
 
 ### bn256 Optimal ate pairing miller algorithm
@@ -64,8 +62,6 @@ This paper presents new software speed records for the computation of cryptograp
 #### finalexponentation code
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062008.PNG" legend="finalexponentation code" %}
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062008.PNG" legend="finalexponentation code(cont.)" %}
-
-
 
 ### Points to note
 
