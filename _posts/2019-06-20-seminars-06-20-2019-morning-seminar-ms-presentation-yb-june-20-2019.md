@@ -24,7 +24,7 @@ permalink: /:categories/:slug.html
 + Ye-Byoul Son (손예별)
 + 2019-06-20
 
-## [Detection of Malicious Code Variants Based on Deep Learning](https://inhaucs.github.io/seminars/06-20-2019-morning-seminar/presentation/ms-presentation-yb-june-20-2019.html)
+## [New software speed records for cryptographic pairings](https://inhaucs.github.io/seminars/06-20-2019-morning-seminar/presentation/ms-presentation-yb-june-20-2019.html)
 
 ### Information of the paper [(Link)](http://cryptojedi.org/papers/dclxvi-20100714.pdf)
 + Authors: Michael Naehrig (Microsoft Research), Ruben Niederhagen (National Taiwan University), Peter Schwabe(Technische Universiteit Eindhoven)
