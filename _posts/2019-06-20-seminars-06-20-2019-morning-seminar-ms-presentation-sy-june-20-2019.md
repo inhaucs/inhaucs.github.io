@@ -37,34 +37,22 @@ Previously known techniques to construct pairing-friendly curves of prime or nea
 surpassing these limitations by describing a method to construct elliptic curves of prime order and embedding degree k = 12. The new curves lead to very efficient implementation: non-pairing cryptosystem operations only need Fp and Fp2 arithmetic, and pairing values can be compressed to one sixth of their length in a way compatible with point reduction techniques. We also discuss the role of large CM discriminants D to minimize ρ; in particular, for embedding degree k = 2q where q is prime we show that the ability to handle log(D)/ log(r) ∼ (q − 3)/(q − 1) enables building curves with ρ ∼ q/(q − 1).
 
 ### Weil pairing miller algorithm
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062001.PNG" legend="Weil pairing miller algorithm" %}
-### Tate pairing miller algorithm
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062002.PNG" legend="Tate pairing miller algorithm" %}
 
-+ All the fast algorithms to compute the Weil and Tate pairing on elliptic curves are based on Miller's algorithm.
+### Tate pairing miller algorithm
+
 ### [Optimal pairing miller algorithm](https://ieeexplore.ieee.org/document/5361495)
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062003.PNG" legend="Optimal pairing miller algorithm" %}
 
 ### bn256 Optimal ate pairing miller algorithm
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062004.PNG" legend="bn256 Optimal ate pairing miller algorithm" %}
 
 ### bn256 pairing code
-[Basic bn256 crypto code](https://github.com/ethereum/go-ethereum/tree/master/crypto/bn256/cloudflare)
-[go-ethereum bn256 code](https://github.com/ethereum/go-ethereum/tree/master/crypto/bn256/cloudflare)
 
 #### bn256 pairing code
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062005.PNG" legend="bn256 optimalate pairing code" %}
 
 #### miller code
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062006.PNG" legend="miller code" %}
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062007.PNG" legend="miller code(cont.)" %}
 
 #### finalexponentation code
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062008.PNG" legend="finalexponentation code" %}
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062008.PNG" legend="finalexponentation code(cont.)" %}
 
 ### Points to note
-
 
 ## Discussion
 
