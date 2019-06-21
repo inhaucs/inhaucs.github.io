@@ -58,7 +58,17 @@ With the development of the Internet, malicious code attacks have increased expo
 [NLJ+11]: <http://delivery.acm.org/10.1145/2020000/2016908/a4-nataraj.pdf?ip=165.246.44.143&id=2016908&acc=ACTIVE%20SERVICE&key=36491E83F85BB6C1%2E36491E83F85BB6C1%2E1702E7686A5145AB%2E4D4702B0C3E38B35&__acm__=1557306835_9d024be09ef7961180484ff3c8575c2a> "Nataraj, Lakshmanan, et al. "Malware images: visualization and automatic classification." Proceedings of the 8th international symposium on visualization for cyber security. ACM, 2011."
 
 
-## Motivation
+## Related work
++ 다음의 네 가지 분석 또는 탐지 방법에 대한 관련 연구 내용 포함
+  + Malware Detection Based on Feature Analysis
+  + Malicious Code Visualization
+  + Image Processing Techniques for Malware Detection
+  + Malware Detection Based on Deep Learning
+
+
+## Malware Detection based on a CNN (proposed method)
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-05-13-fig-proposed-method.png" legend="Overview of the proposed method." %}
++ 제안하는 방법은 상기 그림과 같이 malicious 코드의 grayscale image 매핑; 그리고 CNN 적용을 통한 분류의 두 단계로 구성됨
 <!-- + Android 시장은 매우 큰데, iOS와는 다르게 third-party나 file-sharing을 통한 어플리케이션 설치를 허용하고 있음 -> Malware가 다운로드될 수 있는 경로
 + Mobile malware의 97%가 Android를 타겟으로 함
 + 이러한 Malware의 타입은 50개 이상 있고, 이 때문에 모두 탐지하기가 힘듦
