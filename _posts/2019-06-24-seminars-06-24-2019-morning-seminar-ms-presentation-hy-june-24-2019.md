@@ -1,27 +1,26 @@
 ---
 title: Session 4. Detection of Malicious Code Variants Based on Deep Learning
-date: 2019-05-13 00:00:00 Z
+date: 2019-06-24 00:00:00 Z
 description: Detection of Malicious Code Variants Based on Deep Learning
 card_title: Session 4
 card_teaser: Detection of Malicious Code Variants Based on Deep Learning
 card_position: 4
 icon: fa-server
-categories: [seminars,05-16-2019-morning-seminar,presentation]
+categories: [seminars,06-24-2019-morning-seminar,presentation]
 tags: [TII, 2018, TII2018, Malware variants, grayscale image, deep learning, convolution neural network, bat algorithm]
 sidebar: morning-seminar
 layout: default
-slug: ms-presentation-hy-may-16-2019
+slug: ms-presentation-hy-june-24-2019
 permalink: /:categories/:slug.html
 ---
 
 {% assign product = 'ce' %}
-
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
 
 ## Presenter & Date
 + Hee-Yong Kwon (권희용)
-+ 2019-05-16
++ 2019-06-24
 
 ## [Detection of Malicious Code Variants Based on Deep Learning](https://inhaucs.github.io/seminars/05-16-2019-morning-seminar/presentation/ms-presentation-hy-may-16-2019.html)
 
