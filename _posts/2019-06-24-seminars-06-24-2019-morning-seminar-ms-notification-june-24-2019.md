@@ -51,7 +51,20 @@ User authentication is a process for a system to verify the identity of a claime
 
 ---
 
-### Session 2: [Title](https://inhaucs.github.io/seminars/04-29-2019-morning-seminar/presentation/ms-presentation-jh-apr-29-2019.html)
+### Session 2: [How Do Tor Users InteractWith Onion Services?](https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-winter.pdf)
+
++ Tae-Hyun Kim (김태현)
+
+### Information of the paper [(Link)](https://www.usenix.org/node/217467)
++ Authors: Philipp Winter;Anne Edmundson;Laura M.Roberts;Agnieszka Durkowska-Zuk;Marshini Chetty;Nick Feamster(Princeton University)
++ Conference name: USENIX Security 2018
++ Published date: 2018-08-17
++ [Paper Link](https://www.usenix.org/node/217467)
+
+
+### Abstract
+Onion services are anonymous network services that are exposed over the Tor network. In contrast to conventional Internet services, onion services are private, generally not indexed by search engines, and use self-certifying domain names that are long and difficult for humans to read. In this paper, we study how people perceive, understand, and use onion services based on data from 17 semi-structured interviews and an online survey of 517 users. We find that users have an incomplete mental model of onion services, use these services for anonymity and have varying trust in onion services in general. Users also have difficulty discovering and tracking onion sites and authenticating them. Finally, users want technical improvements to onion services and better information on how to use them. Our findings suggest various improvements for the security and usability of Tor onion services, including ways to automatically detect phishing of onion services, more clear security indicators, and ways to manage onion domain names that are difficult to remember.
+
 
 ---
 
