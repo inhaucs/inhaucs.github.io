@@ -10,7 +10,7 @@ categories: [seminars,06-24-2019-morning-seminar,presentation]
 tags: [BWCCA, 2016, BWCCA2016, Password, Password Authentication, Authentication, OTP, One Time Password, HE, Homomorphic Encryption]
 sidebar: morning-seminar
 layout: default
-slug: ms-presentation-hy-june-24-2019
+slug: ms-presentation-sy-june-24-2019
 permalink: /:categories/:slug.html
 ---
 
