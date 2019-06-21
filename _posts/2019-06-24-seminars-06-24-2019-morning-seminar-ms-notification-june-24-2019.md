@@ -35,7 +35,7 @@ permalink: /:categories/:slug.html
 
 ---
 
-### Session 1: [Password Authentication Using One-Time Key-Based Signature and Homomorphic Encryption](https://inhaucs.github.io/seminars/06-24-2019-morning-seminar/presentation/ms-presentation-sy-jun-24-2019.html)
+### Session 1: [Password Authentication Using One-Time Key-Based Signature and Homomorphic Encryption](https://inhaucs.github.io/seminars/06-24-2019-morning-seminar/presentation/ms-presentation-sy-june-24-2019.html)
 
 + Seong-Yun Jeon (전성윤)
 
