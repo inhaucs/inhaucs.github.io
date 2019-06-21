@@ -14,7 +14,6 @@ slug: ms-presentation-sy-june-24-2019
 permalink: /:categories/:slug.html
 ---
 
-{% assign product = 'ce' %}
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
 
