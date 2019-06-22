@@ -66,7 +66,7 @@ With the development of the Internet, malicious code attacks have increased expo
 
 
 ## Malware Detection based on a CNN (proposed method)
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-05-13-fig-proposed-method.png" legend="Overview of the proposed method." %}
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-06-24-fig-proposed-method.png" legend="Overview of the proposed method." %}
 + 제안하는 방법은 상기 그림과 같이 malicious 코드의 grayscale image 매핑; 그리고 CNN 적용을 통한 분류의 두 단계로 구성됨
 <!-- + Android 시장은 매우 큰데, iOS와는 다르게 third-party나 file-sharing을 통한 어플리케이션 설치를 허용하고 있음 -> Malware가 다운로드될 수 있는 경로
 + Mobile malware의 97%가 Android를 타겟으로 함
