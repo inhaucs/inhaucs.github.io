@@ -67,14 +67,41 @@ With the development of the Internet, malicious code attacks have increased expo
 
 ## Malware Detection based on a CNN (proposed method)
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-06-24-fig-proposed-method.png" legend="Overview of the proposed method." %}
-+ 제안하는 방법은 상기 그림과 같이 malicious 코드의 grayscale image 매핑; 그리고 CNN 적용을 통한 분류의 두 단계로 구성됨
-<!-- + Android 시장은 매우 큰데, iOS와는 다르게 third-party나 file-sharing을 통한 어플리케이션 설치를 허용하고 있음 -> Malware가 다운로드될 수 있는 경로
-+ Mobile malware의 97%가 Android를 타겟으로 함
-+ 이러한 Malware의 타입은 50개 이상 있고, 이 때문에 모두 탐지하기가 힘듦
-+ 이전 기술들이 있고 한계가 있음
-  + RISKRANKER : 정적 분석 기반 -> False positive 많음
-  + TAINTDROID : 동적 분석 기반 -> Malware 탐지 회피 기술
-  + DREBIN : 정적 분석 + 기계 학습 -> High Cost -->
++ 제안하는 방법은 상기 그림과 같이 malicious 코드를 grayscale image로 변환; 그리고 CNN 적용을 통한 탐지의 두 단계로 구성됨
++ Binary Malware to Gray image
+  + [[NKJ+11]]에서 제안하는 변환 방법 사용 (visualization of executable malware binary files)
+    + 먼저 Binary를 8-bit 단위로 나누어 0-255로 표현 -> 10진수의 1-D vector로 변환
+    + 1-D vector를 특정 width에 따라 2-D matrix로 변환
+      + 특정 width는 [[NKJ+11]]에서 실험을 통해 파일 크기에 따라 고정됨
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-06-24-fig-malware_images.png" legend="Overview of the proposed method." %}
+    + [[NKJ+11]]에서 보인 Malware Family 내의 유사성과 Family 간의 차이
++ Malware Image Classification Based on CNN
+  + CNN은 multidimensional input에 이점
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-06-24-fig-malware_classification.png" legend="Overview of the proposed method." %}
+  + 뭔가 새로운 방법을 적용한 줄 알았으나, 일반적인 CNN 사용
+[NKJ+11]: <https://dl.acm.org/citation.cfm?id=2016908> "L. Nataraj, S. Karthikeyan, G. Jacob, andB.Manjunath, “Malware images: visualization and automatic classification,” in Proc. 8th Int. Symp. Vis. Cyber Security, 2011, Paper 4."
+
+
+## Malware Image Data Equilibrium
++ Malware 샘플이 family에 따라 개수의 차이가 있음(데이터 불균형) -> 학습이 제대로 되지 않음(low accuracy & poor robustness)
+  + Image Data Augmentation (IDA) Technology
+    + 데이터 불균형을 해결하기 위해, 부족한 데이터 확대 -> 과적합 방지
+    + 새로운 데이터 생성 방법의 종류
+      + rotation/reflection, flip, zoom, shift, scale, contrast, noise, color 등
+    + 상기 생성 방법들 중 몇 가지를 임의 선택하여 새로운 데이터 생성
+  + Data Equalization Based on a Bat algorithm (DRBAz )
+    + Swarm intelligence(집단 지성)에 기반한 데이터 불균형 해결법 제시: Dynamic Resampling method based on the Bat Algorithm
+      + Bat Algorithm은 기존에 연구된 내용([[Y10]])
+      + 다른 malware family 간의 sampling weight을 최적화하기 위해 사용됨
+[Y10]: <https://link.springer.com/chapter/10.1007/978-3-642-12538-6_6> "X.-S.Yang, “A new metaheuristic bat-inspired algorithm,” Nature Inspired Cooperative Strategies for Optimization (NICSO 2010), New York, NY, USA: Springer, pp. 65–74, 2010."
+
+
+## Experimental Evaluation
++ Caffe framework 사용 (NN framework)
++ Intel Core i5-4590 CPU (3.3 GHz), Nvidia Geforce GTX 750Ti GPU (2 GB), and 8 GB RAM
++ Dataset: 25 Malware Families, 9,342 grayscale images
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-06-24-fig-experimental_results.png" legend="Overview of the proposed method." %}
++
 
 
 ### Points to note
