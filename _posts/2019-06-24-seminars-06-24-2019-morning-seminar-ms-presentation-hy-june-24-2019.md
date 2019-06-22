@@ -73,11 +73,11 @@ With the development of the Internet, malicious code attacks have increased expo
     + 먼저 Binary를 8-bit 단위로 나누어 0-255로 표현 -> 10진수의 1-D vector로 변환
     + 1-D vector를 특정 width에 따라 2-D matrix로 변환
       + 특정 width는 [[NKJ+11]]에서 실험을 통해 파일 크기에 따라 고정됨
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-06-24-fig-malware_images.png" legend="Overview of the proposed method." %}
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-06-24-fig-malware_images.png" legend="Malware Images." %}
     + [[NKJ+11]]에서 보인 Malware Family 내의 유사성과 Family 간의 차이
 + Malware Image Classification Based on CNN
   + CNN은 multidimensional input에 이점
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-06-24-fig-malware_classification.png" legend="Overview of the proposed method." %}
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-06-24-fig-malware_classification.png" legend="Malware Classification." %}
   + 뭔가 새로운 방법을 적용한 줄 알았으나, 일반적인 CNN 사용
 [NKJ+11]: <https://dl.acm.org/citation.cfm?id=2016908> "L. Nataraj, S. Karthikeyan, G. Jacob, andB.Manjunath, “Malware images: visualization and automatic classification,” in Proc. 8th Int. Symp. Vis. Cyber Security, 2011, Paper 4."
 
@@ -100,13 +100,16 @@ With the development of the Internet, malicious code attacks have increased expo
 + Caffe framework 사용 (NN framework)
 + Intel Core i5-4590 CPU (3.3 GHz), Nvidia Geforce GTX 750Ti GPU (2 GB), and 8 GB RAM
 + Dataset: 25 Malware Families, 9,342 grayscale images
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-06-24-fig-experimental_results.png" legend="Overview of the proposed method." %}
-+
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-06-24-fig-experimental_results.png" legend="Performances of experimental Results" %}
+  + Data Equalization을 통해 Validation 시에 더 나은 성과를 보임을 알 수 있음 (Overfitting 방지)
+  + CNN을 수행하기 위해 Image size를 fix해야함에 따라 다양한 Image 크기(reshape)에 따라 실험을 수행함(24*24, 48*48, 96*96, and 192*192)
+    + Image의 크기가 클 수록 Training 단계에서의 시간이 많이 소요되게 때문에 추천하는 이미지 크기는 96*96
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-06-24-tbl-comparison.png" legend="Comparison with other approaches" %}
+  + Accuracy, Precision, and Recall 모두 높으며, Running time 도 매우 빠름
 
 
 ### Points to note
-+ 권한 랭킹과 가지치기를 통해 적은 수의 권한들로 높은 수준의 malware 탐지율을 보임
-+ 비록 최신 연구 내용과 비교하여 더 높은 탐지율은 아니지만, 이와 비슷한 수준이며 feature로 사용되는 권한의 수가 적기 때문에, malware가 빠르게 늘어나는 Android 플랫폼의 특성상 빠르게 탐지해야하는 요구 조건을 만족시킴
++ 
 
 
 
