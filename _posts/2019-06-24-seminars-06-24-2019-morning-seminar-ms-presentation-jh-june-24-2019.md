@@ -18,7 +18,7 @@ permalink: /:categories/:slug.html
 {% include layout/col_start.html column="7" %}
 
 ## Presenter & Date
-+ Seong-Yun Jeon (전성윤)
++ Jong-Hyuk Im (임종혁)
 + 2019-06-24
 
 ## [A4NT: Author Attribute Anonymity by Adversarial Training of Neural Machine Translation](https://inhaucs.github.io/seminars/06-24-2019-morning-seminar/presentation/ms-presentation-jh-june-24-2019.html)
