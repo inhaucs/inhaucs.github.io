@@ -88,12 +88,12 @@ With the development of the Internet, malicious code attacks have increased expo
 
 ---
 
-### Session 5: [A4NT: Author Attribute Anonymity by Adversarial Training of Neural Machine Translation](-)
+### Session 5: [A4NT: Author Attribute Anonymity by Adversarial Training of Neural Machine Translation](https://inhaucs.github.io/seminars/06-24-2019-morning-seminar/presentation/ms-presentation-jh-june-24-2019.html)
 
 + Jong-Hyum Im (임종혁)
 
 ### Information of the paper [(Link)](https://www.usenix.org/conference/usenixsecurity18/presentation/shetty)
-+ Authors: Rakshith Shetty, Bernt Schiele, and Mario Fritz, Max Planck (Institute for Informatics)
++ Authors: Rakshith Shetty; Bernt Schiele; and Mario Fritz; Max Planck (Institute for Informatics)
 + Conference name: USENIX Security 2018
 + Published date: 2018-08-17
 + [Paper Link](https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-shetty.pdf)
