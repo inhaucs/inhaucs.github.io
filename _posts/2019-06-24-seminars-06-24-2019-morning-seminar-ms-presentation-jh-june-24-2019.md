@@ -47,7 +47,7 @@ Our experiments on two datasets and three settings show that the proposed method
 ## Main explanation
 
 Text-based 분석 방법(자연어 처리: Natural Language Processing (NLP))을 이용하면, 공격자(adversary)가 저자의 성별, 나이와 같은 개인정보 관련 저자 속성(attributes)들을 복원(reveal)하여 글의 작성자(저자)를 식별할 수 있다.
-최근의 유명한 사례로 이러한 authorship attribution tools은 J.K Rowling이 익명으로 작성한 A Cuckoo's Calling의 진짜 저자임을 확인하는데 사용되기도 하였다 [[Link]]([Joula]).
+최근의 유명한 사례로 이러한 authorship attribution tools은 J.K Rowling이 익명으로 작성한 A Cuckoo's Calling의 진짜 저자임을 확인하는데 사용되기도 하였다 [[Joula]].
 이러한 방법은 익명의 저자가 자신의 민감한 정보를 제거하려할 때에도 그 저자의 개인정보를 침해할 수 있다.
 이 논문에서는 이러한 텍스트 기반의 공격자에 대응하기 위해 Adversarial Author Attribute Anonymity Neural Translation (A^4NT)이라는 자동화된 방법을 제안한다.
 이 방법은 이전에 수행된 난독화(obfuscation)에 관한 연구와는 달리, 데이터로부터 완전히 자동(**fully automatic**)으로 난독화를 수행한다.
