@@ -1,13 +1,13 @@
 ---
-title: Session 1. Password Authentication Using One-Time Key-Based Signature and Homomorphic Encryption
+title: A4NT: Author Attribute Anonymity by Adversarial Training of Neural Machine Translation
 date: 2019-06-24 00:00:00 Z
-description: Password Authentication Using One-Time Key-Based Signature and Homomorphic Encryption
-card_title: Session 1
-card_teaser: Password Authentication Using One-Time Key-Based Signature and Homomorphic Encryption
-card_position: 1
+description: A4NT: Author Attribute Anonymity by Adversarial Training of Neural Machine Translation
+card_title: Session 5
+card_teaser: A4NT: Author Attribute Anonymity by Adversarial Training of Neural Machine Translation
+card_position: 5
 icon: fa-server
 categories: [seminars,06-24-2019-morning-seminar,presentation]
-tags: [BWCCA, 2016, BWCCA2016, Password, Password Authentication, Authentication, OTP, One Time Password, HE, Homomorphic Encryption]
+tags: [USENIX, 2018, USENIX2018, NPL, Anomymity, obsfucation, Neural Network]
 sidebar: morning-seminar
 layout: default
 slug: ms-presentation-sy-june-24-2019
