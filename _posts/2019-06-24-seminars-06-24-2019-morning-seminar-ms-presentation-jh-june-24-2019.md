@@ -10,7 +10,7 @@ categories: [seminars,06-24-2019-morning-seminar,presentation]
 tags: [USENIX, 2018, USENIX2018, NPL, Anomymity, obsfucation, Neural Network]
 sidebar: morning-seminar
 layout: default
-slug: ms-presentation-sy-june-24-2019
+slug: ms-presentation-jh-june-24-2019
 permalink: /:categories/:slug.html
 ---
 
