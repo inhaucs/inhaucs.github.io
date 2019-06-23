@@ -90,9 +90,9 @@ Text-based 분석 방법(자연어 처리: Natural Language Processing (NLP))을
 + Blog dataset
 + Political speech dataset
 
-{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-06-24-fig-attribute-datasets.PNG" legend="Datasets" %}
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-06-24-fig-datasets.PNG" legend="Datasets" %}
 
-{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-06-24-fig-attribute-datasets-detail.PNG" legend="Details of datasets" %}
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-06-24-fig-datasets-detail.PNG" legend="Details of datasets" %}
 
 #### Performance of attribute classifiers.
 
