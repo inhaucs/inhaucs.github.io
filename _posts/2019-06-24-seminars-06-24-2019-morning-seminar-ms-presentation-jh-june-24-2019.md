@@ -116,7 +116,7 @@ Example: Age
 
 
 ### Points to note
-+ GAN의 좋은 사례 중 하나라고 
++ GAN의 좋은 응용 사례 중 하나라고 
 
 ## Discussion
 
