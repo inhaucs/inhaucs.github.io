@@ -69,7 +69,7 @@ We show that our usage of encryption adds tolerable overhead to the ordinary dee
 
 #### The system of the paper
 
-+ 암호학적인 해결 방법 (Additively homomorphic encryption)으로 [[SS15]](SS15)를 해결한 방법
++ 암호학적인 해결 방법 (Additively homomorphic encryption)으로 [[SS15]]를 해결한 방법
 
 + Gradients-encrypted ASGD라고 불림
 
@@ -92,9 +92,9 @@ We show that our usage of encryption adds tolerable overhead to the ordinary dee
 
   + (10): LWE 스타일로 인코딩한 데이터.
   + (11): AHE 덧셈 ( **E**(r) + **E**(-t) ).
-  + [MNIST dataset](MNIST)에는 n_gd (number of gradient parameters)가 **109386**으로 사용됨
+  + [[MNIST]] dataset에는 n_gd (number of gradient parameters)가 **109386**으로 사용됨
     + MNIST db : 구분이 잘 되는 수준의 handwritten digits
-  + [SVHN dataset](SVHN)에는 n_gd가 **402250**으로 사용됨
+  + [[SVHN]] dataset에는 n_gd가 **402250**으로 사용됨
     + SVHN dataset : real-world image dataset으로 길에 있는 숫자들
 
 {% include articles/figure.html url="http://ufldl.stanford.edu/housenumbers/examples_new.png" legend="SVHN examples" %}
