@@ -43,6 +43,7 @@ $\text{A}^{4}\text{NT}$ learns to make minimal changes to the input to successfu
 Our experiments on two datasets and three settings show that the proposed method is effective in fooling the attribute classifiers and thus improves the anonymity of authors.
 
 ## Summary (Korean)
+글 저자의 개인 정보를 난독화하는 자동화된 프레임워크로 GAN을 이용함.
 
 ## Main explanation
 
@@ -76,13 +77,52 @@ Text-based 분석 방법(자연어 처리: Natural Language Processing (NLP))을
 ### Threat model and the system
 이 시나리오에서 블로그 포스트, 트위터 글 등과 같이 대량의 글을 공격자가 수집할 수 있는 상황이며, 제안된 시스템은 자동적으로 사용자의 writing style을 숨겨 age group, gender, identity를 난독화한다.
 
+### GAN framework to train the A4NT network.
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-06-24-fig-overview.PNG" legend="Overview of A4NT GAN framework" %}
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-06-24-fig-attribute-classifier.PNG" legend="Block diagram of the attribute classifier network" %}
+
+
+### Experiments
+
+#### Dataset
++ Blog dataset
++ Political speech dataset
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-06-24-fig-attribute-datasets.PNG" legend="Datasets" %}
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-06-24-fig-attribute-datasets-detail.PNG" legend="Details of datasets" %}
+
+#### Performance of attribute classifiers.
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-06-24-fig-f1scores-of-attribute-classifiers.PNG" legend="F1-scores of the attribute classifiers." %}
+
+
+#### Performance of obfuscation
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-06-24-fig-related-works.PNG" legend="Related Works" %}
+
+Example: Age
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-06-24-fig-performance-age.PNG" legend="obfuscation performance - age." %}
+
++ Meteor: 유사성점수 metric[METEOR]으로, 0이면 완전히 다른, 1이면 완전히 동일한 문장을 의미함.
+
+### Conclusion
++ Automatic authorship obfsucation framework A4NT
++ Deep learning based solution which learns transformations from data
++ Learning from un-paired data opens up the solution to other settings.
+
 
 ### Points to note
++ GAN의 좋은 사례 중 하나라고 
 
 ## Discussion
 
 
 [Joula]: https://goo.gl/mkZai1
+[METEOR]: https://www.cs.cmu.edu/~alavie/METEOR/pdf/meteor-1.5.pdf
 
 
 {% include date/updated.html %}
