@@ -51,12 +51,17 @@ User authentication is a process for a system to verify the identity of a claime
 - On-line dictionary attack을 막기 위해, ... => 하지만, ...
 
 ### Proposed method
+- 동형암호를 이용하여 One-Time Key-Based Signature를 구현
 
 ### Proposed cryptographic primitive
+- One-Time Key-Based Signature
 
 ### Points to note
+- One-Time Key-Based Signature의 동작 원리
+- One-Time Key-Based Signature를 구현하기 위해 동형암호가 적용된 이유
 
 ### Discussion
+- One-Time Key-Based Signature에 대한 future work
 
 {% include date/updated.html %}
 
