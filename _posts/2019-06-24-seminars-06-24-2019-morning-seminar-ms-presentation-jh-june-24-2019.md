@@ -107,7 +107,7 @@ Example: Age
 
 {% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-06-24-fig-performance-age.PNG" legend="obfuscation performance - age." %}
 
-+ Meteor: 유사성점수 metric[METEOR]으로, 0이면 완전히 다른, 1이면 완전히 동일한 문장을 의미함.
++ Meteor: 유사성점수 metric [[METEOR]]으로, 0이면 완전히 다른, 1이면 완전히 동일한 문장을 의미함.
 
 ### Conclusion
 + Automatic authorship obfsucation framework A4NT
