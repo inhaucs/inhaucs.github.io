@@ -54,7 +54,7 @@ With the development of the Internet, malicious code attacks have increased expo
   + 다른 malware family 간의 데이터 불균형 문제를 해결하기 위해, bat algorithm에 기반한 data equilibrium approach 설계
   + 많은 실험을 통해, 제안하는 방법이 malware detection에 효과적임을 보임
 
-[NLJ+11]: <http://delivery.acm.org/10.1145/2020000/2016908/a4-nataraj.pdf?ip=165.246.44.143&id=2016908&acc=ACTIVE%20SERVICE&key=36491E83F85BB6C1%2E36491E83F85BB6C1%2E1702E7686A5145AB%2E4D4702B0C3E38B35&__acm__=1557306835_9d024be09ef7961180484ff3c8575c2a> "Nataraj, Lakshmanan, et al. "Malware images: visualization and automatic classification." Proceedings of the 8th international symposium on visualization for cyber security. ACM, 2011."
+[NLJ+11]: <https://dl.acm.org/citation.cfm?id=2016908> "Nataraj, Lakshmanan, et al. “Malware images: visualization and automatic classification.” Proceedings of the 8th international symposium on visualization for cyber security. ACM, 2011."
 
 
 ## Related work
@@ -116,9 +116,6 @@ With the development of the Internet, malicious code attacks have increased expo
 
 
 ## Discussion
-
-[ASH+14]: <https://www.researchgate.net/profile/Hugo_Gascon/publication/264785935_DREBIN_Effective_and_Explainable_Detection_of_Android_Malware_in_Your_Pocket/links/53efd0020cf26b9b7dcdf395.pdf> "D. Arp, M. Spreitzenbarth, M. H¨ubner, H. Gascon, K. Rieck, and C. Siemens, “DREBIN: Effective and explainable detection of android malware in your pocket,” presented at Annu. Symp. Netw. Distrib. Syst. Security, 2014."
-[WWF+14]: <https://ieeexplore.ieee.org/abstract/document/6891250> "W. Wang, X. Wang, D. Feng, J. Liu, Z. Han, and X. Zhang, “Exploring permission-induced risk in android applications for malicious application detection,” IEEE Trans. Inf. Forensics Security, vol. 9, no. 11, pp. 1869–1882, Nov. 2014."
 
 
 {% include date/updated.html %}
