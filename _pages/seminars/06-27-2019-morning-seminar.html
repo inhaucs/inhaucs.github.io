@@ -1,0 +1,23 @@
+---
+title: Morning Seminar (06-27-2019)
+layout: home
+category: seminars
+slug: 06-27-2019-morning-seminar
+permalink: /seminars/06-27-2019-morning-seminar
+---
+<div class="panel main">
+    <div class="panel left">
+        {% include sidebar/sub-section-home.html section='seminars' sub=page.slug %}
+    </div>
+    <div class="panel middle">
+        <div class="grid grid-responsive-12">
+            {% include breadcrumbs/default.html slug=page.slug %}
+            {% assign mCategories = "seminars|06-27-2019-morning-seminar|notification" | split: "|" %}
+            {% include cards/jmy-section-cards.html section='seminars' sub='morning-seminar' title='Notification' categories=mCategories %}
+            {% assign mCategories = "seminars|06-27-2019-morning-seminar|presentation" | split: "|" %}
+            {% include cards/jmy-section-cards.html section='seminars' sub='morning-seminar' title='Presentation' categories=mCategories %}
+            {% assign mCategories = "seminars|06-27-2019-morning-seminar|supplementary" | split: "|" %}
+            {% include cards/jmy-section-cards.html section='seminars' sub='morning-seminar' title='Supplementary' categories=mCategories %}
+        </div>
+    </div>
+</div>
