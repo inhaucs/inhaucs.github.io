@@ -7,8 +7,7 @@ card_teaser: Detection of Malicious Code Variants Based on Deep Learning
 card_position: 1
 icon: fa-server
 categories: [seminars,06-27-2019-morning-seminar,presentation]
-<!-- tags: [TII, 2018, TII2018, Malware variants, grayscale image, deep learning, convolution neural network, bat algorithm] -->
-tags: []
+tags: [TII, 2018, TII2018, Malware variants, grayscale image, deep learning, convolution neural network, bat algorithm]
 sidebar: morning-seminar
 layout: default
 slug: ms-presentation-hy-june-27-2019
