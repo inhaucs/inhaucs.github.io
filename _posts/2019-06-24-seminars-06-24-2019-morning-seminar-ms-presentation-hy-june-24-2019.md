@@ -109,7 +109,9 @@ With the development of the Internet, malicious code attacks have increased expo
 
 
 ### Points to note
-+ 
++ Grayscale image + CNN 을 통한 Malware detection 방법 제안
++ Deep Learning 에서 종종 문제가 되는 데이터 불균형 문제를 해결하기 위한 방법 제시
++ 이를 통해 기존의 Malware detection using image 방법들보다 성능이 좋고 빠른 방법 제시
 
 
 

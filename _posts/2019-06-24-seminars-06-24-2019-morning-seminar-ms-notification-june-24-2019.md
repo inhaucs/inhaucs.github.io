@@ -72,7 +72,7 @@ Onion services are anonymous network services that are exposed over the Tor netw
 
 ---
 
-### Session 4: [Title](https://inhaucs.github.io/seminars/04-29-2019-morning-seminar/presentation/ms-presentation-jh-apr-29-2019.html)
+### Session 4: [Detection of Malicious Code Variants Based on Deep Learning](https://inhaucs.github.io/seminars/04-29-2019-morning-seminar/presentation/ms-presentation-jh-apr-29-2019.html)
 
 + Hee-Yong Kwon (권희용)
 
