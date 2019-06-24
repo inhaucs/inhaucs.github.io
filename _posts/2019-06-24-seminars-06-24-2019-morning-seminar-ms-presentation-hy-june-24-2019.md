@@ -74,11 +74,12 @@ With the development of the Internet, malicious code attacks have increased expo
     + 1-D vector를 특정 width에 따라 2-D matrix로 변환
       + 특정 width는 [[NKJ+11]]에서 실험을 통해 파일 크기에 따라 고정됨
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-06-24-fig-malware_images.png" legend="Malware Images." %}
-    + [[NKJ+11]]에서 보인 Malware Family 내의 유사성과 Family 간의 차이
+  + [[NKJ+11]]에서 보인 Malware Family 내의 유사성과 Family 간의 차이
 + Malware Image Classification Based on CNN
   + CNN은 multidimensional input에 이점
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-06-24-fig-malware_classification.png" legend="Malware Classification." %}
   + 뭔가 새로운 방법을 적용한 줄 알았으나, 일반적인 CNN 사용
+
 [NKJ+11]: <https://dl.acm.org/citation.cfm?id=2016908> "L. Nataraj, S. Karthikeyan, G. Jacob, andB.Manjunath, “Malware images: visualization and automatic classification,” in Proc. 8th Int. Symp. Vis. Cyber Security, 2011, Paper 4."
 
 
@@ -93,6 +94,7 @@ With the development of the Internet, malicious code attacks have increased expo
     + Swarm intelligence(집단 지성)에 기반한 데이터 불균형 해결법 제시: Dynamic Resampling method based on the Bat Algorithm
       + Bat Algorithm은 기존에 연구된 내용([[Y10]])
       + 다른 malware family 간의 sampling weight을 최적화하기 위해 사용됨
+
 [Y10]: <https://link.springer.com/chapter/10.1007/978-3-642-12538-6_6> "X.-S.Yang, “A new metaheuristic bat-inspired algorithm,” Nature Inspired Cooperative Strategies for Optimization (NICSO 2010), New York, NY, USA: Springer, pp. 65–74, 2010."
 
 
