@@ -118,7 +118,12 @@ With the development of the Internet, malicious code attacks have increased expo
 
 
 ## Discussion
-
++ Malware **Binary** -> Image: CNN 이용하는 상황
+  + Image Data Augumentation : flip, rotate 등을 이용
+    + 다만, rotate된 코드 이미지는 코드가 아닐텐데 불구하고, 성능이 향상되었다는 것은 의문
++ 난독화, 코드 패킹 등의 처리가 가능할것인가?
+  + 지금 구조만으로는 어려워 
+  
 
 {% include date/updated.html %}
 
