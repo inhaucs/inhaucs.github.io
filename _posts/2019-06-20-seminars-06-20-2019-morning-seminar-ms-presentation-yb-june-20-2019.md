@@ -1,9 +1,9 @@
 ---
-title: Session 3. Miller Algorithm
+title: Session 3. Weil pairing
 date: 2019-06-19 00:00:00 Z
-description: Miller Algorithm
+description: Weil pairing
 card_title: Session 3
-card_teaser: Miller Algorithm
+card_teaser: Weil pairing
 card_position: 3
 icon: fa-server
 categories: [seminars,06-20-2019-morning-seminar,presentation, seminars,06-27-2019-morning-seminar]
@@ -22,7 +22,7 @@ permalink: /:categories/:slug.html
 
 ## Presenter & Date
 + Ye-Byoul Son (손예별)
-+ 2019-06-20
++ 2019-06-27
 
 ## [New software speed records for cryptographic pairings](https://inhaucs.github.io/seminars/06-20-2019-morning-seminar/presentation/ms-presentation-yb-june-20-2019.html)
 
@@ -67,6 +67,14 @@ This paper presents new software speed records for the computation of cryptograp
 
 ### bn256 Optimal ate pairing miller algorithm
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062004.png" legend="bn256 Optimal ate pairing miller algorithm" %}
+
+### [Weil pairing code example](https://github.com/elliptic-shiho/ecpy/blob/master/ecpy/elliptic_curve/pairing.py)
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062612.png" legend="weil_pairing" %}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062613.png" legend="weil_pairing_miller" %}
+
+**20190627 발표**
+
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062614.png" legend="weil_pairing_line_coeff" %}
 
 ### bn256 pairing code
 + [Basic bn256 crypto code](https://github.com/ethereum/go-ethereum/tree/master/crypto/bn256/cloudflare)
