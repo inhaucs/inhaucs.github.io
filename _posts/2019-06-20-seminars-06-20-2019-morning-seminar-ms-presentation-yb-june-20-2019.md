@@ -6,11 +6,11 @@ card_title: Session 1
 card_teaser: Barreto-Naehrig(BN)256 curve Pairing
 card_position: 1
 icon: fa-server
-categories: [seminars,06-20-2019-morning-seminar,presentation]
+categories: [seminars,06-20-2019-morning-seminar,presentation, seminars,06-27-2019-morning-seminar]
 tags: [Pairings, Barreto-Naehrig curves, ate pairing, AMD64 architecture, modular arithmetic, SIMD floating-point instructions]
 sidebar: morning-seminar
 layout: default
-slug: ms-presentation-yb-june-20-2019
+slug: ms-presentation-yb-june-20-2019, ms-presentation-yb-june-27-2019
 permalink: /:categories/:slug.html
 ---
 
@@ -51,15 +51,13 @@ This paper presents new software speed records for the computation of cryptograp
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062004.png" legend="bn256 Optimal ate pairing miller algorithm" %}
 
 ### bn256 pairing code
-[Basic bn256 crypto code](https://github.com/ethereum/go-ethereum/tree/master/crypto/bn256/cloudflare)
-[go-ethereum bn256 code](https://github.com/ethereum/go-ethereum/tree/master/crypto/bn256/cloudflare)
++ [Basic bn256 crypto code](https://github.com/ethereum/go-ethereum/tree/master/crypto/bn256/cloudflare)
++ [go-ethereum bn256 code](https://github.com/ethereum/go-ethereum/tree/master/crypto/bn256/cloudflare)
 
-#### bn256 pairing code
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062005.png" legend="bn256 optimalate pairing code" %}
 
-#### miller code
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062006.png" legend="miller code" %}
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062007.png" legend="miller code(cont.)" %}
+#### pairing code
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062006.png" legend="pairing code" %}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062007.png" legend="pairing code(cont.)" %}
 
 #### finalexponentation code
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062008.png" legend="finalexponentation code" %}
