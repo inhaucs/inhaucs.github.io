@@ -1,10 +1,10 @@
 ---
-title: Session 1. Barreto-Naehrig(BN)256 curve Pairing
+title: Session 3. Miller Algorithm
 date: 2019-06-19 00:00:00 Z
-description: Barreto-Naehrig(BN)256 curve Pairing
-card_title: Session 1
-card_teaser: Barreto-Naehrig(BN)256 curve Pairing
-card_position: 1
+description: Miller Algorithm
+card_title: Session 3
+card_teaser: Miller Algorithm
+card_position: 3
 icon: fa-server
 categories: [seminars,06-20-2019-morning-seminar,presentation, seminars,06-27-2019-morning-seminar]
 tags: [Pairings, Barreto-Naehrig curves, ate pairing, AMD64 architecture, modular arithmetic, SIMD floating-point instructions]
@@ -41,11 +41,10 @@ This paper presents new software speed records for the computation of cryptograp
 ### Tate pairing miller algorithm
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062002.png" legend="Tate pairing miller algorithm" %}
 
-+ All the fast algorithms to compute the Weil and Tate pairing on elliptic curves are based on Miller's algorithm.
+
 ### [Optimal pairing miller algorithm](https://ieeexplore.ieee.org/document/5361495)
-
-
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062003.png" legend="Optimal pairing miller algorithm" %}
++ All the fast algorithms to compute the Weil and Tate pairing on elliptic curves are based on Miller's algorithm.
++ The ate pairing [15,17] and its variations [20,21,28] are simply optimized versions of the Tate pairing when restricted to the eigenspaces of Frobenius.
 
 ### bn256 Optimal ate pairing miller algorithm
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062004.png" legend="bn256 Optimal ate pairing miller algorithm" %}
@@ -53,7 +52,7 @@ This paper presents new software speed records for the computation of cryptograp
 ### bn256 pairing code
 + [Basic bn256 crypto code](https://github.com/ethereum/go-ethereum/tree/master/crypto/bn256/cloudflare)
 + [go-ethereum bn256 code](https://github.com/ethereum/go-ethereum/tree/master/crypto/bn256/cloudflare)
-
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062005.png" legend="bn256 pairing miller code" %}
 
 #### pairing code
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062006.png" legend="pairing code" %}
