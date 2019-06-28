@@ -44,8 +44,8 @@ User authentication is a process for a system to verify the identity of a claime
 ### Attacks, Existing solutions and Limitations
 - 일반적인 인증 시스템에서는 패스워드를 관리하는 파일에 패스워드를 그대로 저장하지 않고, cryptographic hash function을 이용해 변환된 결과를 저장한다. 시스템에서는 등록/인증 시, 패스워드를 비교하는 것이 아니라 변환된 결과들을 비교하는 것으로 인증을 수행한다. 이렇게함으로써, 패스워드를 관리하는 파일이 탈취당하더라도 패스워드의 원래 문자열을 알아내기는 매우 어렵게 만드는 보안 조치이다.
 - 한편, 사용자가 지정하는 패스워드들의 분포(distribution)는 통계적으로 균일하지 않기 때문에, dictionary attack을 고려할 수 있다. Dictionary attack은 다음과 같이 크게 두가지로 분류한다.
-  1. off-line dictionary attack ; 공격자는 자주 사용되는 패스워드들에 대해 미리 hash function을 계산하여 패스워드와 hash된 패스워드 간의 dictionary를 준비한다. 공격자가 시스템으로부터 패스워드를 관리하는 파일을 탈취한 후, 탈취한 파일의 hash를 value로 가지는 key를 dictionary에서 검색하는 것으로 패스워드 문자열 복구를 시도한다. 
-  2. on-line dictionary attack ; 공격자는 공격 대상인 hash된 패스워드를 획득한 후에, dictionary를 준비한다. 이 시점에서는 hash에 적용된 salt가 공격자에게도 available하기에, 획득한 salt를 적용하여 hash된 패스워드와 자주 사용되는 패스워드들 간의 dictionary를 생성한다. 
+  1. off-line dictionary attack ; 공격자는 자주 사용되는 패스워드들에 대해 미리 hash function을 계산하여 패스워드와 hash된 패스워드 간의 dictionary를 준비한다. 공격자가 시스템으로부터 패스워드를 관리하는 파일을 탈취한 후, 탈취한 파일의 hash를 value로 가지는 key를 dictionary에서 검색하는 것으로 패스워드 문자열 복구를 시도한다.
+  2. on-line dictionary attack ; 공격자는 공격 대상인 hash된 패스워드를 획득한 후에, dictionary를 준비한다. 이 시점에서는 hash에 적용된 salt가 공격자에게도 available하기에, 획득한 salt를 적용하여 hash된 패스워드와 자주 사용되는 패스워드들 간의 dictionary를 생성한다.
 - 패스워드로 가능한 문자열 전체 모집단 P라고 하고 P의 분포를 D(P)라고 하자,
   임의의 패스워드 p\inP에 대해 hash function h을 적용한 결과를 h(p)라고 하고 hash function h의 결과의 모집단을 H라고 하자.
   사용자가 지정하는 패스워드들의 분포. 즉, D(P)는 균일하지 않다. 그런데 만약 hash function이 일대일 대응에 가깝다면, D(H)의 분포는 D(P)와 동일하기 때문에, hash function을 적용한 패스워드에 대해서도 dictionary attack을 고려할 수 있다. (Off-line dictionary attack)
@@ -57,7 +57,7 @@ User authentication is a process for a system to verify the identity of a claime
 
 ### Proposed cryptographic primitive
 - Proposed method의 registration phase에서 signature를 생성한 후에, "Remove Sk(sig)"를 수행하는, 즉, private key를 삭제하는 방식.
-- private key를 삭제하는 것은 device가 더이상 signature를 생성할 수 없도록 하지만, public key가 삭제되지 않는한 signature verification은 가능하다. (One-Time Key) 
+- private key를 삭제하는 것은 device가 더이상 signature를 생성할 수 없도록 하지만, public key가 삭제되지 않는한 signature verification은 가능하다. (One-Time Key)
 => dictionary attack은 hash function의 결과와 패스워드의 원본 문자열의 매핑을 가지고 하는 공격이다. 하지만, 이 논문에서 제안한 방법은 hash function과 같이 일대일 대응이 아니라 (on-line에서는 salt가 고정되므로 그 이후로는 일대일 대응이라고 볼수 있음) 서명 검증만을 수행할 수 있는 암호문 쌍이 유지된다. 이 암호문은 key가 없으면 복호화를 할수 없고 암호문의 분포가 균일하게 되어서, 암호문을 만들수 있는 방법이 없으므로 dictionary attack이 불가능하다.
 
 ### Points to note
@@ -67,6 +67,10 @@ User authentication is a process for a system to verify the identity of a claime
 
 ### Discussion
 - One-Time Key-Based Signature에 대한 future work
+- Hee-Yong Kwon
+  - 논문이 One-Time Key-based Signature 와 관련된 내용임에 따라, 전체 프로토콜에서 어떤 연산이 One-Time 특성을 부여하는지 부연설명이 있으면 좋을 것 같음
+
+
 
 {% include date/updated.html %}
 
