@@ -36,7 +36,23 @@ As the size and source of network traffic increase, so does the challenge of mon
 
 
 ## Summary (Korean)
-+ 
++ IoT & Mobile 기기들이 늘어남에 따라 네트워크 트래픽도 급격히 증가 -> 보안 및 프라이버시 문제 발생
++ 최근의 네트워크 데이터들은 일반적으로 암호화됨
+  + 트래픽이 암호화되어 있더라도 분석을 통해 사용자 행위를 식별하는 연구들이 있음 ([[CMS+16]], [[TSC+18]])
+    + Hgih entropy stream 을 잘 분석하지 못 하다는 한계 존재
++ 보통은 데이터 보호를 위해 암호화를 사용함
+  + 그러나 IoT 기기들은 연산 능력의 부족으로 암호화를 잘 수행하지 못 함
+    + ***기존의 기술들은 암호화(Encryption)와 압축(Compression)을 잘 구별하지 못하므로***, 암호화 대신 압축을 많이 사용함
+    + 일반적인 압축이 아닌 임의 압축 (custom compression)
++ 그래서 HEDGE: High Entropy DistinGuishEr 개발
+  + 기존의 접근과 달리 모든 네트워크 트래픽을 분석하지 않음
+  + 실시간 탐지를 위해 임의의 부분적인 트래픽 사용 (Random Subset)
++ 결과 요약
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-01-fig-comp_summ.png" legend="A comparative summary." width="50%" %}
+  + 초록색과 노란 선의 결과는 우리와 달리 추가적인 트래픽 정보를 사용해 분석한 결과임
+
+[CMS+16]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7265055> "M. Conti, L. V. Mancini, R. Spolaor, and N. V. Verde, “Analyzing android encrypted network traffic to identify user actions,” IEEE Trans. Inf. Forensics Security, vol. 11, no. 1, pp. 114–125, Jan. 2016."
+[TSC+18]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8006282> "V. F. Taylor, R. Spolaor, M. Conti, and I. Martinovic, “Robust smartphone app identification via encrypted network traffic analysis,” IEEE Trans. Inf. Forensics Security, vol. 13, no. 1, pp. 63–78, Jan. 2018."
 
 ## Related Works
 + 비교 대상
@@ -51,7 +67,7 @@ As the size and source of network traffic increase, so does the challenge of mon
     + Random Forests 사용
     + 100 개의 웹사이트들에 대해 90-93 % 공격 달성
 
-[WCN+14]: <https://www.usenix.org/conference/usenixsecurity14/technical-sessions/presentation/wang_tao> "T. Wang, X. Cai, R. Nithyanand, R. Johnson, and I. Goldberg, “Effective Attacks and Provable Defenses for Website Fingerprinting,” in USENIX Security Symposium. USENIX Association, 2014, pp. 143–157."
+
 [PLZ+16]: <https://nymity.ch/tor-dns/pdf/Panchenko2016a.pdf> "A. Panchenko, F. Lanze, A. Zinnen, M. Henze, J. Pennekamp, K.Wehrle, and T. Engel, “Website fingerprinting at internet scale,” in Network & Distributed System Security Symposium (NDSS). IEEE Computer Society, 2016, pp. 1–15."
 [HD16]: <https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/hayes> "J. Hayes and G. Danezis, “k-fingerprinting: a Robust Scalable Website Fingerprinting Technique,” in USENIX Security Symposium. USENIX Association, 2016, pp. 1–17."
 
