@@ -38,13 +38,13 @@ This paper presents new software speed records for the computation of cryptograp
 
 ### Weil pairing miller algorithm
 + Weil pairing equation
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062601.png" legend="Weil pairing equation" %}
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062602.png" legend="Weil pairing divisor" %}
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062603.png" legend="Weil pairing divisor addition" %}
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062604.png" legend="Weil pairing divisor doubling" %}
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062605.png" legend="Weil pairing f1value" %}
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062606.png" legend="Weil pairing f1function" %}
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062607.png" legend="Weil pairing f1Qfunction" %}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062601.png" legend="Weil pairing equation" width="50%"%}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062602.png" legend="Weil pairing divisor" width="50%" %}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062603.png" legend="Weil pairing divisor addition" width="50%"%}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062604.png" legend="Weil pairing divisor doubling" width="50%"%}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062605.png" legend="Weil pairing f1value" width="50%"%}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062606.png" legend="Weil pairing f1function" width="50%"%}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062607.png" legend="Weil pairing f1Qfunction" width="50%"%}
 
 + Weil pairing pseudocode
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062001.png" legend="Weil pairing miller algorithm" %}
@@ -52,10 +52,10 @@ This paper presents new software speed records for the computation of cryptograp
 ### Tate pairing miller algorithm
 
 + Tate pairing equation
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062608.png" legend="Tate pairing equation" %}
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062609.png" legend="Tate pairing divisor" %}
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062610.png" legend="Tate pairing additionr" %}
-{% include articles/figure.html url="/assets/img/byoul/2019/2019062611.png" legend="Tate pairing doubling" %}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062608.png" legend="Tate pairing equation" width="50%"%}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062609.png" legend="Tate pairing divisor" width="50%"%}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062610.png" legend="Tate pairing additionr" width="50%"%}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019062611.png" legend="Tate pairing doubling" width="50%"%}
 
 + Tate pairing pseudocode
 {% include articles/figure.html url="/assets/img/byoul/2019/2019062002.png" legend="Tate pairing miller algorithm" %}
