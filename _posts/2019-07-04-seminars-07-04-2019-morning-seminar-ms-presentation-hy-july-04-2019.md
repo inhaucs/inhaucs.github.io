@@ -1,16 +1,16 @@
 ---
 title: Session 1. HEDGE: Efficient Traffic Classification of Encrypted and Compressed Packets
-date: 2019-07-01 00:00:00 Z
+date: 2019-07-04 00:00:00 Z
 description: HEDGE: Efficient Traffic Classification of Encrypted and Compressed Packets
 card_title: Session 1
 card_teaser: HEDGE: Efficient Traffic Classification of Encrypted and Compressed Packets
 card_position: 1
 icon: fa-server
-categories: [seminars,07-01-2019-morning-seminar,presentation]
+categories: [seminars,07-04-2019-morning-seminar,presentation]
 tags: [TIFS, 2019, TIFS2019, Encryption, High entropy sources, Compression, Classification, Traffic analysis]
 sidebar: morning-seminar
 layout: default
-slug: ms-presentation-hy-july-01-2019
+slug: ms-presentation-hy-july-04-2019
 permalink: /:categories/:slug.html
 ---
 
