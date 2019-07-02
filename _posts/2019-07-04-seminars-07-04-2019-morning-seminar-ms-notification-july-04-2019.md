@@ -24,7 +24,7 @@ permalink: /:categories/:slug.html
 
 ## Presenters
 + Hee-Yong Kwon (권희용)
-+
++ a
 
 
 ---
