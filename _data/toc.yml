@@ -50,10 +50,10 @@
   slug: lectures
   teaser: UCSLab Lectures
   items:
-    - title: Lectures
-      url: /lectures/guides-for-seminars
-      icon: fa-bullhorn
-      teaser: ABCD.
+    - title: ML & DL for Everyone
+      url: /lectures/hunkim-lecture
+      icon: fa-compass
+      teaser: Machine Learning and Deep Learning for Everyone.
 #- title: Discover
 #  slug: discover
 #  teaser: Everybody has to start somewhere
