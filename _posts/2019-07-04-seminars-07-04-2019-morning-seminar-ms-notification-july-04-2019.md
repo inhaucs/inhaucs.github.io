@@ -1,7 +1,7 @@
 ---
 title: 9th UCSLab Morning Seminar
 date: 2019-07-04 00:00:00 Z
-description: Notificaion of 8th UCSLab Morning Seminar (on 2019-07-04)
+description: Notificaion of 9th UCSLab Morning Seminar (on 2019-07-04)
 card_title: 9th Morning Seminar
 card_teaser: with 5 presentations on 2019-07-04.
 card_position: 1
