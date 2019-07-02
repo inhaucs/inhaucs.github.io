@@ -54,6 +54,10 @@
       url: /lectures/hunkim-lecture
       icon: fa-compass
       teaser: Machine Learning and Deep Learning for Everyone.
+    # - title: Another lecture
+    #   url: /lectures/XXXXX
+    #   icon: fa-compass
+    #   teaser: XXXXX.
 #- title: Discover
 #  slug: discover
 #  teaser: Everybody has to start somewhere
