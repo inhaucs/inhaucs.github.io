@@ -12,12 +12,12 @@ permalink: /lectures/hunkim-lecture
     <div class="panel middle">
         <div class="grid grid-responsive-12">
             {% include breadcrumbs/default.html slug=page.slug %}
-            {% assign mCategories = "lectures|hunkim-lecture|common-information" | split: "|" %}
-            {% include cards/jmy-section-cards.html section='lectures' sub='hunkim-lecture' title='Common information' categories=mCategories %}
-            {% assign mCategories = "lectures|hunkim-lecture|morning-seminar-guide" | split: "|" %}
-            {% include cards/jmy-section-cards.html section='lectures' sub='hunkim-lecture' title='Guide for morning seminar' categories=mCategories %}
-            {% assign mCategories = "lectures|hunkim-lecture|external-seminar-guide" | split: "|" %}
-            {% include cards/jmy-section-cards.html section='lectures' sub='hunkim-lecture' title='Guide for external seminar' categories=mCategories %}
+            {% assign mCategories = "lectures|hunkim-lecture|lecture-overview" | split: "|" %}
+            {% include cards/jmy-section-cards.html section='lectures' sub='hunkim-lecture' title='Lecture Overview' categories=mCategories %}
+            {% assign mCategories = "lectures|hunkim-lecture|lectures" | split: "|" %}
+            {% include cards/jmy-section-cards.html section='lectures' sub='hunkim-lecture' title='Lectures' categories=mCategories %}
+            <!-- {% assign mCategories = "lectures|hunkim-lecture|external-seminar-guide" | split: "|" %}
+            {% include cards/jmy-section-cards.html section='lectures' sub='hunkim-lecture' title='Guide for external seminar' categories=mCategories %} -->
         </div>
     </div>
 </div>
