@@ -7,7 +7,6 @@ card_teaser: Lecture 00
 card_position: 1
 icon: fa-server
 categories: [lectures,hunkim-lecture,contents]
-tags: [NDSS, 2018, NDSS2018, Website Fingerprinting, Automation, Deep Learning]
 sidebar: hunkim-lecture
 layout: default
 slug: hunkim-lecture-lec-00
@@ -25,7 +24,7 @@ permalink: /:categories/:slug.html
 + 2019-07-02
 
 ### Information of the lecture
-#### [Youtube](https://www.youtube.com/watch?v=BS6O0zOGX4E), [Slide](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lec0.pdf?raw=true)
+#### [Youtube(Lecture)](https://www.youtube.com/watch?v=BS6O0zOGX4E), [Slide(Lecture)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lec0.pdf?raw=true)
 
 ## Lecture Contents
 + 이세돌 vs. 알파고
