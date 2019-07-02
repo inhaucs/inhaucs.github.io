@@ -3,7 +3,7 @@ title: Lecture 01
 date: 2019-07-02 00:00:00 Z
 description: Lecture 01
 card_title: Lecture 01
-card_teaser: Lecture 01
+card_teaser:  기본적인 Machine Learning의 용어와 개념 설명
 card_position: 2
 icon: fa-server
 categories: [lectures,hunkim-lecture,contents]

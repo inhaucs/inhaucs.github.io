@@ -3,7 +3,7 @@ title: Lecture 00
 date: 2019-07-02 00:00:00 Z
 description: Lecture 00
 card_title: Lecture 00
-card_teaser: Lecture 00
+card_teaser: Machine/Deep learning 수업의 개요와 일정
 card_position: 1
 icon: fa-server
 categories: [lectures,hunkim-lecture,contents]
