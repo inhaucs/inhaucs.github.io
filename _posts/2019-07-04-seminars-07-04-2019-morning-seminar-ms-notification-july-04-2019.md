@@ -48,18 +48,18 @@ As the size and source of network traffic increase, so does the challenge of mon
 
 ---
 
-### Session 2: [PrivBioMTAuth: Privacy Preserving Biometrics-Based and User Centric Protocol for User Authentication From Mobile Phones](https://inhaucs.github.io/seminars/06-27-2019-morning-seminar/presentation/ms-presentation-jh-june-27-2019.html)
+### Session 2: [TITLE](https://inhaucs.github.io/seminars/06-27-2019-morning-seminar/presentation/ms-presentation-xx-xx-xx-2019.html)
 
-+ Jong-Hyuk Im (임종혁)
++
 
 ### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/8119873)
-+ Authors: Hasini Gunasinghe; Elisa Bertino (Purdue University)
-+ **Journal** name: IEEE Transactions on Information Forensics and Security
-+ Published date: 2017-11-24
++ Authors:
++ **Journal** name:
++ Published date:
 + [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8119873)
 
 ### Abstract
-We introduce a privacy preserving biometrics-based authentication solution by which users can authenticate to different service providers from mobile phones without involving identity providers in the transactions. Authentication is performed via zero-knowledge proof of knowledge, based on a cryptographic identity token that encodes the biometric identifier of the user and a secret provided by the user, making it three-factor authentication. Our approach for generating a unique, repeatable, and revocable biometric identifier from the user's biometric image is based on a machine learning-based classification technique, which involves the features extracted from the user's biometric image. We have implemented a prototype of the proposed authentication solution and evaluated our solution with respect to its performance, security, and privacy. The evaluation has been performed on a public data set of face images.
+
 
 ---
 
