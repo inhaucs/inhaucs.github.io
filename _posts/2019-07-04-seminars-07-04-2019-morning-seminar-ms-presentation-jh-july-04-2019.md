@@ -54,6 +54,10 @@ As the size and source of network traffic increase, so does the challenge of mon
   
 
 ## Proposed Protocol
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-overall.PNG" legend="Overall Architecture." width="60%" %}
+
+
+
 {% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-enrollment.png" legend="Enrollment Phase." width="80%" %}
 
 
@@ -102,11 +106,26 @@ As the size and source of network traffic increase, so does the challenge of mon
 
 ## Results and Conclusion
 
-+ 
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-result1.PNG" legend="Breakdown of the execution time." width="80%" %}
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-result2.PNG" legend="End-To-End Execution time." width="80%" %}
+
+
+
+### Opinion
+
++ 잘못된 것은 아니나, Closed set에 대해서만 가능한 방법
+  + 라벨을 미리 학습해야하기 때문
++ Password + @로 (3-factor 인증이 됨)
++ Trusted party (IDP)가 필요한 구조임
+
+
 
 ### Points to note
 
-+ 
++ 분석의 관점이 Unique, Repeatable, Revocable 에 대한 것으로, 추후 ZKPK 등을 이용한 프로토콜을 설계할 때 , 참조할 수 있을 것으로 보임.
+
+
 
 ## Discussion
 
