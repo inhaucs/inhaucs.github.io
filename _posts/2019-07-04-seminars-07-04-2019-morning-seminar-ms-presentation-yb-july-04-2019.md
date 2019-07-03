@@ -24,7 +24,7 @@ permalink: /:categories/:slug.html
 
 ## [2019NSR - CNN, RNN, Autoencoder](https://inhaucs.github.io/seminars/07-01-2019-morning-seminar/presentation/ms-presentation-yb-july-04-2019.html)
 
-### [PPT]()
+### [PPT](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/img/byoul/2019/20190524_NSR_PPT.pdf)
 + Published date: 2019-05-24
 
 ### Abstract
