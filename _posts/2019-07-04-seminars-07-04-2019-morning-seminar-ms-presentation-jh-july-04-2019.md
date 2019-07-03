@@ -1,6 +1,6 @@
 ---
 title: Session 3. PrivBioMTAuth. Privacy Preserving Biometrics-Based and User Centric Protocol for User Authentication From Mobile Phones
-date: 2019-07-04 00:00:00 Z
+date: 2019-07-03 00:00:00 Z
 description: PrivBioMTAuth. Privacy Preserving Biometrics-Based and User Centric Protocol for User Authentication From Mobile Phones
 card_title: Session 3
 card_teaser: PrivBioMTAuth. Privacy Preserving Biometrics-Based and User Centric Protocol for User Authentication From Mobile Phones
@@ -39,18 +39,48 @@ As the size and source of network traffic increase, so does the challenge of mon
 
 + 여러 Service Provider (SP) 들에 대해 바이오인증 정보를 숨기면서 안전하게 사용자를 인증을 하기 위한 방법
 
++ 이를 구현하기 위해, 바이오인증 정보 이외에도 패스워드, symmetric encryption을 이용함
+
+  + 결과적으로, 3-factor authentication이 됨
+  + 기술적으로는 Key derivation function, Zero-knowledge proof of knowledge (ZKPK), SVM, PCA, Symmetric encryption, Digital signature 등이 사용됨.
+
++ 총 3가지 파티(User, Service Provider, Identity Provider)와, 두 phase로 구성됨
+
+  + Enrollment phase: Identity provider (IDP)가 User에 대한 Identity token (IDT)를 발급하고 서명하는 단계
+  + Authentication phase: Service provider (SP)가 IDP에 등록되어있는 사용자를 인증하는 단계
+
++ 제시한 결과는 real-time이 아니지만, ["Moto G"](https://www.gsmarena.com/motorola_moto_g-5831.php)를 테스트 기기로 사용해서 성능이 느리게 보일 뿐, 실제 연산은 real-time에 가능할 것으로 보임
+
+  
+
+## Proposed Protocol
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-enrollment.png" legend="An overview of the proposed approach." width="50%" %}
 
 
-## Proposed Approach
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-01-fig-overview.png" legend="An overview of the proposed approach." width="50%" %}
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-authentication.png" legend="An overview of the proposed approach." width="50%" %}
 
 
 
 
-## Experiments
+## Preliminaries
 
+### Key Derivation Function
+
+
+
+### Zero-Knowledge Proof of Knowledge (ZKPK)
+
+
+
+
+
+## Results and Conclusion
+
++ 
 
 ### Points to note
+
 + 
 
 ## Discussion
