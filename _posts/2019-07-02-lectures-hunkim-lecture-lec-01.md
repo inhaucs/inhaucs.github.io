@@ -53,7 +53,7 @@ permalink: /:categories/:slug.html
       + 투자한 시간에 따른 시험 결과에 따른 학점 (A, B, C, E and F)
   + 분류에 따라 Training set이 달라짐
 
-###
+<br>
 
 ### Tensorflow
 

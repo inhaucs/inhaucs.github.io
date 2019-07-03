@@ -63,6 +63,8 @@ permalink: /:categories/:slug.html
   + Deep Learning
     + CNN, RNN, Bidirectional Neural networks
 
+<br>
+
 ### Acknowledgement
 + Andrew Ng's ML class
   + https://class.coursera.org/ml-003/lecture

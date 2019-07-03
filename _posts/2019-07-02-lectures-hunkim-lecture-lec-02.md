@@ -42,7 +42,7 @@ permalink: /:categories/:slug.html
   + Cost function은 입력 데이터와 현재 직선과의 거리 차이를 구한 것으로, 이 거리가 최소화되는 직선이 가장 최적의 직선이라고 생각할 수 있음
     + 따라서, 직선의 방정식이 $H(x) = Wx + b$일 때, $cost(W,b) = \frac{1}{m} \sum^m_{i=1} (H(x^{(i)})-y^{(i)})^2$를 최소화하는 $W$와 $b$를 구해야 함
 
-###
+<br>
 
 ### Tensorflow
 + Goal
@@ -72,8 +72,6 @@ permalink: /:categories/:slug.html
 + Placeholder를 사용해 Linear regression을 수행하는 방법 설명
 + Training 후, Test하는 방법 소개
   + sess.run(hypothesis, feed_dict={X:[5]})와 같이 Y 값을 제외하고 전달하면, X가 모델에 입력되었을 때 예상되는 Y 값을 반환
-
-
 
 {% include date/updated.html %}
 {% include layout/col_end.html %}
