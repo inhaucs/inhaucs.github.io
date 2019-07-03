@@ -28,60 +28,52 @@ permalink: /:categories/:slug.html
 #### [Youtube(Tensorflow)](https://www.youtube.com/watch?v=mQGwjrStQgg&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab2.pdf?raw=true)
 
 ### Lecture
-### Machine Learning
-+ Spam filter와 같이 규칙(rule)이 많은 경우, explicit programming을 하기 어려움
-+ 이에 1959년 Arthur Samuel이 일일히 규칙을 프로그래밍 하지 않고 자료나 현상으로부터 자동으로 배우는 방법에 대해 제안 -> Machine Learning
-  + "Field of study that gives computers the ability to learn without being explicitly programmed" Arthur Samuel (1959)
-
-### Supervised/Unsupervised learning
-+ 학습하는 방법에 따라 나누어지는 기준
-+ Supervised
-  + 정해져 있는 데이터(Labeled)를 사용하여 학습
-+ Unsupervised learning
-  + Un-labeled 데이터를 사용하여 학습
-
-#### Supervised learning
-+ E.g., Image labeling, Email spam filter, Predicting exam score 등
-+ Training data set
-  + Training data set으로 Labeled data (Feature-label set)를 학습하여 모델 생성 후, 모르는 Feature에 대해 예상되는 label 출력
-+ Supervised learning의 분류
-  1) Regression
-      + 투자한 시간에 따른 점수의 예측
-  2) Binary classification
-      + 투자한 시간에 따른 시험의 통과 여부 (pass/fail)
-  3) Multi-label classification
-      + 투자한 시간에 따른 시험 결과에 따른 학점 (A, B, C, E and F)
-  + 분류에 따라 Training set이 달라짐
+### Linear Regression
++ Regression의 예시 : Predicting exam score
++ Linear regression
+  1) 식을 $H(x) = Wx + b$ 로 가정
+  2) H(x)로 나타내는 여러가지 직선 중 어떤 직선을 선택할 것인지 정해야 함 (W와 b의 결정)
+      + Cost(Loss) function 사용
+      + Data와 차이가 가장 적은 직선 선택
+        + $cost = \frac{1}{m} \sum^m_{i=1} (H(x^{(i)})-y^{(i)})^2$
+        + 상기 cost function의 $H(x^{(i)})$에 $H(x) = Wx + b$를 대입하면 $cost(W,b)$로 표현 가능하고, $\min_{W,b} cost(W,b)$를 구하는 것이 목표
++ Point
+  + Linear regression은 입력 데이터에 가장 적합한 직선을 찾는 것이 목표이며 이를 위해 cost(loss) function을 사용
+  + Cost function은 입력 데이터와 현재 직선과의 거리 차이를 구한 것으로, 이 거리가 최소화되는 직선이 가장 최적의 직선이라고 생각할 수 있음
+    + 따라서, 직선의 방정식이 $H(x) = Wx + b$일 때, $cost(W,b) = \frac{1}{m} \sum^m_{i=1} (H(x^{(i)})-y^{(i)})^2$를 최소화하는 $W$와 $b$를 구해야 함
 
 ###
 
 ### Tensorflow
++ Goal
+  + Tensorflow를 이용한 Linear regression 구현
+  + Hypothesis
+    + $H(x) = Wx + b$
+    + $W$: weight, $b$: bias
+  + Cost function
+    + $cost(W,b) = \frac{1}{m} \sum^m_{i=1} (H(x^{(i)})-y^{(i)})^2$
+1) Build graph
+    + Training set 정의
+    + tf.Variable로 $W, b$ 정의
+    + TF의 Variable은 trainable 변수를 의미함
+    + Hypothesis 정의
+      + $hypothesis = x\_train * W + b$
+    + Cost function 정의
+      + cost = tf.reduce\_mean(tf.square(hypothesis - y\_train))
+        + reduce\_mean 함수는 평균을 내주는 함수로 cost function의 $\frac{1}{m}\sum^m_{i=1}$에 해당
+    + Cost를 최소화하는 값을 찾기 위해 GradientDescent 사용
+      + 현재는 자세히 설명하지 않음
+2) Run/update graph
+    + Session 생성 후, 전역 변수 초기화
+      + sess.run(tf.global\_variables\_initializer())
+    + GradientDescent 연산을 매 step 수행하는 방법 설명
+      + $W,b$ update
+    + train, cost, hypothesis, $W$, $b$ 텐서들의 관계에 대해 그래프를 통해 설명
++ Placeholder를 사용해 Linear regression을 수행하는 방법 설명
++ Training 후, Test하는 방법 소개
+  + sess.run(hypothesis, feed_dict={X:[5]})와 같이 Y 값을 제외하고 전달하면, X가 모델에 입력되었을 때 예상되는 Y 값을 반환
 
-+ Tensorflow의 기본에 대한 설명
-+ Google에서 만든 open source library for machine intelligence
-+ Deep learning libraries
-  + tensorflow, caffe, keras, mxnet, Theano, etc.
-+ Data flow graphs를 사용해서 numerical computation을 하는 프로그램 & Python!
-  + Nodes in graph: operations
-  + Edges in graph: data arrays(tensors)
-+ 실습 내용
-  + 설치 방법 설명
-  + TensorFlow Hello World! 출력
-  + Computational Graph 만드는 법
-  + Tensorflow의 구조
-    + Tensorflow operations를 사용하여 graph 빌드(설계)
-    + session.run(op)로 실행
-    + 그래프 내의 변수들 업데이트 후 출력
-  + 특정 값 (constant) 외에 다른 값을 입력하고 싶은 경우
-    + tf.constant 대신 tf.placeholder로 생성
-    + 그리고 session.run 시에 feed_dict={a, b} 옵션을 사용하여 입력 (vector 입력 가능)
-    + 즉 그래프를 미리 만들어놓고 다양한 입력에 대해 사용 가능
-  + Tensor에 대한 설명
-    + Ranks: 몇 차원 array인가 (x-Tensor)
-    + Shapes: 각각의 엘리먼트에 몇 개의 정보가 들어있는가
-      + E.g., t = [[[[1,2], [3,4], [5,6]]]]인 경우, (3,2)로 표현 가능
-        + 가장 안의 괄호에 두 개의 엘리먼트이고, 이 것이 3 개 있으므로
-    + Types: tf.float32(64), tf.int32(64) 등
+
 
 {% include date/updated.html %}
 {% include layout/col_end.html %}
