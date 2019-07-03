@@ -1,10 +1,10 @@
 ---
-title: Session 2. PrivBioMTAuth. Privacy Preserving Biometrics-Based and User Centric Protocol for User Authentication From Mobile Phones
+title: Session 3. PrivBioMTAuth. Privacy Preserving Biometrics-Based and User Centric Protocol for User Authentication From Mobile Phones
 date: 2019-07-04 00:00:00 Z
 description: PrivBioMTAuth. Privacy Preserving Biometrics-Based and User Centric Protocol for User Authentication From Mobile Phones
-card_title: Session 2
+card_title: Session 3
 card_teaser: PrivBioMTAuth. Privacy Preserving Biometrics-Based and User Centric Protocol for User Authentication From Mobile Phones
-card_position: 2
+card_position: 3
 icon: fa-server
 categories: [seminars,07-04-2019-morning-seminar,presentation]
 tags: [TIFS, 2018, TIFS2018, Privacy-Preserving, Biometrics, Zero-Knowledge, Proof-Of-Knowledge, Key-Derivation]

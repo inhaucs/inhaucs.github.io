@@ -25,6 +25,7 @@ permalink: /:categories/:slug.html
 ## Presenters
 + Hee-Yong Kwon (권희용)
 + a
++ Jong-Hyum Im (임종혁)
 
 ---
 ## Presentations
@@ -47,7 +48,11 @@ As the size and source of network traffic increase, so does the challenge of mon
 
 ---
 
-### Session 2: [PrivBioMTAuth: Privacy Preserving Biometrics-Based and User Centric Protocol for User Authentication From Mobile Phones](https://inhaucs.github.io/seminars/06-27-2019-morning-seminar/presentation/ms-presentation-jh-june-27-2019.html)
+### Session 2: [Title](-)
+
+------
+
+### Session 3: [PrivBioMTAuth: Privacy Preserving Biometrics-Based and User Centric Protocol for User Authentication From Mobile Phones](https://inhaucs.github.io/seminars/06-27-2019-morning-seminar/presentation/ms-presentation-jh-july-4-2019.html)
 
 - Jong-Hyuk Im (임종혁)
 
@@ -61,10 +66,6 @@ As the size and source of network traffic increase, so does the challenge of mon
 ### Abstract
 
 We introduce a privacy preserving biometrics-based authentication solution by which users can authenticate to different service providers from mobile phones without involving identity providers in the transactions. Authentication is performed via zero-knowledge proof of knowledge, based on a cryptographic identity token that encodes the biometric identifier of the user and a secret provided by the user, making it three-factor authentication. Our approach for generating a unique, repeatable, and revocable biometric identifier from the user's biometric image is based on a machine learning-based classification technique, which involves the features extracted from the user's biometric image. We have implemented a prototype of the proposed authentication solution and evaluated our solution with respect to its performance, security, and privacy. The evaluation has been performed on a public data set of face images.
-
----
-
-### Session 3: [Title](https://inhaucs.github.io/seminars/04-29-2019-morning-seminar/presentation/ms-presentation-jh-apr-29-2019.html)
 
 ---
 
