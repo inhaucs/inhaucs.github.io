@@ -26,6 +26,7 @@ permalink: /:categories/:slug.html
 
 ### [PPT](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/img/byoul/2019/20190524_NSR_PPT.pdf)
 + Published date: 2019-05-24
++ [CODE](http://3.14.140.1:8888)
 
 #### Abstract
 + CNN, RNN, Autoencoder 기본 개념 및 MNIST를 이용한 코드 이해
@@ -40,6 +41,11 @@ permalink: /:categories/:slug.html
 
 #### [RNN](https://skymind.ai/kr/wiki/lstm)
 + RNN은 FNN과는 좀 다릅니다. RNN은 지금 들어온 입력 데이터와 과거에 입력 받았던 데이터를 동시에 고려합니다. 아래의 Elman이 제안한 아주 간단한 RNN의 구조도를 보면(PPT-11page하단 그림), 입력으로 BTSXPE가 들어오는데 은닉층에서는 이 입력데이터와 좌측 하단의 CONTEXT UNIT을 다 입력으로 받습니다."
+
+#### Autoencoder performance
+{% include articles/figure.html url="/assets/img/byoul/2019/2019070301.png" legend="Autoencoder_CNN_MNIST"%}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019070302.png" legend="Autoencoder_CNN_CIFAR10"%}
+
 
 ## Points to note
 
