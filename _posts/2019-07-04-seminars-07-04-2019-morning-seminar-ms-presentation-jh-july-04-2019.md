@@ -92,7 +92,9 @@ As the size and source of network traffic increase, so does the challenge of mon
 
 #### ZKPK Protocol
 
-{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-zkpk.png" legend="Authentication Phase." width="50%" %}
+
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-zkpk.png" legend="ZKPK Protocol." width="50%" %}
 
 
 
