@@ -54,11 +54,11 @@ As the size and source of network traffic increase, so does the challenge of mon
   
 
 ## Proposed Protocol
-{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-enrollment.png" legend="An overview of the proposed approach." width="80%" %}
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-enrollment.png" legend="Enrollment Phase." width="80%" %}
 
 
 
-{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-authentication.png" legend="An overview of the proposed approach." width="80%" %}
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-authentication.png" legend="Authentication Phase." width="80%" %}
 
 
 
@@ -67,11 +67,32 @@ As the size and source of network traffic increase, so does the challenge of mon
 
 ### Key Derivation Function
 
++ Digest (= Salt + Password)를 생성할 때, 솔팅과 키 스트레칭을 반복하며 솔트와 패스워드 외에도 입력 값을 추가하여 공격자가 쉽게 Digest를 유추할 수 없도록 하고 보안 강도를 선택할 수 있는 기능을 제공함.
+  + 솔팅: 단방향 해시 함수에 추가되는 바이트 단위의 임의의 문자열인 솔트(salt)를 추가하는 방법
+  + 키 스트레칭: 다이제스트를 입력으로 다시 함수를 수행하는 방법
++ GPU와 같은 장비를 이용한 병렬화를 어렵게 하는 기능을 제공한다.
+
+#### Password-Based Key Derivation Function (PBKDF2)
+
+`DIGEST = PBKDF2(PRF, Password, Salt, c, DLen)`
+
++ c: iteration 수
++ DLen: digest 길이
+
 
 
 ### Zero-Knowledge Proof of Knowledge (ZKPK)
 
+#### [Pedersen Commitment](https://www.cs.cornell.edu/courses/cs754/2001fa/129.PDF)
 
++ Setup, Commit, Open 세 단계로 이루어져 있음
+  + Setup에서는 Verifier가 큰 소수(p, q)를 뽑고 정수군을 선택함
+  + Commit에서는 Verifier가 C = g^x*h^r   (x, r \in Z_q)을 계산함.
+  + Open에서는 Prover가 생성한 x'와 r'를 이용해 C == g^x' h^r'이 되도록하는 값을 Verifier가 확인함.
+
+#### ZKPK Protocol
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-zkpk.png" legend="Authentication Phase." width="50%" %}
 
 
 
