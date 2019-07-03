@@ -90,11 +90,13 @@ As the size and source of network traffic increase, so does the challenge of mon
   + Commit에서는 Verifier가 C = g^x*h^r   (x, r \in Z_q)을 계산함.
   + Open에서는 Prover가 생성한 x'와 r'를 이용해 C == g^x' h^r'이 되도록하는 값을 Verifier가 확인함.
 
+
+
 #### ZKPK Protocol
 
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-zkpk.png" legend="ZKPK Protocol." width="80%" %}
 
 
-{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-04-fig-zkpk.png" legend="ZKPK Protocol." width="50%" %}
 
 
 
