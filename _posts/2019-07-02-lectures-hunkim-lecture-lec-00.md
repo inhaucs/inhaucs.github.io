@@ -32,7 +32,7 @@ permalink: /:categories/:slug.html
   + 그러나 이세돌이 패배함으로써, 인공지능이 직관적인 의사 결정을 인간 대신 할 수 있을 것인가라는 고민 발생
 + Dr. Andrew Ng의 Machine Learning을 잘 사용하면 Super power를 얻을 수 있다는 말 인용
 
-####
+\
 
 + 본 강의의 대상
   + Machine Learnig에 관심이 있는 사람
