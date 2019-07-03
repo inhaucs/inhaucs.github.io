@@ -1,15 +1,15 @@
 ---
-title: Lecture 01
+title: Lecture 02
 date: 2019-07-02 00:00:00 Z
-description: Lecture 01
-card_title: Lecture 01
-card_teaser: 기본적인 Machine Learning의 용어와 개념 설명
-card_position: 2
+description: Lecture 02
+card_title: Lecture 02
+card_teaser: Linear Regression의 Hypothesis 와 cost 설명
+card_position: 3
 icon: fa-server
 categories: [lectures,hunkim-lecture,contents]
 sidebar: hunkim-lecture
 layout: default
-slug: hunkim-lecture-lec-01
+slug: hunkim-lecture-lec-02
 permalink: /:categories/:slug.html
 ---
 
@@ -17,15 +17,15 @@ permalink: /:categories/:slug.html
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
 
-#Lecture 01 - 기본적인 Machine Learning의 용어와 개념 설명
+#Lecture 02 - Linear Regression의 Hypothesis 와 cost 설명
 
 ## Writer
 + Hee-Yong Kwon (권희용)
-+ 2019-07-02
++ 2019-07-03
 
 ### Information of the lecture
-#### [Youtube(Lecture)](https://www.youtube.com/watch?v=qPMeuL2LIqY), [Slide(Lecture)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lec1.pdf?raw=true)
-#### [Youtube(Tensorflow)](https://www.youtube.com/watch?v=-57Ne86Ia8w&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab1.pdf?raw=true)
+#### [Youtube(Lecture)](https://www.youtube.com/watch?v=Hax03rCn3UI), [Slide(Lecture)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lec2.pdf?raw=true)
+#### [Youtube(Tensorflow)](https://www.youtube.com/watch?v=mQGwjrStQgg&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab2.pdf?raw=true)
 
 ### Lecture
 ### Machine Learning
