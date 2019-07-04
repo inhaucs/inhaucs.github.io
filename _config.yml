@@ -23,12 +23,16 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: ""
 url: "https://inhaucs.github.io"
 
-twitter_username: 
+twitter_username:
 github_username:  inhaucs
 piwik: false
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -61,4 +65,3 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - .idea/workspace.xml
-

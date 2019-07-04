@@ -11,6 +11,7 @@ sidebar: hunkim-lecture
 layout: default
 slug: hunkim-lecture-lec-04
 permalink: /:categories/:slug.html
+use_math: true
 ---
 
 {% assign product = 'ce' %}
