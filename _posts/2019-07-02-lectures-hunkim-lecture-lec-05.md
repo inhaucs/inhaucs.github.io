@@ -18,63 +18,93 @@ use_math: true
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
 
-#Lecture 04 - Multi-variable linear regression
+#Lecture 05 - Logistic Classification의 가설 함수 정의
 
 ## Writer
 + Hee-Yong Kwon (권희용)
-+ 2019-07-04
++ 2019-07-08
 
 ### Information of the lecture
-#### [Youtube(Lecture)](https://www.youtube.com/watch?v=kPxpJY6fRkY&feature=youtu.be), [Slide(Lecture)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lec4.pdf?raw=true)
-#### [Youtube(Tensorflow_1)](https://www.youtube.com/watch?v=fZUV3xjoZSM&feature=youtu.be), [Youtube(Tensorflow_2)](https://www.youtube.com/watch?v=o2q4QNnoShY&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab4.pdf?raw=true)
+#### [Youtube(Lecture_1)](https://www.youtube.com/watch?v=PIjno6paszY&feature=youtu.be), [Youtube(Lecture_2)](https://www.youtube.com/watch?v=6vzchGYEJBc&feature=youtu.be), [Slide(Lecture)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lec5.pdf?raw=true)
+#### [Youtube(Tensorflow)](https://www.youtube.com/watch?v=2FeWGgnyLSw&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab5.pdf?raw=true)
 
-### Lecture
-### Multi-variable linear regression
-+ Linear regression에 필요한 세 가지 (복습)
-  + Hypothesis, Cost function, Gradient descent algorithm
-+ Multi-variable linear regression: $X=[x_1, x_2, x_3], Y$ 와 같이 여러 변수가 입력되는 경우
-  + Hypothesis의 변화
-    + $H(x_1,x_2,x_3) = w_1x_1 + w_2x_2 + w_3x_3 + b$
-    + 학습해야할 weight이 $w_1, w_2, w_3, b$로 늘어남
-  + Cost function의 변화
-    + $cost(W,b) = \frac{1}{m} \sum^m_{i=1} (H(x_1^{(i)}, x_2^{(i)}, x_3^{(i)})-y^{(i)})^2$
-  + 일반적으로 적용 가능 : $w_1x_1 + \ldots + w_nx_n$
-    + 표현의 편의를 위해 Matrix 사용
-      + e.g., $\left({\begin{array}{ccc} x_1 & x_2 & x_3 \end{array}}\right)$ $\left(\begin{array}{c} w_1 \\ w_2 \\ w_3 \end{array}\right) = x_1w_1+x_2w_2+x_3w_3$
-      + $H(X) =XW$로 표현 가능
-      + 행렬 사용시에는 보통 X를 앞쪽에 표기
-  + 상기 방법을 그대로 사용하는 경우 Instance가 10,000개일 때, 행렬 연산을 10,000번 수행해야 함
-    + 전체를 큰 행렬에 넣고 한 번에 계산할 수 있음
-    + e.g., $\left({\begin{array}{ccc} x_{11} & x_{12} & x_{13} \\ x_{21} & x_{22} & x_{23} \end{array}}\right)$ $\left(\begin{array}{c} w_1 \\ w_2 \\ w_3 \end{array}\right) = \left({\begin{array}{ccc} x_{11}w_1 + x_{12}w_2 + x_{13}w_3 \\ x_{21}w_1 + x_{22}w_2 + x_{23}w_3 \end{array}}\right)$
-  + WX vs. **XW**
-    + Theory에서는 $H(x)=Wx+b$로 표기하지만 실제 구현시에는 $H(X) = XW$로 구현
+### Lecture_1
+### Logistic (regression) classification
++ Linear regression 복습 : Hypothesis, Cost, Gradient descent
++ Binary classification 예시
+  + Spam detection: Spam or Ham
+  + Facebook feed: show or hide
+  + Credit Card Fraudulent Transaction detection: legitimate or fraud
++ 공부에 투자한 시간에 따른 합격(1), 불합격(0) 분류를 예시로 들어 설명
+  + Linear regression 에서 사용한 Hypothesis인 $WX$를 사용할 수도 있으나, 문제 발생
+    + 극단값에 취약함
+    + 또한 $WX$는 분류 목표값인 [0, 1] 이외의 값도 가능함
+    + 따라서 $H(X)$를 0 ~ 1 의 값으로 하는 함수 고려
+      + **Sigmoid function(Logistic function)** : $g(z) = \frac{1}{(1 + e^{-z})}$
+  + Sigmoid function의 z를 weighted equation으로 치환
+    + **Logistic Hypothesis** $H(X) = \frac{1}{(1 + e^{-W^TX})}$
+
+<br>
+
+### Lecture_2
+### Logistic (regression) classification: cost function & gradient descent
++ Cost function of Linear regression
+  + $cost(W,b) = \frac{1}{m} \sum^m_{i=1} (H(x^{(i)})-y^{(i)})^2$ when $H(x) = Wx + b$
++ $H(x) = Wx + b$의 경우 Cost function이 매끄러운 곡선이지만, $H(X) = \frac{1}{(1 + e^{-W^TX})}$로 변경됨에 따라 Cost function이 울퉁불퉁한 곡선으로 변경됨
+  + Hypothesis가 Linear하지 않기 때문
+  + 때문에, Gradient descent를 바로 적용할 경우, 시작 위치에 따라 Global minimum을 찾기 어려움 -> Local minimum으로 수렴할 수 있음
+    + 기존의 Gradient descent를 사용할 수 없음
++ New cost function for logistic
+  + $cost(W) = \frac{1}{m} \sum c(H(x), y)$
+    + $c(H(x),y) =  \begin{cases} -log(H(x)) & :y=1 \\ -log(1-H(x)) & :y=0 \end{cases}$
+  + Cost function의 울퉁불퉁한 곡선을 매끄럽게 만들기 위해 log 사용
+    + $H(x) = 1$이고 $y = 1$인 경우, $C(H(x),y)$가 0에 가까워짐 ($H(x) = 0$ and $y = 0$)
+    + $H(x) = 1$이고 $y = 0$인 경우, $C(H(x),y)$가 $\infty$에 가까워짐 ($H(x) = 0$ and $y = 1$)
+  + 상기 식에서 **if** 조건 제거
+    + $C(H(x),y) = -y \log{(H(x))} - (1-y) \log{(1-H(x))}$
++ Cost function이 주어졌으므로, Minimize 가능
+  + $cost(W) = -\frac{1}{m} \sum y \log{(H(x))} + (1-y) \log{(1-H(x))}$
+  + $W := W - \alpha \frac{\delta}{\delta W} cost(W)$
+    + 미분은 TF 라이브러리가 해줄 것
 
 <br>
 
 ### Tensorflow
-#### 1) Multi-variable linear regression을 TensorFlow에서 구현하기
-+ Hypothesis
-  + $H(x_1,x_2,x_3) = w_1x_1 + w_2x_2 + w_3x_3$
-+ 이전 강의와 마찬가지로 Hypothesis 정의, cost function, optimize(GradientDescent), 그리고 학습의 순서로 이루어짐
-+ 데이터를 코드에 나열하는 대신 행렬을 사용하는 방법 설명
-+ Option 중 $shape=[None, 3]$의 의미는 variable이 3개인 instance가 임의의 개수만큼 입력될 수 있음을 의미
-
-#### 2) TensorFlow로 파일에서 데이터 읽어오기
-+ numpy의 loadtxt를 사용하여 파일로부터 데이터 읽어오는 방법 설명
-+ python array의 slicing 및 indexing 기능을 유용하게 사용하여 데이터를 잘 다룰 수 있음
-+ 파일이 너무 커서 메모리에 다 올리지 못 하는 경우
-  + TF의 Queue Runners 사용 (3 steps)
-    1) Input file name 나열
-        + filename_queue = tf.train.string_input_producer([fil1, fil2, ...], shuffle=T/F, name='filename_queue')
-    2) File들을 읽어올 Reader 정의
-        + Text로 읽고, (key, value)로 읽는 경우
-          + reader = tf.TextLineReader()
-          + key, value = reader.read(filename_queue)
-    3) 2)에서 읽어온 value 값을 어떻게 파싱할 것인지 정의 (decode)
-        + xy = tf.decode_csv(value, record_defaults=record_defaults)
-  + 상기 절차를 통해 queue에 들어온 데이터들은 tf.train.batch 함수를 통해 배치 연산 가능
-+ 데이터의 구조에 따라 shape option을 신경써주어야 함
-+ 데이터를 임의의 순서로 진행하고 싶은 경우 shuffle_batch 함수 사용 가능
+#### Logistic (regression) classifier
++ Logistic Regression
+  + $cost(W) = -\frac{1}{m} \sum y \log{(H(x))} + (1-y) \log{(1-H(x))}$
+  + $W := W - \alpha \frac{\delta}{\delta W} cost(W)$
++ Gradient descent와 같이 cost function의 경사면을 따라 내려감
++ Tensorflow
+  + Training Data
+    + 입력이 2인 경우를 가정
+      ```
+      X = tf.placeholder(tf.float32, shape=[None, 2]) // None: 입력 또는 출력의 개수가 정해지지 않은 경우
+      Y = tf.placeholder(tf.float32, shape=[None, 1])
+      ```
+  + Hypothesis using sigmoid
+    + $H(X) = \frac{1}{1+ e^{-W^T X}}$
+    ```
+    hypothesis = tf.sigmoid(tf.matmul(X,W) + b)
+    ```
+  + Cost/Loss function
+    + $cost(W) = -\frac{1}{m} \sum y \log{(H(x))} + (1-y) \log{(1-H(x))}$
+    ```
+    cost = -tf.reduce_mean(Y * tf.log(hypothesis) + (1-Y) * tf.log(1 - hypothesis))
+    ```
+  + Gradient descent
+    + $W := W - \alpha \frac{\delta}{\delta W} cost(W)$
+    ```
+    train = tf.train.GradientDescentOptimizer(learning_rate=0.01).minimize(cost)
+    ```
+  + Accuracy computation
+    + True if hypothesis > 0.5 else False
+    ```
+    predicted = tf.cast(hypothesis > 0.5, dtype=tf.float32)
+    accuracy = tf.reduce_mean(tf.cast(tf.equal(predicted, Y), dtype=tf.float32))
+    ```
+  + Train
++ 질병 예측 데이터를 사용하여 실습(당뇨병 데이터)
 
 {% include date/updated.html %}
 {% include layout/col_end.html %}
