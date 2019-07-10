@@ -82,10 +82,12 @@ As the size and source of network traffic increase, so does the challenge of mon
 ## Experiments
 + 상기 Randomness test 들은 파일 크기에 영향을 받으므로, 실험에서 파일 크기도 고려함
 + Dataset
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-01-fig-dataset.png" legend="Datasets." width="50%" %}
   + 그림, 비디오, 바이너리, 오디오, 텍스트, PDF 에서 같은 수의 파일 사용
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-01-fig-dataset.png" legend="Datasets." width="50%" %}  
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-01-fig-accuracy.png" legend="Accuracy detection." width="50%" %}
-  + Gain Factor? : 회수율(이득률)이라고 하는데, 설명은 없고 적용한다고 되어있음. 실험 결과를 보면 Threshold가 얼마나 엄격하게 적용되는지를 결정하는 인자로 생각됨
+
+  + Gain Factor? : 회수율(이득률)이라고 하는데, 자세한 설명은 없고 Threshold를 얼마나 relaxed 또는 strict하게 적용하는지 조정하기 위해 적용한다고 되어있음
+    + Gain Factor가 클수록, Threashold가 엄격하게 적용됨 -> TP, TN이 커지지만, Threshold가 엄격하게 적용됨에 따라, FP도 함께 늘어남을 볼 수 있음
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-01-fig-outcomes.png" legend="Outcomes." width="50%" %}
 
 
