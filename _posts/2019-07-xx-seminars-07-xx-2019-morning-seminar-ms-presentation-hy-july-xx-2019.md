@@ -1,16 +1,16 @@
 ---
-title: Session 1. HEDGE. Efficient Traffic Classification of Encrypted and Compressed Packets
+title: Session 1. Generation of Cancelable Iris Templates via Randomized Bit Sampling
 date: 2019-07-04 00:00:00 Z
-description: HEDGE. Efficient Traffic Classification of Encrypted and Compressed Packets
+description: Generation of Cancelable Iris Templates via Randomized Bit Sampling
 card_title: Session 1
-card_teaser: HEDGE. Efficient Traffic Classification of Encrypted and Compressed Packets
+card_teaser: Generation of Cancelable Iris Templates via Randomized Bit Sampling
 card_position: 1
 icon: fa-server
-categories: [seminars,07-04-2019-morning-seminar,presentation]
-tags: [TIFS, 2019, TIFS2019, Encryption, High entropy sources, Compression, Classification, Traffic analysis]
+categories: [seminars,07-xx-2019-morning-seminar,presentation]
+tags: [TIFS, 2019, TIFS2019, Cancelable biometrics, iris, security, locality sensitive hashing]
 sidebar: morning-seminar
 layout: default
-slug: ms-presentation-hy-july-04-2019
+slug: ms-presentation-hy-july-xx-2019
 permalink: /:categories/:slug.html
 ---
 
@@ -20,19 +20,19 @@ permalink: /:categories/:slug.html
 
 ## Presenter & Date
 + Hee-Yong Kwon (권희용)
-+ 2019-07-01
++ 2019-07-xx
 
-## [HEDGE: Efficient Traffic Classification of Encrypted and Compressed Packets](https://inhaucs.github.io/seminars/07-01-2019-morning-seminar/presentation/ms-presentation-hy-july-01-2019.html)
+## [Generation of Cancelable Iris Templates via Randomized Bit Sampling](https://inhaucs.github.io/seminars/07-xx-2019-morning-seminar/presentation/ms-presentation-hy-july-xx-2019.html)
 
-### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/8691576)
-+ Authors: Fran Casino; Constantinos Patsakis (University of Piraeus); Kim-Kwang Raymond Choo (University of Texas at San Antonio)
+### Information of the paper [(Link)](https://ieeexplore.ieee.org/abstract/document/8672919)
++ Authors: Debanjan Sadhya (ABV-Indian Institute of Information Technology); Balasubramanian Raman (Indian Institute of Technology Roorkee)
 + **Journal** name: IEEE Transactions on Information Forensics and Security (Volume 14, Issue 11)
-+ Published date: 2019-04-15
-+ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8691576)
++ Published date: 2019-03-22
++ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8672919)
 
 
 ### Abstract
-As the size and source of network traffic increase, so does the challenge of monitoring and analyzing network traffic. Therefore, sampling algorithms are often used to alleviate these scalability issues. However, the use of high entropy data streams, through the use of either encryption or compression, further compounds the challenge as current state-of-the-art algorithms cannot accurately and efficiently differentiate between encrypted and compressed packets. In this paper, we propose a novel traffic classification method named High Entropy DistinGuishEr (HEDGE) to distinguish between compressed and encrypted traffic. HEDGE is based on the evaluation of the randomness of the data streams and can be applied to individual packets without the need to have access to the entire stream. The findings from the evaluation show that our approach outperforms current state of the art. We also make available our statistically sound dataset, based on known benchmarks, to the wider research community.
+Iris-based biometric models are widely recognized to be one of the most accurate forms for authenticating individual identities. Features extracted from the captured iris images (known as IrisCodes) conventionally get stored in their native format over a data repository. However, from a security aspect, the stored templates are highly vulnerable to a wide spectrum of adversarial attack forms. The study in this paper addresses this issue by introducing a privacy-preserving and secure biometric scheme based on the notion of locality sensitive hashing (LSH). In this paper, we have generated cancelable IrisCode features, coined as locality sampled code (LSC), which simultaneously provides strong security guarantees and satisfactory system performance. The functionality of our proposed framework pivots around the fact that intra-class IrisCode samples are “close” to each other, due to which they hash to the same location. Alternatively, the inter-class IrisCodes features are comparatively dissimilar and consequently hash to different locations. We have rigorously examined the intrinsic properties of the LSCs by estimating the intra-class and inter-class collision probabilities for two distinct IrisCodes. Furthermore, we have formally analyzed the security guarantees of non-invertibility, revocability, and unlinkability in our model by establishing various bounds on the adversarial success probability. Extensive empirical tests on the CASIAv3 and IITD benchmark iris databases demonstrate the superior performance of our proposed model, for which we have obtained the best EERs of 0.105% and 1.4%, respectively.
 
 
 ## Summary (Korean)
@@ -53,7 +53,6 @@ As the size and source of network traffic increase, so does the challenge of mon
   + 초록색과 노란 선의 결과는 우리와 달리 추가적인 트래픽 정보를 사용해 분석한 결과임
   + 64 KB 패킷에서는 94.72% 의 분류 성공율을 보임
   + 1 KB 패킷에서도 (노란 선과 초록 선을 제외하면), 기존의 state-of-the-art인 66.9%를 70.6%로 올림 -> 작은 크기의 패킷에서 이 정도의 성능 향상은 큰 향상임을 어필
-
 [CMS+16]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7265055> "M. Conti, L. V. Mancini, R. Spolaor, and N. V. Verde, “Analyzing android encrypted network traffic to identify user actions,” IEEE Trans. Inf. Forensics Security, vol. 11, no. 1, pp. 114–125, Jan. 2016."
 [TSC+18]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8006282> "V. F. Taylor, R. Spolaor, M. Conti, and I. Martinovic, “Robust smartphone app identification via encrypted network traffic analysis,” IEEE Trans. Inf. Forensics Security, vol. 13, no. 1, pp. 63–78, Jan. 2018."
 
@@ -62,19 +61,8 @@ As the size and source of network traffic increase, so does the challenge of mon
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-01-fig-overview.png" legend="An overview of the proposed approach." width="50%" %}
 + 교환되는 메시지 : 평문, 암호문, 압축문
 + Eve: 메시지 인터셉트 가능
-+ 본 솔루션에서 목표로 하는 네 가지 특성
-  + Accurate: 평문, 암호문, 그리고 압축 파일을 구분할 수 있어야하고, 해당 파일이 어떤 타입(image, binary, etc.)인지 구분 가능
-  + Efficient: 시릿간이 가능하도록 수행 속도가 빨라야 함
-  + Adaptable: 네트워크 트래픽에 따라 파라미터 수정 가능
-  + Reproducible: 구현 또는 재구성이 쉬워야 함
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-01-fig-step_by_step.png" legend="Step by step of our methodology." width="50%" %}
 + Randomness Tests 에는 Chi square test (2) 와 NIST SP 800-22 (1) 세 가지를 사용
-  + Chi square test_1: Absolute value -> $\chi \in AVG \ \pm \ \sigma$
-  + Chi square test_2: $\chi$\% of confidence -> $\chi$% > 99% || $\chi$ < 1%
-  + NIST SP 800-22: Aggregate number of failed blocks -> 0 fails
-  + Appendix
-    + Chi square test \& NIST SP 800-22 test
-      + 데이터 스트림의 randomness 검증 알고리즘
 + 구분하려는 암호화 알고리즘은 AES (128, 192, 256) & Camelia (128, 192, 256) 이며, 압축 알고리즘은 ZIP, RAR, BZIP2, GZIP
 
 

@@ -114,7 +114,7 @@ use_math: true
   ```
   + 1., 2. 의 cost는 같음
 + 동물의 특징에 기반한 데이터를 사용하여 분류 실습
-  + 여러 개의 레이블($Y$)을 one-hot으로 바꿔주는 함수
+  + 여러 개의 레이블($Y$)을 one-hot으로 바꿔주는 함수''
   ```
   Y = tf.placeholder(tf.int32, [None, 1]) // 0 ~ 6, shape=(?, 1)
   Y_one_hot = tf.one_hot(Y, nb_classes)   // one hot shape = (?, 1, 7)
