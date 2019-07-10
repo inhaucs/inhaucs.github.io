@@ -36,7 +36,35 @@ use_math: true
 Iris-based biometric models are widely recognized to be one of the most accurate forms for authenticating individual identities. Features extracted from the captured iris images (known as IrisCodes) conventionally get stored in their native format over a data repository. However, from a security aspect, the stored templates are highly vulnerable to a wide spectrum of adversarial attack forms. The study in this paper addresses this issue by introducing a privacy-preserving and secure biometric scheme based on the notion of locality sensitive hashing (LSH). In this paper, we have generated cancelable IrisCode features, coined as locality sampled code (LSC), which simultaneously provides strong security guarantees and satisfactory system performance. The functionality of our proposed framework pivots around the fact that intra-class IrisCode samples are “close” to each other, due to which they hash to the same location. Alternatively, the inter-class IrisCodes features are comparatively dissimilar and consequently hash to different locations. We have rigorously examined the intrinsic properties of the LSCs by estimating the intra-class and inter-class collision probabilities for two distinct IrisCodes. Furthermore, we have formally analyzed the security guarantees of non-invertibility, revocability, and unlinkability in our model by establishing various bounds on the adversarial success probability. Extensive empirical tests on the CASIAv3 and IITD benchmark iris databases demonstrate the superior performance of our proposed model, for which we have obtained the best EERs of 0.105% and 1.4%, respectively.
 
 
-## Summary (Korean)
+## Introduction (Korean)
++ 홍채는 나이에 따른 변화가 없고, false match에 강점이 있다는 장점이 있으며, 이로 인해 인증 시스템에 적합
++ 홍채 이미지로부터 추출된 feature는 주로 ***IrisCode*** 라는 bit string으로 표현됨 [[D16]]
++ [[RU11]]에는 biometric system에 대한 여러 공격이 소개되어 있음
+  + Privacy invasion, masquerade attack, replay attack, and identity theft
+  + 이에 따라 대응책으로 **Biometric Template Protection (BTP)** 에 대한 연구가 진행됨 -> 원본 데이터 대신 변환된 데이터를 저장하여 대응하는 방법
++ 본 논문에서 소개하는 내용은 BTP의 하나인 Cancelable biometrics 를 적용
+  + 원본 데이터에 특정 함수를 사용하여 왜곡하는 방법
+    + 변환된 데이터는 쉽게 역연산되지 않아야 함
+    + 인식 성능이 좋아야 함
+  + 효과적인 cancelable biometrics scheme 은 다음을 만족
+    1) Unlinkability: 같은 데이터로 변환된 두 데이터를 구분할 수 없어야 함 -> Countermeasure of cross-matching based attack
+    2) Non-invertibility: One-way 변환으로 인한 역연산 불가
+    3) Revocability: (폐지 가능성), 처음 등록한 데이터가 탈취당할 경우, 새로운 변환 데이터를 생성할 수 있어야 함
+    4) Performance: Baseline 모델에 비해 성능이 많이 떨어지지 않아야 함
+
+[D16]: <https://ieeexplore.ieee.org/abstract/document/7328287> "J. Daugman, “Information theory and the iriscode,” IEEE Trans. Inf. Forensics Security, vol. 11, no. 2, pp. 400–409, Feb. 2016."
+[RU11]: <https://jis-eurasipjournals.springeropen.com/articles/10.1186/1687-417X-2011-3> "C. Rathgeb and A. Uhl, “A survey on biometric cryptosystems and cancelable biometrics,” EURASIP J. Inf. Secur., vol. 2011, no. 1, p. 3, Sep. 2011. [Online]. Available: https://link. springer.com/article/10.1186/1687-417X-2011-3"
+
++ Contributions
+  + Randomized bit sampling 을 사용하여 IrisCode에 적용할 Locality-sensitive hashing (LSH) 생성 $\rightarrow$ 이를 Locality Sampled Code (LSC) 라 명명
+    + LSC는 modulo threshold를 사용하여 비가역연산(Non-invertible)
+  + CASIAv3 and IITD 데이터베이스에 대해 분석
+
+
+## Related Work
+
+
+
 + IoT & Mobile 기기들이 늘어남에 따라 네트워크 트래픽도 급격히 증가 -> 보안 및 프라이버시 문제 발생
 + 최근의 네트워크 데이터들은 일반적으로 암호화됨
   + 트래픽이 암호화되어 있더라도 분석을 통해 사용자 행위를 식별하는 연구들이 있음 ([[CMS+16]], [[TSC+18]])
@@ -87,8 +115,6 @@ Iris-based biometric models are widely recognized to be one of the most accurate
 
 
 {% include date/updated.html %}
-
 {% include layout/col_end.html %}
 {% include layout/col_start.html column="4 last push1" %}
-
 {% include layout/row_end.html %}
