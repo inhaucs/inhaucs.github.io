@@ -12,6 +12,7 @@ sidebar: morning-seminar
 layout: default
 slug: ms-presentation-hy-july-xx-2019
 permalink: /:categories/:slug.html
+use_math: true
 ---
 
 {% assign product = 'ce' %}

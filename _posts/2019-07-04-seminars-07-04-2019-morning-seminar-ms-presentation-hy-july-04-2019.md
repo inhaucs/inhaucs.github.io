@@ -12,6 +12,7 @@ sidebar: morning-seminar
 layout: default
 slug: ms-presentation-hy-july-04-2019
 permalink: /:categories/:slug.html
+use_math: true
 ---
 
 {% assign product = 'ce' %}
@@ -45,7 +46,7 @@ As the size and source of network traffic increase, so does the challenge of mon
     + ***기존의 기술들은 암호화(Encryption)와 압축(Compression)을 잘 구별하지 못하므로***, 암호화 대신 압축을 많이 사용함
 + 그래서 HEDGE: High Entropy DistinGuishEr 개발
   + 기존의 접근과 달리 모든 네트워크 트래픽을 분석하지 않음
-  + 실시간 탐지를 위해 임의의 부분적인 트래픽 사용 (Random Subset)
+  + 실시간 탐지를 위해 임의의 부분적인 트래픽 사용 (Random Subset) -> 패킷의 subset을 의미
 + Git: Dataset and Implementation
   + https://github.com/francasino/traffic_analysis
 + 결과 요약
