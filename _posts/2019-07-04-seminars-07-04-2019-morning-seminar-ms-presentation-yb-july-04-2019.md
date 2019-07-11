@@ -22,7 +22,7 @@ permalink: /:categories/:slug.html
 + Ye-Byoul Son(손예별)
 + 2019-07-04
 
-## [2019NSR - CNN, RNN, Autoencoder](https://inhaucs.github.io/seminars/07-01-2019-morning-seminar/presentation/ms-presentation-yb-july-04-2019.html)
+## [2019NSR - CNN, RNN, Autoencoder](https://inhaucs.github.io/seminars/07-04-2019-morning-seminar/presentation/ms-presentation-yb-july-04-2019.html)
 
 ### [PPT](http://gofile.me/6uXSD/WT4YnR6EX)
 + 위치 : NAS-Level1-국가암호기술전문인력양성과정-2019국가암호기술전문인력양성과정-20190524_NSR_PPT.pdf
