@@ -75,19 +75,19 @@ We also report on a proof-of-concept implementation of a redactable blockchain, 
     + HGen : 입력(security parameter) 출력(공개 해시 키 hk, trapdoor tk)
     + Hash : 입력(hk, message m, **random coins r**), 출력( hash value h, check string ξ )
     + HVer : 입력(hk, m, h, ξ), 출력(1 또는 0)
+      + m 과 (h, ξ) 가 한 쌍인 것이 확인되면 1, 아니면 0
     + HCol : 입력(tk, h, m, ξ, m’), 출력( ξ’ )
       + HVer( hk,m, h, ξ ) = HVer(hk, m’, h, ξ,’ ) = 1 이 되는 ξ’
 
 + Public-coin hashing
-  + Hash에 쓰는 r이 원래 랜덤이라 비밀인데, 이것을 고정해서 쓰는 해시함수. 따라서, r이 비밀이 아니며 ξ가 필요 없기 때문에 조금씩 달라짐.
+  + Hash에 쓰는 r이 원래 비밀값인데, 이것을 공개해서 쓰는 해시함수. 따라서, ξ가 필요 없기 때문에 조금씩 달라짐.
     + Hash : 입력(hk, message m, random coins r), 출력( hash value h, **random coins r**)
     + HVer : 입력(hk, m, h, r), 출력(1 또는 0)
-      + Hash 알고리즘과 결국 똑같이 생겼기 때문에 일반적으로 생략함.
-
+      + **Hash 알고리즘과 결국 똑같이 생겼기 때문에 일반적으로 생략함.**
 
 
 ### Redactable Blockchain
-+ 1) The redactable blockchain structure 그림의 G함수에 카멜레온 해시 함수를 적용.
++ 1) The redactable blockchain structure 그림의 G 함수에 카멜레온 해시 함수를 적용.
   + secret-coin hashing을 사용했을 때의 validblock 함수
   {% include articles/figure.html url="/assets/img/byoul/2019/2019071203.png" legend="secret-coin's validblock" width="50%"%}
   + public-coin hashing을 사용했을 때의 validblock 함수
@@ -98,7 +98,7 @@ We also report on a proof-of-concept implementation of a redactable blockchain, 
   + 수정할 체인 위치 i
   + 다른 사용자들은 더 긴 체인을 가지고 있어도 이 체인으로 매핑해야 함.
   
-+ 3) 키를 가져야 하는 사람이 여러명 일 때, 키 관리 방법
++ 3) 키를 가져야 하는 사람이 여러명 일 때, 키 관리 방법 (MPC 프로토콜 이용)
   + (참고 : 수정 가능한 사람이 한 명이면(은행 과 같은 기관) 그냥 알아서 가지고 있으면 됨.)
   + 조건 : 수정할 수 있는 사용자 집합은 고정되어 있음.
   + 키 나눠주기
@@ -107,8 +107,8 @@ We also report on a proof-of-concept implementation of a redactable blockchain, 
       + Rec : n개의 shares를 받아서 x(tk)나 ㅗ 돌려준다.
 
   + 수정 방법
-    + 1) n개의 공유부품들을 모아서 tk를 다시 생성 (tk = Rec(r1 … rn) )
-    + 2) 모든 사용자들로부터 수정할 블록 정보, 변경할 메시지를 받아서 E’ 생성할 수 있음. (E’이나 r’이라고 생각하면 될 듯..?). 이렇게 알고리즘1과 똑 같은 형식으로 구현.
+    + 1) n개의 공유부품들을 모아서 tk를 다시 생성 (tk = Rec(shares1, shares2, ..., sharesN) )
+    + 2) 모든 사용자들로부터 수정할 블록 정보, 변경할 메시지를 받아서 E’ 생성할 수 있음.
     
 ### Chameleon Hash Transform
 + 기존의 public-coin hashing함수에서, Public-Key Encryption과 Non-Interactive Zero-Knowledge 를 이용하여 카멜레온 해시 함수를 개선함.
@@ -119,8 +119,8 @@ We also report on a proof-of-concept implementation of a redactable blockchain, 
 
 
 ### Points to note
-+ 카멜레온 해시의 단점, 장점 및 그 개선으로 인한 효과, 한계가 주요 내용인 것 같은데 카멜레온 해시를 모르니까 설명이 안되는 부분이 좀 많은 것 같음.
-+ 카멜레온 해시 함수에 대한 설명이 우선되어야 할 것 같고, 이후 논문에 대한 추가 설명이 필요해 보임.
++ 카멜레온 해시의 단점, 장점 및 그 개선으로 인한 효과, 한계가 주요 내용인 것 같은데 카멜레온 해시를 잘 모르니까 설명이 안되는 부분이 좀 많은 것 같음.
++ 설명이 안된 부분들을 마저 설명하려면 카멜레온 해시 함수에 대한 설명이 우선되어야 할 것 같고, 이후 논문에 대한 추가 설명이 필요해 보임.
 
 ## Discussion
 Editor: 작성자 이름
