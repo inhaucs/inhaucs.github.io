@@ -115,7 +115,7 @@ We also report on a proof-of-concept implementation of a redactable blockchain, 
 
 
 ### Experiments
-{% include articles/figure.html url="/assets/img/byoul/2019/2019071205.png" legend="Chain Redact Algorithm"%}
+{% include articles/figure.html url="/assets/img/byoul/2019/2019071206.png" legend="Preformance"%}
 
 
 ### Points to note
