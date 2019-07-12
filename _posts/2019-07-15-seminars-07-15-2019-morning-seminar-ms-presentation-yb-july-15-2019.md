@@ -1,10 +1,9 @@
-
 ---
-title: "Session 1. Redactable Blockchain – or – Rewriting History in Bitcoin and Friends"
+title: Session 1. Redactable Blockchain – or – Rewriting History in Bitcoin and Friends
 date: 2019-07-15 00:00:00 Z
-description: "Redactable Blockchain – or – Rewriting History in Bitcoin and Friends"
+description: Redactable Blockchain – or – Rewriting History in Bitcoin and Friends
 card_title: Session 1
-card_teaser: "Redactable Blockchain – or – Rewriting History in Bitcoin and Friends"
+card_teaser: Redactable Blockchain – or – Rewriting History in Bitcoin and Friends
 card_position: 1
 icon: fa-server
 categories: [seminars,07-15-2019-morning-seminar,presentation]
