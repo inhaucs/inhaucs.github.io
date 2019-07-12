@@ -31,9 +31,9 @@ permalink: /:categories/:slug.html
 
 ### Session 1: [Title](-)
 
-### Information of the paper [(Link)]()
+### Information of the paper [(Link)](-)
 + Authors:
-+ **Journal** name: 
++ Conference name: 
 + Published date: 
 + [Paper Link]()
 
