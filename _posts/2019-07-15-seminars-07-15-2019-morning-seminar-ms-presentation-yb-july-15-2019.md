@@ -40,25 +40,87 @@ We also report on a proof-of-concept implementation of a redactable blockchain, 
 
  
 ## Summary (Korean)
-+ 존재하는 비트코인과 같은 블록체인들은 블록에 한번 기록되면 수정할 수 없다는 특징이 있음. 
-+ 그러나 이런 점은 실제 세계에서는 적합하지 않은 경우가 많음. 따라서, 블록 수정이 필요함.
-+ 카멜레온 해시를 이용한 블록 수정, 삭제, 삽입, 압축이 가능한 블록체인 프레임워크 개발.
++ 블록체인 기술의 경우 한번 블록에 기록되면 수정할 수 없다는 특징이 있는데, 이 특징이 앞으로 생성될 모든 새로운 어플리케이션에 적절하지는 않을 것임.
+  + 이미 비트코인에 악용 사례가 있음. 비트코인 블록 데이터에 부적절한 콘텐츠를 올리는 사례가 있었음. [31](If you own bitcoin, you also own links to child porn.)
+  + 계약을 잘못 만들었으면 다시 올리고 해야 되는데 수정이 안되니 결국 다시 올려야 함. -> 자원 낭비.
+  + 올라간 데이터들이 영구적으로 안전하다는 보장이 없음.
+  + 등등..
+
++ 따라서, 수정 가능한 블록체인을 개발해야 함.
+  + 블록 수정, 삭제, 삽입, 압축이 가능하게 한다.
+  + 허가된 사용자들만이 수정이 가능하며, 공개적으로 수정된다.
+  + 카멜레온 해시 함수를 이용하여, 이전 블록의 해시 값과 똑 같은 해시 값을 가지는 다른 블록을 만들어낸다.
+
++ 기여
+  + 현 블록체인에 쉽게 호환 가능
+  + 개선된 카멜레온 해시 디자인 개발
+  + 비트코인 위에서 실험해보고, 잘 된 것 확인.
+
 
 
 ## Details
 ### Blockchain Basics
+{% include articles/figure.html url="/assets/img/byoul/2019/2019071201.png" legend="The redactable blockchain structure"%}
 
-### Chameleon hash
-### SABRE Relay Network
++ 기존 블록체인에서 블록이 유효한지 확인하는 함수 식
+{% include articles/figure.html url="/assets/img/byoul/2019/2019071202.png" legend="validblock" width="50%"%}
+
+### Chameleon hash function
++ IDEA 
+  + 해시 값에 암호(key, trapdoor)를 걸어서, 암호를 풀면 효율적으로 충돌이 생기는 메시지를 생성할 수 있음. 
+  + 즉, 키를 알고 있으면 블록 수정이 가능하고 키를 잃어버리면 그냥 변경 불가능한 일반 블록체인이 됨.
+
++ Secret-coin hashing : 기본 카멜레온 해시 개념
+  + efficient algorithm CH = (HGen, Hash, HVer, HCol)
+    + HGen : 입력(security parameter) 출력(공개 해시 키 hk, trapdoor tk)
+    + Hash : 입력(hk, message m, **random coins r**), 출력( hash value h, check string ξ )
+    + HVer : 입력(hk, m, h, ξ), 출력(1 또는 0)
+    + HCol : 입력(tk, h, m, ξ, m’), 출력( ξ’ )
+      + HVer( hk,m, h, ξ ) = HVer(hk, m’, h, ξ,’ ) = 1 이 되는 ξ’
+
++ Public-coin hashing
+  + Hash에 쓰는 r이 원래 랜덤이라 비밀인데, 이것을 고정해서 쓰는 해시함수. 따라서, r이 비밀이 아니며 ξ가 필요 없기 때문에 조금씩 달라짐.
+    + Hash : 입력(hk, message m, random coins r), 출력( hash value h, **random coins r**)
+    + HVer : 입력(hk, m, h, r), 출력(1 또는 0)
+      + Hash 알고리즘과 결국 똑같이 생겼기 때문에 일반적으로 생략함.
+
+
+
+### Redactable Blockchain
++ 1) The redactable blockchain structure 그림의 G함수에 카멜레온 해시 함수를 적용.
+  + secret-coin hashing을 사용했을 때의 validblock 함수
+  {% include articles/figure.html url="/assets/img/byoul/2019/2019071203.png" legend="secret-coin's validblock" width="50%"%}
+  + public-coin hashing을 사용했을 때의 validblock 함수
+  {% include articles/figure.html url="/assets/img/byoul/2019/2019071204.png" legend="secret-coin's validblock" width="50%"%}
+  
++ 2) 체인 수정
+{% include articles/figure.html url="/assets/img/byoul/2019/2019071205.png" legend="Chain Redact Algorithm"%}
+  + 수정할 체인 위치 i
+  + 다른 사용자들은 더 긴 체인을 가지고 있어도 이 체인으로 매핑해야 함.
+  
++ 3) 키를 가져야 하는 사람이 여러명 일 때, 키 관리 방법
+  + (참고 : 수정 가능한 사람이 한 명이면(은행 과 같은 기관) 그냥 알아서 가지고 있으면 됨.)
+  + 조건 : 수정할 수 있는 사용자 집합은 고정되어 있음.
+  + 키 나눠주기
+    + system이 HGen을 이용하여 hk, tk를 만들고, 수정할 수 있는 사용자들 n명이면 tk를 n으로 쪼개서 나누어 줌. 나눠줄 때 secret sharing scheme( Share, Rec)이용.
+      + Share : x(tk)를 받아서 n개의 shares들을 만들어낸다.
+      + Rec : n개의 shares를 받아서 x(tk)나 ㅗ 돌려준다.
+
+  + 수정 방법
+    + 1) n개의 공유부품들을 모아서 tk를 다시 생성 (tk = Rec(r1 … rn) )
+    + 2) 모든 사용자들로부터 수정할 블록 정보, 변경할 메시지를 받아서 E’ 생성할 수 있음. (E’이나 r’이라고 생각하면 될 듯..?). 이렇게 알고리즘1과 똑 같은 형식으로 구현.
+    
+### Chameleon Hash Transform
++ 기존의 public-coin hashing함수에서, Public-Key Encryption과 Non-Interactive Zero-Knowledge 를 이용하여 카멜레온 해시 함수를 개선함.
+
 
 ### Experiments
-
-
-### DISCUSSIONS
+{% include articles/figure.html url="/assets/img/byoul/2019/2019071205.png" legend="Chain Redact Algorithm"%}
 
 
 ### Points to note
-
++ 카멜레온 해시의 단점, 장점 및 그 개선으로 인한 효과, 한계가 주요 내용인 것 같은데 카멜레온 해시를 모르니까 설명이 안되는 부분이 좀 많은 것 같음.
++ 카멜레온 해시 함수에 대한 설명이 우선되어야 할 것 같고, 이후 논문에 대한 추가 설명이 필요해 보임.
 
 ## Discussion
 Editor: 작성자 이름
