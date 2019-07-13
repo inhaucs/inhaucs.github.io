@@ -1,16 +1,16 @@
 ---
-title: Session 1. Generation of Cancelable Iris Templates via Randomized Bit Sampling
-date: 2019-07-04 00:00:00 Z
+title: Session 2. Generation of Cancelable Iris Templates via Randomized Bit Sampling
+date: 2019-07-15 00:00:00 Z
 description: Generation of Cancelable Iris Templates via Randomized Bit Sampling
-card_title: Session 1
+card_title: Session 2
 card_teaser: Generation of Cancelable Iris Templates via Randomized Bit Sampling
-card_position: 1
+card_position: 2
 icon: fa-server
-categories: [seminars,07-xx-2019-morning-seminar,presentation]
+categories: [seminars,07-15-2019-morning-seminar,presentation]
 tags: [TIFS, 2019, TIFS2019, Cancelable biometrics, iris, security, locality sensitive hashing]
 sidebar: morning-seminar
 layout: default
-slug: ms-presentation-hy-july-xx-2019
+slug: ms-presentation-hy-july-15-2019
 permalink: /:categories/:slug.html
 use_math: true
 ---
@@ -19,9 +19,12 @@ use_math: true
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
 
+## 예진이 NAS 살려줘 계정(알려주고 며칠간 해 줄지 정하면 될듯)
+## SGX
+
 ## Presenter & Date
 + Hee-Yong Kwon (권희용)
-+ 2019-07-xx
++ 2019-07-15
 
 ## [Generation of Cancelable Iris Templates via Randomized Bit Sampling](https://inhaucs.github.io/seminars/07-xx-2019-morning-seminar/presentation/ms-presentation-hy-july-xx-2019.html)
 
@@ -62,7 +65,43 @@ Iris-based biometric models are widely recognized to be one of the most accurate
 
 
 ## Related Work
++ Cancelable iris scheme은 두 개의 카테고리로 나눌 수 있음: Salting \& non-invertible transform
+1) Salting
+    + 데이터 변환을 위해 원본 biometrics 데이터와 보조 데이터(e.g., password, token)를 조합
+      + One of the first study: [[CJL06]] - inner-product 사용
+      + Two salting techniques: [[ZRC08]] - 인공적인 시드를 IrisCode에 더해서 변환 \& 임의의 키와 XOR 연산
+      + Random Projection: [[TY07], [PPC+10]] - 원본 biometrics 를 임의의 수의 부분으로 나누어 projection하는 방법
+2) Non-invertible transform
+    + one-way transformation functions 을 기반으로 수행
+      + Tokenless iris template protection model: [[OTN10]] - **Bio-encoding**
+      + [[OTN10]]의 문제점 분석: [[L12]]
+      + Use modified Bloom filters for generating cancelable iris templates: [[RBB13]], [[RB14]]
+      + Modified Bloom filters 를 사용한 연구 공격: [[HMP14]] - Cross-matching based attacks
 
+
+## Preliminaries
++ Locality Sensitive Hashing (LSH)
+  + 높은 차원의 데이터를 차원 축소하는 해시
+  + 비슷한 데이터에 대해 collision을 높임
+    + 이로 인해 비슷한 데이터는 같은 값으로 해시됨
++ Bit sampling based LSH
+  + LSH family를 만드는 효율적인 방법인 Bit sampling 사용
+
+[CJL06]: <https://www.sciencedirect.com/science/article/pii/S107731420600004X> "C. S. Chin, A. T. B. Jin, and D. N. C. Ling, “High security iris verification system based on random secret integration,” Comput. Vis. Image Understand., vol. 102, no. 2, pp. 169–177, 2006."
+[ZRC08]: <https://ieeexplore.ieee.org/abstract/document/4761886> "J. Zuo, N. K. Ratha, and J. H. Connell, “Cancelable iris biometric,” in Proc. 19th Int. Conf. Pattern Recognit., Dec. 2008, pp. 1–4."
+[TY07]: <https://ieeexplore.ieee.org/abstract/document/4305292> "A. B. J. Teoh and C. T. Yuang, “Cancelable biometrics realization with multispace random projections,” IEEE Trans. Syst., Man, Cybern. B, Cybern., vol. 37, no. 5, pp. 1096–1106, Oct. 2007."
+[PPC+10]: <https://ieeexplore.ieee.org/abstract/document/5495383> "J. K. Pillai, V. M. Patel, R. Chellappa, and N. K. Ratha, “Sectored random projections for cancelable iris biometrics,” in Proc. IEEE Int. Conf. Acoust., Speech Signal Process., Mar. 2010, pp. 1838–1841."
+[OTN10]: <https://ieeexplore.ieee.org/abstract/document/5596070> "O. Ouda, N. Tsumura, and T. Nakaguchi, “Tokenless cancelable biometrics scheme for protecting iris codes,” in Proc. 20th Int. Conf. Pattern Recognit., Aug. 2010, pp. 882–885."
+[L12]: <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.736.2059&rep=rep1&type=pdf> "P. Lacharme, “Analysis of the iriscode bioencoding scheme,” Int. J. Comput. Sci. Secur., vol. 6, no. 5, pp. 315–321, Oct. 2012."
+[RBB13]: <https://ieeexplore.ieee.org/abstract/document/6612976> "C. Rathgeb, F. Breitinger, and C. Busch, “Alignment-free cancelable iris biometric templates based on adaptive bloom filters,” in Proc. Int. Conf. Biometrics, Jun. 2013, pp. 1–8."
+[RB14]: <https://www.sciencedirect.com/science/article/pii/S0167404814000029> "C. Rathgeb and C. Busch, “Cancelable multi-biometrics: Mixing iriscodes based on adaptive bloom filters,” Comput. Secur., vol. 42, pp. 1–12, 2014."
+[HMP14]: <https://ieeexplore.ieee.org/abstract/document/7029413/> "J. Hermans, B. Mennink, and R. Peeters, “When a bloom filter is a doom filter: Security assessment of a novel iris biometric template protection system,” in Proc. Int. Conf. Biometrics Special Interest Group, Sep. 2014, pp. 1–6."
+[]: <> ""
+[]: <> ""
+[]: <> ""
+[]: <> ""
+[]: <> ""
+<!-- []: <> "" -->
 
 
 + IoT & Mobile 기기들이 늘어남에 따라 네트워크 트래픽도 급격히 증가 -> 보안 및 프라이버시 문제 발생
