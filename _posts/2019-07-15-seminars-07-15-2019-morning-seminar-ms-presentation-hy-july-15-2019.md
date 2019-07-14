@@ -20,7 +20,7 @@ use_math: true
 {% include layout/col_start.html column="7" %}
 
 ## 예진이 NAS 살려줘 계정(알려주고 며칠간 해 줄지 정하면 될듯)
-## SGX
+## SGX 설명
 
 ## Presenter & Date
 + Hee-Yong Kwon (권희용)
@@ -59,7 +59,7 @@ Iris-based biometric models are widely recognized to be one of the most accurate
 [RU11]: <https://jis-eurasipjournals.springeropen.com/articles/10.1186/1687-417X-2011-3> "C. Rathgeb and A. Uhl, “A survey on biometric cryptosystems and cancelable biometrics,” EURASIP J. Inf. Secur., vol. 2011, no. 1, p. 3, Sep. 2011. [Online]. Available: https://link. springer.com/article/10.1186/1687-417X-2011-3"
 
 + Contributions
-  + Randomized bit sampling 을 사용하여 IrisCode에 적용할 Locality-sensitive hashing (LSH) 생성 $\rightarrow$ 이를 Locality Sampled Code (LSC) 라 명명
+  + Randomized bit sampling 을 사용하여 IrisCode에 적용할 Locality-sensitive hashing (LSH) 생성 $\rightarrow$ 이를 Locality Sampled Code (LSC) 라 명명 : Template
     + LSC는 modulo threshold를 사용하여 비가역연산(Non-invertible)
   + CASIAv3 and IITD 데이터베이스에 대해 분석
 
@@ -85,7 +85,7 @@ Iris-based biometric models are widely recognized to be one of the most accurate
   + 비슷한 데이터에 대해 collision을 높임
     + 이로 인해 비슷한 데이터는 같은 값으로 해시됨
 + Bit sampling based LSH
-  + LSH family를 만드는 효율적인 방법인 Bit sampling 사용
+  + LSH family를 만드는 효율적인 방법인 Bit sampling 사용한 LSH를 사용
 
 [CJL06]: <https://www.sciencedirect.com/science/article/pii/S107731420600004X> "C. S. Chin, A. T. B. Jin, and D. N. C. Ling, “High security iris verification system based on random secret integration,” Comput. Vis. Image Understand., vol. 102, no. 2, pp. 169–177, 2006."
 [ZRC08]: <https://ieeexplore.ieee.org/abstract/document/4761886> "J. Zuo, N. K. Ratha, and J. H. Connell, “Cancelable iris biometric,” in Proc. 19th Int. Conf. Pattern Recognit., Dec. 2008, pp. 1–4."
@@ -96,57 +96,41 @@ Iris-based biometric models are widely recognized to be one of the most accurate
 [RBB13]: <https://ieeexplore.ieee.org/abstract/document/6612976> "C. Rathgeb, F. Breitinger, and C. Busch, “Alignment-free cancelable iris biometric templates based on adaptive bloom filters,” in Proc. Int. Conf. Biometrics, Jun. 2013, pp. 1–8."
 [RB14]: <https://www.sciencedirect.com/science/article/pii/S0167404814000029> "C. Rathgeb and C. Busch, “Cancelable multi-biometrics: Mixing iriscodes based on adaptive bloom filters,” Comput. Secur., vol. 42, pp. 1–12, 2014."
 [HMP14]: <https://ieeexplore.ieee.org/abstract/document/7029413/> "J. Hermans, B. Mennink, and R. Peeters, “When a bloom filter is a doom filter: Security assessment of a novel iris biometric template protection system,” in Proc. Int. Conf. Biometrics Special Interest Group, Sep. 2014, pp. 1–6."
-[]: <> ""
-[]: <> ""
-[]: <> ""
-[]: <> ""
-[]: <> ""
+
+
+## Methodology
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-15-fig-generation_LSCs.png" legend="Generation of LSCs." width="75%" %}
++ 홍채 이미지로부터 추출된 IrisCode 를 n 개의 블록으로 나눔
++ $l$ 개의 bit sampling hash function 을 사용하여, $l$ 개의 $k$-bit$ 샘플링
+  + $l$, $k$ 이 커질수록, 안전성은 높아지고 성능은 낮아짐
++ 샘플링된 데이터들을 10진수로 표현 후, modulo 연산 $\rightarrow$ non-invertible
+
+
+## Experimental Results and Analysis
++ databases
+  + [CASIAv3-Iris-Interval database](http://biometrics.idealtest.org/)
+  + IIT Delhi Iris database [[KP10]]
++ Pre-processing
+  + Segmentation process: [[UW12]]
+  + Feature extraction process: [[MTW+04]] $\rightarrow$ 04?
++ Results
+
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-15-tbl_EER.png" legend="Variation of EER (\%)." width="75%" %}
+
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-15-tbl_comp.png" legend="Comparative Analysis." width="75%" %}
++ CASIAv3 데이터셋에 대해 실험한 결과는 기존의 논문들보다 낮은 EER을 보이며, IITD의 경우도 준수함
+  + IITD에서 다른 연구보다 높지 않은 이유에 대해, 다른 연구에서는 Multiple biometric characteristics에 기반한 fusion strategy를 사용했는데 본 연구에서는 사용하지 않았기 때문이라고 함
+
+[KP10]: <https://www.sciencedirect.com/science/article/pii/S0031320309003343> "A. Kumar and A. Passi, “Comparison and combination of iris matchers for reliable personal authentication,” Pattern Recognit., vol. 43, no. 3, pp. 1016–1026, 2010."
+[UW12]: <https://ieeexplore.ieee.org/abstract/document/6199821> "A. Uhl and P. Wild, “Weighted adaptive hough and ellipsopolar transforms for real-time iris segmentation,” in 5th IAPR Int. Conf. Biometrics, Mar./Apr. 2012, pp. 283–290."
+[MTW+04]: <https://ieeexplore.ieee.org/abstract/document/1298831> "L. Ma, T. Tan, Y. Wang, and D. Zhang, “Efficient iris recognition by characterizing key local variations,” IEEE Trans. Image Process., vol. 13, no. 6, pp. 739–750, Jun. 2004."
 <!-- []: <> "" -->
 
 
-+ IoT & Mobile 기기들이 늘어남에 따라 네트워크 트래픽도 급격히 증가 -> 보안 및 프라이버시 문제 발생
-+ 최근의 네트워크 데이터들은 일반적으로 암호화됨
-  + 트래픽이 암호화되어 있더라도 분석을 통해 사용자 행위를 식별하는 연구들이 있음 ([[CMS+16]], [[TSC+18]])
-    + Hgih entropy stream 을 잘 분석하지 못 하다는 한계 존재
-+ 보통은 데이터 보호를 위해 암호화를 사용함
-  + 그러나 IoT 기기들은 연산 능력의 부족으로 암호화를 잘 수행하지 못 함
-    + ***기존의 기술들은 암호화(Encryption)와 압축(Compression)을 잘 구별하지 못하므로***, 암호화 대신 압축을 많이 사용함
-+ 그래서 HEDGE: High Entropy DistinGuishEr 개발
-  + 기존의 접근과 달리 모든 네트워크 트래픽을 분석하지 않음
-  + 실시간 탐지를 위해 임의의 부분적인 트래픽 사용 (Random Subset)
-+ Git: Dataset and Implementation
-  + https://github.com/francasino/traffic_analysis
-+ 결과 요약
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-01-fig-comp_summ.png" legend="A comparative summary." width="50%" %}
-  + 초록색과 노란 선의 결과는 우리와 달리 추가적인 트래픽 정보를 사용해 분석한 결과임
-  + 64 KB 패킷에서는 94.72% 의 분류 성공율을 보임
-  + 1 KB 패킷에서도 (노란 선과 초록 선을 제외하면), 기존의 state-of-the-art인 66.9%를 70.6%로 올림 -> 작은 크기의 패킷에서 이 정도의 성능 향상은 큰 향상임을 어필
-[CMS+16]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7265055> "M. Conti, L. V. Mancini, R. Spolaor, and N. V. Verde, “Analyzing android encrypted network traffic to identify user actions,” IEEE Trans. Inf. Forensics Security, vol. 11, no. 1, pp. 114–125, Jan. 2016."
-[TSC+18]: <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8006282> "V. F. Taylor, R. Spolaor, M. Conti, and I. Martinovic, “Robust smartphone app identification via encrypted network traffic analysis,” IEEE Trans. Inf. Forensics Security, vol. 13, no. 1, pp. 63–78, Jan. 2018."
-
-
-## Proposed Approach
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-01-fig-overview.png" legend="An overview of the proposed approach." width="50%" %}
-+ 교환되는 메시지 : 평문, 암호문, 압축문
-+ Eve: 메시지 인터셉트 가능
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-01-fig-step_by_step.png" legend="Step by step of our methodology." width="50%" %}
-+ Randomness Tests 에는 Chi square test (2) 와 NIST SP 800-22 (1) 세 가지를 사용
-+ 구분하려는 암호화 알고리즘은 AES (128, 192, 256) & Camelia (128, 192, 256) 이며, 압축 알고리즘은 ZIP, RAR, BZIP2, GZIP
-
-
-## Experiments
-+ 상기 Randomness test 들은 파일 크기에 영향을 받으므로, 실험에서 파일 크기도 고려함
-+ Dataset
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-01-fig-dataset.png" legend="Datasets." width="50%" %}
-  + 그림, 비디오, 바이너리, 오디오, 텍스트, PDF 에서 같은 수의 파일 사용
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-01-fig-accuracy.png" legend="Accuracy detection." width="50%" %}
-  + Gain Factor? : 회수율(이득률)이라고 하는데, 설명은 없고 적용한다고 되어있음. 실험 결과를 보면 Threshold가 얼마나 엄격하게 적용되는지를 결정하는 인자로 생각됨
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-01-fig-outcomes.png" legend="Outcomes." width="50%" %}
-
-
 ### Points to note
-+ 기계 학습을 사용하지 않고 높은 성능으로 암호화 패킷과 압축된 패킷을 구분하는 방법 제시
-+ 구현 코드 제공 : https://github.com/francasino/traffic_analysis
++ 취소가능한 템플릿을 만드는 새로운 방법 제시
+  + Bit sampling based LSH 사용
++ 실제 홍채 데이터셋에 대한 실험 및 분석 수행
 
 
 
