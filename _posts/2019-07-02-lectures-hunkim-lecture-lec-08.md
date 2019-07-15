@@ -1,15 +1,15 @@
 ---
-title: Lecture 07
+title: Lecture 08
 date: 2019-07-02 00:00:00 Z
-description: Lecture 07
-card_title: Lecture 07
-card_teaser: Application & Tips. Learning rate, data preprocessing, overfitting & Learning and test data sets
-card_position: 8
+description: Lecture 08
+card_title: Lecture 08
+card_teaser: 딥러닝의 기본 개념. 시작과 XOR 문제 & Back-propagation 과 2006/2007 '딥'의 출현
+card_position: 9
 icon: fa-server
 categories: [lectures,hunkim-lecture,contents]
 sidebar: hunkim-lecture
 layout: default
-slug: hunkim-lecture-lec-07
+slug: hunkim-lecture-lec-08
 permalink: /:categories/:slug.html
 use_math: true
 ---
@@ -18,7 +18,7 @@ use_math: true
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
 
-#Lecture 07 - Application & Tips: Learning rate, data preprocessing, overfitting & Learning and test data sets
+#Lecture 08 - 딥러닝의 기본 개념. 시작과 XOR 문제
 
 ## Writer
 + Hee-Yong Kwon (권희용)
