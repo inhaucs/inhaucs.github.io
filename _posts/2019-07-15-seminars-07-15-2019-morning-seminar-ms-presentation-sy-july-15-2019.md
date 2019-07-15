@@ -2,9 +2,9 @@
 title: Session 3. On Computing Products of Pairings
 date: 2019-07-15 00:00:00 Z
 description: On Computing Products of Pairings
-card_title: Session 1
+card_title: Session 3
 card_teaser: On Computing Products of Pairings
-card_position: 1
+card_position: 3
 icon: fa-server
 categories: [seminars,07-15-2019-morning-seminar,presentation]
 tags: [ePrint, 2006, Pairing, Optimization, Inner Product]
