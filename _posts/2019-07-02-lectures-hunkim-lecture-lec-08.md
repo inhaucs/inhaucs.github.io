@@ -18,111 +18,104 @@ use_math: true
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
 
-#Lecture 08 - 딥러닝의 기본 개념. 시작과 XOR 문제
+#Lecture 08 - 딥러닝의 기본 개념: 시작과 XOR 문제 & Back-propagation 과 2006/2007 '딥'의 출현
 
 ## Writer
 + Hee-Yong Kwon (권희용)
 + 2019-07-15
 
 ### Information of the lecture
-#### [Youtube(Lecture_1)](https://www.youtube.com/watch?v=1jPjVoDV_uo&feature=youtu.be), [Youtube(Lecture_2)](https://www.youtube.com/watch?v=KVv1nMSlPzY&feature=youtu.be), [Slide(Lecture)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lec7.pdf?raw=true)
-#### [Youtube(Tensorflow_1)](https://www.youtube.com/watch?v=oSJfejG2C3w&feature=youtu.be), [Youtube(Tensorflow_2)](https://www.youtube.com/watch?v=ktd5yrki_KA&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab7.pdf?raw=true)
+#### [Youtube(Lecture_1)](https://www.youtube.com/watch?v=n7DNueHGkqE&feature=youtu.be), [Youtube(Lecture_2)](https://www.youtube.com/watch?v=AByVbUX1PUI&feature=youtu.be), [Slide(Lecture)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lec8.pdf?raw=true)
+#### [Youtube(Tensorflow)](https://www.youtube.com/watch?v=ZYX0FaqUeN4&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab8.pdf?raw=true)
 
 ### Lecture_1
-### Application & Tips: Learning rate, data preprocessing, overfitting
-+ Gradient descent의 Learning rate $\alpha$
-  + Large learning rate: Overshooting
-    + 경사면을 내려가는 step이 커짐
-    + 2차원 곡선의 minimum으로 수렴하는 것이 아닌 바깥으로 발산할 수 있음
-  + Small learning rate: Takes too long, stops at local minimum
-    + 매우 천천히 수렴
-    + Minimum이 아닌 구간에서 알고리즘이 종료
-  + Learning rate을 선정하는 것에는 특별한 답이 없으며, 여러번 시도해보아야 함
-    + Cost function을 확인하며 수정
-+ Data (X) preprocessing for gradient descent
-  + Weight이 두 개 있는 경우를 예시로 들어 설명
-  + $\left( x_1, x_2 \right) = \left(1, 9000 \right)$와 같이 두 입력의 차이가 큰 경우
-    + Gradient descent가 발산할 수 있음
-    + 해결 방법
-      + Zero-centered data: 데이터의 중심을 0으로 맞춰주는 방법
-      + Normalized data: 데이터들을 normalization
-        + Standardization: $x_j' = \frac{x_j - \mu_j}{\sigma_j}$
-        + Python
-        ```
-        X_std[:,0] = (X[:,0] - X[:,0].mean()) / X[:,0].std()  // easy way
-        ```
-+ Overfitting
-  + 데이터에 과적합한 모델이 생성되는 경우
-  + 해결 방법
-    + 학습 데이터를 늘리는 방법
-    + Feature의 수를 줄이는 방법
-    + Regularization (일반화)
-      + Weight의 크기를 줄이도록 유도
-      + Cost function에 Regularization term 추가 (일반적으로 $\lambda \sum W^2$ 을 사용)
-        + $\lambda$ : Regularization strength
-      + Tensorflow
-      ```
-      l2reg = 0.001 * tf.reduce_sum(tf.square(W)) // Regularization strength: 0.001
-      ```
+### 딥러닝의 기본 개념: 시작과 XOR 문제
++ 수학적인 내용과 컴퓨터공학적인 내용을 제외한 딥러닝 소개
+  + 인간의 뉴런 설명
+  + 뉴런과 비슷한 머신 설계 with Activation Functions
++ OR/AND 문제는 linearly separable 하지만, XOR는 불가능
+  + Marvin Minsky (1969) 가 XOR 는 수학적으로 해결할 수 없는 문제임을 증명
+  + Multi Layer Perceptron (MLP) 를 사용하면 해결되지만 weight을 학습하는 것이 불가능 할 것이라 함
+  + 1974, 1982 (Paul Werbos), and 1986 (Hinton): Backpropagation을 제안함으로써 해결법 제시
+    + 문제점
+      + 레이어가 많아질수록 Backpropagation 의 Output 의 에러가 앞쪽으로 잘 전달되지 않음
+      + 훨씬 간단한 SVM, RandomForest 등의 등장
 
 <br>
 
 ### Lecture_2
-### Application & Tips: Learning and test data sets
-+ Performance evaluation: is this good?
-  + 학습된 모델의 성능을 측정하는 방법
-  + 전체 데이터로 학습 후, 같은 데이터로 테스트를 수행하는 것은 좋은 방법이 아님
-    + 따라서, 가지고 있는 데이터를 7 : 3 = Training set : Test set 으로 나눔
-      + Training set 으로 학습 후 Test set 으로 확인
-+ Training, validation and test sets
-  + Training set 을 Training set 과 Validation set 으로 나눔
-  + Training set 은 학습에 사용하고, Validation set 으로 파라미터 $\alpha, \lambda$를 튜닝
-  + Test set 으로 테스트
-+ 데이터셋이 매우 많아, 한 번에 학습시키기 어려운 경우
-  + Online learning 사용
-    + e.g., 100 만 개의 데이터가 있을 때, 10 만 개씩 나누어 순차적으로 학습
-    + 새로운 학습 데이터가 추가되어도 이전의 데이터를 다시 학습할 필요 없음
+### 딥러닝의 기본 개념: Back-propagation 과 2006/2007 '딥'의 출현
++ Backpropagation의 문제점: 레이어가 많은 경우 학습이 제대로 진행되지 않음
++ CIFAR: Canadian Institute for Adavanced Research
+  + 돈이 되지 않더라도 딥러닝 연구가 가능하도록 연구자들 독려
+  + 연구를 통해 Breakthrough가 되는 두 논문 발표
+    + Hinton, Simon Osindero, and Yee-Whye Teh, "A fast learning algorithm for deep belief nets", 2006.
+      + 레이어가 많을 때 weight 이 잘 학습되지 않는 것은 초기값을 제대로 주지 않았기 때문
+    + Yoshua Bengio et al. "Greedy Layer-Wise Training of Deep Networks", 2007.
+    + 상기 두 논문으로 인해 Neural networks 를 Deep Learning 으로 바꾸어 부르기 시작하였고, 다시 대두되기 시작함
+  + ImageNet 또한 관심을 끄는데 도움
+    + 2012, AlexNet의 등장 ImageNet Classification 의 에러율을 크게 줄임
+    + 2015, 3\% 의 에러율까지 줄임
++ Deep learning이 필요한 이유 (Business 등)
 
 <br>
 
-### Tensorflow_1
-#### Learning rate, Evaluation
-+ Tensorflow 를 사용하여 Training set 과 Test set 을 나누는 방법에 대해 설명
-  + 학습에 사용되지 않은 데이터로 테스트를 수행하여야 함
-+ Learning rate: NaN! $\rightarrow$ Learning rate 을 정하는 방법
-  + Overshooting 과 Performance 관리
-  + Large learning rate 으로 인한 Overshooting 의 경우 $\infty$와 nan 으로 출력됨
-    + 학습 실패
-  + Small learning rate 으로 인한 cost 불변 예시를 제시
-+ Non-normalized inputs
-  + Normalization 이 되지 않은 경우, 특정 큰 값에 의해 Gradient descent 가 발산할 수 있음
-    + 이 경우에도 Tensorflow 는 nan 으로 출력
-  + 해결을 위해 다음과 같은 방법을 사용
-    + 각 Feature 마다, 가장 작은 값과 큰 값을 0과 1로 두어 normalization
-    ```
-    xy = MinMaxScaler(xy)
-    ```
-
-<br>
-
-### Tensorflow_2
-#### Meet MNIST Dataset
-+ 미국의 우체국에서 ZIP code 를 식별하기 위해 만들어진 데이터셋
-  + 각 데이터는 28 * 28 * 1 이미지 $\rightarrow$ 784 features
-+ Tensorflow 에서 MNIST 데이터를 로드하는 방법에 대한 설명
+### Tensorflow
+#### Tensor Manipulation
++ Tensor 를 다루는 방법에 대한 실습
+  + Tensorflow 를 효율적으로 다루기 위한 과정
++ Array Slicing에 대한 방법 리뷰
 ```
-from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
-...
-batch_xs, batch_ys = mnist.train.next_batch(100)
-...
-print("Accuracy: ", accuracy.eval(session=sess, feed_dict={X: mnist.test.images, Y: mnist.test.labels}))
+e.g., t[2:5], t[4:-1], t[2:], etc.
 ```
-+ Training epoch/batch
-  + 학습 데이터가 큰 경우, 조금씩 batch_size로 나누어 학습
-    + one epoch: 전체 데이터셋을 한 번 학습시키는 것
-    + batch_size: 전체 데이터 중, 한 번에 몇 개씩 학습할 것인가
-    + e.g., 1,000 training examples, batch size is 500, then it will take 2 iterations to complete 1 epoch.
++ Shape, Rank, Axis
+  + Rank 는 가장 바깥의 괄호의 수와 같음
+  + Shape 은 데이터의 형태
+  ```
+  t = tf.constant([[[[1,2,3,4], [5,6,7,8], [9,10,11,12]],[[1,2,3,4], [5,6,7,8], [9,10,11,12]]]]) // Rank = 4, Shape = [1,2,3,4], Axis 는 Shape 의 순서 (axis = 0 인 경우 가장 바깥의 Element 로 이해)
+  ```
++ Broadcasting: Shape 이 다른 행렬간의 연산을 가능하게 함
+  + 그러나 사용 시에 인식하고 있는 연산과 다를 수 있으므로 주의를 요함
++ Reduce mean 에서의 Axis 사용 (+ Argmax 에서의 예시 포함)
+```
+x = [[1.,2.],[3.,4.]]
+tf.reduce_mean(x).eval()          // 2.5
+tf.reduce_mean(x, axis=0).eval()  // [2., 3.]
+tf.reduce_mean(x, axis=1).eval()  // [1.5, 3.5]
+```
++ **Reshape**
+```
+t = np.array([[[0,1,2], [3,4,5]], [6,7,8], [9,10,11]]])
+tf.reshape(t, shape=[-1,3]).eval() // 보통 reshape 시에 가장 내부의 Element 개수는 그대로 유지
+// Result
+array([[0,1,2], [3,4,5], [6,7,8], [9,10,11]])
+```
+  + 특수 목적 Reshape (squeeze, expand)
+    ```
+    tf.squeeze([[0], [1], [2]]).eval()  // [0,1,2]
+    tf.expand_dims([0,1,2], 1).eval()   // [[0], [1], [2]]
+    ```
++ One hot 사용법
+```
+t = tf.one_hot([[0], [1], [2], [0]], depth=3)   // one hot 이 될 수 있는 값의 수
+tf.reshape(t, shape=[-1,3]).eval()              // one hot 함수의 경우 rank 가 자동으로 하나 증가하므로 reshape을 통해 줄여줄 수 있음
+```
++ Casting
+  + True / False 를 0 / 1 로 표현
++ Ones and Zeros like
+```
+tf.ones_like(x).eval()  // x와 같은 모양에 1로 채워진 행렬 반환
+tf.zeros_like(x).eval() // x와 같은 모양에 0으로 채워진 행렬 반환
+```
++ Zip: 반복문 등에서 한 번에 여러 개의 입력을 받는 방법
+```
+for x, y in zip([1,2,3], [4,5,6]):
+  print(x, y)
+// Result
+1 4
+2 5
+3 6
+```
 
 {% include date/updated.html %}
 {% include layout/col_end.html %}
