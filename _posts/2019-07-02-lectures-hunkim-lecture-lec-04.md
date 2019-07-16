@@ -43,7 +43,7 @@ use_math: true
       + 행렬 사용시에는 보통 X를 앞쪽에 표기
   + 상기 방법을 그대로 사용하는 경우 Instance가 10,000개일 때, 행렬 연산을 10,000번 수행해야 함
     + 전체를 큰 행렬에 넣고 한 번에 계산할 수 있음
-    + e.g., $$\begin{matrix} x_{11} & x_{12} & x_{13} \\ x_{21} & x_{22} & x_{23} \end{matrix} \begin{matrix} w_1 \\ w_2 \\ w_3 \end{matrix} = \begin{matrix} x_{11}w_1 + x_{12}w_2 + x_{13}w_3 \\ x_{21}w_1 + x_{22}w_2 + x_{23}w_3 \end{matrix}$$
+    + e.g., $$\begin{bmatrix} x_{11} & x_{12} & x_{13} \\ x_{21} & x_{22} & x_{23} \end{bmatrix} \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} = \begin{bmatrix} x_{11}w_1 + x_{12}w_2 + x_{13}w_3 \\ x_{21}w_1 + x_{22}w_2 + x_{23}w_3 \end{bmatrix}$$
   + WX vs. **XW**
     + Theory에서는 $H(x)=Wx+b$로 표기하지만 실제 구현시에는 $H(X) = XW$로 구현
 
