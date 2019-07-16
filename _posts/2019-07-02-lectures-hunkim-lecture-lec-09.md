@@ -77,42 +77,41 @@ use_math: true
   + Tensor 하나에 대해서 학습을 수행하여도 Accuracy=0.5 $\rightarrow$ Tensor 하나로는 불가능
   + 첫 번째 레이어의 weight 을 $2 \times 2$ 행렬로 수정 후, 두 번째 레이어 추가 $\rightarrow$ Accuracy=1.0
 + Wide NN for XOR
-  + 
+  + 상기 방법에서는 Tensor 가 하나씩인 두 개의 레이어로 XOR 문제 해결
+  + Wide NN 으로 해결해보는 방법 (좋은 방법은 아니지만 예시를 보여주기 위함)
+    + 첫 번째 레이어의 출력을 2 $\rightarrow$ 10 로 증가시켜 학습 시도
+      + 즉 weight 인 $(W,b)$ 를 2개에서 10개로 늘림
+      + 학습 결과 성능이 더 향상됨
++ Deep NN for XOR
+  + Wide & Deep example 제시
+    + $\left[ 2, 10 \right]$ 의  weight 을 가지는 3개의 레이어와 결과를 출력하는 레이어, 총 4개의 레이어로 구성된 모델 학습
+    + 역시 학습 결과 성능이 더 향상됨
 
 <br>
 
 ### Tensorflow_2
 #### Tensorboard for XOR NN
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
++ Tensorflow 로 작성한 graph 를 구상화
+  + Old fashion: print, print, print
+  + 5 개의 단계를 통해 사용 가능
+  ```
+  // 1. From TF graph, decide which tensors you want to log
+  w2_hist = tf.summary.histogram("weights2", W2)
+  cost_summ = tf.summary.scalar("cost", cost)
+  // 2. Merge all summaries
+  summary = tf.summary.merge_all()
+  // 3. Create writer and add graph
+  # Create summary writer
+  writer = tf.summary.FileWriter('./logs')
+  writer.add_graph(sess.graph)
+  // 4. Run summary merge and add_summary
+  s, _ = sess.run([summary, optimizer], feed_dict=feed_dict)
+  writer.add_summary(s, global_step=global_step)
+  // 5. Launch TensorBoard (in Terminal)
+  tensorboard --logdir=./logs
+  ```
+  + Scalar, Histogram 등의 구상화 가능
+  + 이 후 내용 SKIP
 
 {% include date/updated.html %}
 {% include layout/col_end.html %}
