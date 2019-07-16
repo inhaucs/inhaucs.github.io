@@ -56,25 +56,29 @@ use_math: true
     + tf.Variable로 $W, b$ 정의
     + TF의 Variable은 trainable 변수를 의미함
     + Hypothesis 정의
-    ```
-    hypothesis = x_train * W + b
-    ```
+      ```
+      hypothesis = x_train * W + b
+      ```
     + Cost function 정의
-    ```
-    cost = tf.reduce_mean(tf.square(hypothesis - y_train))
-    ```
-        + reduce\_mean 함수는 평균을 내주는 함수로 cost function의 $\frac{1}{m}\sum^m_{i=1}$에 해당
+      ```
+      cost = tf.reduce_mean(tf.square(hypothesis - y_train))
+      ```
+      + reduce_mean 함수는 평균을 내주는 함수로 cost function의 $\frac{1}{m}\sum^m_{i=1}$에 해당
     + Cost를 최소화하는 값을 찾기 위해 GradientDescent 사용
       + 현재는 자세히 설명하지 않음
 + Run/update graph
     + Session 생성 후, 전역 변수 초기화
-      + sess.run(tf.global\_variables\_initializer())
+      ```
+      sess.run(tf.global_variables_initializer())
+      ```
     + GradientDescent 연산을 매 step 수행하는 방법 설명
       + $W,b$ update
     + train, cost, hypothesis, $W$, $b$ 텐서들의 관계에 대해 그래프를 통해 설명
 + Placeholder를 사용해 Linear regression을 수행하는 방법 설명
 + Training 후, Test하는 방법 소개
-  + sess.run(hypothesis, feed_dict={X:[5]})와 같이 Y 값을 제외하고 전달하면, X가 모델에 입력되었을 때 예상되는 Y 값을 반환
+  ```
+  sess.run(hypothesis, feed_dict={X:[5]}) // 다음과 같이 Y 값을 제외하고 전달하면, X가 모델에 입력되었을 때 예상되는 Y 값을 반환
+  ```  
 
 {% include date/updated.html %}
 {% include layout/col_end.html %}
