@@ -1,5 +1,5 @@
 ---
-title: Lecture 03
+title: Lecture 03. Linear Regression의 cost 최소화 알고리즘의 원리 설명
 date: 2019-07-02 00:00:00 Z
 description: Lecture 03
 card_title: Lecture 03
@@ -17,8 +17,6 @@ use_math: true
 {% assign product = 'ce' %}
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
-
-#Lecture 03 - Linear Regression의 cost 최소화 알고리즘의 원리 설명
 
 ## Writer
 + Hee-Yong Kwon (권희용)
@@ -70,10 +68,14 @@ use_math: true
   + TF의 함수들을 사용해서 Gradient descent를 직접 작성해보는 실습 수행
     + TF는 = 기호로 할당할 수 없고 $W.assign$으로 할당을 수행
   + 그러나 직접 작성하지 않고 일련의 과정을 통해 수행 가능
-    + optimizer = tf.train.GradientDescentOptimizer(learning_rate=x.x)
-    + train = optimizer.minimize(cost)
+    ```
+    optimizer = tf.train.GradientDescentOptimizer(learning_rate=x.x)
+    train = optimizer.minimize(cost)
+    ```
 + (Optional) 심화 설명
-  + gvs = optimizer.compute_gradients(cost)를 통해 gradient값을 임의로 전달 가능
+  ```
+  gvs = optimizer.compute_gradients(cost)를 통해 gradient값을 임의로 전달 가능
+  ```
 
 {% include date/updated.html %}
 {% include layout/col_end.html %}

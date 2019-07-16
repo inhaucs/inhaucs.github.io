@@ -1,5 +1,5 @@
 ---
-title: Lecture 04
+title: Lecture 04. Multi-variable linear regression
 date: 2019-07-02 00:00:00 Z
 description: Lecture 04
 card_title: Lecture 04
@@ -17,8 +17,6 @@ use_math: true
 {% assign product = 'ce' %}
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
-
-#Lecture 04 - Multi-variable linear regression
 
 ## Writer
 + Hee-Yong Kwon (권희용)
@@ -40,7 +38,7 @@ use_math: true
     + $cost(W,b) = \frac{1}{m} \sum^m_{i=1} (H(x_1^{(i)}, x_2^{(i)}, x_3^{(i)})-y^{(i)})^2$
   + 일반적으로 적용 가능 : $w_1x_1 + \ldots + w_nx_n$
     + 표현의 편의를 위해 Matrix 사용
-      + e.g., $\left({\begin{array}{ccc} x_1 & x_2 & x_3 \end{array}}\right)$ $\left(\begin{array}{c} w_1 \\ w_2 \\ w_3 \end{array}\right) = x_1w_1+x_2w_2+x_3w_3$
+      + e.g., $\left[ \begin{matrix} x_1 & x_2 & x_3 \end{matrix} \right]$ $\left[ \begin{array}{c} w_1 \\ w_2 \\ w_3 \end{array} \right] = x_1w_1+x_2w_2+x_3w_3$
       + $H(X) =XW$로 표현 가능
       + 행렬 사용시에는 보통 X를 앞쪽에 표기
   + 상기 방법을 그대로 사용하는 경우 Instance가 10,000개일 때, 행렬 연산을 10,000번 수행해야 함
