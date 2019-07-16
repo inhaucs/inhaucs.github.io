@@ -1,5 +1,5 @@
 ---
-title: Lecture 02
+title: Lecture 02. Linear Regression의 Hypothesis 와 cost 설명
 date: 2019-07-02 00:00:00 Z
 description: Lecture 02
 card_title: Lecture 02
@@ -18,8 +18,6 @@ use_math: true
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
 
-#Lecture 02 - Linear Regression의 Hypothesis 와 cost 설명
-
 ## Writer
 + Hee-Yong Kwon (권희용)
 + 2019-07-03
@@ -32,12 +30,12 @@ use_math: true
 ### Linear Regression
 + Regression의 예시 : Predicting exam score
 + Linear regression
-  1) 식을 $H(x) = Wx + b$ 로 가정
-  2) H(x)로 나타내는 여러가지 직선 중 어떤 직선을 선택할 것인지 정해야 함 (W와 b의 결정)
+  + 식을 $H(x) = Wx + b$ 로 가정
+  + H(x)로 나타내는 여러가지 직선 중 어떤 직선을 선택할 것인지 정해야 함 (W와 b의 결정)
       + Cost(Loss) function 사용
       + Data와 차이가 가장 적은 직선 선택
         + $cost = \frac{1}{m} \sum^m_{i=1} (H(x^{(i)})-y^{(i)})^2$
-        + 상기 cost function의 $H(x^{(i)})$에 $H(x) = Wx + b$를 대입하면 $cost(W,b)$로 표현 가능하고, $\min_{W,b} cost(W,b)$를 구하는 것이 목표
+        + 상기 cost function의 $H(x^{(i)})$에 $H(x) = Wx + b$를 대입하면 $cost(W,b)$로 표현 가능하고, $\min\limits_{W,b} cost(W,b)$를 구하는 것이 목표
 + Point
   + Linear regression은 입력 데이터에 가장 적합한 직선을 찾는 것이 목표이며 이를 위해 cost(loss) function을 사용
   + Cost function은 입력 데이터와 현재 직선과의 거리 차이를 구한 것으로, 이 거리가 최소화되는 직선이 가장 최적의 직선이라고 생각할 수 있음

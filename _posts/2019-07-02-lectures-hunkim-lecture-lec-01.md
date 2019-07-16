@@ -45,11 +45,11 @@ use_math: true
   + Training data set으로 Labeled data (Feature-label set)를 학습하여 모델 생성 후, 모르는 Feature에 대해 예상되는 label 출력
 + Supervised learning의 분류
   + Regression
-      + 투자한 시간에 따른 점수의 예측
+    + 투자한 시간에 따른 점수의 예측
   + Binary classification
-      + 투자한 시간에 따른 시험의 통과 여부 (pass/fail)
+    + 투자한 시간에 따른 시험의 통과 여부 (pass/fail)
   + Multi-label classification
-      + 투자한 시간에 따른 시험 결과에 따른 학점 (A, B, C, E and F)
+    + 투자한 시간에 따른 시험 결과에 따른 학점 (A, B, C, E and F)
   + 분류에 따라 Training set이 달라짐
 
 <br>
