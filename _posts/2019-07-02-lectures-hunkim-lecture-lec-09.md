@@ -67,14 +67,17 @@ use_math: true
 
 ### Tensorflow_1
 #### NN for XOR
-+ Input and Output
-```
-x_data = np.array([[0,0], [0,1], [1,0], [1,1]], dtype=np.float32)
-y_data = np.array([[0], [1], [1], [0]], dtype=np.float32)
-```
-+ 결과 값이 0 또는 1 이기 때문에 (binary) 복잡한 softmax 를 사용하지 않고 logistic regression 을 사용
-+ Tensor 하나에 대해서 학습을 수행하여도 Accuracy=0.5 $\rightarrow$ Tensor 하나로는 불가능
-+ 첫 번째 레이어의 weight 을 $2 \times 2$ 행렬로 수정 후, 두 번째 레이어 추가 $\rightarrow$ Accuracy=1.0
++ 기본적인 XOR 문제 해결
+  + Input and Output
+  ```
+  x_data = np.array([[0,0], [0,1], [1,0], [1,1]], dtype=np.float32)
+  y_data = np.array([[0], [1], [1], [0]], dtype=np.float32)
+  ```
+  + 결과 값이 0 또는 1 이기 때문에 (binary) 복잡한 softmax 를 사용하지 않고 logistic regression 을 사용
+  + Tensor 하나에 대해서 학습을 수행하여도 Accuracy=0.5 $\rightarrow$ Tensor 하나로는 불가능
+  + 첫 번째 레이어의 weight 을 $2 \times 2$ 행렬로 수정 후, 두 번째 레이어 추가 $\rightarrow$ Accuracy=1.0
++ Wide NN for XOR
+  + 
 
 <br>
 
