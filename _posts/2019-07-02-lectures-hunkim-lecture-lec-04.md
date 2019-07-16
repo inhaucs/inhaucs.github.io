@@ -62,14 +62,20 @@ use_math: true
 + python array의 slicing 및 indexing 기능을 유용하게 사용하여 데이터를 잘 다룰 수 있음
 + 파일이 너무 커서 메모리에 다 올리지 못 하는 경우
   + TF의 Queue Runners 사용 (3 steps)
-    1) Input file name 나열
-        + filename_queue = tf.train.string_input_producer([fil1, fil2, ...], shuffle=T/F, name='filename_queue')
-    2) File들을 읽어올 Reader 정의
-        + Text로 읽고, (key, value)로 읽는 경우
-          + reader = tf.TextLineReader()
-          + key, value = reader.read(filename_queue)
-    3) 2)에서 읽어온 value 값을 어떻게 파싱할 것인지 정의 (decode)
-        + xy = tf.decode_csv(value, record_defaults=record_defaults)
+    + Input file name 나열
+      ```
+      filename_queue = tf.train.string_input_producer([fil1, fil2, ...], shuffle=T/F, name='filename_queue')
+      ```
+    + File들을 읽어올 Reader 정의
+      + Text로 읽고, (key, value)로 읽는 경우
+        ```
+        reader = tf.TextLineReader()
+        key, value = reader.read(filename_queue)
+        ```
+    + 상기 File에서 읽어온 value 값을 어떻게 파싱할 것인지 정의 (decode)
+      ```
+      xy = tf.decode_csv(value, record_defaults=record_defaults)
+      ```
   + 상기 절차를 통해 queue에 들어온 데이터들은 tf.train.batch 함수를 통해 배치 연산 가능
 + 데이터의 구조에 따라 shape option을 신경써주어야 함
 + 데이터를 임의의 순서로 진행하고 싶은 경우 shuffle_batch 함수 사용 가능
