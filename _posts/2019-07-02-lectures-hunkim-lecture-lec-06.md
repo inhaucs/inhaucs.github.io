@@ -39,7 +39,7 @@ use_math: true
     + Binary Hyperplane을 여러 개 구현 (e.g., (A, B, C) 분류를 위해 (A or not), (B or not), (C or not) hyperplanes 구현)
     + $$ \begin{bmatrix} w_{1} & w_{2} & w_{3} \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \\ x_{3} \end{bmatrix} = \left[ w_1x_1 + w_2x_2 + w_3x_3 \right] $$ 연산을 세 번 독립적으로 수행하여 가능
       + 이를 한 번에 수행 가능
-      + $$ \begin{bmatrix} w_{A1} & w_{A2} & w_{A3} \\ w_{B1} & w_{B2} & w_{B3} \\ w_{C1} & w_{C2} & w_{C3} \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \\ x_{3} \end{bmatrix} = \begin{bmatrix} w_{A1}x_1 + w_{A2}x_2 + w_{A3}x_3 \\ w_{B1}x_1 + w_{B2}x_2 + w_{B3}x_3 \\ w_{C1}x_1 + w_{C2}x_2 + w_{C3}x_3 \end{bmatrix}$$ = $$\begin{bmatrix} H_A(X) \\ H_B(X) \\ H_C(X) \end{bmatrix} $$
+      + $$ \begin{bmatrix} w_{A1} & w_{A2} & w_{A3} \\ w_{B1} & w_{B2} & w_{B3} \\ w_{C1} & w_{C2} & w_{C3} \end{bmatrix} \begin{bmatrix} x_{1} \\ x_{2} \\ x_{3} \end{bmatrix} = \begin{bmatrix} w_{A1}x_1 + w_{A2}x_2 + w_{A3}x_3 \\ w_{B1}x_1 + w_{B2}x_2 + w_{B3}x_3 \\ w_{C1}x_1 + w_{C2}x_2 + w_{C3}x_3 \end{bmatrix}$$ $$= \begin{bmatrix} H_A(X) \\ H_B(X) \\ H_C(X) \end{bmatrix} $$
     + 상기 연산을 효율적으로 하는 방법에 대해 Lecture_2 에서 설명
 
 <br>
