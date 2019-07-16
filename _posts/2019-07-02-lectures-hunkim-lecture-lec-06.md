@@ -1,5 +1,5 @@
 ---
-title: Lecture 06. Softmax Regression: 기본 개념 소개 & Softmax classifier의 cost function
+title: Lecture 06. Softmax Regression. 기본 개념 소개 & Softmax classifier의 cost function
 date: 2019-07-02 00:00:00 Z
 description: Lecture 06
 card_title: Lecture 06
