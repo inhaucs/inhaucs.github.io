@@ -41,7 +41,7 @@ We also report on a proof-of-concept implementation of a redactable blockchain, 
  
 ## Summary (Korean)
 + 블록체인 기술의 경우 한번 블록에 기록되면 수정할 수 없다는 특징이 있는데, 이 특징이 앞으로 생성될 모든 새로운 어플리케이션에 적절하지는 않을 것임.
-  + 이미 비트코인에 악용 사례가 있음. 비트코인 블록 데이터에 부적절한 콘텐츠를 올리는 사례가 있었음. [31](If you own bitcoin, you also own links to child porn.)
+  + 이미 비트코인에 악용 사례가 있음. 비트코인 블록 데이터에 부적절한 콘텐츠를 올리는 사례가 있었음. [If you own bitcoin, you also own links to child porn.]
   + 계약을 잘못 만들었으면 다시 올리고 해야 되는데 수정이 안되니 결국 다시 올려야 함. -> 자원 낭비.
   + 올라간 데이터들이 영구적으로 안전하다는 보장이 없음.
   + 등등..
