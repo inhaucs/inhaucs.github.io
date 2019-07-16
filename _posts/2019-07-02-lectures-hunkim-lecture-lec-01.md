@@ -1,5 +1,5 @@
 ---
-title: Lecture 01
+title: Lecture 01. 기본적인 Machine Learning의 용어와 개념 설명
 date: 2019-07-02 00:00:00 Z
 description: Lecture 01
 card_title: Lecture 01
@@ -17,8 +17,6 @@ use_math: true
 {% assign product = 'ce' %}
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
-
-#Lecture 01 - 기본적인 Machine Learning의 용어와 개념 설명
 
 ## Writer
 + Hee-Yong Kwon (권희용)
@@ -46,11 +44,11 @@ use_math: true
 + Training data set
   + Training data set으로 Labeled data (Feature-label set)를 학습하여 모델 생성 후, 모르는 Feature에 대해 예상되는 label 출력
 + Supervised learning의 분류
-  1) Regression
+  + Regression
       + 투자한 시간에 따른 점수의 예측
-  2) Binary classification
+  + Binary classification
       + 투자한 시간에 따른 시험의 통과 여부 (pass/fail)
-  3) Multi-label classification
+  + Multi-label classification
       + 투자한 시간에 따른 시험 결과에 따른 학점 (A, B, C, E and F)
   + 분류에 따라 Training set이 달라짐
 
@@ -75,12 +73,12 @@ use_math: true
     + 그래프 내의 변수들 업데이트 후 출력
   + 특정 값 (constant) 외에 다른 값을 입력하고 싶은 경우
     + tf.constant 대신 tf.placeholder로 생성
-    + 그리고 session.run 시에 feed_dict={a, b} 옵션을 사용하여 입력 (vector 입력 가능)
+    + 그리고 session.run 시에 $feed_dict=\left{ a, b \right}$ 옵션을 사용하여 입력 (vector 입력 가능)
     + 즉 그래프를 미리 만들어놓고 다양한 입력에 대해 사용 가능
   + Tensor에 대한 설명
     + Ranks: 몇 차원 array인가 (x-Tensor)
     + Shapes: 각각의 엘리먼트에 몇 개의 정보가 들어있는가
-      + E.g., $t = [[1,2], [3,4], [5,6]]$인 경우, (3,2)로 표현 가능
+      + E.g., $t = [[1,2], [3,4], [5,6]]$인 경우, $(3,2)$로 표현 가능
         + 가장 안의 괄호에 두 개의 엘리먼트이고, 이 것이 3 개 있으므로
     + Types: tf.float32(64), tf.int32(64) 등
 
