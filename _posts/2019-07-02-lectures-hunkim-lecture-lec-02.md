@@ -51,18 +51,22 @@ use_math: true
     + $W$: weight, $b$: bias
   + Cost function
     + $cost(W,b) = \frac{1}{m} \sum^m_{i=1} (H(x^{(i)})-y^{(i)})^2$
-1) Build graph
++ Build graph
     + Training set 정의
     + tf.Variable로 $W, b$ 정의
     + TF의 Variable은 trainable 변수를 의미함
     + Hypothesis 정의
-      + $hypothesis = x\_train * W + b$
+    ```
+    hypothesis = x_train * W + b
+    ```
     + Cost function 정의
-      + cost = tf.reduce\_mean(tf.square(hypothesis - y\_train))
+    ```
+    cost = tf.reduce_mean(tf.square(hypothesis - y_train))
+    ```
         + reduce\_mean 함수는 평균을 내주는 함수로 cost function의 $\frac{1}{m}\sum^m_{i=1}$에 해당
     + Cost를 최소화하는 값을 찾기 위해 GradientDescent 사용
       + 현재는 자세히 설명하지 않음
-2) Run/update graph
++ Run/update graph
     + Session 생성 후, 전역 변수 초기화
       + sess.run(tf.global\_variables\_initializer())
     + GradientDescent 연산을 매 step 수행하는 방법 설명
