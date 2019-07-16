@@ -1,5 +1,5 @@
 ---
-title: Lecture 00
+title: Lecture 00. Machine/Deep learning 수업의 개요와 일정
 date: 2019-07-02 00:00:00 Z
 description: Lecture 00
 card_title: Lecture 00
@@ -17,8 +17,6 @@ use_math: true
 {% assign product = 'ce' %}
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
-
-#Lecture 00 : Machine/Deep learning 수업의 개요와 일정
 
 ## Writer
 + Hee-Yong Kwon (권희용)
