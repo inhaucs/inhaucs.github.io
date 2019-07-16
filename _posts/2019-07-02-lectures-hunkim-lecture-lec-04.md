@@ -38,7 +38,7 @@ use_math: true
     + $cost(W,b) = \frac{1}{m} \sum^m_{i=1} (H(x_1^{(i)}, x_2^{(i)}, x_3^{(i)})-y^{(i)})^2$
   + 일반적으로 적용 가능 : $w_1x_1 + \ldots + w_nx_n$
     + 표현의 편의를 위해 Matrix 사용
-      + e.g., $\left[ \begin{bmatrix} x_1 & x_2 & x_3 \end{bmatrix} \right]$ $\left[ \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix} \right] = x_1w_1+x_2w_2+x_3w_3$
+      + e.g., $\begin{matrix} x_1 & x_2 & x_3 \end{matrix}$ $\begin{matrix} w_1 \\ w_2 \\ w_3 \end{matrix} = x_1w_1+x_2w_2+x_3w_3$
       + $H(X) =XW$로 표현 가능
       + 행렬 사용시에는 보통 X를 앞쪽에 표기
   + 상기 방법을 그대로 사용하는 경우 Instance가 10,000개일 때, 행렬 연산을 10,000번 수행해야 함
