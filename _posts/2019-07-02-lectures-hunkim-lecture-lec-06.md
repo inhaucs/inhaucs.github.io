@@ -49,11 +49,11 @@ use_math: true
 + Multinomial classification 결과가 0과 1 사이의 값으로 출력되기를 원함 $\rightarrow$ Softmax
   + Softmax Equation
     + $S(y_i) = \frac{e^{y_i}}{\sum_j e^{y_j}}$
-  + $\left[ \begin{array}{c} H_A(X) \\ H_B(X) \\ H_C(X) \end{array} \right] = \left[ \begin{array}{c} 2.0 \\ 1.0 \\ 0.1 \end{array} \right]$일 때, Softmax를 사용하여 $\left[ \begin{array}{c} 0.7 \\ 0.2 \\ 0.1 \end{array} \right]$ ($\sum = 1$)이 되도록 함
+  + $$ \begin{bmatrix} H_A(X) \\ H_B(X) \\ H_C(X) \end{bmatrix} = \begin{bmatrix} 2.0 \\ 1.0 \\ 0.1 \end{bmatrix} $$일 때, Softmax를 사용하여 $$ \begin{bmatrix} 0.7 \\ 0.2 \\ 0.1 \end{bmatrix} $$ ($\sum = 1$)이 되도록 함
     + 0과 1 사이의 값
     + $\sum = 1$
     + 확률로 표현 가능
-    + 'ONE-HOT' ENCODING (argmax)을 통해 $\left[ \begin{array}{c} 1.0 \\ 0.0 \\ 0.0 \end{array} \right]$으로 표현 가능
+    + 'ONE-HOT' ENCODING (argmax)을 통해 $$ \begin{bmatrix} 1.0 \\ 0.0 \\ 0.0 \end{bmatrix} $$으로 표현 가능
 + Cost function
   + Cross-Entropy 사용
   + 예측값 $S(y) = \hat Y$, 실제 값 $L = Y$일 때
@@ -61,7 +61,7 @@ use_math: true
       + $-\sum_{i} L_i \log{S_i} = -\sum_{i} L_i \log{\hat Y_i} = \sum_{i} L_i \times (-\log{\hat Y_i})$
         + $-\log{\hat Y_i}$ 는 Softmax 연산이 수행된 값이기 때문에 $\left[ 0,1 \right]$
       + 예시를 통해 cost function이 동작함을 보임
-        + $L = \left[ \begin{array}{c} 0 \\ 1 \end{array} \right]$, $\hat Y_1 = \left[ \begin{array}{c} 0 \\ 1 \end{array} \right]$, $\hat Y_2 = \left[ \begin{array}{c} 1 \\ 0 \end{array} \right]$ 를 사용하여, 예측이 맞은 경우와 틀린 경우의 cost function을 구함
+        + $$ L = \begin{bmatrix} 0 \\ 1 \end{bmatrix} $$, $$\hat Y_1 = \begin{bmatrix} 0 \\ 1 \end{bmatrix} $$, $$\hat Y_2 =  \begin{bmatrix} 1 \\ 0 \end{bmatrix} $$ 를 사용하여, 예측이 맞은 경우와 틀린 경우의 cost function을 구함
   + **Logistic cost vs. cross entropy**
     + Logistic cost: $C(H(x),y) = -y \log{(H(x))} - (1-y) \log{(1-H(x))}$
     + Cross entropy: $D(S, L) = - \sum_{i} L_i \log{S_i}$
