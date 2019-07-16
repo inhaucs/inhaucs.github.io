@@ -18,7 +18,7 @@ use_math: true
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
 
-#Lecture 00 - Machine/Deep learning 수업의 개요와 일정
+#Lecture 00 : Machine/Deep learning 수업의 개요와 일정
 
 ## Writer
 + Hee-Yong Kwon (권희용)
@@ -32,29 +32,17 @@ use_math: true
   + 그동안 바둑은 경우의 수가 너무 많아 컴퓨터가 접근할 수 없는 영역이라 여겨짐
   + 그러나 이세돌이 패배함으로써, 인공지능이 직관적인 의사 결정을 인간 대신 할 수 있을 것인가라는 고민 발생
 + Dr. Andrew Ng의 Machine Learning을 잘 사용하면 Super power를 얻을 수 있다는 말 인용
-
-<br>
-
 + 본 강의의 대상
   + Machine Learnig에 관심이 있는 사람
   + 수학 또는 컴퓨터를 못 하더라도 이해할 수 있음
   + Machine Learning을 black-box로 두고 사용할 수도 있으나, 더 잘 사용하고 싶은 사람
   + Tensorflow를 사용한 Machine Learning을 하고 싶은 사람
-
-<br>
-
 + 본 강의의 목표
   + Deep Learning을 이해하기 위한 기본적인 Machine Learning 알고리즘 Linear regression, Logistic regression의 이해
   + 이를 통해 자신의 문제를 해결할 수 있음
-
-<br>
-
 + 본 강의의 구조
   + 10분 가량의 동영상 강의
   + Tensorflow를 사용한 튜토리얼
-
-<br>
-
 + 본 강의의 일정
   + Machine learning basic concepts
   + Linear regression
@@ -63,9 +51,6 @@ use_math: true
   + Neural networks
   + Deep Learning
     + CNN, RNN, Bidirectional Neural networks
-
-<br>
-
 ### Acknowledgement
 + Andrew Ng's ML class
   + https://class.coursera.org/ml-003/lecture
@@ -75,8 +60,6 @@ use_math: true
 + Tensorflow
   + https://www.tensorflow.org
   + https://github.com/aymericdamien/TensorFlow-Examples
-
-
 
 {% include date/updated.html %}
 {% include layout/col_end.html %}
