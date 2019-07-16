@@ -47,10 +47,10 @@ Iris-based biometric models are widely recognized to be one of the most accurate
     + 변환된 데이터는 쉽게 역연산되지 않아야 함
     + 인식 성능이 좋아야 함
   + 효과적인 cancelable biometrics scheme 은 다음을 만족
-    1) Unlinkability: 같은 데이터로부터 변환된 두 데이터를 구분할 수 없어야 함 -> Countermeasure of cross-matching based attack
-    2) Non-invertibility: One-way 변환으로 인한 역연산 불가
-    3) Revocability: (폐지 가능성), 처음 등록한 데이터가 탈취당할 경우, 새로운 변환 데이터를 생성할 수 있어야 함
-    4) Performance: Baseline 모델에 비해 성능이 많이 떨어지지 않아야 함
+    + Unlinkability: 같은 데이터로부터 변환된 두 데이터를 구분할 수 없어야 함 -> Countermeasure of cross-matching based attack
+    + Non-invertibility: One-way 변환으로 인한 역연산 불가
+    + Revocability: (폐지 가능성), 처음 등록한 데이터가 탈취당할 경우, 새로운 변환 데이터를 생성할 수 있어야 함
+    + Performance: Baseline 모델에 비해 성능이 많이 떨어지지 않아야 함
 
 [D16]: <https://ieeexplore.ieee.org/abstract/document/7328287> "J. Daugman, “Information theory and the iriscode,” IEEE Trans. Inf. Forensics Security, vol. 11, no. 2, pp. 400–409, Feb. 2016."
 [RU11]: <https://jis-eurasipjournals.springeropen.com/articles/10.1186/1687-417X-2011-3> "C. Rathgeb and A. Uhl, “A survey on biometric cryptosystems and cancelable biometrics,” EURASIP J. Inf. Secur., vol. 2011, no. 1, p. 3, Sep. 2011. [Online]. Available: https://link. springer.com/article/10.1186/1687-417X-2011-3"
@@ -63,17 +63,17 @@ Iris-based biometric models are widely recognized to be one of the most accurate
 
 ## Related Work
 + Cancelable iris scheme은 두 개의 카테고리로 나눌 수 있음: Salting & non-invertible transform
-1) Salting
-    + 데이터 변환을 위해 원본 biometrics 데이터와 보조 데이터(e.g., password, token)를 조합
-      + One of the first study: [[CJL06]] - inner-product 사용
-      + Two salting techniques: [[ZRC08]] - 인공적인 시드를 IrisCode에 더해서 변환 & 임의의 키와 XOR 연산
-      + Random Projection: [[TY07], [PPC+10]] - 원본 biometrics 를 임의의 수의 부분으로 나누어 projection하는 방법
-2) Non-invertible transform
-    + one-way transformation functions 을 기반으로 수행
-      + Tokenless iris template protection model: [[OTN10]] - **Bio-encoding**
-      + [[OTN10]]의 문제점 분석: [[L12]]
-      + Use modified Bloom filters for generating cancelable iris templates: [[RBB13]], [[RB14]]
-      + Modified Bloom filters 를 사용한 연구 공격: [[HMP14]] - Cross-matching based attacks
++ Salting
+  + 데이터 변환을 위해 원본 biometrics 데이터와 보조 데이터(e.g., password, token)를 조합
+    + One of the first study: [[CJL06]] - inner-product 사용
+    + Two salting techniques: [[ZRC08]] - 인공적인 시드를 IrisCode에 더해서 변환 & 임의의 키와 XOR 연산
+    + Random Projection: [[TY07], [PPC+10]] - 원본 biometrics 를 임의의 수의 부분으로 나누어 projection하는 방법
++ Non-invertible transform
+  + one-way transformation functions 을 기반으로 수행
+    + Tokenless iris template protection model: [[OTN10]] - **Bio-encoding**
+    + [[OTN10]]의 문제점 분석: [[L12]]
+    + Use modified Bloom filters for generating cancelable iris templates: [[RBB13]], [[RB14]]
+    + Modified Bloom filters 를 사용한 연구 공격: [[HMP14]] - Cross-matching based attacks
 
 
 ## Preliminaries
@@ -97,8 +97,8 @@ Iris-based biometric models are widely recognized to be one of the most accurate
 
 ## Methodology
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-15-fig-generation_LSCs.png" legend="Generation of LSCs." width="75%" %}
-+ 홍채 이미지로부터 추출된 IrisCode 를 n 개의 블록으로 나눔
-+ $l$ 개의 bit sampling hash function 을 사용하여, $l$ 개의 $k$-bit$ 샘플링
++ 홍채 이미지로부터 추출된 IrisCode 를 $n$ 개의 블록으로 나눔
++ $l$ 개의 bit sampling hash function 을 사용하여, $l$ 개의 $k$-bit 샘플링
   + $l$, $k$ 이 커질수록, 안전성은 높아지고 성능은 낮아짐
 + 샘플링된 데이터들을 10진수로 표현 후, modulo 연산 $\rightarrow$ non-invertible
 
@@ -109,7 +109,7 @@ Iris-based biometric models are widely recognized to be one of the most accurate
   + IIT Delhi Iris database [[KP10]]
 + Pre-processing
   + Segmentation process: [[UW12]]
-  + Feature extraction process: [[MTW+04]] $\rightarrow$ 04?
+  + Feature extraction process: [[MTW+04]] $\rightarrow$ 04년도 논문을 사용?
 + Results
 
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-15-tbl_EER.png" legend="Variation of EER (%)." width="75%" %}
