@@ -54,7 +54,7 @@ use_math: true
     + 기존의 Gradient descent를 사용할 수 없음
 + New cost function for logistic
   + $cost(W) = \frac{1}{m} \sum c(H(x), y)$
-    + $c(H(x),y) = $$$\begin{cases} -log(H(x)) & :y=1 \\ -log(1-H(x)) & :y=0 \end{cases}$$
+    + $c(H(x),y) = $ $$\begin{cases} -log(H(x)) & :y=1 \\ -log(1-H(x)) & :y=0 \end{cases}$$
   + Cost function의 울퉁불퉁한 곡선을 매끄럽게 만들기 위해 log 사용
     + $H(x) = 1$이고 $y = 1$인 경우, $C(H(x),y)$가 0에 가까워짐 ($H(x) = 0$ and $y = 0$)
     + $H(x) = 1$이고 $y = 0$인 경우, $C(H(x),y)$가 $\infty$에 가까워짐 ($H(x) = 0$ and $y = 1$)
