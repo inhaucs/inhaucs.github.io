@@ -41,11 +41,14 @@ We introduce chameleon signatures that provide with an undeniable commitment of 
 
  
 ## Summary (Korean)
-+ 일반적으로 디지털 서명은 부인방지기능을 제공하는 암호 툴임. 그러나 이 경우, 수신자가 발신자의 동의 없이 서명된 내용을 아무에게나 공유할 수 있게 됨.
-+ Undeniable signature라는 서명기법이 있는데, zero-knowledge방식을 이용하여 위의 단점을 해결함. 그러나, zero-knowledge를 이용하는 것 때문에 복잡해지고, 비효율적인 상태임.
++ 일반적으로 디지털 서명은 부인방지기능을 제공하는 암호 툴임. 
+  + 그러나 이 경우, 수신자가 발신자의 동의 없이 서명된 내용을 아무에게나 공유할 수 있게 됨.
++ Undeniable signature라는 서명기법이 존재.
+  + zero-knowledge 방식을 이용하여 위의 단점을 해결함. 
+  + 그러나, zero-knowledge를 이용하는 것 때문에 복잡해지고, 비효율적인 상태임.
 + 본 논문에서는 Chameleon signature라는 서명기법을 이용.
-+ Undeniable signature보다 간단하고, 효율적이며, 비대화형이고, zero-knowledge 방식으로 구현되어있는것에 반해
-+ Chameleon signature의 경우는 해시 서명 방식을 이용하여 서명이 되며, 사용하는 해시는 카멜레온 해시를 이용한다.
+  + Undeniable signature보다 간단하고, 효율적이며, 비대화형이고, zero-knowledge 방식으로 구현되어있는것에 반해
+  + Chameleon signature의 경우는 해시 서명 방식을 이용하여 서명이 되며, 사용하는 해시는 카멜레온 해시를 이용한다.
 
 
 ## Details
@@ -54,9 +57,8 @@ We introduce chameleon signatures that provide with an undeniable commitment of 
 + An undeniable signature is a digital signature scheme which allows the signer to be selective to whom they allow to verify signatures. **The scheme adds explicit signature repudiation, preventing a signer later refusing to verify a signature by omission;** a situation that would devalue the signature in the eyes of the verifier. It was invented by David Chaum and Hans van Antwerpen in 1989.
 + 서명자가 자신의 서명을 검증할 수 있는 사람들을 고를 수 있는 디지털 서명 스킴. 이 스킴은 서명을 검증하는 것을 거부하는 것을 막을 수 있는(?) 분명한 서명 거부권리를 가지고 있음.
 + 서명을 생성할 때, 다음 두가지 프로토콜에 대해서 메시지, 서명에 대해 수신인/검증자에게 어떠한 정보도 넘겨주지 않음.
-+ Confirmation protocol : 서명한 자의 공개키와, 메시지에 대한 서명이 유효한지 확인하는 것.
-+ Disavowal protocol : 서명자로부터 나온 메시지가 유효한 서명이 아닌 것을 확인하는 것.
-
+  + "Confirmation protocol : 서명한 자의 공개키와, 메시지에 대한 서명이 유효한지 확인하는 것."
+  + "Disavowal protocol : 서명자로부터 나온 메시지가 유효한 서명이 아닌 것을 확인하는 것."
 
 {% include articles/figure.html url="/assets/img/byoul/2019/2019071801.png" legend="Sign"%}
 {% include articles/figure.html url="/assets/img/byoul/2019/2019071802.png" legend="Confirmation protocol"%}
@@ -70,21 +72,20 @@ We introduce chameleon signatures that provide with an undeniable commitment of 
 + 표기
   + 유저 R, 공개 키 HK, 연결되는 개인키 CK, message m, random string r
 + 특징
-+ 1) 공개 키 HK를 알면 누구나 hash function 계산 가능. Hash value = CHAM-HASH(m,r)
-+ 2)	Trapdoor(CK)를 모르는 사람은 충돌되는 해시값을 찾는 것은 불가능함
-        CK를 모르면 CHAM-HASH(m1, r1) = CHAM-HASH(m2,r2) 인 r2를 찾기는 불가능
-+ 3)	Trapdoor(CK) 정보를 가지고 있는 사람은 충돌을 쉽게 찾을 수 있음.
-        CK를 알면 CHAM-HASH(m1, r1) = CHAM-HASH(m2,r2)인 r2를 쉽게 찾을 수 있음.
+  + 1) 공개 키 HK를 알면 누구나 hash function 계산 가능. Hash value = CHAM-HASH(m,r)
+  + 2)	Trapdoor(CK)를 모르는 사람은 충돌되는 해시값을 찾는 것은 불가능함
+    + CK를 모르면 CHAM-HASH(m1, r1) = CHAM-HASH(m2,r2) 인 r2를 찾기는 불가능
+  + 3)	Trapdoor(CK) 정보를 가지고 있는 사람은 충돌을 쉽게 찾을 수 있음.
+    + CK를 알면 CHAM-HASH(m1, r1) = CHAM-HASH(m2,r2)인 r2를 쉽게 찾을 수 있음.
 
 ### Chameleon Signature
 + 표기
-+ 서명자 S, 수신자 R, 판단하는 사람 J
+  + 서명자 S, 수신자 R, 판단하는 사람 J
+  + S가 서명을 위한 개인-공개키쌍 생성. (각 SK, VK)
+  + R이 카멜레온 해시 스킴을 쓰기 위한 개인-공개키쌍을 생성(CK, HK)
 + "프로토콜 : SIGN, VERIFY"
-+ 방식
-+ S가 서명을 위한 개인-공개키쌍 생성. (각 SK, VK)
-+ R이 카멜레온 해시 스킴을 쓰기 위한 개인-공개키쌍을 생성(HK, CK)
-+ "SIGN : S가 m, SK, HK, random string r로 hash = CHAM-HASH(m,r), sig=SIGN(hash), SIG(m)=(m,r,sig) 생성, R에게는 SIG(m) 줌."
-+ "VERIFY : R이 hash=CHAM-HASH(m,r) 로 hash값 확인 가능. VK로 sig도 확인 가능."
+  + "SIGN : S가 m, SK, HK, random string r로 hash = CHAM-HASH(m,r), sig=SIGN(hash), SIG(m)=(m,r,sig) 생성, R에게는 SIG(m) 줌."
+  + "VERIFY : R이 hash=CHAM-HASH(m,r) 로 hash값 확인 가능. VK로 sig도 확인 가능."
 
 
 ### Points to note
