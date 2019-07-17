@@ -1,5 +1,5 @@
 ---
-title: Session 2. Generation of Cancelable Iris Templates via Randomized Bit Sampling
+title: Session 1. Generation of Cancelable Iris Templates via Randomized Bit Sampling
 date: 2019-07-15 00:00:00 Z
 description: Generation of Cancelable Iris Templates via Randomized Bit Sampling
 card_title: Session 2
