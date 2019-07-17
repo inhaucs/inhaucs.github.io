@@ -55,9 +55,9 @@ Human body images encode plenty of useful biometric information, such as pupil c
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-three_problems.png" legend="Three kinds of problems." width="75%" %}
 
 + 세 가지 문제를 해결하고자 함
-  + 1. 두 이미지를 (이전의 이미지와 현재의 이미지 사용) 보고, 체중이 늘었는지, 줄었는지, 같은지 분석 (-1, 0, 1)
-  + 2. 두 이미지를 보고, 체중이 얼마나 변했는지 예측
-  + 3. 한 이미지를 보고 BMI 또는 체중이 얼마인지 예측
+  + 1) 두 이미지를 (이전의 이미지와 현재의 이미지 사용) 보고, 체중이 늘었는지, 줄었는지, 같은지 분석 (-1, 0, 1)
+  + 2) 두 이미지를 보고, 체중이 얼마나 변했는지 예측
+  + 3) 한 이미지를 보고 BMI 또는 체중이 얼마인지 예측
 
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-framework.png" legend="Three kinds of problems." width="75%" %}
 
@@ -90,10 +90,10 @@ Human body images encode plenty of useful biometric information, such as pupil c
 ## Learning the Mapping
 + weight/BMI 분석 : 상기 계산된 다섯 개의 인체 특징들을 BMI 값에 매핑(학습)시키는 과정 (maping function 을 학습)
 + Support Vector Machine (SVM)
-  + 1. 두 이미지를 (이전의 이미지와 현재의 이미지 사용) 보고, 체중이 늘었는지, 줄었는지, 같은지 분석 (-1, 0, 1) 하는 문제를 해결하기 위해 Binary classifier 인 (SVM)을 여러개 사용 (Multi-SVMs)
-  + 2. 두 이미지를 보고, 체중이 얼마나 변했는지 예측하기 위해 Support Vector Regression (SVR) 사용
+  + 1) 두 이미지를 (이전의 이미지와 현재의 이미지 사용) 보고, 체중이 늘었는지, 줄었는지, 같은지 분석 (-1, 0, 1) 하는 문제를 해결하기 위해 Binary classifier 인 (SVM)을 여러개 사용 (Multi-SVMs)
+  + 2) 두 이미지를 보고, 체중이 얼마나 변했는지 예측하기 위해 Support Vector Regression (SVR) 사용
 + Gaussian Processing Regression (GPR)
-  + 3. 한 이미지를 보고 BMI 또는 체중이 얼마인지 예측하기 위해 Gaussian Processing 을 사용한 회귀 모델 학습
+  + 3) 한 이미지를 보고 BMI 또는 체중이 얼마인지 예측하기 위해 Gaussian Processing 을 사용한 회귀 모델 학습
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-GPs.png" legend="Gaussian Processes." width="75%" %}
 
 
@@ -103,20 +103,20 @@ Human body images encode plenty of useful biometric information, such as pupil c
 
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-confusion_matrix.png" legend="Confusion matrix of weight difference classification results." width="75%" %}
 
-+ 1. 두 이미지를 (이전의 이미지와 현재의 이미지 사용) 보고, 체중이 늘었는지, 줄었는지, 같은지 분석 (-1, 0, 1)
++ 1) 두 이미지를 (이전의 이미지와 현재의 이미지 사용) 보고, 체중이 늘었는지, 줄었는지, 같은지 분석 (-1, 0, 1)
   + Overall Accuracy: 81.3%
   + (0,0)의 경우 (-1,-1)과 (1,1) 보다 정확도가 낮음
     + 0 class 의 경우 테스트에 사용된 데이터가 적고, (-1,0,1) 의 데이터 분포가 고르지 못하기 때문
 
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-bmi_differences.png" legend="BMI differences using SVR and GPR models." width="75%" %}
 
-+ 2. 두 이미지를 보고, 체중이 얼마나 변했는지 예측
++ 2) 두 이미지를 보고, 체중이 얼마나 변했는지 예측
   + 상기 표에서는 SVR 을 사용했을 때보다 GPR 을 사용했을 때 성능이 약간 좋음 (lower MAE and lower Standard deviation)
   + 아래 그래프에서 "$ > 15.5 $" 의 경우, MAE가 큰데, 이 또한 해당 데이터의 부족으로 인한 것으로 기술
 
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-mapes_3.png" legend="MAPEs of predicted BMI." width="75%" %}
 
-+ 3. 한 이미지를 보고 BMI 또는 체중이 얼마인지 예측
++ 3) 한 이미지를 보고 BMI 또는 체중이 얼마인지 예측
   + 성별별로 SVR 과 GPR 을 사용하였을 때 MAPE 에러율
 
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-comparison.png" legend="Comparison of BMI estimation." width="75%" %}
