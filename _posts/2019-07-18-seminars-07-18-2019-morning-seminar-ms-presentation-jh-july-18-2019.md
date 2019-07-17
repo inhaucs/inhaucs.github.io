@@ -41,7 +41,9 @@ Deep Neural Networks have recently gained lots of success after enabling several
 
 ## Summary(Korean)
 
-+ backdoor  == adversarial example (?)
++ Backdooring (adversarial example)을 이용한 DNN 워터마킹 기법을 제안한 논문으로, hyper-parameter 레벨이 아닌, 학습된 parameter 레벨의 보안 이슈를 다룬 논문이다.
++ 이를 위해 **BadNet**이라는 사전 연구를 먼저 소개한다. (19/07/18)
+
 
 
 ## Previous Research
@@ -121,6 +123,25 @@ Deep learning-based techniques have achieved state-of-the-art performance on a w
   + convolutional layers는 유지한다. [[decaf]] [[CVPRW14]]
 + Figure 3에 나타나 있는 Clean model을 이용한 결과와 backdoored model을 이용한 결과를 비교할 것이다.
   + Swedish BadNet의 공격은 validation 정확도가 높지만, backdoored image의 정확도가 낮아지는 경우에 성공했다고 한다.
+
+##### Attack Strategy \& Results
+
++ 공격이 transfer learning으로부터 살아남을 수 있도록, backdoor neurons의 weight $k$ 를 1~100 사이로 증가시킨다.
+  + 이 공격은 $ k = 10 $일 때, 가장 효과적이었다고 하며, 그 결과만을 제시한다.
++ 공격 결과
+  + Swedish traffic signs BadNet은 accuracy가 72.7%에서 71.3%으로 소폭 떨어졌지만,
+  + backdoored traffic image의 정확도는 49% 미만이 되어 23.7% 하락한 것을 확인하였다.
+  + 또한 $ k = 30 $으로 설정한 경우에, backdoored traffic image의 정확도는 40%로 훨씬 하락하나,
+  + Clean input의 정확도 또한 65.2%로 떨어지는 결과를 얻었다.
++ 즉, backdoor trigger가 transfer learning에서 생존할 수 있다는 결론을 얻을 수 있으며, 특히 영향이 선택적으로 강화될 수 있는 경우에 더욱 가능성이 높다고 본다.
+
+
+
+#### Discussion and conclusion
+
++ Pre-trained model을 사용하는 경향은 비교적 최근에 이루어진 일이며, 이러한 모델의 사용에 관한 security practice가 시간이 지날수록 향상될 것이다.
++ 이 연구는 그러한 목표에 다가가기 위한 첫 연구라 할 수 있다.
++ 간단한 해결책을 제시하는데, 모델에 서명을 넣자는 해결방법이다.
 
 
 
