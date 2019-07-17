@@ -7,13 +7,14 @@ card_teaser: Generation of Cancelable Iris Templates via Randomized Bit Sampling
 card_position: 2
 icon: fa-server
 categories: [seminars,07-15-2019-morning-seminar,presentation]
-tags: [TIFS, 2019, TIFS2019, Cancelable biometrics, iris, security, locality sensitive hashing]
+tags: [TIFS, 2019, TIFS2019, Body weight analysis, visual analysis of body mass index (BMI), anthropometric features, visual-body-to-BIM dataset]
 sidebar: morning-seminar
 layout: default
 slug: ms-presentation-hy-july-15-2019
 permalink: /:categories/:slug.html
 use_math: true
 ---
+<!-- []: <> "" -->
 
 {% assign product = 'ce' %}
 {% include layout/row_start.html %}
@@ -23,17 +24,17 @@ use_math: true
 + Hee-Yong Kwon (권희용)
 + 2019-07-15
 
-## [Generation of Cancelable Iris Templates via Randomized Bit Sampling](https://inhaucs.github.io/seminars/07-xx-2019-morning-seminar/presentation/ms-presentation-hy-july-xx-2019.html)
+## [Body Weight Analysis From Human Body Images](https://inhaucs.github.io/seminars/07-18-2019-morning-seminar/presentation/ms-presentation-hy-july-18-2019.html)
 
-### Information of the paper [(Link)](https://ieeexplore.ieee.org/abstract/document/8672919)
-+ Authors: Debanjan Sadhya (ABV-Indian Institute of Information Technology); Balasubramanian Raman (Indian Institute of Technology Roorkee)
-+ **Journal** name: IEEE Transactions on Information Forensics and Security (Volume 14, Issue 11)
-+ Published date: 2019-03-22
-+ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8672919)
+### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/8666768)
++ Authors: Min Jiang; Guodong Guo (West Virginia University)
++ **Journal** name: IEEE Transactions on Information Forensics and Security (Volume 14, Issue 10)
++ Published date: 2019-03-13
++ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8666768)
 
 
 ### Abstract
-Iris-based biometric models are widely recognized to be one of the most accurate forms for authenticating individual identities. Features extracted from the captured iris images (known as IrisCodes) conventionally get stored in their native format over a data repository. However, from a security aspect, the stored templates are highly vulnerable to a wide spectrum of adversarial attack forms. The study in this paper addresses this issue by introducing a privacy-preserving and secure biometric scheme based on the notion of locality sensitive hashing (LSH). In this paper, we have generated cancelable IrisCode features, coined as locality sampled code (LSC), which simultaneously provides strong security guarantees and satisfactory system performance. The functionality of our proposed framework pivots around the fact that intra-class IrisCode samples are “close” to each other, due to which they hash to the same location. Alternatively, the inter-class IrisCodes features are comparatively dissimilar and consequently hash to different locations. We have rigorously examined the intrinsic properties of the LSCs by estimating the intra-class and inter-class collision probabilities for two distinct IrisCodes. Furthermore, we have formally analyzed the security guarantees of non-invertibility, revocability, and unlinkability in our model by establishing various bounds on the adversarial success probability. Extensive empirical tests on the CASIAv3 and IITD benchmark iris databases demonstrate the superior performance of our proposed model, for which we have obtained the best EERs of 0.105% and 1.4%, respectively.
+Human body images encode plenty of useful biometric information, such as pupil color, gender, and weight. Among these, body weight is a good indicator of health conditions. Motivated by recent health science studies, this paper investigates the feasibility of analyzing body weight from two-dimensional (2D) frontal view human body images. The widely used body mass index (BMI) is employed as a measure of body weight. To investigate the problems at different levels of difficulties, three feasibility problems, from easy to hard, are studied. More specifically, a framework is developed for analyzing body weight from human body images. Computation of five anthropometric features is proposed for body weight characterization. Correlation is analyzed between the extracted anthropometric features and the BMI values, which validates the usability of the selected features. A visual-body-to-BMI dataset is collected and cleaned to facilitate the study, which contains 5900 images of 2950 subjects along with the labels corresponding gender, height, and weight. Some interesting results are obtained, demonstrating the feasibility of analyzing body weight from 2D body images. In addition, the proposed method outperforms two state-of-art facial image-based weight analysis approaches in most cases.
 
 
 ## Introduction (Korean)
@@ -121,7 +122,6 @@ Iris-based biometric models are widely recognized to be one of the most accurate
 [KP10]: <https://www.sciencedirect.com/science/article/pii/S0031320309003343> "A. Kumar and A. Passi, “Comparison and combination of iris matchers for reliable personal authentication,” Pattern Recognit., vol. 43, no. 3, pp. 1016–1026, 2010."
 [UW12]: <https://ieeexplore.ieee.org/abstract/document/6199821> "A. Uhl and P. Wild, “Weighted adaptive hough and ellipsopolar transforms for real-time iris segmentation,” in 5th IAPR Int. Conf. Biometrics, Mar./Apr. 2012, pp. 283–290."
 [MTW+04]: <https://ieeexplore.ieee.org/abstract/document/1298831> "L. Ma, T. Tan, Y. Wang, and D. Zhang, “Efficient iris recognition by characterizing key local variations,” IEEE Trans. Image Process., vol. 13, no. 6, pp. 739–750, Jun. 2004."
-<!-- []: <> "" -->
 
 
 ### Points to note

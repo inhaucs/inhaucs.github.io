@@ -44,7 +44,7 @@ permalink: /:categories/:slug.html
 
 ---
 
-### Session 1: [Generation of Cancelable Iris Templates via Randomized Bit Sampling](https://inhaucs.github.io/seminars/07-xx-2019-morning-seminar/presentation/ms-presentation-hy-july-xx-2019.html)
+### Session 1: [Generation of Cancelable Iris Templates via Randomized Bit Sampling](https://inhaucs.github.io/seminars/07-15-2019-morning-seminar/presentation/ms-presentation-hy-july-15-2019.html)
 
 ### Information of the paper [(Link)](https://ieeexplore.ieee.org/abstract/document/8672919)
 + Authors: Debanjan Sadhya (ABV-Indian Institute of Information Technology); Balasubramanian Raman (Indian Institute of Technology Roorkee)
