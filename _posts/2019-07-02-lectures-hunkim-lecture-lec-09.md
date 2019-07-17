@@ -1,5 +1,5 @@
 ---
-title: Lecture 09
+title: Lecture 09. Neural Network 1. XOR 문제 해결 & 딥네트워크 학습 시키기 (backpropagation)
 date: 2019-07-02 00:00:00 Z
 description: Lecture 09
 card_title: Lecture 09
@@ -18,8 +18,6 @@ use_math: true
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
 
-#Lecture 09 - Neural Network 1: XOR 문제 해결 & 딥네트워크 학습 시키기 (backpropagation)
-
 ## Writer
 + Hee-Yong Kwon (권희용)
 + 2019-07-16
@@ -34,9 +32,9 @@ use_math: true
   + 하나의 Unit 으로는 XOR 을 풀 수 없다고 수학적으로 증명됨
   + 그러나 여러 개의 Unit 으로 해결 가능 $\rightarrow$ 3 개의 logistic regression 으로 해결
     + 예시를 들어 실제 해결됨을 보임
-      + 두 input layer 의 $\left( W, b \right)$ : $W_1 = \left[\begin{array}{c} 5 \\ 5 \end{array}\right]$, $b_1=-8$ and $W_2 = \left[\begin{array}{c} -7 \\ -7 \end{array}\right]$, $b_2=3$
-        + 하나의 네트워크로 결합 가능 : $W_1 = \left[\begin{array}{cc} 5 & -7 \\ 5 & -7 \end{array}\right]$, $B_1=\left[ \begin{array}{cc} -8 & 3 \end{array} \right]$
-      + 상기 두 input layer 의 출력을 입력으로 받는 뉴런의 $\left( W, b \right)$ : $W_3 = \left[\begin{array}{c} -11 \\ -11 \end{array}\right]$, $b_3=6$
+      + 두 input layer 의 $\left( W, b \right)$ : $$W_1 = \begin{bmatrix} 5 \\ 5 \end{bmatrix} $$, $b_1=-8$ and $$ W_2 = \begin{bmatrix} -7 \\ -7 \end{bmatrix} $$, $b_2=3$
+        + 하나의 네트워크로 결합 가능 : $$ W_1 = \begin{bmatrix} 5 & -7 \\ 5 & -7 \end{bmatrix} $$, $$ B_1= \begin{bmatrix} -8 & 3 \end{bmatrix} $$
+      + 상기 두 input layer 의 출력을 입력으로 받는 뉴런의 $\left( W, b \right)$ : $$ W_3 = \begin{bmatrix} -11 \\ -11 \end{bmatrix} $$, $b_3=6$
 + Neural networks
   + 상기 결합된 $\left( W_1, B_1 \right)$ 를 사용하여 최종 값 $\bar{Y}$ 는 다음의 수식으로 표현 가능
     + $K(X) = sigmoid(XW_1 + B_1)$
