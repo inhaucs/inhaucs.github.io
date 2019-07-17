@@ -1,5 +1,5 @@
 ---
-title: Lecture 07
+title: Lecture 07. Application & Tips. Learning rate, data preprocessing, overfitting & Learning and test data sets
 date: 2019-07-02 00:00:00 Z
 description: Lecture 07
 card_title: Lecture 07
@@ -17,8 +17,6 @@ use_math: true
 {% assign product = 'ce' %}
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
-
-#Lecture 07 - Application & Tips: Learning rate, data preprocessing, overfitting & Learning and test data sets
 
 ## Writer
 + Hee-Yong Kwon (권희용)

@@ -1,5 +1,5 @@
 ---
-title: Lecture 08
+title: Lecture 08. 딥러닝의 기본 개념. 시작과 XOR 문제 & Back-propagation 과 2006/2007 '딥'의 출현
 date: 2019-07-02 00:00:00 Z
 description: Lecture 08
 card_title: Lecture 08
@@ -17,8 +17,6 @@ use_math: true
 {% assign product = 'ce' %}
 {% include layout/row_start.html %}
 {% include layout/col_start.html column="7" %}
-
-#Lecture 08 - 딥러닝의 기본 개념: 시작과 XOR 문제 & Back-propagation 과 2006/2007 '딥'의 출현
 
 ## Writer
 + Hee-Yong Kwon (권희용)
@@ -55,7 +53,7 @@ use_math: true
     + 상기 두 논문으로 인해 Neural networks 를 Deep Learning 으로 바꾸어 부르기 시작하였고, 다시 대두되기 시작함
   + ImageNet 또한 관심을 끄는데 도움
     + 2012, AlexNet의 등장 ImageNet Classification 의 에러율을 크게 줄임
-    + 2015, 3\% 의 에러율까지 줄임
+    + 2015, 3% 의 에러율까지 줄임
 + Deep learning이 필요한 이유 (Business 등)
 
 <br>
