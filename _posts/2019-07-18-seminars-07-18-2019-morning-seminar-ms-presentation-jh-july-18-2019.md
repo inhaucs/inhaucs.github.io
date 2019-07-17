@@ -89,24 +89,38 @@ Deep learning-based techniques have achieved state-of-the-art performance on a w
 + Figure 1(b)의 trained filters를 보면, 빨갛게 표시된 부분이 BadNet의 첫 번째 레이어에서 사용된 필터로 우측 하단의 데이터를 학습하는데 활용한다는 것을 확인할 수 있다.
 + 이러한 dedicated (전용) backdoor filter가 있다는 것은 backdoors가 BadNet의 깊은 layer안에 sparsely coded되었다는 것을 나타낸다. 
 
-(그림 삽입)
+
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-18-fig-casestudy1.png" legend="The case study 1." width="75%" %}
+
+
 
 #### Case Study 2:  Traffic Sign Detection Attack
 
 + 이전에 교수님께서 언급하신 적이 있던 내용으로, Case Study 1의 사례를 실제 환경에서 시도한 공격
   + accuracy는 0.7% 떨어지는 수준에서, stop-sign을 speed-limit sign으로 오분류하게 할 확률이 90%였다.
 
-(그림 삽입)
+
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-18-fig-casestudy2.png" legend="The case study 2." width="75%" %}
+
+
 
 #### Transfer learning attack
 
 ##### Attack Implementation
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-07-18-fig-transfer-learning.png" legend="Illustration of the transfer learning attack setup." width="75%" %}
+
+
 
 + Figure 3은 이 공격의 설정이 나타나있다.
 + 두 모델이 합쳐지는 것은 아니고, 왼쪽이 일반 User에게 배포된 pre-trained model, 오른쪽이 피해자에게 배포된 pre-trained model이다.
 + Transfer learning에서 일반적인 셋팅을 이용한다.
   + CNN의 모든 fully-connected layers는 재학습되지만,
   + convolutional layers는 유지한다. [[decaf]] [[CVPRW14]]
++ Figure 3에 나타나 있는 Clean model을 이용한 결과와 backdoored model을 이용한 결과를 비교할 것이다.
+  + Swedish BadNet의 공격은 validation 정확도가 높지만, backdoored image의 정확도가 낮아지는 경우에 성공했다고 한다.
 
 
 
