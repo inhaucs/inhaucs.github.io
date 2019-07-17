@@ -1,16 +1,16 @@
 ---
 title: Session 1. Generation of Cancelable Iris Templates via Randomized Bit Sampling
-date: 2019-07-15 00:00:00 Z
+date: 2019-07-18 00:00:00 Z
 description: Generation of Cancelable Iris Templates via Randomized Bit Sampling
 card_title: Session 1
 card_teaser: Generation of Cancelable Iris Templates via Randomized Bit Sampling
 card_position: 1
 icon: fa-server
-categories: [seminars,07-15-2019-morning-seminar,presentation]
+categories: [seminars,07-18-2019-morning-seminar,presentation]
 tags: [TIFS, 2019, TIFS2019, Body weight analysis, visual analysis of body mass index (BMI), anthropometric features, visual-body-to-BIM dataset]
 sidebar: morning-seminar
 layout: default
-slug: ms-presentation-hy-july-15-2019
+slug: ms-presentation-hy-july-18-2019
 permalink: /:categories/:slug.html
 use_math: true
 ---
