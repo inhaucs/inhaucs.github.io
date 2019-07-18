@@ -1,9 +1,9 @@
 ---
-title: Session 1. Generation of Cancelable Iris Templates via Randomized Bit Sampling
+title: Session 1. Body Weight Analysis From Human Body Images
 date: 2019-07-18 00:00:00 Z
-description: Generation of Cancelable Iris Templates via Randomized Bit Sampling
+description: Body Weight Analysis From Human Body Images
 card_title: Session 1
-card_teaser: Generation of Cancelable Iris Templates via Randomized Bit Sampling
+card_teaser: Body Weight Analysis From Human Body Images
 card_position: 1
 icon: fa-server
 categories: [seminars,07-18-2019-morning-seminar,presentation]
