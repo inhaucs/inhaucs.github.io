@@ -27,7 +27,7 @@ use_math: true
 #### [Youtube(Tensorflow_1)](https://www.youtube.com/watch?v=oSJfejG2C3w&feature=youtu.be), [Youtube(Tensorflow_2)](https://www.youtube.com/watch?v=ktd5yrki_KA&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab7.pdf?raw=true)
 
 ### Lecture_1
-### Application & Tips: Learning rate, data preprocessing, overfitting
+#### Application & Tips: Learning rate, data preprocessing, overfitting
 + Gradient descent의 Learning rate $\alpha$
   + Large learning rate: Overshooting
     + 경사면을 내려가는 step이 커짐
@@ -66,7 +66,7 @@ use_math: true
 <br>
 
 ### Lecture_2
-### Application & Tips: Learning and test data sets
+#### Application & Tips: Learning and test data sets
 + Performance evaluation: is this good?
   + 학습된 모델의 성능을 측정하는 방법
   + 전체 데이터로 학습 후, 같은 데이터로 테스트를 수행하는 것은 좋은 방법이 아님

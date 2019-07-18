@@ -27,7 +27,7 @@ use_math: true
 #### [Youtube(Tensorflow_1)](https://www.youtube.com/watch?v=VRnubDzIy3A&feature=youtu.be), [Youtube(Tensorflow_2)](https://www.youtube.com/watch?v=E-io76NlsqA&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab6.pdf?raw=true)
 
 ### Lecture_1
-### Softmax Regression: 기본 개념 소개 (Softmax classification: Multinomial classfication)
+#### Softmax Regression: 기본 개념 소개 (Softmax classification: Multinomial classfication)
 + Logistic regression
   + 기존의 Linear function $H_L(X)=WX$는 classification에 적합하지 않음
   + $z = H(X)$에 대하여 $g(z)$의 함수를 정의하였음
@@ -45,7 +45,7 @@ use_math: true
 <br>
 
 ### Lecture_2
-### Softmax classifier의 cost function
+#### Softmax classifier의 cost function
 + Multinomial classification 결과가 0과 1 사이의 값으로 출력되기를 원함 $\rightarrow$ Softmax
   + Softmax Equation
     + $S(y_i) = \frac{e^{y_i}}{\sum_j e^{y_j}}$

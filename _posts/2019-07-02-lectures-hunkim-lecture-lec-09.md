@@ -27,7 +27,7 @@ use_math: true
 #### [Youtube(Tensorflow_1)](https://www.youtube.com/watch?v=oFGHOsAYiz0&feature=youtu.be), [Youtube(Tensorflow_2)](https://www.youtube.com/watch?v=lmrWZPFYjHM&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab9.pdf?raw=true)
 
 ### Lecture_1
-### XOR 문제 딥러닝으로 풀기
+#### XOR 문제 딥러닝으로 풀기
 + Neural Networks 로 XOR 을 해결할 수 있는가
   + 하나의 Unit 으로는 XOR 을 풀 수 없다고 수학적으로 증명됨
   + 그러나 여러 개의 Unit 으로 해결 가능 $\rightarrow$ 3 개의 logistic regression 으로 해결
@@ -44,7 +44,7 @@ use_math: true
 <br>
 
 ### Lecture_2
-### 딥러닝의 기본 개념: 딥 네트워크 학습 시키기 (backpropagation)
+#### 딥러닝의 기본 개념: 딥 네트워크 학습 시키기 (backpropagation)
 + Back propagation (chain rule)
   + $f = wx+b$, $g=wx$, $\rightarrow$ $f=g+b$ 일 때, 우리가 구하고 싶은 것은 각 $w, x, b$ 가 결과 f에 미치는 영향
     + 즉 $\frac{\partial f}{\partial w}, \frac{\partial f}{\partial x}, \frac{\partial f}{\partial b}$

@@ -27,12 +27,12 @@ use_math: true
 #### [Youtube(Tensorflow)](https://www.youtube.com/watch?v=-57Ne86Ia8w&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab1.pdf?raw=true)
 
 ### Lecture
-### Machine Learning
+#### Machine Learning
 + Spam filter와 같이 규칙(rule)이 많은 경우, explicit programming을 하기 어려움
 + 이에 1959년 Arthur Samuel이 일일히 규칙을 프로그래밍 하지 않고 자료나 현상으로부터 자동으로 배우는 방법에 대해 제안 -> Machine Learning
   + "Field of study that gives computers the ability to learn without being explicitly programmed" Arthur Samuel (1959)
 
-### Supervised/Unsupervised learning
+#### Supervised/Unsupervised learning
 + 학습하는 방법에 따라 나누어지는 기준
 + Supervised
   + 정해져 있는 데이터(Labeled)를 사용하여 학습

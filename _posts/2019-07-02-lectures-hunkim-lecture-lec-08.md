@@ -27,7 +27,7 @@ use_math: true
 #### [Youtube(Tensorflow)](https://www.youtube.com/watch?v=ZYX0FaqUeN4&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab8.pdf?raw=true)
 
 ### Lecture_1
-### 딥러닝의 기본 개념: 시작과 XOR 문제
+#### 딥러닝의 기본 개념: 시작과 XOR 문제
 + 수학적인 내용과 컴퓨터공학적인 내용을 제외한 딥러닝 소개
   + 인간의 뉴런 설명
   + 뉴런과 비슷한 머신 설계 with Activation Functions
@@ -42,7 +42,7 @@ use_math: true
 <br>
 
 ### Lecture_2
-### 딥러닝의 기본 개념: Back-propagation 과 2006/2007 '딥'의 출현
+#### 딥러닝의 기본 개념: Back-propagation 과 2006/2007 '딥'의 출현
 + Backpropagation의 문제점: 레이어가 많은 경우 학습이 제대로 진행되지 않음
 + CIFAR: Canadian Institute for Adavanced Research
   + 돈이 되지 않더라도 딥러닝 연구가 가능하도록 연구자들 독려

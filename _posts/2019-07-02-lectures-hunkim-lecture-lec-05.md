@@ -27,7 +27,7 @@ use_math: true
 #### [Youtube(Tensorflow)](https://www.youtube.com/watch?v=2FeWGgnyLSw&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab5.pdf?raw=true)
 
 ### Lecture_1
-### Logistic (regression) classification
+#### Logistic (regression) classification
 + Linear regression 복습 : Hypothesis, Cost, Gradient descent
 + Binary classification 예시
   + Spam detection: Spam or Ham
@@ -45,7 +45,7 @@ use_math: true
 <br>
 
 ### Lecture_2
-### Logistic (regression) classification: cost function & gradient descent
+#### Logistic (regression) classification: cost function & gradient descent
 + Cost function of Linear regression
   + $cost(W,b) = \frac{1}{m} \sum^m_{i=1} (H(x^{(i)})-y^{(i)})^2$ when $H(x) = Wx + b$
 + $H(x) = Wx + b$의 경우 Cost function이 매끄러운 곡선이지만, $H(X) = \frac{1}{1 + e^{-W^TX}}$로 변경됨에 따라 Cost function이 울퉁불퉁한 곡선으로 변경됨

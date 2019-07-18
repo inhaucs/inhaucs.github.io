@@ -27,7 +27,7 @@ use_math: true
 #### [Youtube(Tensorflow)](https://www.youtube.com/watch?v=Y0EF9VqRuEA&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab3.pdf?raw=true)
 
 ### Lecture
-### How to minimize cost
+#### How to minimize cost
 + Cost function
   + $cost(W,b) = \frac{1}{m} \sum^m_{i=1} (H(x^{(i)})-y^{(i)})^2$
   + Cost function을 최소화하는 $W,b$를 구하는 것이 목표

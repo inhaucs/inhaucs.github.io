@@ -27,7 +27,7 @@ use_math: true
 #### [Youtube(Tensorflow_1)](https://www.youtube.com/watch?v=fZUV3xjoZSM&feature=youtu.be), [Youtube(Tensorflow_2)](https://www.youtube.com/watch?v=o2q4QNnoShY&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab4.pdf?raw=true)
 
 ### Lecture
-### Multi-variable linear regression
+#### Multi-variable linear regression
 + Linear regression에 필요한 세 가지 (복습)
   + Hypothesis, Cost function, Gradient descent algorithm
 + Multi-variable linear regression: $X=[x_1, x_2, x_3], Y$ 와 같이 여러 변수가 입력되는 경우

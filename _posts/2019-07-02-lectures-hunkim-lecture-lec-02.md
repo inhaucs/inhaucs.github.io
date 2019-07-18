@@ -27,7 +27,7 @@ use_math: true
 #### [Youtube(Tensorflow)](https://www.youtube.com/watch?v=mQGwjrStQgg&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab2.pdf?raw=true)
 
 ### Lecture
-### Linear Regression
+#### Linear Regression
 + Regression의 예시 : Predicting exam score
 + Linear regression
   + 식을 $H(x) = Wx + b$ 로 가정

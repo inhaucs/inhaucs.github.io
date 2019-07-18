@@ -23,28 +23,17 @@ use_math: true
 + 2019-07-18
 
 ### Information of the lecture
-#### [Youtube(Lecture_1)](https://www.youtube.com/watch?v=GYecDQQwTdI&feature=youtu.be), [Youtube(Lecture_2)](https://www.youtube.com/watch?v=oZyvmtqLmLo&feature=youtu.be), [Youtube(Lecture_3)](https://www.youtube.com/watch?v=573EZkzfnZ0&feature=youtu.be), [Slide(Lecture)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lec9.pdf?raw=true)
-#### [Youtube(Tensorflow_1)](https://www.youtube.com/watch?v=oFGHOsAYiz0&feature=youtu.be), [Youtube(Tensorflow_2)](https://www.youtube.com/watch?v=lmrWZPFYjHM&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab9.pdf?raw=true)
+#### [Youtube(Lecture_1)](https://www.youtube.com/watch?v=cKtg_fpw88c&feature=youtu.be), [Youtube(Lecture_2)](https://www.youtube.com/watch?v=4rC0sWrp3Uw&feature=youtu.be), [Youtube(Lecture_3)](https://www.youtube.com/watch?v=wTxMsp22llc&feature=youtu.be), [Youtube(Lecture_4)](https://www.youtube.com/watch?v=YHsbHjTBx9Q&feature=youtu.be), [Slide(Lecture)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lec10.pdf?raw=true)
+#### [Youtube(Tensorflow)](https://www.youtube.com/watch?v=6CCXyfvubvY&feature=youtu.be), [Slide(Tensorflow)](https://github.com/inhaucs/inhaucs.github.io/blob/master/assets/files/heeyong/2019/hunkim-lecture/slide/lab10.pdf?raw=true)
 
 ### Lecture_1
-### XOR 문제 딥러닝으로 풀기
-+ Neural Networks 로 XOR 을 해결할 수 있는가
-  + 하나의 Unit 으로는 XOR 을 풀 수 없다고 수학적으로 증명됨
-  + 그러나 여러 개의 Unit 으로 해결 가능 $\rightarrow$ 3 개의 logistic regression 으로 해결
-    + 예시를 들어 실제 해결됨을 보임
-      + 두 input layer 의 $\left( W, b \right)$ : $$W_1 = \begin{bmatrix} 5 \\ 5 \end{bmatrix} $$, $b_1=-8$ and $$ W_2 = \begin{bmatrix} -7 \\ -7 \end{bmatrix} $$, $b_2=3$
-        + 하나의 네트워크로 결합 가능 : $$ W_1 = \begin{bmatrix} 5 & -7 \\ 5 & -7 \end{bmatrix} $$, $$ B_1= \begin{bmatrix} -8 & 3 \end{bmatrix} $$
-      + 상기 두 input layer 의 출력을 입력으로 받는 뉴런의 $\left( W, b \right)$ : $$ W_3 = \begin{bmatrix} -11 \\ -11 \end{bmatrix} $$, $b_3=6$
-+ Neural networks
-  + 상기 결합된 $\left( W_1, B_1 \right)$ 를 사용하여 최종 값 $\bar{Y}$ 는 다음의 수식으로 표현 가능
-    + $K(X) = sigmoid(XW_1 + B_1)$
-    + $\bar{Y} = H(X) = sigmoid(K(X)W_2 + b_2)$
-  + $W_1, W_2, B_1, b_2$ 를 학습하는 방법에 대해 Lecture_2 에서 설명
+#### ReLU: Better non-linearity (Sigmoid 보다 ReLU가 더 좋아)
++ 
 
 <br>
 
 ### Lecture_2
-### 딥러닝의 기본 개념: 딥 네트워크 학습 시키기 (backpropagation)
+#### 딥러닝의 기본 개념: 딥 네트워크 학습 시키기 (backpropagation)
 + Back propagation (chain rule)
   + $f = wx+b$, $g=wx$, $\rightarrow$ $f=g+b$ 일 때, 우리가 구하고 싶은 것은 각 $w, x, b$ 가 결과 f에 미치는 영향
     + 즉 $\frac{\partial f}{\partial w}, \frac{\partial f}{\partial x}, \frac{\partial f}{\partial b}$
