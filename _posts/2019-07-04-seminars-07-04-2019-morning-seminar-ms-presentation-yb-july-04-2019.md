@@ -24,10 +24,10 @@ permalink: /:categories/:slug.html
 
 ## [2019NSR - CNN, RNN, Autoencoder](https://inhaucs.github.io/seminars/07-04-2019-morning-seminar/presentation/ms-presentation-yb-july-04-2019.html)
 
-### [PPT](http://gofile.me/6uXSD/hH8KLS5CC)
-+ 위치 : NAS-Level1-국가암호기술전문인력양성과정-2019국가암호기술전문인력양성과정-20190524_NSR_PPT.pdf
+### Material
++ "PPT 위치 : NAS-Level1-국가암호기술전문인력양성과정-2019국가암호기술전문인력양성과정-20190524_NSR_PPT.pdf"
 + Published date: 2019-05-24
-+ [CODE](http://3.14.140.1:8888)
++ [CODE](http://165.246.44.144:8888/tree/byoul/5.May)
 
 #### Abstract
 + CNN, RNN, Autoencoder 기본 개념 및 MNIST를 이용한 코드 이해
