@@ -38,7 +38,9 @@ A physically unclonable function (PUF) is a circuit of which the input-output be
 
 
 ## Introduction (Korean)
-+
++ Physically Unclonable Functions (PUFs)
+  + 물리적 복제방지기술
+  + 동일한 공정에서 생상된 칩들의 미세구조 차이를 이용해 물리적으로 복제가 불가능한 보안키를 생성하는 기술
 
 
 

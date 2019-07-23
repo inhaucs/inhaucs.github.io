@@ -28,17 +28,17 @@ permalink: /:categories/:slug.html
 
 ---
 
-### Session 1: [2019NSR-Malware Detection](https://inhaucs.github.io/seminars/07-22-2019-morning-seminar/presentation/ms-presentation-hy-july-22-2019.html)
+### Session 1: [Machine-Learning Attacks on PolyPUFs, OB-PUFs, RPUFs, LHS-PUFs, and PUF–FSMs](https://inhaucs.github.io/seminars/07-25-2019-morning-seminar/presentation/ms-presentation-hy-july-25-2019.html)
 
-### Information of the paper
-+ Position: NAS-Level1-국가암호기술전문인력양성과정-2019국가암호기술전문인력양성과정-20190628_NSR_PPT.pdf
-+ Published date: 2019-06-28
-+ [CODE](http://165.246.44.144:8888/tree/byoul/6.June)
+### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/8603753)
++ Authors: Jeroen Delvaux (Nanyang Technological University)
++ **Journal** name: IEEE Transactions on Information Forensics and Security (Volume 14, Issue 8)
++ Published date: 2019-01-07
++ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8603753)
 
 
 ### Abstract
-+ 머신러닝, 딥러닝을 이용한 악성코드 탐지
-+ PPT와 코드를 참조하여 설명할 예정입니다.
+A physically unclonable function (PUF) is a circuit of which the input-output behavior is designed to be sensitive to the random variations of its manufacturing process. This building block hence facilitates the authentication of any given device in a population of identically laid-out silicon chips, similar to the biometric authentication of a human. The focus and novelty of this paper is the development of efficient impersonation attacks on the following five Arbiter PUF-based authentication protocols: 1) the so-called Poly PUF protocol of Konigsmark et al. as published in the IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems in 2016; 2) the so-called OB-PUF protocol of Gao et al. as presented at the IEEE Conference PerCom 2016; 3) the so-called RPUF protocol of Ye et al. as presented at the IEEE Conference AsianHOST 2016; 4) the so-called LHS-PUF protocol of Idriss and Bayoumi as presented at the IEEE Conference RFID-TA 2017; and 5) the so-called PUF-FSM protocol of Gao et al. as published in the IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems in 2018. The common flaw of all five designs is that the use of lightweight obfuscation logic provides insufficient protection against machine-learning attacks.
 
 
 ---
