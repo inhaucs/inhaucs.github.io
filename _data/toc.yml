@@ -70,6 +70,14 @@
       url: /lectures/hunkim-lecture
       icon: fa-compass
       teaser: Machine Learning and Deep Learning for Everyone.
+- title: Datasets
+  slug: datasets
+  teaser: List of Datasets
+  items:
+    - title: List of Datasets
+      url: /datasets/datasets
+      icon: fa-compass
+      teaser: Datasets
     # - title: Another lecture
     #   url: /lectures/XXXXX
     #   icon: fa-compass

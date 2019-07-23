@@ -1,0 +1,23 @@
+---
+title: List of Datasets
+layout: home
+category: datasets
+slug: datasets
+permalink: /datasets/datasets
+---
+<div class="panel main">
+    <div class="panel left">
+        {% include sidebar/sub-section-home.html section='datasets' sub=page.slug %}
+    </div>
+    <div class="panel middle">
+        <div class="grid grid-responsive-12">
+            {% include breadcrumbs/default.html slug=page.slug %}
+            {% assign mCategories = "datasets|datasets|datasets_list" | split: "|" %}
+            {% include cards/jmy-section-cards.html section='datasets' sub='datasets' title='List of Datasets' categories=mCategories %}
+            <!-- {% assign mCategories = "lectures|hunkim-lecture|contents" | split: "|" %}
+            {% include cards/jmy-section-cards.html section='lectures' sub='hunkim-lecture' title='Contents' categories=mCategories %} -->
+            <!-- {% assign mCategories = "lectures|hunkim-lecture|external-seminar-guide" | split: "|" %}
+            {% include cards/jmy-section-cards.html section='lectures' sub='hunkim-lecture' title='Guide for external seminar' categories=mCategories %} -->
+        </div>
+    </div>
+</div>
