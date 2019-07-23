@@ -1,10 +1,10 @@
 ---
-title: Session 2. 2019NSR – Malware detection
+title: Session 1. 2019NSR – Malware detection
 date: 2019-07-22 00:00:00 Z
 description: 2019NSR - Malware detection
-card_title: Session 2
+card_title: Session 1
 card_teaser: 2019NSR - Malware detection
-card_position: 2
+card_position: 1
 icon: fa-server
 categories: [seminars,07-22-2019-morning-seminar,presentation]
 tags: [Deep Learning, Machine Learning, Decision Tree, Random Forest, Malware Detection, CNN]
