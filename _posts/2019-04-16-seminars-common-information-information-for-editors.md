@@ -79,6 +79,8 @@ permalink: /:categories/:slug.html
 + computer security
 + mobile applications
 + mobile computing
++ physically unclonable function
++ entity authentication
 + (Tag에는 발표 년도와 논문의 키워드, 등을 추가)
 + (Tips: 저널/컨퍼런스명, 세션명 추가: 2018년에 개최한 CCS의 경우, tags: [CCS, 2018, CCS2018])
 
