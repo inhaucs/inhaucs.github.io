@@ -28,17 +28,17 @@ permalink: /:categories/:slug.html
 
 ---
 
-### Session 1: [Machine-Learning Attacks on PolyPUFs, OB-PUFs, RPUFs, LHS-PUFs, and PUF–FSMs](https://inhaucs.github.io/seminars/07-25-2019-morning-seminar/presentation/ms-presentation-hy-july-25-2019.html)
+### Session 1: [A Practical Privacy-Preserving Data Aggregation (3PDA) Scheme for Smart Grid](https://inhaucs.github.io/seminars/07-25-2019-morning-seminar/presentation/ms-presentation-hy-july-25-2019.html)
 
-### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/8603753)
-+ Authors: Jeroen Delvaux (Nanyang Technological University)
-+ **Journal** name: IEEE Transactions on Information Forensics and Security (Volume 14, Issue 8)
-+ Published date: 2019-01-07
-+ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8603753)
+### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/8302950)
++ Authors: Yining Liu; Wei Guo (Guilin University of Electronic Technology); Chan-I Fan (National Sun Yat-sen University); Liang Chang (Guilin University of Electronic Technology); Chi Cheng (China University of Geosciences)
++ **Journal** name: IEEE Transactions on Industrial Informatics (Volume 15, Issue 3)
++ Published date: 2018-02-27
++ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8302950)
 
 
 ### Abstract
-A physically unclonable function (PUF) is a circuit of which the input-output behavior is designed to be sensitive to the random variations of its manufacturing process. This building block hence facilitates the authentication of any given device in a population of identically laid-out silicon chips, similar to the biometric authentication of a human. The focus and novelty of this paper is the development of efficient impersonation attacks on the following five Arbiter PUF-based authentication protocols: 1) the so-called Poly PUF protocol of Konigsmark et al. as published in the IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems in 2016; 2) the so-called OB-PUF protocol of Gao et al. as presented at the IEEE Conference PerCom 2016; 3) the so-called RPUF protocol of Ye et al. as presented at the IEEE Conference AsianHOST 2016; 4) the so-called LHS-PUF protocol of Idriss and Bayoumi as presented at the IEEE Conference RFID-TA 2017; and 5) the so-called PUF-FSM protocol of Gao et al. as published in the IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems in 2018. The common flaw of all five designs is that the use of lightweight obfuscation logic provides insufficient protection against machine-learning attacks.
+The real-time electricity consumption data can be used in value-added service such as big data analysis, meanwhile the single user's privacy needs to be protected. How to balance the data utility and the privacy preservation is a vital issue, where the privacy-preserving data aggregation could be a feasible solution. Most of the existing data aggregation schemes rely on a trusted third party (TTP). However, this assumption will have negative impact on reliability, because the system can be easily knocked down by the denial of service attack. In this paper, a practical privacy-preserving data aggregation scheme is proposed without TTP, in which the users with some extent trust construct a virtual aggregation area to mask the single user's data, and meanwhile, the aggregation result almost has no effect for the data utility in large scale applications. The computation cost and communication overhead are reduced in order to promote the practicability. Moreover, the security analysis and the performance evaluation show that the proposed scheme is robust and efficient.
 
 
 ---
