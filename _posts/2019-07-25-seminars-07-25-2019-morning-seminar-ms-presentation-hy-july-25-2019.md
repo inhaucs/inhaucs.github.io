@@ -77,10 +77,10 @@ The real-time electricity consumption data can be used in value-added service su
   + Lifted EC-ElGamal Cryptosystem
     + 1) - 4) 는 따라가면 당연한 얘기
     + 5) Distributed Decryption
+      + 나눠서 복호화 가능
 
 {% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-25-fig-dist_dec.png" legend="Distributed decryption." width="75%" %}
 
-      + 이렇게 나눠서 복호화도 가능
   + CL* signature Scheme
     + Pairing batch verification algorithm
     + Randomizer 문제 있을 것으로 생각됨 (확인은 추후)
