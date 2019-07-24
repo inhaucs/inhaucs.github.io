@@ -38,114 +38,76 @@ The real-time electricity consumption data can be used in value-added service su
 
 
 ## Introduction (Korean)
-+ Physically Unclonable Functions (PUFs)
-  + 물리적 복제방지기술
-  + 동일한 공정에서 생상된 칩들의 미세구조 차이를 이용해 물리적으로 복제가 불가능한 보안키를 생성하는 기술
-+ PUF 개발 이후 다양한 인증 프로토콜은 PUF와 함께 수행되었는데, 여기의 이점은 비밀키를 저장할 필요가 없다는 점
-  + 비휘발성 메모리 공격 등이 불가능
-+ 문제점: PUF의 출력은 노이즈가 많은데, 이를 제어하기 위해 PUF를 사용한 연산에 제한이 많이 걸려있음
-  + 이에 따라, 기계 학습이 가능하게 됨
-+ 본 연구에서는, PolyPUF, OB-PUF, RPUF, LHS-PUF, and PUF-FSM 등에 대해 기계 학습 공격 수행
++ Smart Grid (SG) 를 위해 Smart Meter (SM) 들은 실시간 사용 정보를 Operation Center (OC) 로 전달, OC 는 이를 처리하여 더 효율적으로 SG 관리
++ 그러나 전력 사용량은 다른 용도를 위해 SG 시스템 외의 용도로 제공될 수 있음
+  + 개인의 전력 사용 정보에 대한 프라이버시 침해 위험 존재
+  + 프라이버시 문제를 해결하기 위해 "Privacy-preserving data aggregation" 방법들이 제안됨 ([[LHL+17]], [[LXY+18]])
+    + 요구사항
+      + Aggregation operator 는 한 지역(or 구간)에서 사용한 전력의 합을 알 수 있어야 함
+      + Aggregation operator 는 지역(or 구간)에 포함된 개인의 전력 사용량은 알 수 없음
+  + 상기 방법 외에도 동형 암호 ([[P99]]), Random number ([[JZC+14]], [[FHL14]], [[HKL16]]), Shamir's secret sharing ([[S79]], [[TGZ13]])
++ 본 논문에서는 Practical Privacy-Preserving Data Aggregation (3PDA) 를 제안 (contribution below)
+  + 3PDA 는 Data Collection Unit (DCU) 또는 Trusted Third Party (TTP) 에 의지하지 않음
+  + 3DPA 를 가능하게 하는 Virtual Aggregation Area 를 소개
+  + 추정 결과가 아닌 정확한 결과를 얻음
 
+[LHL+17]: <https://ieeexplore.ieee.org/abstract/document/7869305> "R. Lu, K. Heung, A. H. Lashkari, and A. A. Ghorbani, “A lightweight privacy-preserving data aggregation scheme for fog computing-enhanced iot,” IEEE Access, vol. 5, pp. 3302–3312, 2017."
+[LXY+18]: <https://ieeexplore.ieee.org/abstract/document/7962172> "S. Li, K. Xue, Q. Yang, and P. Hong, “PPMA: privacy-preserving multisubset aggregation in smart grid,” IEEE Trans. Ind. Informat., vol. 14, no. 2, pp. 462–471, Feb. 2018."
+[P99]: <https://link.springer.com/chapter/10.1007/3-540-48910-X_16> "P. Paillier, “Public-key cryptosystems based on composite degree residuosity classes,” in International Conference on the Theory and Applications of Cryptographic Techniques. New York, NY, USA: Springer, 1999, pp. 223–238."
+[JZC+14]: <https://ieeexplore.ieee.org/abstract/document/6541956> "W. Jia, H. Zhu, Z. Cao, X. Dong, and C. Xiao, “Human-factor-aware privacy-preserving aggregation in smart grid,” IEEE Syst. J., vol. 8, no. 2, pp. 598–607, Jun. 2014."
+[FHL14]: <https://ieeexplore.ieee.org/abstract/document/6578183> "C. I. Fan, S. Y. Huang, and Y. L. Lai, “Privacy-enhanced data aggregation scheme against internal attackers in smart grid,” IEEE Trans. Ind. Informat., vol. 10, no. 1, pp. 666–675, Feb. 2014."
+[HKL16]: <https://link.springer.com/article/10.1007/s11276-015-0983-3> "D. He, N. Kumar, and J.-H. Lee, “Privacy-preserving data aggregation scheme against internal attackers in smart grids,” Wireless Netw., vol. 22, no. 2, pp. 491–502, 2016."
+[S79]: <https://dl.acm.org/citation.cfm?id=359176> "A. Shamir, “How to share a secret,” Commun. ACM, vol. 22, no. 11, pp. 612–613, 1979."
+[TGZ13]: <https://link.springer.com/article/10.1007/s11424-013-2131-4> "C. Tang, S. Gao, C. Zhang, “The optimal linear secret sharing scheme for any given access structure,” J. Syst. Sci. Complexity, vol. 26, no. 4, pp. 634–649, 2013."
 
++ System Model
+  + Communication Model
 
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-25-fig-system_model.png" legend="System model." width="75%" %}
 
+  + Privacy Adversary Model
+    + SG 에는 data injection, time synchronization, DoS, and physical threats 등의 위협 존재
+    + 안전성 요구사항과 Privacy-preserving 의 목적은 동치가 아님
+    + OC 는 honest-but-curious
+    + DCU 는 not to be trusted
+    + User (or SM) honest-but-curious
+    + 즉 최악의 경우에는 OC, DCU, User 모두 공모 가능
 
++ Preliminaries
+  + Lifted EC-ElGamal Cryptosystem
+    + 1) - 4) 는 따라가면 당연한 얘기
+    + 5) Distributed Decryption
 
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-25-fig-dist_dec.png" legend="Distributed decryption." width="75%" %}
 
+      + 이렇게 나눠서 복호화도 가능
+  + CL* signature Scheme
+    + Pairing batch verification algorithm
+    + Randomizer 문제 있을 것으로 생각됨 (확인은 추후)
 
++ Our Scheme
 
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-25-fig-main_workflow.png" legend="Main Workflows in our scheme." width="75%" %}
 
-
-
-
-
-
-
-
-
-## Problems to Study
-+ **또한 본 연구는 BMI 와 인체 특징과의 상관관계를 연구한 첫 연구**
-
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-three_problems.png" legend="Three kinds of problems." width="75%" %}
-
-+ 세 가지 문제를 해결하고자 함
-  + 1) 두 이미지를 (이전의 이미지와 현재의 이미지 사용) 보고, 체중이 늘었는지, 줄었는지, 같은지 분석 (-1, 0, 1)
-  + 2) 두 이미지를 보고, 체중이 얼마나 변했는지 예측
-  + 3) 한 이미지를 보고 BMI 또는 체중이 얼마인지 예측
-
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-framework.png" legend="Three kinds of problems." width="75%" %}
-
-+ 제안하는 방법의 프레임워크
-  + 이미지로부터 몸의 윤곽과 관절을 탐지
-  + 이미지로부터 인체 특징 계산 (WTR, WHpR, WHdR, HpHdR, and Area)
-  + 인체 특징들을 몸무게와 BMI에 매핑하기 위한 통계학적 모델 적용 (학습 모델)
-
-
-## Feature extraction
-+ 몸의 윤곽과 관절 탐지
-  + 윤곽 탐지 : Conditional Random Field as Recurrent Neural Networks (CRF-RNN) 사용 [[Z+15]]
-  + 관절 탐지 : Convolutional Pose Machine (CPM) 사용 [[WRK+16]]
-
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-five_features.png" legend="Three kinds of problems." width="75%" %}
-
-+ 인체 특징 계산
-  + Waist width to Thigh width Ratio (WTR)
-  + Waist width to Hip width Ratio (WHpR)
-  + Waist width to Head width Ratio (WHdR)
-  + Hip width to Head width Ratio (HpHdR)
-  + body Area between waist and hip (Area)
-  + 상기 특징들은 머리, 허리, 엉덩이, 그리고 허벅지의 너비 간의 비율
-
-
-[Z+15]: <https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zheng_Conditional_Random_Fields_ICCV_2015_paper.html> "S. Zheng et al., “Conditional random fields as recurrent neural networks,” in Proc. IEEE Int. Conf. Comput. Vis. Pattern Recognit., Jun. 2015, pp. 1529–1537."
-[WRK+16]: <https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Wei_Convolutional_Pose_Machines_CVPR_2016_paper.html> "S.-E. Wei, V. Ramakrishna, T. Kanade, and Y. Sheikh, “Convolutional pose machines,” in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., Jun. 2016, pp. 4724–4732."
-
-
-## Learning the Mapping
-+ weight/BMI 분석 : 상기 계산된 다섯 개의 인체 특징들을 BMI 값에 매핑(학습)시키는 과정 (maping function 을 학습)
-+ Support Vector Machine (SVM)
-  + 1) 두 이미지를 (이전의 이미지와 현재의 이미지 사용) 보고, 체중이 늘었는지, 줄었는지, 같은지 분석 (-1, 0, 1) 하는 문제를 해결하기 위해 Binary classifier 인 (SVM)을 여러개 사용 (Multi-SVMs)
-  + 2) 두 이미지를 보고, 체중이 얼마나 변했는지 예측하기 위해 Support Vector Regression (SVR) 사용
-+ Gaussian Processing Regression (GPR)
-  + 3) 한 이미지를 보고 BMI 또는 체중이 얼마인지 예측하기 위해 Gaussian Processing 을 사용한 회귀 모델 학습
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-GPs.png" legend="Gaussian Processes." width="75%" %}
-
-
-## Experiments
-+ 전체적으로 각 분류에 따른 데이터 수가 고정되지 않아 Skewed model 이 발생할 가능성이 있는 것처럼 보임
-  + 특히 Fig. 10.의 결과에서는 BMI Difference Range 에 따른 SVR 과 GPR 의 차이를 $> 15.5$ 의 테스트 데이터가 적기 때문이라고 해명하고 있음 $\rightarrow$ TIFS 에서 이 정도는 허용 가능하다고 생각해야 할 지...
-
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-confusion_matrix.png" legend="Confusion matrix of weight difference classification results." width="75%" %}
-
-+ 1) 두 이미지를 (이전의 이미지와 현재의 이미지 사용) 보고, 체중이 늘었는지, 줄었는지, 같은지 분석 (-1, 0, 1)
-  + Overall Accuracy: 81.3%
-  + (0,0)의 경우 (-1,-1)과 (1,1) 보다 정확도가 낮음
-    + 0 class 의 경우 테스트에 사용된 데이터가 적고, (-1,0,1) 의 데이터 분포가 고르지 못하기 때문
-
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-bmi_differences.png" legend="BMI differences using SVR and GPR models." width="75%" %}
-
-+ 2) 두 이미지를 보고, 체중이 얼마나 변했는지 예측
-  + 상기 표에서는 SVR 을 사용했을 때보다 GPR 을 사용했을 때 성능이 약간 좋음 (lower MAE and lower Standard deviation)
-  + 아래 그래프에서 "$ > 15.5 $" 의 경우, MAE가 큰데, 이 또한 해당 데이터의 부족으로 인한 것으로 기술
-
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-mapes_3.png" legend="MAPEs of predicted BMI." width="75%" %}
-
-+ 3) 한 이미지를 보고 BMI 또는 체중이 얼마인지 예측
-  + 성별별로 SVR 과 GPR 을 사용하였을 때 MAPE 에러율
-
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-18-fig-comparison.png" legend="Comparison of BMI estimation." width="75%" %}
-
-+ 기존의 BMI 를 예측하는 다른 방법들과의 에러율 비교
-  + PIGF[[WG13]] 와 VGG feature [[K+17]] 는 얼굴 이미지로 BMI 를 측정하는 알고리즘
-  + 다른 방법들보다 전반적인 에러율이 낮음을 확인할 수 있음
-
-[WG13]: <https://www.sciencedirect.com/science/article/pii/S0262885613000462> "L. Wen and G. Guo, “A computational approach to body mass index prediction from face images,” Image Vis. Comput., vol. 31, no. 5, pp. 392–400, 2013."
-[K+17]: <https://arxiv.org/abs/1703.03156> "E. Kocabey et al.. (Mar. 9, 2017). “Face-to-BMI: Using computer vision to infer body mass index on social media.”"
+  + 다섯 단계로 구성 : System setup, aggregation area creation, ciphertext generation, ciphertext aggregation, and distributed decryption
+    + System setup
+      + Elliptic curve 연산에 필요한 generator, hash, key-pair 등 생성
+    + Aggregation Area Creation
+      + $n$ 개의 SM 은 aggregation area (group) 을 만들고, 자신의 아이디 $ID_i$, 공개키 $Y_i$, 그리고 인증서 $Cert_i$ 를 브로드캐스팅하고 다른 SM 들은 확인 후, Group 공개키인 GK 계산 $GK = \sum_{i=1}^n Y_i$
+    + Ciphertext Generation
+      + 각 SM 은 자신의 메시지 $m_i$ 의 암호문과 서명을 DCU 로 전달
+    + Ciphertext Aggregation
+      + DCU 는 batch verification 을 사용하여 서명을 확인하고, $n$ SM 으로부터의 암호문 aggregation $\rightarrow (C^a, C^b)$
+      + 자신의 서명과 Aggregated data 를 OC 로 전달
+    + Distributed Decryption
+      + OC 는 앞서 설명한 Distributed Decryption 을 사용하여 모든 SM 에 $C^a$ 를 전달하고, $x_i C^a$ 를 돌려받아 복호화
 
 
 ### Points to note
-+ 학습 부분에 있어 흥미로운 부분은 없으나, 몸 윤곽이나 관절 등의 특징을 BMI 추측에 사용하는 등의 새로운 발상에 주목할 필요가 있어 보임
++ Lifted EC-ElGamal Cryptosystem 의 Homomorphism 을 활용한 Aggregation 방법 제안
+  + 실험 결과를 통해 실용적이라고 말하고 있음
+  + Homomorphism 을 가지는 Lifted EC-ElGamal Cryptosystem 보다 빠른 알고리즘을 적용한다면 더 실용적인 시스템 설계 가능할 것으로 보임
++ Batch verification 에 문제가 있을 것으로 보임 : Randomizer $\rightarrow$ Comment?
 
 
 ## Discussion
