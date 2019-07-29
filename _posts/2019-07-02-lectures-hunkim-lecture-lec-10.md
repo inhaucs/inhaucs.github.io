@@ -105,82 +105,66 @@ use_math: true
 
 ### Lecture_3
 #### NN dropout and model ensemble (Dropout 과 앙상블)
-+
++ Overfitting review
+  + Layer 가 많아질수록 overfitting 될 확률이 높아짐
+  + 해결법
+    + 많은 training data
+    + **Regularization**
++ Regularization
+  + $L2$-regularization: $\lambda \sum W^2$
+  + Neural Nets 에서는 Dropout 이라는 방법 존재
+    + Srivastava et al. 2014
+    + Layer 의 뉴런 중 몇 개를 zero 로 하여 학습한 후, 모든 뉴런을 사용하여 테스트
+      ```
+      dropout_rate = tf.placeholder("float")
+      _L1 = tf.nn.relu(tf.add(tf.matmul(X, W1), B1))
+      L1 = tf.nn.dropout(_L1, dropout_rate)
+      ```
+      + Dropout 은 학습에서만 수행되고, 실제 테스트 시에는 모든 뉴런을 사용하여 테스트
+        ```
+        TRAIN:
+        sess.run(optimizer, feed_dict={X: batch_xs, Y: atch_ys, dropout_rate: 0.7})
+
+        EVALUATION:
+        print "Accuracy:", accuracy.eval({X: mnist.test.images, Y: mnist.test.labels, dropout_rate: 1})
+        ```
++ What is Ensemble?
+  + 독립적인 neural nets 가 존재하고 각각에 training set 제공 (Training set 은 같을 수도 다를 수도 있음)
+  + 이 후, 각 모델에서 출력되는 결과를 종합하여 결과 예측
 
 <br>
 
 ### Lecture_4
 #### NN LEGO Play (레고처럼 네트워크 모듈을 마음껏 쌓아 보자)
-
-
-
-
-
-+ Back propagation (chain rule)
-  + $f = wx+b$, $g=wx$, $\rightarrow$ $f=g+b$ 일 때, 우리가 구하고 싶은 것은 각 $w, x, b$ 가 결과 f에 미치는 영향
-    + 즉 $\frac{\partial f}{\partial w}, \frac{\partial f}{\partial x}, \frac{\partial f}{\partial b}$
-  + Chain rule
-    + $\frac{\partial f}{\partial x} = \frac{\partial f}{\partial g} \times \frac{\partial g}{\partial x}$
-  + 두 스텝으로 진행
-    + Forward
-      + 실제 값을 대입하여 정방향 진행 (e.g., $w=-2, x=5, b=3$)
-    + Backward
-      + 편미분과 chain rule 을 통해 $\frac{\partial f}{\partial w}=5, \frac{\partial f}{\partial x}=-2, \frac{\partial f}{\partial b}=1$ 계산
-        + 상기 편미분 값은 입력값과 출력값의 비례 관계를 뜻함, 예를 들어 $w$가 1 증가하는 경우 출력값은 5 증가
-+ Sigmoid 의 미분?
-  + Sigmoid: $g(z) = \frac{1}{1+e^{-z}}$
-    + Sigmoid 식은 $z \rightarrow \times (-1) \rightarrow exp \rightarrow +1 \rightarrow \frac{1}{x} \rightarrow g(z)$ 이므로, 이 또한 chain rule 을 통해 $g'(z)$ 연산 가능
-+ Tensorflow 는 tensor 의 backpropagation 을 자동으로 수행 $\rightarrow$ 사용의 편의
++ Fast forward
+  + resNet 에서 제안 (He et al. 2015)
+  + 레이어 간의 중간 출력 결과를 몇 개 레이어를 건너 뛰어 입력으로 제공 (또는 특정 연산)
++ Split & merge
+  + 어떤 입력 또는 중간 출력 결과에 대해 여러 개의 레이어로 나누어 학습 후, 병합하는 방법
+  + Convolutional layer
++ Recurrent network
+  + 네트워크를 한 방향(다음 레이어 방향)이 아닌 같은 레이어의 뉴런으로 결과를 전달하도록 구성하는 방법
 
 <br>
 
 ### Tensorflow_1
-#### NN for XOR
-+ 기본적인 XOR 문제 해결
-  + Input and Output
-  ```
-  x_data = np.array([[0,0], [0,1], [1,0], [1,1]], dtype=np.float32)
-  y_data = np.array([[0], [1], [1], [0]], dtype=np.float32)
-  ```
-  + 결과 값이 0 또는 1 이기 때문에 (binary) 복잡한 softmax 를 사용하지 않고 logistic regression 을 사용
-  + Tensor 하나에 대해서 학습을 수행하여도 Accuracy=0.5 $\rightarrow$ Tensor 하나로는 불가능
-  + 첫 번째 레이어의 weight 을 $2 \times 2$ 행렬로 수정 후, 두 번째 레이어 추가 $\rightarrow$ Accuracy=1.0
-+ Wide NN for XOR
-  + 상기 방법에서는 Tensor 가 하나씩인 두 개의 레이어로 XOR 문제 해결
-  + Wide NN 으로 해결해보는 방법 (좋은 방법은 아니지만 예시를 보여주기 위함)
-    + 첫 번째 레이어의 출력을 2 $\rightarrow$ 10 로 증가시켜 학습 시도
-      + 즉 weight 인 $(W,b)$ 를 2개에서 10개로 늘림
-      + 학습 결과 성능이 더 향상됨
-+ Deep NN for XOR
-  + Wide & Deep example 제시
-    + $\left[ 2, 10 \right]$ 의  weight 을 가지는 3개의 레이어와 결과를 출력하는 레이어, 총 4개의 레이어로 구성된 모델 학습
-    + 역시 학습 결과 성능이 더 향상됨
-
-<br>
-
-### Tensorflow_2
-#### Tensorboard for XOR NN
-+ Tensorflow 로 작성한 graph 를 구상화
-  + Old fashion: print, print, print
-  + 5 개의 단계를 통해 사용 가능
-  ```
-  // 1. From TF graph, decide which tensors you want to log
-  w2_hist = tf.summary.histogram("weights2", W2)
-  cost_summ = tf.summary.scalar("cost", cost)
-  // 2. Merge all summaries
-  summary = tf.summary.merge_all()
-  // 3. Create writer and add graph
-  # Create summary writer
-  writer = tf.summary.FileWriter('./logs')
-  writer.add_graph(sess.graph)
-  // 4. Run summary merge and add_summary
-  s, _ = sess.run([summary, optimizer], feed_dict=feed_dict)
-  writer.add_summary(s, global_step=global_step)
-  // 5. Launch TensorBoard (in Terminal)
-  tensorboard --logdir=./logs
-  ```
-  + Scalar, Histogram 등의 구상화 가능
-  + 이 후 내용 SKIP
+#### NN, ReLu, Xavier, Dropout, and Adam
++ Neural Nets 사용의 팁
++ Lecture 7 에서 softmax for MNIST: **Accuracy (0.9035)**
++ Neural Nets for MNIST: **Accuracy (0.9455)**
+  + 3 layers & 1 neuron for each layer
+  + Activation function: ReLu
++ Xavier 초기화 방법 적용: **Accuracy (0.9783)**
+  + W1 의 초기화 방법에 xavier_initializer() 적용
+    + 초기값이 잘 적용되어 1 epoch 의 cost 부터 매우 작음
++ Deep Neural Nets for MNIST: **Accuracy (0.9742)**
+  + Wide & Deep Neural Networks 적용
+  + 네트워크가 깊어짐에 따라 과적합 발생 (Overfitting)
++ Dropout for MNIST: **Accuracy (0.9804)**
+  + 학습시에는, 통상적으로 0.5 ~ 0.7 정도의 dropout 수행
+  + 테스트시에는, 1
++ Gradient descent 외의 optimizer 존재
+  + Adam Optimizer 소개
 
 {% include date/updated.html %}
 {% include layout/col_end.html %}
