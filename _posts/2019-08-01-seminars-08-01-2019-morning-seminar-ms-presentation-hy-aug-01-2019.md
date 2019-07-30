@@ -1,16 +1,16 @@
 ---
-title: Session 1. A Practical Privacy-Preserving Data Aggregation (3PDA) Scheme for Smart Grid
-date: 2019-07-25 00:00:00 Z
-description: A Practical Privacy-Preserving Data Aggregation (3PDA) Scheme for Smart Grid
-card_title: Session 1
-card_teaser: A Practical Privacy-Preserving Data Aggregation (3PDA) Scheme for Smart Grid
-card_position: 1
+title: Session 2. Recent Advancements in Intrusion Detection Systems for the Internet of Things
+date: 2019-08-01 00:00:00 Z
+description: Recent Advancements in Intrusion Detection Systems for the Internet of Things
+card_title: Session 2
+card_teaser: Recent Advancements in Intrusion Detection Systems for the Internet of Things
+card_position: 2
 icon: fa-server
-categories: [seminars,07-25-2019-morning-seminar,presentation]
-tags: [TII, 2019, TII2019, data aggregation, data utility, distributed decryption algorithm, privacy preservation, smart grid]
+categories: [seminars,08-01-2019-morning-seminar,presentation]
+tags: [SCN, 2019, SCN2019]
 sidebar: morning-seminar
 layout: default
-slug: ms-presentation-hy-july-25-2019
+slug: ms-presentation-hy-aug-01-2019
 permalink: /:categories/:slug.html
 use_math: true
 ---
@@ -22,19 +22,19 @@ use_math: true
 
 ## Presenter & Date
 + Hee-Yong Kwon (권희용)
-+ 2019-07-25
++ 2019-08-01
 
-## [A Practical Privacy-Preserving Data Aggregation (3PDA) Scheme for Smart Grid](https://inhaucs.github.io/seminars/07-25-2019-morning-seminar/presentation/ms-presentation-hy-july-25-2019.html)
+## [Recent Advancements in Intrusion Detection Systems for the Internet of Things](https://inhaucs.github.io/seminars/08-01-2019-morning-seminar/presentation/ms-presentation-hy-aug-01-2019.html)
 
-### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/8302950)
-+ Authors: Yining Liu; Wei Guo (Guilin University of Electronic Technology); Chan-I Fan (National Sun Yat-sen University); Liang Chang (Guilin University of Electronic Technology); Chi Cheng (China University of Geosciences)
-+ **Journal** name: IEEE Transactions on Industrial Informatics (Volume 15, Issue 3)
-+ Published date: 2018-02-27
-+ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8302950)
+### Information of the paper [(Link)](https://www.hindawi.com/journals/scn/2019/4301409/abs/)
++ Authors: Zeeshan Ali Khan (Minhaj University); Peter Herrmann (Norwegian University of Science and Technology)
++ **Journal** name: Security and Communication Networks (Volume 2019, Issue )
++ Published date: 2018-07-03
++ [Paper Link](https://www.hindawi.com/journals/scn/2019/4301409/abs/)
 
 
 ### Abstract
-The real-time electricity consumption data can be used in value-added service such as big data analysis, meanwhile the single user's privacy needs to be protected. How to balance the data utility and the privacy preservation is a vital issue, where the privacy-preserving data aggregation could be a feasible solution. Most of the existing data aggregation schemes rely on a trusted third party (TTP). However, this assumption will have negative impact on reliability, because the system can be easily knocked down by the denial of service attack. In this paper, a practical privacy-preserving data aggregation scheme is proposed without TTP, in which the users with some extent trust construct a virtual aggregation area to mask the single user's data, and meanwhile, the aggregation result almost has no effect for the data utility in large scale applications. The computation cost and communication overhead are reduced in order to promote the practicability. Moreover, the security analysis and the performance evaluation show that the proposed scheme is robust and efficient.
+Many Internet of Things (IoT) systems run on tiny connected devices that have to deal with severe processor and energy restrictions. Often, the limited processing resources do not allow the use of standard security mechanisms on the nodes, making IoT applications quite vulnerable to different types of attacks. This holds particularly for intrusion detection systems (IDS) that are usually too resource-heavy to be handled by small IoT devices. Thus, many IoT systems are not sufficiently protected against typical network attacks like Denial-of-Service (DoS) and routing attacks. On the other side, IDSs have already been successfully used in adjacent network types like Mobile Ad hoc Networks (MANET), Wireless Sensor Networks (WSN), and Cyber-Physical Systems (CPS) which, in part, face limitations similar to those of IoT applications. Moreover, there is research work ongoing that promises IDSs that may better fit to the limitations of IoT devices. In this article, we will give an overview about IDSs suited for IoT networks. Besides looking on approaches developed particularly for IoT, we introduce also work for the three similar network types mentioned above and discuss if they are also suitable for IoT systems. In addition, we present some suggestions for future research work that could be useful to make IoT networks more secure.
 
 
 ## Introduction (Korean)
