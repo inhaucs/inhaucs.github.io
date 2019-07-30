@@ -24,6 +24,7 @@ permalink: /:categories/:slug.html
 ## Presenters
 + Jong-Hyuk Im (임종혁)
 + Hee-Yong Kwon (권희용)
++ Seong-Yun Jeon (전성윤)
 
 ## Presentations
 
@@ -59,6 +60,20 @@ Many Internet of Things (IoT) systems run on tiny connected devices that have to
 
 ---
 
+### Session 3: [BSeIn: A blockchain-based secure mutual authentication with fine-grained access control system for industry 4.0](https://inhaucs.github.io/seminars/08-01-2019-morning-seminar/presentation/ms-presentation-hy-aug-01-2019.html)
+
+### Information of the paper [(Link)](https://www.sciencedirect.com/science/article/pii/S1084804518301619)
+
+- Authors: Chao Lin, Debiao He(Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education, School of Cyber Science and Engineering, Wuhan University), Xinyi Huang(School of Mathematics and Computer Science, Fujian Normal University), Kim-Kwang Raymond Choo(The University of Texas at San Antonio), Athanasios V. Vasilakos(Department of Computer Science, Electrical and Space Engineering, Lulea University of Technology)
+- **Journal** name: Journal of Network and Computer Applications
+- Published date: 2018-08-15
+- [Paper Link](https://www.sciencedirect.com/science/article/pii/S1084804518301619)
+
+### Abstract
+
+To be prepared for the ‘Industry 4.0’-era, we propose a hierarchical framework comprising four tangible layers, which is designed to vertically integrate inter-organizational value networks, engineering value chain, manufacturing factories, etc. The conceptual framework allows us to efficiently implement a flexible and reconfigurable smart factory. However, we need to consider security inherent in existing (stand-alone) devices and networks as well as those that may arise in such integrations. Especially the existing solutions are insufficient to address these fundamental security concerns. Thus, we present a blockchain-based system for secure mutual authentication, BSeIn, to enforce fine-grained access control polices. The proposed system (with integrated attribute signature, multi-receivers encryption and message authentication code) is designed to provide privacy and security guarantees such as anonymous authentication, auditability, and confidentiality. BSeIn also scales well due to the utilization of smart contract. We then evaluate the security and performance of BSeIn. For example, findings from the performance evaluation demonstrate that Initialization/Request Issuance/Chain Transaction/State Delivery/Permission Update phase only cost 12.123/4.810/6.978/0.013/2.559s, respectively.
+
+---
 
 {% include date/updated.html %}
 {% include layout/col_end.html %}
