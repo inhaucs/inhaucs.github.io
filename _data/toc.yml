@@ -10,6 +10,11 @@
       url: /seminars/08-01-2019-morning-seminar
       icon: fa-compass
       teaser: 14th UCSLab Good Morning Paper Review Seminar.
+      itmes:
+        - title: Naver
+          url: https://www.naver.com
+          icon: fa-comment
+          teaser: Test to link a page.
     - title: Morning Seminar (07-25-2019)
       url: /seminars/07-25-2019-morning-seminar
       icon: fa-compass
