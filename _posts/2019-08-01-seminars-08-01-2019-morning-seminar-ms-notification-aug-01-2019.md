@@ -19,27 +19,28 @@ permalink: /:categories/:slug.html
 {% include layout/col_start.html column="7" %}
 
 ## Date
-2019-08-01
+2019-07-31 ~ 2019-08-01
 
 ## Presenters
++ Jong-Hyuk Im (임종혁)
 + Hee-Yong Kwon (권희용)
 
 ## Presentations
 
 ---
 
-### Session 1: [A Practical Privacy-Preserving Data Aggregation (3PDA) Scheme for Smart Grid](https://inhaucs.github.io/seminars/07-25-2019-morning-seminar/presentation/ms-presentation-hy-july-25-2019.html)
+### Session 1: [Turning Your Weakness Into a Strength: Watermarking Deep Neural Networks by Backdooring](https://inhaucs.github.io/seminars/07-18-2019-morning-seminar/presentation/ms-presentation-jh-july-18-2019.html)
 
-### Information of the paper [(Link)](https://ieeexplore.ieee.org/document/8302950)
-+ Authors: Yining Liu; Wei Guo (Guilin University of Electronic Technology); Chan-I Fan (National Sun Yat-sen University); Liang Chang (Guilin University of Electronic Technology); Chi Cheng (China University of Geosciences)
-+ **Journal** name: IEEE Transactions on Industrial Informatics (Volume 15, Issue 3)
-+ Published date: 2018-02-27
-+ [Paper Link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8302950)
+### Information of the paper [(Link)](https://www.usenix.org/conference/usenixsecurity18/presentation/adi)
+
+- Authors: Yossi Adi and Carsten Baum (Bar Ilan University); Moustapha Cisse (Google Inc); Benny Pinkas and Joseph Keshet (Bar Ilan University)
+- **Conference** name: 27th Usenix Security Symposium
+- Published date: 2018-08-17
+- [Paper Link](https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-adi.pdf)
 
 
 ### Abstract
-The real-time electricity consumption data can be used in value-added service such as big data analysis, meanwhile the single user's privacy needs to be protected. How to balance the data utility and the privacy preservation is a vital issue, where the privacy-preserving data aggregation could be a feasible solution. Most of the existing data aggregation schemes rely on a trusted third party (TTP). However, this assumption will have negative impact on reliability, because the system can be easily knocked down by the denial of service attack. In this paper, a practical privacy-preserving data aggregation scheme is proposed without TTP, in which the users with some extent trust construct a virtual aggregation area to mask the single user's data, and meanwhile, the aggregation result almost has no effect for the data utility in large scale applications. The computation cost and communication overhead are reduced in order to promote the practicability. Moreover, the security analysis and the performance evaluation show that the proposed scheme is robust and efficient.
-
+Deep Neural Networks have recently gained lots of success after enabling several breakthroughs in notoriously challenging problems. Training these networks is computationally expensive and requires vast amounts of training data. Selling such pre-trained models can, therefore, be a lucrative business model. Unfortunately, once the models are sold they can be easily copied and redistributed. To avoid this, a tracking mechanism to identify models as the intellectual property of a particular vendor is necessary. In this work, we present an approach for watermarking Deep Neural Networks in a black-box way. Our scheme works for general classification tasks and can easily be combined with current learning algorithms. We show experimentally that such a watermark has no noticeable impact on the primary task that the model is designed for and evaluate the robustness of our proposal against a multitude of practical attacks. Moreover, we provide a theoretical analysis, relating our approach to previous work on backdooring.
 
 ---
 
@@ -56,7 +57,6 @@ The real-time electricity consumption data can be used in value-added service su
 ### Abstract
 
 To be prepared for the ‘Industry 4.0’-era, we propose a hierarchical framework comprising four tangible layers, which is designed to vertically integrate inter-organizational value networks, engineering value chain, manufacturing factories, etc. The conceptual framework allows us to efficiently implement a flexible and reconfigurable smart factory. However, we need to consider security inherent in existing (stand-alone) devices and networks as well as those that may arise in such integrations. Especially the existing solutions are insufficient to address these fundamental security concerns. Thus, we present a blockchain-based system for secure mutual authentication, BSeIn, to enforce fine-grained access control polices. The proposed system (with integrated attribute signature, multi-receivers encryption and message authentication code) is designed to provide privacy and security guarantees such as anonymous authentication, auditability, and confidentiality. BSeIn also scales well due to the utilization of smart contract. We then evaluate the security and performance of BSeIn. For example, findings from the performance evaluation demonstrate that Initialization/Request Issuance/Chain Transaction/State Delivery/Permission Update phase only cost 12.123/4.810/6.978/0.013/2.559s, respectively.
-
 
 ---
 
