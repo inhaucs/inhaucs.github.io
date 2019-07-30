@@ -12,6 +12,7 @@
       teaser: 14th UCSLab Good Morning Paper Review Seminar.
       itmes:
         - title: Naver
+          slug: ms-presentation-jh-aug-01-2019
           url: https://www.naver.com
           icon: fa-comment
           teaser: Test to link a page.
