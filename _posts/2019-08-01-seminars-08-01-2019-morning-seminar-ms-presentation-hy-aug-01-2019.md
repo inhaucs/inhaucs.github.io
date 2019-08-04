@@ -38,6 +38,61 @@ Many Internet of Things (IoT) systems run on tiny connected devices that have to
 
 
 ## Introduction (Korean)
++ Internet of Things (IoT) network에 적합한 Intrusion Detection Systems (IDSs)에 대한 overview
++ IoT는 헬스케어, 교통, 스마트 그리드 등 다양한 분야에서 사용됨
++ 그러나 IoT 특성에 따른 자원의 제약이 기존의 암호 메커니즘을 적용하는데 문제가 됨
++ 다행히도 비슷한 네트워크 환경인 Mobile Ad hoc Networks (MANET), Wireless Sensor Networks (WSN), Cyber-Physical Systems (CPS)와 관련된 연구들이도움이 될 수 있음
+  + IoT에 적합한 IDS는 거의 개발되지 않았기 때문에, 본 논문에서는 WSNs, MANETs, CPSs에서 사용되는 IDS에 대한 내용 또한 제공
++ 본 논문의 기여는 IoT, 그리고 상기 세 개의 네트워크에서의 IDS를 모두 고려한 연구라는 점
+
+## IoT의 보안
+  + IoT 환경은 처리능력과 에너지 자원 제한으로 인해 암호화와 같은 처리 집약적인 작업이 어려움
+  + 공개적인 장소에 설치되어 있어 공격자의 물리적인 접근과 외부에서의 접근 용이
+  + 또한 매우 다양한 환경에서 다양한 목적으로 사용되기 때문에 포괄적인 해결법을 찾기 어려움
+  + 공격 분류
+    + 물리적 공격: 노드 교체, 배터리 교체, 재-프로그래밍 등
+    + 네트워크 공격
+      + Passive attacks
+        + e.g., 헬스케어의 측면에서, 네트워크 통신은 그대로 두고 패킷(사용자의 의료 정보 등)을 보는 것
+      + Active attacks
+        + e.g., 헬스케어의 측면에서, 패킷을 고의로 누락하는 등의 공격
+
+## Intrusion Detection Systems (IDSs)
+FIGURE 1
++ 목적: 잠재적으로 문제가 될 수 있는 비정상 동작 탐지
++ 상기 Figure 1와 같은 분류 중 앞서 등장하는 다섯 가지 기준에 대해 설명하고, Implementation Strategy의 경우 장을 새로 만들어 심화 설명
+  + Decision Quality
+    + 공격을 얼마나 잘 탐지하는 지에 대한 연구
+    + [[PAPER17]]을 인용, TP, TN, FP, FN 설명
+    + [[PAPER18]]에서 인용
+      + IDS should have a "low false positive rate, and high true positive rate"
+  + Responses on Attacks
+    + IDS의 공격에 대한 반응을 설명
+    + 일반적으로 IDS는 모니터링, 탐지, 알람의 세 모듈로 구성됨
+    + 또한 IDS는 공격에 대한 반응으로 관리자에 보고하는 것이 일반적임
+      + [[PAPER19]]에서 인용, 이와 다른 방법으로는 즉각적으로 공격에 대한 대응책을 수행하는 Intrusion Prevention System (IPS)과 공격의 근원지로 보이는 노드를 차단하는 Intrusion Mitigation System (IMS)이 있으나, 두 방법 모두 공격자에 의해 의도적인 false positive 발생이 가능하다는 문제점이 있기에 일반적인 IDS 대응이 많이 사용됨
+  + Attacker Type
+    + External Attacker: 네트워크 바깥에서 공격하는 노드
+    + Internal Attacker: 네트워크 내부에서 공격하는 노드
+  + Type of Attack
+    + IoT 네트워크의 특성에 따른 공격
+      + Selective forwarding: IoT 장비가 메시지 전송자의 패킷 전송 속도를 감당하지 못하는 경우 중간 노드가 메시지 전송을 관리하는데, 이 중간 노드가 공격당하는 경우 선택적인 메시지 전송이 가능
+      + Sinkhole/black hole/packet dropping: IoT 네트워크는 종종 Routing Protocol for Low Power and Lossy networks (RPL)과 같은 즉흥적인 프로토콜을 사용하여 네트워크를 구성하는데, 이 때 거리가 가까운 노드를 선택하는 경향이 있음. 해당 프로토콜을 사용하여 네트워크를 구성할 때, 공격자의 장비가 더 가까운 거리에 있다고 속임으로써 네트워크에 침투
+      + Node selfishness: 상기 공격과 반대로 실제로 가까운 노드이지만, 먼 노드라고 기만함으로써, 배터리 등의 이득을 얻는 공격. 이웃 노드들의 자원을 혹사시키며 전체적인 네트워크 성능의 하락을 야기함
+      + Version number: 네트워크가 변경될 때, RPL과 같은 프로토콜에 의해 네트워크가 새로운 버전으로 재구성되는데, 이를 위해 상대적으로 노드 간에 상대적으로 큰 재구성 패킷 교환이 수행됨. 공격자는 이 네트워크 재구성을 발생시킴으로써 공격
+      + Resource depletion/battery exhaustion: 여러 방법을 사용한 배터리 고갈 공격. e.g., 네트워크에 큰 용량의 무의미한 패킷 주입
+    + 일반적인 네트워크 공격
+      +
+  + Detection Technique
+
+
+
+
+
+
+
+
+
 + Smart Grid (SG) 를 위해 Smart Meter (SM) 들은 실시간 사용 정보를 Operation Center (OC) 로 전달, OC 는 이를 처리하여 더 효율적으로 SG 관리
 + 그러나 전력 사용량은 다른 용도를 위해 SG 시스템 외의 용도로 제공될 수 있음
   + 개인의 전력 사용 정보에 대한 프라이버시 침해 위험 존재
