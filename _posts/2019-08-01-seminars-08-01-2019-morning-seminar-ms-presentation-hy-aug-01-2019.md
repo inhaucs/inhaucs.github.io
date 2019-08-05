@@ -37,7 +37,7 @@ use_math: true
 Many Internet of Things (IoT) systems run on tiny connected devices that have to deal with severe processor and energy restrictions. Often, the limited processing resources do not allow the use of standard security mechanisms on the nodes, making IoT applications quite vulnerable to different types of attacks. This holds particularly for intrusion detection systems (IDS) that are usually too resource-heavy to be handled by small IoT devices. Thus, many IoT systems are not sufficiently protected against typical network attacks like Denial-of-Service (DoS) and routing attacks. On the other side, IDSs have already been successfully used in adjacent network types like Mobile Ad hoc Networks (MANET), Wireless Sensor Networks (WSN), and Cyber-Physical Systems (CPS) which, in part, face limitations similar to those of IoT applications. Moreover, there is research work ongoing that promises IDSs that may better fit to the limitations of IoT devices. In this article, we will give an overview about IDSs suited for IoT networks. Besides looking on approaches developed particularly for IoT, we introduce also work for the three similar network types mentioned above and discuss if they are also suitable for IoT systems. In addition, we present some suggestions for future research work that could be useful to make IoT networks more secure.
 
 
-## Introduction (Korean)
+### Introduction (Korean)
 + Internet of Things (IoT) network에 적합한 Intrusion Detection Systems (IDSs)에 대한 overview
 + IoT는 헬스케어, 교통, 스마트 그리드 등 다양한 분야에서 사용됨
 + 그러나 IoT 특성에 따른 자원의 제약이 기존의 암호 메커니즘을 적용하는데 문제가 됨
@@ -45,7 +45,7 @@ Many Internet of Things (IoT) systems run on tiny connected devices that have to
   + IoT에 적합한 IDS는 거의 개발되지 않았기 때문에, 본 논문에서는 WSNs, MANETs, CPSs에서 사용되는 IDS에 대한 내용 또한 제공
 + 본 논문의 기여는 IoT, 그리고 상기 세 개의 네트워크에서의 IDS를 모두 고려한 연구라는 점
 
-## IoT의 보안
+### IoT의 보안
   + IoT 환경은 처리능력과 에너지 자원 제한으로 인해 암호화와 같은 처리 집약적인 작업이 어려움
   + 공개적인 장소에 설치되어 있어 공격자의 물리적인 접근과 외부에서의 접근 용이
   + 또한 매우 다양한 환경에서 다양한 목적으로 사용되기 때문에 포괄적인 해결법을 찾기 어려움
@@ -57,20 +57,22 @@ Many Internet of Things (IoT) systems run on tiny connected devices that have to
       + Active attacks
         + e.g., 헬스케어의 측면에서, 패킷을 고의로 누락하는 등의 공격
 
-## Intrusion Detection Systems (IDSs)
-FIGURE 1
+### Intrusion Detection Systems (IDSs)
+
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-08-01-fig-classification_IDSs.png" legend="System model." width="75%" %}
+
 + 목적: 잠재적으로 문제가 될 수 있는 비정상 동작 탐지
-+ 상기 Figure 1와 같은 분류 중 앞서 등장하는 다섯 가지 기준에 대해 설명하고, Implementation Strategy의 경우 장을 새로 만들어 심화 설명
++ 상기 Figure 1과 같은 분류 중 앞서 등장하는 다섯 가지 기준에 대해 설명하고, Implementation Strategy의 경우 장을 새로 만들어 심화 설명
   + Decision Quality
     + 공격을 얼마나 잘 탐지하는 지에 대한 연구
-    + [[PAPER17]]을 인용, TP, TN, FP, FN 설명
-    + [[PAPER18]]에서 인용
+    + [[PP07]]을 인용, TP, TN, FP, FN 설명
+    + [[ZLH03]]에서 인용
       + IDS should have a "low false positive rate, and high true positive rate"
   + Responses on Attacks
     + IDS의 공격에 대한 반응을 설명
     + 일반적으로 IDS는 모니터링, 탐지, 알람의 세 모듈로 구성됨
     + 또한 IDS는 공격에 대한 반응으로 관리자에 보고하는 것이 일반적임
-      + [[PAPER19]]에서 인용, 이와 다른 방법으로는 즉각적으로 공격에 대한 대응책을 수행하는 Intrusion Prevention System (IPS)과 공격의 근원지로 보이는 노드를 차단하는 Intrusion Mitigation System (IMS)이 있으나, 두 방법 모두 공격자에 의해 의도적인 false positive 발생이 가능하다는 문제점이 있기에 일반적인 IDS 대응이 많이 사용됨
+      + [[F05]]에서 인용, 이와 다른 방법으로는 즉각적으로 공격에 대한 대응책을 수행하는 Intrusion Prevention System (IPS)과 공격의 근원지로 보이는 노드를 차단하는 Intrusion Mitigation System (IMS)이 있으나, 두 방법 모두 공격자에 의해 의도적인 false positive 발생이 가능하다는 문제점이 있기에 일반적인 IDS 대응이 많이 사용됨
   + Attacker Type
     + External Attacker: 네트워크 바깥에서 공격하는 노드
     + Internal Attacker: 네트워크 내부에서 공격하는 노드
@@ -82,80 +84,51 @@ FIGURE 1
       + Version number: 네트워크가 변경될 때, RPL과 같은 프로토콜에 의해 네트워크가 새로운 버전으로 재구성되는데, 이를 위해 상대적으로 노드 간에 상대적으로 큰 재구성 패킷 교환이 수행됨. 공격자는 이 네트워크 재구성을 발생시킴으로써 공격
       + Resource depletion/battery exhaustion: 여러 방법을 사용한 배터리 고갈 공격. e.g., 네트워크에 큰 용량의 무의미한 패킷 주입
     + 일반적인 네트워크 공격
-      +
+      + DoS, DDoS, Jamming, Unauthorized access (허가 없이 접근), Remote-to-Local (공격자가 외부에서 IoT 네트워크로 패킷을 보낼 수 있는 경우), User-to-Root (normal user로 접근하여 root까지 접근하는 공격), Probing (탐색 공격), Spoofing, Packet repetition, packet delay, Wormhole (공격자가 네트워크 내의 두 개 이상의 노드를 네트워크와 별개로 연결하여 라우터 교란), Packet alteration/bad data injection (패킷을 변경하거나 악의적인 데이터 주입), Periodic route error (라우팅 에러를 이웃 노드들에 전파하여 새 경로를 찾도록 유도), Hello flooding (공격자가 네트워크에 새롭게 추가되려는 노드로 위장하여 hello(join) 패킷 대량 전송), Routing misdirection and disruption (라우터 노드가 잘못된 경로를 알려주는 공격 -> Packet delay), Node capture (다른 공격을 돕도록 노드 획득), Eavesdropping (도청: 메시지 획득)
   + Detection Technique
+    + Signature-Based IDSs
+      + Rule-based IDSs 라고도 함
+      + 실제 네트워크 활동 감시, 가지고 있는 signature와 같은 경우 경고
+      + False positive는 적지만, 새로운 공격에 취약 $\rightarrow$ 따라서 높은 false negative (공격이 발생했으나 탐지 못 하는 경우)
+      + [[SMR+05]]에서는 다양한 규칙 연구
+        + Interval, Retransmission, Integrity, Delay, Repetition, Radio transmission range, Jamming rule, Version number check
+    + Anomaly-Based IDSs
+      + 비정상 동작 탐지 $\rightarrow$ 알려지지 않은 공격 탐지 가능
+      + 높은 false positive $\rightarrow$ Threshold에 따라 정상 동작도 비정상 동작으로 탐지
+    + Hybrid IDSs
+      + 상기 두 가지 방법을 사용함으로써, 낮은 false positive & false negative
+      + 연산에 필요한 자원이 큼
 
+[PP07]: <https://www.sciencedirect.com/science/article/pii/S138912860700062X> "A. Patcha and J.-M. Park, “An overview of anomaly detection techniques: existing solutions and latest technological trends,” Computer Networks, vol. 51, no. 12, pp. 3448–3470, 2007."
+[ZLH03]: <https://dl.acm.org/citation.cfm?id=942556> "Y. Zhang, W. Lee, and Y.-A. Huang, “Intrusion detection techniques for mobile wireless networks,” Wireless Networks, vol. 9, no. 5, pp. 545–556, 2003."
+[F05]: <https://faculty.kfupm.edu.sa/ics/salah/092/ics444/slides/IDS%20and%20IPS.pdf> "A. Fuchsberger, “Intrusion detection systems and intrusion prevention systems,” Information Security Technical Report, vol. 10, no. 3, pp. 134–139, 2005."
+[SMR+05]: <https://dl.acm.org/citation.cfm?id=1089765> "A. P. R. Da Silva, M. H. Martins, B. P. Rocha, A. A. Loureiro, L. B. Ruiz, and H. C.Wong, “Decentralized intrusion detection in wireless sensor networks,” in Proceedings of the 1stACMInternationalWorkshop on Quality of Service & Security inWireless and Mobile Networks, pp. 16–23, ACM, Quebec, Canada, October 2005."
 
+### Implementation Strategies
 
+{% include articles/figure.html url="/assets/img/heeyong/2019/2019-08-01-tbl-IDS_impl_schemes.png" legend="System model." width="75%" %}
 
++ 상기 장에서 다루는 솔루션들의 전략은 not centralized, distributed (since they did not find centralized solution)
++ Table 2의 A-F는 학점 표현 (A: the best, F: the worst)
++ Hierarchical IDSs
+  + 인접한 IoT 장비들이 클러스터가 되어 네트워크가 구성될 때, 전력 또는 연산 자원이 많은 노드의 경우 클러스터 헤드가 되어 인접 클러스터들의 패킷 모니터링
+  + 연산 자원이 충분한 노드가 있는 경우 사용하기 좋음
++ Distributed and Collaborative IDSs
+  + 여러 노드들이 네트워크의 여러 측면을 관찰하고 종합하여 정상인지 확인하는 방법
+  + 데이터 종합을 위한 메시지 교환 필요
++ Voting-Based IDSs
+  + Distributed and Collaborative IDSs의 변형
+  + 연산 능력이나 전력에 영향을 덜 받음
+  + 너무 간단하다는 본질 때문에, false negative가 매우 높아질 수 있음
++ Reputation-Based IDSs
+  + Distributed and Collaborative IDSs의 변형
+  + 
++ Cross Layer IDSs
++ Mobile Agent-Based IDSs
++ Game Theory-Based IDSs
++ Statistical Detection-Based IDSs
++ Machine Learning-Based IDSs
 
-
-
-
-
-+ Smart Grid (SG) 를 위해 Smart Meter (SM) 들은 실시간 사용 정보를 Operation Center (OC) 로 전달, OC 는 이를 처리하여 더 효율적으로 SG 관리
-+ 그러나 전력 사용량은 다른 용도를 위해 SG 시스템 외의 용도로 제공될 수 있음
-  + 개인의 전력 사용 정보에 대한 프라이버시 침해 위험 존재
-  + 프라이버시 문제를 해결하기 위해 "Privacy-preserving data aggregation" 방법들이 제안됨 ([[LHL+17]], [[LXY+18]])
-    + 요구사항
-      + Aggregation operator 는 한 지역(or 구간)에서 사용한 전력의 합을 알 수 있어야 함
-      + Aggregation operator 는 지역(or 구간)에 포함된 개인의 전력 사용량은 알 수 없음
-  + 상기 방법 외에도 동형 암호 ([[P99]]), Random number ([[JZC+14]], [[FHL14]], [[HKL16]]), Shamir's secret sharing ([[S79]], [[TGZ13]])
-+ 본 논문에서는 Practical Privacy-Preserving Data Aggregation (3PDA) 를 제안 (contribution below)
-  + 3PDA 는 Data Collection Unit (DCU) 또는 Trusted Third Party (TTP) 에 의지하지 않음
-  + 3DPA 를 가능하게 하는 Virtual Aggregation Area 를 소개
-  + 추정 결과가 아닌 정확한 결과를 얻음
-
-[LHL+17]: <https://ieeexplore.ieee.org/abstract/document/7869305> "R. Lu, K. Heung, A. H. Lashkari, and A. A. Ghorbani, “A lightweight privacy-preserving data aggregation scheme for fog computing-enhanced iot,” IEEE Access, vol. 5, pp. 3302–3312, 2017."
-[LXY+18]: <https://ieeexplore.ieee.org/abstract/document/7962172> "S. Li, K. Xue, Q. Yang, and P. Hong, “PPMA: privacy-preserving multisubset aggregation in smart grid,” IEEE Trans. Ind. Informat., vol. 14, no. 2, pp. 462–471, Feb. 2018."
-[P99]: <https://link.springer.com/chapter/10.1007/3-540-48910-X_16> "P. Paillier, “Public-key cryptosystems based on composite degree residuosity classes,” in International Conference on the Theory and Applications of Cryptographic Techniques. New York, NY, USA: Springer, 1999, pp. 223–238."
-[JZC+14]: <https://ieeexplore.ieee.org/abstract/document/6541956> "W. Jia, H. Zhu, Z. Cao, X. Dong, and C. Xiao, “Human-factor-aware privacy-preserving aggregation in smart grid,” IEEE Syst. J., vol. 8, no. 2, pp. 598–607, Jun. 2014."
-[FHL14]: <https://ieeexplore.ieee.org/abstract/document/6578183> "C. I. Fan, S. Y. Huang, and Y. L. Lai, “Privacy-enhanced data aggregation scheme against internal attackers in smart grid,” IEEE Trans. Ind. Informat., vol. 10, no. 1, pp. 666–675, Feb. 2014."
-[HKL16]: <https://link.springer.com/article/10.1007/s11276-015-0983-3> "D. He, N. Kumar, and J.-H. Lee, “Privacy-preserving data aggregation scheme against internal attackers in smart grids,” Wireless Netw., vol. 22, no. 2, pp. 491–502, 2016."
-[S79]: <https://dl.acm.org/citation.cfm?id=359176> "A. Shamir, “How to share a secret,” Commun. ACM, vol. 22, no. 11, pp. 612–613, 1979."
-[TGZ13]: <https://link.springer.com/article/10.1007/s11424-013-2131-4> "C. Tang, S. Gao, C. Zhang, “The optimal linear secret sharing scheme for any given access structure,” J. Syst. Sci. Complexity, vol. 26, no. 4, pp. 634–649, 2013."
-
-+ System Model
-  + Communication Model
-
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-25-fig-system_model.png" legend="System model." width="75%" %}
-
-  + Privacy Adversary Model
-    + SG 에는 data injection, time synchronization, DoS, and physical threats 등의 위협 존재
-    + 안전성 요구사항과 Privacy-preserving 의 목적은 동치가 아님
-    + OC 는 honest-but-curious
-    + DCU 는 not to be trusted
-    + User (or SM) honest-but-curious
-    + 즉 최악의 경우에는 OC, DCU, User 모두 공모 가능
-
-+ Preliminaries
-  + Lifted EC-ElGamal Cryptosystem
-    + 1) - 4) 는 따라가면 당연한 얘기
-    + 5) Distributed Decryption
-      + 나눠서 복호화 가능
-
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-25-fig-dist_dec.png" legend="Distributed decryption." width="75%" %}
-
-  + CL* signature Scheme
-    + Pairing batch verification algorithm
-    + Randomizer 문제 있을 것으로 생각됨 (확인은 추후)
-
-+ Our Scheme
-
-{% include articles/figure.html url="/assets/img/heeyong/2019/2019-07-25-fig-main_workflow.png" legend="Main Workflows in our scheme." width="75%" %}
-
-  + 다섯 단계로 구성 : System setup, aggregation area creation, ciphertext generation, ciphertext aggregation, and distributed decryption
-    + System setup
-      + Elliptic curve 연산에 필요한 generator, hash, key-pair 등 생성
-    + Aggregation Area Creation
-      + $n$ 개의 SM 은 aggregation area (group) 을 만들고, 자신의 아이디 $ID_i$, 공개키 $Y_i$, 그리고 인증서 $Cert_i$ 를 브로드캐스팅하고 다른 SM 들은 확인 후, Group 공개키인 GK 계산 $GK = \sum_{i=1}^n Y_i$
-    + Ciphertext Generation
-      + 각 SM 은 자신의 메시지 $m_i$ 의 암호문과 서명을 DCU 로 전달
-    + Ciphertext Aggregation
-      + DCU 는 batch verification 을 사용하여 서명을 확인하고, $n$ SM 으로부터의 암호문 aggregation $\rightarrow (C^a, C^b)$
-      + 자신의 서명과 Aggregated data 를 OC 로 전달
-    + Distributed Decryption
-      + OC 는 앞서 설명한 Distributed Decryption 을 사용하여 모든 SM 에 $C^a$ 를 전달하고, $x_i C^a$ 를 돌려받아 복호화
 
 
 ### Points to note
