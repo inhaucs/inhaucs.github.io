@@ -122,20 +122,28 @@ Many Internet of Things (IoT) systems run on tiny connected devices that have to
   + 너무 간단하다는 본질 때문에, false negative가 매우 높아질 수 있음
 + Reputation-Based IDSs
   + Distributed and Collaborative IDSs의 변형
-  + 
+  + 주변 노드들의 동작을 trust value로 계산하여 유지하는 방법
+  + 나의 트래픽뿐 아니라 이웃 노드들의 트래픽도 관찰하기 때문에 이에 따른 전력 필요
 + Cross Layer IDSs
+  + 상기 IDS들은 OSI 한 개 레이어에서만(어딘지는 명시 안 되어 있음) 탐지를 수행하지만, 본 방법은 여러 레이어에서의 탐지 수행
+  + 탐지율이 좋음
 + Mobile Agent-Based IDSs
+  + 노드들 사이에 재위치시킬 수 있는 Mobile agent에 IDS 탑재
+  + MANETs에서 주로 사용됨
+  + 노드 간의 통신 비용은 적지만, 긴 Agent code를 전송함에 있어 전력에 무리
+  + 결과적으로 IoT 환경에서는 좋은 방법이 아님
 + Game Theory-Based IDSs
+  + 게임 이론에 기반한 방법으로, 게임의 주최자가 되는 노드는 연산량이 많기 때문에, 자원이 많은 노드가 있는 경우 좋은 성능을 보임
+  + 게임 이론: 한 사람의 행위가 다른 사람의 행위에 미치는 상호의존적, 전략적 상황에서의 의사결정 이론
 + Statistical Detection-Based IDSs
+  + Anomaly-based IDSs와 같은 말
+  + 큰 데이터를 다루기에, 처리량과 저장공간이 많아야 사용 가능
 + Machine Learning-Based IDSs
-
+  + 분석된 비정상 동작들에 대한 모델을 만들어 기계 학습을 적용하는 방법
 
 
 ### Points to note
-+ Lifted EC-ElGamal Cryptosystem 의 Homomorphism 을 활용한 Aggregation 방법 제안
-  + 실험 결과를 통해 실용적이라고 말하고 있음
-  + Homomorphism 을 가지는 Lifted EC-ElGamal Cryptosystem 보다 빠른 알고리즘을 적용한다면 더 실용적인 시스템 설계 가능할 것으로 보임
-+ Batch verification 에 문제가 있을 것으로 보임 : Randomizer $\rightarrow$ Comment?
++ 
 
 
 ## Discussion
