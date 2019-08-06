@@ -203,29 +203,42 @@ Deep learning-based techniques have achieved state-of-the-art performance on a w
   3. Unremovability: 마킹이 지워지지 않아야 함.
   4. Unforgeability: 학습된 모델에서 워터마크를 조작할 수 없어야 함.
 
-{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-08-09-fig-watermarking1.png"  width="75%" %}
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-08-09-fig-watermarking1.png" legend="watermarking-1" width="50%" %}
 
-{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-08-09-fig-watermarking2.png"  width="75%" %}
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-08-09-fig-watermarking2.png"  legend="watermarking-1" width="50%" %}
 
 
 
 #### Experimental Results
 
-##### CIFAR (FromScratch, PreTrained)
+##### CIFAR (Accuracy) : Functionality-Preserving
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-08-09-fig-acc.png"  legend="Classification Accuracy" width="50%" %}
+
++ No-WM : No watermarking
++ FromScratch: 모델 학습시에 트리거 셋을 삽입하는 경우
++ PreTrained: 기 학습된 모델 $M$을 $\hat{M}$으로 변환하는 경우
 
 
 
-##### Tranfer Learning
+#####Unremovability, Ownership Piracy 
+
++ Unremovability 확인을 위해 Fine-Tuning 방법을 총 4가지 이용하였음. (구체적 사항은 논문 확인)
+  + Fine-Tune Last Layer (FTLL): 출력 레이어만 업데이트
+  + Fine-Tune All Layer (FTAL): 제대로 backpropagation 하여 업데이트
+  + Re-Train Last Layer (RTLL): 출력 layer만 random weight 로 초기화 후, 업데이트
+  + Re-Train All Layers (RTAL): 모든 레이어의 파라미터 random weight로 초기화 후, 업데이트
++ 각 방법별로 결과의 차이가 존재함 (FromScratch vs. PreTrained // Test set vs. Trigger set)
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-08-09-fig-tune.png"  legend="watermarking-1" width="50%" %}
+
++ Ownership Piracy는 필요하다면 논문 내용을 추가로 확인 
 
 
-
-
-
-1. Previous and currently works (기존 연구와의 차이점)
-2. Backdoor & Strong backdoor
 
 ### Points to note
-+ 
++ 머신러닝 모델의 워터마킹 기법 중 한가지의 최초 스터디임
++ 관련 연구 진행 시, 고려할 사항들을 정리해 두었기 때문에 참조하기 좋은 논문 ( e.g., Adversarial Learning, backdooring, etc.)
 
 
 
