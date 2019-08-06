@@ -22,7 +22,7 @@ use_math: true
 
 ## Presenter & Date
 + Jong-Hyuk Im (임종혁)
-+ 2019-07-18
++ 2019-07-18, 2019-08-07
 
 ## [Turning Your Weakness Into a Strength: Watermarking Deep Neural Networks by Backdooring](https://inhaucs.github.io/seminars/07-18-2019-morning-seminar/presentation/ms-presentation-jh-july-18-2019.html)
 
@@ -150,15 +150,82 @@ Deep learning-based techniques have achieved state-of-the-art performance on a w
 
 
 
-
 ## Main explanation
 
-(TBD)
+#### Summary
+
++ NN의 over-parameterization 을 이용하여 강력한 watermarking algorithm을 설계함.
++ 사실 이는 (over-parameterization) 보안관점에서는 백도어가 가능하기 때문에 약점이라 여겨졌음.
+  + 앞서 설명하였듯, ML의 백도어는 특정 입력 집합 T에 대해의 도적으로 잘못된 레이블을 출력하도록 모델을 훈련시키는 것임.
++ 이러한 백도어 (무작위 훈련 인스턴스와 무작위 레이블을 사용하여 NN을 워터마크하는 방법)를 이용해, 강한 워터마크를 남기는 방법을 제안함.
++ 이 모델에 대한 블랙/그레이 박스 모두 가능한 공격을 제시했음. (구체적 사항은 논문 참조)
++ 단, 아직은 사용자가 소유권을 주장하기 위해 워터마크를 어느 수준으로 적용해야하는지 이론적인 경계가 없고, 이는 향후 연구 과제로 제시함.
++ 또한, Commitment 스킴을 넣었지만, 실제로는 복잡도 문제로 적용되기 쉽지 않음. 
+  + 현실적인 수준의 기법이 직접 적용된 것은 아니고, Commitment 스킴이 블랙박스임을 가정한 결과임.
+
+#### Previous and Currently works
+
++ 모델에 워터마크를 남기려는 시도들이 있었지만. 이렇게 parameter 레벨에서 적용한 사례는 처음임.
++ 해당 논문들 링크 ( [deepmarks], [MPT17], [Deeppose] )
+
+
+
+[deepmarks]: https://arxiv.org/abs/1804.03648 "Deepmarks: A digital fingerprinting framework for deep neural networks"
+[MPT17]: https://arxiv.org/abs/1711.01894	"Adversarial frontier stitching for remote neural network watermarking"
+[Deeppose]: https://arxiv.org/abs/1312.4659 "Deeppose: Human pose estimation via deep neural networks"
+
+
+
+#### Backdoor & Strong backdoor
+
++ Backdoor: 잘못된 라벨로 분류되도록 하는 특정 데이터를 모델에 학습시키는 것임.
++ Strong backdoor: 한 개의 백도어가 아닌 여러개의 백도어를 묶어 모두가 백도어의 조건을 만족시켜야한다는 추가적인 조건이 있음. 즉, 모든 백도어의 accuracy가 100%이어야 함.
+
+
+
+#### Watermarking (논문상의 정의)
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-08-09-fig3.png" legend="A schematic illustration of watermarking a neural network." width="75%" %}
+
+
+
++ $KeyGen()$: outputs a key pair $(mk, vk)$.
++ $Mark(M, mk)$ on input a model $M$ and a marking key $mk$, output a model $\hat{M}$.
++ $Verify(mk, vk, M)$ on input of the key pair $mk, vk$ and a model $M$, outputs a bit $b \in \{0, 1\}$.
+
+
+
+#### Watermarking from backdoors
+
++ 다음과 같은 속성을 만족시킬 수 있어야 한다고 정의하였음.
+  1. Functionality-preserving : 워터마크를 정상적으로 확인할 수 있어야 함.
+  2. Non-trivial ownership: 워터마킹 알고리즘을 알고 있다해도, 마킹할 수 없어야 함.
+  3. Unremovability: 마킹이 지워지지 않아야 함.
+  4. Unforgeability: 학습된 모델에서 워터마크를 조작할 수 없어야 함.
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-08-09-fig-watermarking1.png"  width="75%" %}
+
+{% include articles/figure.html url="/assets/img/jonghyuk/2019/2019-08-09-fig-watermarking2.png"  width="75%" %}
+
+
+
+#### Experimental Results
+
+##### CIFAR (FromScratch, PreTrained)
+
+
+
+##### Tranfer Learning
+
+
+
+
+
+1. Previous and currently works (기존 연구와의 차이점)
+2. Backdoor & Strong backdoor
 
 ### Points to note
-+ 취소가능한 템플릿을 만드는 새로운 방법 제시
-  + Bit sampling based LSH 사용
-+ 실제 홍채 데이터셋에 대한 실험 및 분석 수행
++ 
 
 
 
