@@ -41,15 +41,18 @@ BSeIn은 이 13가지의 보안 요구 사항을 모두 만족하는 안전한 �
 ## Contents
 1. 사전지식
  - 4차 산업(Industry 4.0) ; IoT, Cyber Physical Systems, 센서기술 등을 기반으로 생산 전 과정을 연결 -> 실시간 모니터링 및 피드백 -> 생산성 증대
+
  - 4-Layer 구조 ; (Fig 1 참고)
     - Terminals ; 사용자에 가까운 단말 기기
     - Cloud ; 정책적인 것을 결정하는 시스템(ex. ERP)
     - Industrial Network ; Physical Resources 를 연동하는 네트워크
     - Physical Resources ; 실제 일을 수행하는 자원
- - ABS ; 
- - MRE ; 
- - AES ; 
- - MAC ; 
+ - ABS ; attribute-based encryption.
+    - signer가 특정 attribute들의 셋들을 소유한 채로 (attribute authority 존재) 서명하고 검증하는 전자서명 방법.
+    - Maji et al.이 2010년에 제안한 실용적인 ABS 사용
+ - MRE ; multi-receiver encryption.
+    - Open network에서 한 주체가 미리 선택된 다른 주체들(receivers)에게 동일한 메시지를 안전하게 방송(broadcast)하는 방법. 
+    - IsIam et al.이 2015년에 제안한 스킴을 적용함
 
 2. BSeIn
  - 4-Layer 를 기반으로 ABS,MRE,AES,MAC와 블록체인 기술들을 융합하여 만든 4차 산업을 위한 Framework
@@ -62,50 +65,27 @@ BSeIn은 이 13가지의 보안 요구 사항을 모두 만족하는 안전한 �
  - 설명
     - A. Terminals를 익명으로 인증(anonymously authenticate)하기 위해 블록체인과 ABS 적용
     - B. Gateways를 효율적으로 인증(efficiently authenticate)하기 위해 MAC을 활용
-    - C. 허가된 참가자(authorized participants, (e.g.
-permission nodes, cloud gateway, Industrial network gateway))만 요청한 메시지들의 raw 컨텍스트에 대한 접근 권한을 얻을 수 있게하려고 MRE를 활용
+    - C. 허가된 참가자(authorized participants, (e.g. permission nodes, cloud gateway, Industrial network gateway))만 요청한 메시지들의 raw 컨텍스트에 대한 접근 권한을 얻을 수 있게하려고 MRE를 활용
     - D. Industry 4.0 어플리케이션들에서는 확장성(scalability)가 보장되어야하는게 기본 -> 전체 요청 절차(request process)는 smart contracts와 상호작용하는 구조. (Smart Contract on PDHT or Smart Contract on TX 사용)
 
 3. 블록체인 기반의 상호 간 인증 구현
  - 어떻게?
 
-4. 13가지의 보안 요구사항과 항목별 BSeIn이 충족시킨 방법
- - Single registration
-    - 설명 ;
-    - 방법 ; 
- - Mutual authentication
-    - 설명 ;
-    - 방법 ; 
- - User anonymity
-    - 설명 ;
-    - 방법 ; 
- - Fine-grained access control
-    - 설명 ;
-    - 방법 ; 
- - Session key agreement
-    - 설명 ;
-    - 방법 ; 
- - Perfect forward secrecy
-    - 설명 ;
-    - 방법 ; 
- - No verifier table
-    - 설명 ;
-    - 방법 ; 
- - No online registration center
-    - 설명 ;
-    - 방법 ; 
- - Relay current timestamp
-    - 설명 ;
-    - 방법 ; 
- - Birthday collision resilience
-    - 설명 ;
-    - 방법 ; 
- - Interception and modification resi
-    - 설명 ;
-    - 방법 ; 
+4. BSeIn이 충족시킨 13가지의 보안 요구사항
+ - Single registration ;
+ - Mutual authentication ;
+ - User anonymity ;
+ - Fine-grained access control ;
+ - Session key agreement ;
+ - Perfect forward secrecy ;
+ - No verifier table ;
+ - No online registration center ;
+ - Relay current timestamp ;
+ - Birthday collision resilience ;
+ - Interception and modification resilience ;
 
 5. 실험 및 성능 평가
- - 디테일한것들 많지만, 전체 요약은 Table 8을 참고
+ - 전체 요약은 Table 8을 참고
 
 ## Points to note
 
