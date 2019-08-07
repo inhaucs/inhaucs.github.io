@@ -41,7 +41,6 @@ BSeIn은 이 13가지의 보안 요구 사항을 모두 만족하는 안전한 �
 ## Contents
 1. 사전지식
  - 4차 산업(Industry 4.0) ; IoT, Cyber Physical Systems, 센서기술 등을 기반으로 생산 전 과정을 연결 -> 실시간 모니터링 및 피드백 -> 생산성 증대
-
  - 4-Layer 구조 ; (Fig 1 참고)
     - Terminals ; 사용자에 가까운 단말 기기
     - Cloud ; 정책적인 것을 결정하는 시스템(ex. ERP)
@@ -55,19 +54,18 @@ BSeIn은 이 13가지의 보안 요구 사항을 모두 만족하는 안전한 �
     - IsIam et al.이 2015년에 제안한 스킴을 적용함
 
 2. BSeIn
- - 4-Layer 를 기반으로 ABS,MRE,AES,MAC와 블록체인 기술들을 융합하여 만든 4차 산업을 위한 Framework
+ - 앞서 설명한 4-Layer 구조를 기반으로 ABS,MRE,AES,MAC와 블록체인 기술들을 융합하여 만든 4차 산업을 위한 Framework
  - 구조 ; (Fig 2 참고)
     - Terminals ; Blockchain Network에 접근 or 명령 처리를 위한 request transaction을 publish함
     - Blockchain Network ; 사설 체인(permissioned fabric)을 사용. 합의 방식은 PBFT(뒤에서 설명함) 사용. 트랜잭션을 검증하는 validation node(vdn)과 검증된 트랜잭션을 블록체인에 chaining 하는 bookkeeping node(bkn)으로 나뉘어져있음. Terminals를 통해 요청된 request는 트랜잭션의 형태로 합의를 거쳐 블록체인에 chaining됨. 
     - Cloud ; Physical resources로 부터 대량의 데이터들을 수집하고 처리하기도 하며, Terminals로 부터 온 데이터 접근 request를 처리함. Terminals로 부터 온 request는 블록체인에 있기 때문에, 클라우드는 Blockchain Network를 모니터링하다가 등록된 request들을 처리하게됨.
     - Industrial Network ; Cloud와 달리 Terminals로 부터 온 제어 명령 request를 수행한다. Cloud와 마찬가지로 Blockchain Network를 모니터링한다. 단, Physical Resources와 연결되어 있어 제어 요청을 처리할 때 Physical Resources를 제어할 수 있는 네트워크이다.
     - Physical Resources ; 기존의 시스템과 달라진 점이 없어 설명을 생략한다.
- - 설명
+ - 기술들의 적용
     - A. Terminals를 익명으로 인증(anonymously authenticate)하기 위해 블록체인과 ABS 적용
     - B. Gateways를 효율적으로 인증(efficiently authenticate)하기 위해 MAC을 활용
     - C. 허가된 참가자(authorized participants, (e.g. permission nodes, cloud gateway, Industrial network gateway))만 요청한 메시지들의 raw 컨텍스트에 대한 접근 권한을 얻을 수 있게하려고 MRE를 활용
     - D. Industry 4.0 어플리케이션들에서는 확장성(scalability)가 보장되어야하는게 기본 -> 전체 요청 절차(request process)는 smart contracts와 상호작용하는 구조. (Smart Contract on PDHT or Smart Contract on TX 사용)
-
  - 설계(Design)
    - TBD
 
