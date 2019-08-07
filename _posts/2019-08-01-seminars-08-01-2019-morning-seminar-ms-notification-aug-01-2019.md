@@ -19,12 +19,13 @@ permalink: /:categories/:slug.html
 {% include layout/col_start.html column="7" %}
 
 ## Date
-2019-07-31 ~ 2019-08-01
+2019-07-31 ~ 2019-08-08
 
 ## Presenters
 + Jong-Hyuk Im (임종혁)
 + Hee-Yong Kwon (권희용)
 + Seong-Yun Jeon (전성윤)
++ Ye-Byoul Son (손예별)
 
 ## Presentations
 
@@ -73,7 +74,25 @@ Many Internet of Things (IoT) systems run on tiny connected devices that have to
 
 To be prepared for the ‘Industry 4.0’-era, we propose a hierarchical framework comprising four tangible layers, which is designed to vertically integrate inter-organizational value networks, engineering value chain, manufacturing factories, etc. The conceptual framework allows us to efficiently implement a flexible and reconfigurable smart factory. However, we need to consider security inherent in existing (stand-alone) devices and networks as well as those that may arise in such integrations. Especially the existing solutions are insufficient to address these fundamental security concerns. Thus, we present a blockchain-based system for secure mutual authentication, BSeIn, to enforce fine-grained access control polices. The proposed system (with integrated attribute signature, multi-receivers encryption and message authentication code) is designed to provide privacy and security guarantees such as anonymous authentication, auditability, and confidentiality. BSeIn also scales well due to the utilization of smart contract. We then evaluate the security and performance of BSeIn. For example, findings from the performance evaluation demonstrate that Initialization/Request Issuance/Chain Transaction/State Delivery/Permission Update phase only cost 12.123/4.810/6.978/0.013/2.559s, respectively.
 
----
+------
+### Session 4: [Chameleon Hashing and Signatures]()
+
+### Information of the paper [(Link)](https://pdfs.semanticscholar.org/1c29/4428c76ba7d1d0bb5e1d1bc931138c092453.pdf)
+
+- Authors: Hugo Krawczyk, Tal Rabin (IBM Research)
+- Publish date : 1997
+- [Paper Link](https://pdfs.semanticscholar.org/1c29/4428c76ba7d1d0bb5e1d1bc931138c092453.pdf)
+
+- Ref
+  - **Conference** name: Network and Distributed System Security Symposium 2000
+  - Published date: 2000-02-03
+  - Information of the paper[(Link)](https://www.ndss-symposium.org/ndss2000/chameleon-signatures/)
+  - [Paper Link](https://www.ndss-symposium.org/wp-content/uploads/2017/09/Chameleon-Signatures-paper-Hugo-Krawczyk.pdf)
+
+### Abstract
+We introduce chameleon signatures that provide with an undeniable commitment of the signer to the contents of the signed document (as regular digital signatures do) but, at the same time, do not allow the recipient of the signature to disclose the contents of the signed information to any third party without the signer's consent. These signatures are closely related to \undeniable signatures", but chameleon signatures allow for simpler and more efficient realizations than the latter. In particular, they are essentially non-interactive and do not involve the design and complexity of zero-knowledge proofs on which traditional undeniable signatures are based. Instead, chameleon signatures are generated under the standard method of hash-then-sign. Yet, the hash functions which are used are chameleon hash functions. These hash functions are characterized by the nonstandard property of being collision-resistant for the signer but collision tractable for the recipient. 
+
+------
 
 {% include date/updated.html %}
 {% include layout/col_end.html %}
