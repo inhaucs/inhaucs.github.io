@@ -68,21 +68,23 @@ BSeIn은 이 13가지의 보안 요구 사항을 모두 만족하는 안전한 �
     - C. 허가된 참가자(authorized participants, (e.g. permission nodes, cloud gateway, Industrial network gateway))만 요청한 메시지들의 raw 컨텍스트에 대한 접근 권한을 얻을 수 있게하려고 MRE를 활용
     - D. Industry 4.0 어플리케이션들에서는 확장성(scalability)가 보장되어야하는게 기본 -> 전체 요청 절차(request process)는 smart contracts와 상호작용하는 구조. (Smart Contract on PDHT or Smart Contract on TX 사용)
 
-3. 블록체인 기반의 상호 간 인증 구현
- - 어떻게?
+ - 설계(Design)
+   - TBD
 
-4. BSeIn이 충족시킨 13가지의 보안 요구사항
- - Single registration ;
- - Mutual authentication ;
- - User anonymity ;
- - Fine-grained access control ;
- - Session key agreement ;
- - Perfect forward secrecy ;
- - No verifier table ;
- - No online registration center ;
- - Relay current timestamp ;
- - Birthday collision resilience ;
- - Interception and modification resilience ;
+3. BSeIn이 충족시킨 13가지의 보안 요구사항(Aitzhan and Svetinovic, 2016; He et al., 2016)
+ - Single registration ; 사용자 1명 당 등록은 1회만 수행한다.
+ - Mutual authentication ; 시스템은 상호적인 인증을 제공해야한다. 예) Terminals -> Gateways and Gateways -> Terminals
+ - User anonymity ; 블록체인 입장에서는 transaction들을 통해 Terminal의 identity를 구분할 수 있으면 안된다.
+ - Fine-grained access control ; 세분화된 접근 권한 관리. 예) Accept/Reject -> if one has A, B, C and D, Accept else Reject
+ - Session key agreement ; 안전한 통신을 위해 세션 키를 활용해야함
+ - Perfect forward secrecy ; 줄여서 PFS라고 함. 만일 현재 비밀키가 노출되었더라도 이전의 세션들을 복구할 수 없어야함
+ - No verifier table ; 시스템은 verifier table에 의존해서는 안됨. (verifier table이란..?)
+ - No online registration center ; 3rd party(TP)를 가지는 것을 피한다.
+ - Relay current timestamp ; 블록체인을 사용하다 보니, 블록 간에 올바른 타임스탬프로 정렬되어야한다(?)
+ - Birthday collision resilience ; 시스템은 birthday collision으로 인한 chaining 문제가 발생하지 않아야한다.
+ - Interception and modification resilience ; 전송된 메시지는 interception이나 modification으로부터 별도의 detection없이 보호되어야한다
+ - Hijacking resilience ; 공격자가 transaction들을 hijacking하는 것에 대한 잠재적인 위협을 별도의 detection없이 줄여야한다.
+ - Resilience to other attacks ; 시스템은 impersonation, D-DoS attack, modification attack, replay attack, MITM attack 등으로 부터 안전해야한다.
 
 5. 실험 및 성능 평가
  - 전체 요약은 Table 8을 참고
