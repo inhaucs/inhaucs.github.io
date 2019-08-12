@@ -47,11 +47,15 @@ BSeIn은 이 13가지의 보안 요구 사항을 모두 만족하는 안전한 �
     - Industrial Network ; Physical Resources 를 연동하는 네트워크
     - Physical Resources ; 실제 일을 수행하는 자원
   - ABS ; attribute-based encryption.
-    - signer가 특정 attribute들의 셋들을 소유한 채로 (attribute authority 존재) 서명하고 검증하는 전자서명 방법.
+    - signer가 특정 attribute들의 셋들을 소유한 채로 (attribute authority 존재) 서명하고 검증하는 전자서명 방법
     - Maji et al.이 2010년에 제안한 실용적인 ABS 사용
   - MRE ; multi-receiver encryption
-    - Open network에서 한 주체가 미리 선택된 다른 주체들(receivers)에게 동일한 메시지를 안전하게 방송(broadcast)하는 방법.
+    - Open network에서 한 주체가 미리 선택된 다른 주체들(receivers)에게 동일한 메시지를 안전하게 방송(broadcast)하는 방법
     - IsIam et al.이 2015년에 제안한 스킴을 적용함
+  - Permission data hash table(PDHT)
+    - 본 논문에서 고안한 일종의 hash table
+    - 특정 predicate에 대한 256bit hash -> NxN binary matrix(predicate x policy) 관계에 대한 Hash table
+    - 예를 들어, predicate "A and (B or C)"가 "efID||all"에 매핑된다고 하자, 그러면, A and B 또는 A and C를 가진 누군가는 한 장치에 대해 efID의 identity를 가지고 모든 권한을 획득할 수 있다는 뜻이된다.
 
 2. BSeIn
   - 앞서 설명한 4-Layer 구조를 기반으로 ABS,MRE,AES,MAC와 블록체인 기술들을 융합하여 만든 4차 산업을 위한 Framework
@@ -66,8 +70,12 @@ BSeIn은 이 13가지의 보안 요구 사항을 모두 만족하는 안전한 �
     - B. Gateways를 효율적으로 인증(efficiently authenticate)하기 위해 MAC을 활용
     - C. 허가된 참가자(authorized participants, (e.g. permission nodes, cloud gateway, Industrial network gateway))만 요청한 메시지들의 raw 컨텍스트에 대한 접근 권한을 얻을 수 있게하려고 MRE를 활용
     - D. Industry 4.0 어플리케이션들에서는 확장성(scalability)가 보장되어야하는게 기본 -> 전체 요청 절차(request process)는 smart contracts와 상호작용하는 구조. (Smart Contract on PDHT or Smart Contract on TX 사용)
-  - 설계(Design)
-    - TBD
+  - 설계(Design) -- 작성중
+    - Initialization
+    - Request Issuance
+    - Chain Transaction
+    - State Delivery
+    - Permission Update
 
 3. BSeIn이 충족시킨 13가지의 보안 요구사항(Aitzhan and Svetinovic, 2016; He et al., 2016)
  - Single registration ; 사용자 1명 당 등록은 1회만 수행한다.
@@ -85,7 +93,8 @@ BSeIn은 이 13가지의 보안 요구 사항을 모두 만족하는 안전한 �
  - Resilience to other attacks ; 시스템은 impersonation, D-DoS attack, modification attack, replay attack, MITM attack 등으로 부터 안전해야한다.
 
 5. 실험 및 성능 평가
- - 전체 요약은 Table 8을 참고
+ - Table 7. 암호 알고리즘별 성능
+ - Table 8. BSeIn의 phase 별 성능
 
 ## Points to note
 
