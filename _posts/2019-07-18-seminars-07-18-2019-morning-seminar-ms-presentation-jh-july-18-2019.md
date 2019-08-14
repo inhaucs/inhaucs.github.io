@@ -23,6 +23,7 @@ use_math: true
 ## Presenter & Date
 + Jong-Hyuk Im (임종혁)
 + 2019-07-18, 2019-08-07
++ https://kitchenplanner.ikea.com/KR/UI/Pages/VPUI.htm?Lang=ko-KR&_ga=2.91454618.163785692.1565787140-2025839066.1565787140&LoadDesign=b1338ef35f884cfa859059f4f83de605&UIContext=ME_Menu&IsSharedDesign=1&Entry=Kitchen
 
 ## [Turning Your Weakness Into a Strength: Watermarking Deep Neural Networks by Backdooring](https://inhaucs.github.io/seminars/07-18-2019-morning-seminar/presentation/ms-presentation-jh-july-18-2019.html)
 
