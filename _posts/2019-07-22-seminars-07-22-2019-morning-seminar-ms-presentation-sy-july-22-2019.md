@@ -40,52 +40,61 @@ BSeIn은 이 13가지의 보안 요구 사항을 모두 만족하는 안전한 �
 
 ## Contents
 1. 사전지식
- - 4차 산업(Industry 4.0) ; IoT, Cyber Physical Systems, 센서기술 등을 기반으로 생산 전 과정을 연결 -> 실시간 모니터링 및 피드백 -> 생산성 증대
-
- - 4-Layer 구조 ; (Fig 1 참고)
+  - 4차 산업(Industry 4.0) ; IoT, Cyber Physical Systems, 센서기술 등을 기반으로 생산 전 과정을 연결 -> 실시간 모니터링 및 피드백 -> 생산성 증대
+  - 4-Layer 구조 ; (Fig 1 참고)
     - Terminals ; 사용자에 가까운 단말 기기
     - Cloud ; 정책적인 것을 결정하는 시스템(ex. ERP)
     - Industrial Network ; Physical Resources 를 연동하는 네트워크
     - Physical Resources ; 실제 일을 수행하는 자원
- - ABS ; attribute-based encryption.
-    - signer가 특정 attribute들의 셋들을 소유한 채로 (attribute authority 존재) 서명하고 검증하는 전자서명 방법.
+  - ABS ; attribute-based encryption.
+    - signer가 특정 attribute들의 셋들을 소유한 채로 (attribute authority 존재) 서명하고 검증하는 전자서명 방법
     - Maji et al.이 2010년에 제안한 실용적인 ABS 사용
- - MRE ; multi-receiver encryption.
-    - Open network에서 한 주체가 미리 선택된 다른 주체들(receivers)에게 동일한 메시지를 안전하게 방송(broadcast)하는 방법. 
+  - MRE ; multi-receiver encryption
+    - Open network에서 한 주체가 미리 선택된 다른 주체들(receivers)에게 동일한 메시지를 안전하게 방송(broadcast)하는 방법
     - IsIam et al.이 2015년에 제안한 스킴을 적용함
+  - Permission data hash table(PDHT)
+    - 본 논문에서 고안한 일종의 hash table
+    - 특정 predicate에 대한 256bit hash -> NxN binary matrix(predicate x policy) 관계에 대한 Hash table
+    - 예를 들어, predicate "A and (B or C)"가 "efID||all"에 매핑된다고 하자, 그러면, A and B 또는 A and C를 가진 누군가는 한 장치에 대해 efID의 identity를 가지고 모든 권한을 획득할 수 있다는 뜻이된다.
 
 2. BSeIn
- - 4-Layer 를 기반으로 ABS,MRE,AES,MAC와 블록체인 기술들을 융합하여 만든 4차 산업을 위한 Framework
- - 구조 ; (Fig 2 참고)
+  - 앞서 설명한 4-Layer 구조를 기반으로 ABS,MRE,AES,MAC와 블록체인 기술들을 융합하여 만든 4차 산업을 위한 Framework
+  - 구조 ; (Fig 2 참고)
     - Terminals ; Blockchain Network에 접근 or 명령 처리를 위한 request transaction을 publish함
-    - Blockchain Network ; 
-    - Cloud ; 
-    - Industrial Network ; 
-    - Physical Resources ; 
- - 설명
+    - Blockchain Network ; 사설 체인(permissioned fabric)을 사용. 합의 방식은 PBFT(뒤에서 설명함) 사용. 트랜잭션을 검증하는 validation node(vdn)과 검증된 트랜잭션을 블록체인에 chaining 하는 bookkeeping node(bkn)으로 나뉘어져있음. Terminals를 통해 요청된 request는 트랜잭션의 형태로 합의를 거쳐 블록체인에 chaining됨. 
+    - Cloud ; Physical resources로 부터 대량의 데이터들을 수집하고 처리하기도 하며, Terminals로 부터 온 데이터 접근 request를 처리함. Terminals로 부터 온 request는 블록체인에 있기 때문에, 클라우드는 Blockchain Network를 모니터링하다가 등록된 request들을 처리하게됨.
+    - Industrial Network ; Cloud와 달리 Terminals로 부터 온 제어 명령 request를 수행한다. Cloud와 마찬가지로 Blockchain Network를 모니터링한다. 단, Physical Resources와 연결되어 있어 제어 요청을 처리할 때 Physical Resources를 제어할 수 있는 네트워크이다.
+    - Physical Resources ; 기존의 시스템과 달라진 점이 없어 설명을 생략한다.
+  - 기술들의 적용
     - A. Terminals를 익명으로 인증(anonymously authenticate)하기 위해 블록체인과 ABS 적용
     - B. Gateways를 효율적으로 인증(efficiently authenticate)하기 위해 MAC을 활용
     - C. 허가된 참가자(authorized participants, (e.g. permission nodes, cloud gateway, Industrial network gateway))만 요청한 메시지들의 raw 컨텍스트에 대한 접근 권한을 얻을 수 있게하려고 MRE를 활용
     - D. Industry 4.0 어플리케이션들에서는 확장성(scalability)가 보장되어야하는게 기본 -> 전체 요청 절차(request process)는 smart contracts와 상호작용하는 구조. (Smart Contract on PDHT or Smart Contract on TX 사용)
+  - 설계(Design) -- 작성중
+    - Initialization
+    - Request Issuance
+    - Chain Transaction
+    - State Delivery
+    - Permission Update
 
-3. 블록체인 기반의 상호 간 인증 구현
- - 어떻게?
-
-4. BSeIn이 충족시킨 13가지의 보안 요구사항
- - Single registration ;
- - Mutual authentication ;
- - User anonymity ;
- - Fine-grained access control ;
- - Session key agreement ;
- - Perfect forward secrecy ;
- - No verifier table ;
- - No online registration center ;
- - Relay current timestamp ;
- - Birthday collision resilience ;
- - Interception and modification resilience ;
+3. BSeIn이 충족시킨 13가지의 보안 요구사항(Aitzhan and Svetinovic, 2016; He et al., 2016)
+ - Single registration ; 사용자 1명 당 등록은 1회만 수행한다.
+ - Mutual authentication ; 시스템은 상호적인 인증을 제공해야한다. 예) Terminals -> Gateways and Gateways -> Terminals
+ - User anonymity ; 블록체인 입장에서는 transaction들을 통해 Terminal의 identity를 구분할 수 있으면 안된다.
+ - Fine-grained access control ; 세분화된 접근 권한 관리. 예) Accept/Reject -> if one has A, B, C and D, Accept else Reject
+ - Session key agreement ; 안전한 통신을 위해 세션 키를 활용해야함
+ - Perfect forward secrecy ; 줄여서 PFS라고 함. 만일 현재 비밀키가 노출되었더라도 이전의 세션들을 복구할 수 없어야함
+ - No verifier table ; 시스템은 verifier table에 의존해서는 안됨. (verifier table이란..?)
+ - No online registration center ; 3rd party(TP)를 가지는 것을 피한다.
+ - Relay current timestamp ; 블록체인을 사용하다 보니, 블록 간에 올바른 타임스탬프로 정렬되어야한다(?)
+ - Birthday collision resilience ; 시스템은 birthday collision으로 인한 chaining 문제가 발생하지 않아야한다.
+ - Interception and modification resilience ; 전송된 메시지는 interception이나 modification으로부터 별도의 detection없이 보호되어야한다
+ - Hijacking resilience ; 공격자가 transaction들을 hijacking하는 것에 대한 잠재적인 위협을 별도의 detection없이 줄여야한다.
+ - Resilience to other attacks ; 시스템은 impersonation, D-DoS attack, modification attack, replay attack, MITM attack 등으로 부터 안전해야한다.
 
 5. 실험 및 성능 평가
- - 전체 요약은 Table 8을 참고
+ - Table 7. 암호 알고리즘별 성능
+ - Table 8. BSeIn의 phase 별 성능
 
 ## Points to note
 
