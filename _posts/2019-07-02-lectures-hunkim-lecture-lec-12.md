@@ -149,6 +149,12 @@ use_math: true
 
 ### Tensorflow_6
 #### RNN with time series data (stock)
++ Time series data
+  + 시간에 따라 값이 변하는 데이터
++ 주식(stock)을 예시로 들어 설명
+  + Many to one LSTM 적용 1-7일간의 가격으로 8일째의 가격 예측
++ 영상 참조
+
 
 
 {% include date/updated.html %}
