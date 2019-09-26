@@ -28,8 +28,17 @@ use_math: true
 ### Lecture
 #### TensorFlow를 AWS에서 GPU와 함께 돌려보자
 + Tensorflow를 Amazon Web Service에서 실행하는 방법
-
-
++ Deep Network은 학습에 많은 데이터가 필요하고, forward/backward propagation을 모두 수행하기에 시간이 오래 걸림
+  + 이를 해결하기 위한 방법 $\rightarrow$ GPU: 행렬 연산이 매우 빠름
+  + Tensorflow 설치 시에 GPU 버전 확인 필요
++ GPU가 없는 경우 클라우드 서비스를 통해 사용 가능
++ AWS 사용 방법에 대해 설명
+  + hunkim 교수님께서 이미 AWS에 CUDA 설치를 완료한 이미지 만들어 놓음
+    + N. Virginia: ami-9e39dcf3
+    + oregon: ami-38f60658
+  + GPU 사용시의 속도 향상 보임
+  + 저렴하게 사용하는 방법 (Spot Instance) 설명 $\rightarrow$ bidding
+  + 사용하지 않는 경우 꼭 server stop
 
 {% include date/updated.html %}
 {% include layout/col_end.html %}
