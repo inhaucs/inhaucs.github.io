@@ -32,8 +32,8 @@ use_math: true
   + [virusign](http://www.virusign.com/) - Free
   + [virusshare](https://virusshare.com/) - Free & Need an invitation by member
 
-## Letters \& journals list
-#### Pattern Recognition \& Machine Learning
+## Letters & journals list
+#### Pattern Recognition & Machine Learning
 + Letters.
 	+ IEEE Signal Processing Letters
 		+ Impact factor: 3.268
